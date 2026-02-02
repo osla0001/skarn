@@ -34,6 +34,13 @@ class HeaderComponent extends Component {
   #intersectionObserver = null;
 
   /**
+   * An intersection observer for monitoring hero section visibility
+   * @type {IntersectionObserver | null}
+   */
+  #heroObserver = null;
+
+
+  /**
    * Whether the header has been scrolled offscreen, when sticky behavior is 'scroll-up'
    * @type {boolean}
    */
@@ -106,6 +113,37 @@ class HeaderComponent extends Component {
     }, config);
 
     this.#intersectionObserver.observe(this);
+  };
+
+  /**
+   * Observes the hero section to remove transparent attribute when it's scrolled out of view
+   */
+  #observeHeroSection = () => {
+    if (this.#heroObserver) return;
+
+    const heroSection = document.querySelector('.shopify-section:has([data-hero-section])');
+    if (!heroSection) return;
+
+    const config = {
+      threshold: 0,
+    };
+
+    this.#heroObserver = new IntersectionObserver(([entry]) => {
+      if (!entry) return;
+
+      if (!entry.isIntersecting) {
+        // Hero section is scrolled out of view, remove transparent attribute
+        this.removeAttribute('transparent');
+      } else {
+        // Hero section is in view, restore transparent attribute if it should be transparent
+        const transparentValue = this.getAttribute('data-original-transparent');
+        if (transparentValue) {
+          this.setAttribute('transparent', transparentValue);
+        }
+      }
+    }, config);
+
+    this.#heroObserver.observe(heroSection);
   };
 
   /**
@@ -203,6 +241,13 @@ class HeaderComponent extends Component {
     this.#resizeObserver.observe(this);
     this.addEventListener('overflowMinimum', this.#handleOverflowMinimum);
 
+
+    // Store original transparent value before we potentially remove it
+    const transparentValue = this.getAttribute('transparent');
+    if (transparentValue) {
+      this.setAttribute('data-original-transparent', transparentValue);
+    }
+
     const stickyMode = this.getAttribute('sticky');
     if (stickyMode) {
       this.#observeStickyPosition(stickyMode === 'always');
@@ -213,10 +258,17 @@ class HeaderComponent extends Component {
     }
   }
 
+
+    // Observe hero section if header is transparent
+    if (transparentValue) {
+      this.#observeHeroSection();
+    }
+
   disconnectedCallback() {
     super.disconnectedCallback();
     this.#resizeObserver.disconnect();
     this.#intersectionObserver?.disconnect();
+    this.#heroObserver?.disconnect();
     this.removeEventListener('overflowMinimum', this.#handleOverflowMinimum);
     document.removeEventListener('scroll', this.#handleWindowScroll);
     if (this.#scrollRafId !== null) {
