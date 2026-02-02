@@ -95,10 +95,29 @@
           },
           "block_order": ["product_list_text_YFtzcL", "product_list_button_MWeP9V"]
         },
-        "static-product-card": { "type": "_product-card", "name": "t:names.product_card", "static": true, "settings": { "product_card_gap": 4, "inherit_color_scheme": true, "color_scheme": "", "border": "none", "border_width": 1, "border_opacity": 100, "border_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0 }, "blocks": { "product_card_gallery_677WP3": { "type": "_product-card-gallery", "name": "t:names.product_card_media", "settings": { "image_ratio": "square", "border": "solid", "border_width": 1, "border_opacity": 100, "border_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0 }, "blocks": {} } }, "block_order": ["product_card_gallery_677WP3"] }
+        "static-product-card": { "type": "_product-card", "name": "t:names.product_card", "static": true, "settings": { "product_card_gap": 4, "inherit_color_scheme": true, "color_scheme": "", "border": "none", "border_width": 0, "border_opacity": 100, "border_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0 }, "blocks": { "product_card_gallery_677WP3": { "type": "_product-card-gallery", "name": "t:names.product_card_media", "settings": { "image_ratio": "square", "border": "solid", "border_width": 1, "border_opacity": 100, "border_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0 }, "blocks": {} } }, "block_order": ["product_card_gallery_677WP3"] }
       },
       "name": "Featured collection",
-      "settings": { "collection": "all", "layout_type": "grid", "carousel_on_mobile": false, "max_products": 8, "columns": 4, "mobile_columns": "2", "mobile_card_size": "60cqw", "columns_gap": 0, "rows_gap": 24, "icons_style": "arrow", "icons_shape": "none", "section_width": "full-width", "horizontal_alignment": "flex-start", "gap": 0, "color_scheme": "scheme-1", "padding-block-start": 0, "padding-block-end": 0 }
+      "settings": {
+        "collection": "all",
+        "featured_heading": "Nye items",
+        "layout_type": "grid",
+        "carousel_on_mobile": false,
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 0,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "none",
+        "section_width": "full-width",
+        "horizontal_alignment": "flex-start",
+        "gap": 0,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": ["hero_jVaWmY", "product_list_fa6P9H"]

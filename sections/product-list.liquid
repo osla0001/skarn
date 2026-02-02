@@ -69,7 +69,8 @@
     settings: section.settings,
     slide_count: max_items,
     content_type: 'products',
-    test_id: 'resource-list-grid'
+    test_id: 'resource-list-grid',
+    featured_heading: section.settings.featured_heading
   %}
 
   <div
@@ -103,6 +104,17 @@
       "type": "collection",
       "id": "collection",
       "label": "t:settings.collection"
+    },
+    {
+      "type": "header",
+      "content": "Featured Heading"
+    },
+    {
+      "type": "text",
+      "id": "featured_heading",
+      "label": "Heading Text",
+      "default": "Featured Collection",
+      "placeholder": "Enter your featured heading text"
     },
     {
       "type": "select",

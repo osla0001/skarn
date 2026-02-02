@@ -1,42 +1,48 @@
+/* Produktkort hover-effekt: vis billede 2 på hover */
+/* Fjernet hover-effekt på produktkort – kun ét billede vises */
+/* Sikrer at billeder i produktkort aldrig bliver strukket */
+.product-card img,
+.card-gallery img,
+.product-card picture,
+.card-gallery picture {
+  object-fit: cover !important;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: block;
+}
+/* Force remove border from product cards and card-gallery */
+.card-gallery,
+.product-card {
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Produktkort hover-effekt: vis billede 2 på hover */
+/* Ingen hover-effekt på produktkort – kun ét billede vises */
 * {
   box-sizing: border-box;
 }
 
 body {
-  color: var(--color-foreground);
-  background: var(--color-background);
-  display: flex;
-  flex-direction: column;
   margin: 0;
-  min-height: 100svh;
-  font-variation-settings: "slnt" 0;
 }
 
-:root {
-  --hover-lift-amount: 4px;
-  --hover-scale-amount: 1.03;
-  --hover-subtle-zoom-amount: 1.015;
-  --hover-shadow-color: var(--color-shadow);
-  --hover-transition-duration: 0.25s;
-  --hover-transition-timing: ease-out;
-  --surface-transition-duration: 0.3s;
-  --surface-transition-timing: var(--ease-out-quad);
-}
-
-html {
-  /* Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: rgb(var(--color-foreground-rgb) / var(--opacity-40)) var(--color-background);
-  scroll-behavior: smooth;
-}
-
-html[scroll-lock] {
+.card-gallery {
+  position: relative;
   overflow: hidden;
 }
 
-img,
-picture,
-video,
+/* Ensure images/media cover the card area */
+.card-gallery .slideshow-slides img,
+.card-gallery .slideshow-slides picture,
+.card-gallery .slideshow-slides video,
+.card-gallery .slideshow-slides deferred-media,
+.card-gallery .slideshow-slides product-model {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 canvas,
 svg {
   display: block;
@@ -100,6 +106,10 @@ select {
   }
 }
 
+/* Featured heading inside the resource-list blank item
+   These rules were moved below under the `Kollektions overskrift` section
+   so all blank-item styling lives together in one place. */
+
 .collection-card__inner,
 .featured-blog-posts-card__inner {
   width: 100%;
@@ -114,6 +124,7 @@ select {
 .collection-card__content,
 .featured-blog-posts-card__content {
   display: flex;
+  flex-wrap: nowrap;
   position: relative;
   height: 100%;
   width: 100%;
@@ -659,34 +670,36 @@ p:empty {
   box-shadow: 0 0 0 var(--focus-outline-offset) var(--color-background);
 }
 
-.text-left {
-  --text-align: left;
-
-  text-align: left;
+.card-gallery {
+  position: relative;
+  overflow: hidden;
 }
 
-.text-center {
-  --text-align: center;
-
-  text-align: center;
+/* Safer opacity-based swap for slideshow children without removing them from flow */
+.card-gallery slideshow-slides {
+  position: relative;
 }
 
-.text-right {
-  --text-align: right;
-
-  text-align: right;
+.card-gallery slideshow-slides > slideshow-slide {
+  transition: opacity 220ms ease-in-out;
+  opacity: 0;
 }
 
-.text-inherit {
-  color: inherit;
+.card-gallery slideshow-slides > slideshow-slide:first-of-type {
+  opacity: 1;
 }
 
-.user-select-text {
-  user-select: text;
+.card-gallery:hover slideshow-slides > slideshow-slide:first-of-type {
+  opacity: 0;
 }
 
-.justify-left {
-  justify-content: left;
+.card-gallery:hover slideshow-slides > slideshow-slide:nth-of-type(2) {
+  opacity: 1;
+}
+
+/* Ensure any further slides remain hidden */
+.card-gallery slideshow-slides > slideshow-slide:nth-of-type(n + 3) {
+  opacity: 0;
 }
 
 .justify-center {
@@ -1046,7 +1059,7 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
 }
 
 .product-grid__item {
-  border: var(--product-card-border-width) solid rgb(var(--color-border-rgb) / var(--product-card-border-opacity));
+  border: none;
 }
 
 .product-grid--organic[product-grid-view="default"] .product-grid__item {
@@ -2805,6 +2818,27 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   }
 }
 
+/* Desktop fixed cards */
+.resource-list__item,
+.collection-card,
+.product-card {
+  width: 300px;
+  height: 300px;
+  flex: 0 0 300px;
+  aspect-ratio: 1 / 1;
+}
+
+/* Mobile fallback */
+@media (max-width: 749px) {
+  .resource-list__item,
+  .collection-card,
+  .product-card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+}
+
 /* Fly to cart animation */
 fly-to-cart {
   --offset-y: 10px;
@@ -3584,55 +3618,121 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 
 .resource-list {
   --resource-list-mobile-gap-max: 9999px;
-  --resource-list-column-gap: min(var(--resource-list-column-gap-desktop), var(--resource-list-mobile-gap-max));
-  --resource-list-row-gap: min(var(--resource-list-row-gap-desktop), var(--resource-list-mobile-gap-max));
+  --resource-list-column-gap: -1px;
+  /* Kollektions overskrift (blank white div) er stylet i `.resource-list__blank-item` */
+
+  /* Card size is scalable: use a vw-based clamp so cards resize on desktop
+     and never exceed the max (here 358px). Tweak the clamp values if needed. */
+  --resource-card-size: clamp(220px, 22vw, 358px);
 
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  scrollbar-width: none;
 
   @media screen and (max-width: 749px) {
-    --resource-list-mobile-gap-max: 12px;
+    --resource-list-mobile-gap-max: -1px;
   }
 
   @container resource-list (max-width: 749px) {
-    --resource-list-mobile-gap-max: 12px;
+    --resource-list-mobile-gap-max: -1px;
   }
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .resource-list--grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--resource-list-row-gap);
-  width: 100%;
+  flex-wrap: nowrap;
+  gap: var(--resource-list-column-gap);
+  width: fit-content;
+  align-items: start;
 }
 
+/* Kollektions overskrift */
 .resource-list__blank-item {
-  width: 325px;
-  height: 325px;
+  /* Kollektions overskrift: samme sizing som kortene */
+  width: var(--resource-card-size);
+  flex: 0 0 var(--resource-card-size);
   aspect-ratio: 1 / 1;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   background-color: white;
-  flex-shrink: 0;
 }
 
-.resource-list__item {
-  width: 325px;
-  height: 325px;
+/* Kollektions overskrift H1 styling */
+.resource-list__blank-item h1 {
+  /* H1 font-size scales proportionally with product card size - targets ~100px at max size */
+  font-size: clamp(60px, 6vw, 100px);
+  line-height: 1.1;
+  font-weight: 100 !important;
+  color: var(--featured-heading-color, var(--color-foreground));
+  text-wrap: wrap;
+  text-transform: uppercase;
+  text-align: left !important;
+}
+
+@media (max-width: 749px) {
+  .resource-list__blank-item h1 {
+    font-size: 22px;
+  }
+}
+
+/* Produktkort */
+.resource-list__item,
+.collection-card,
+.product-card {
+  width: var(--resource-card-size);
+  flex: 0 0 var(--resource-card-size);
   aspect-ratio: 1 / 1;
-  flex-shrink: 0;
+  height: auto;
+  box-sizing: border-box;
+  gap: -1;
+  position: relative;
+}
+
+/* Fjernet: cirkel-indikatorer på produktkort */
+
+/* Disable hover zoom/scale on product cards globally */
+.card-hover-effect-scale .product-card:hover,
+.card-hover-effect-subtle-zoom .product-card:hover,
+.card-hover-effect-lift .product-card:hover {
+  transform: none !important;
+}
+
+/* Also disable image transform inside card-gallery on hover */
+.card-hover-effect-subtle-zoom .product-card:hover .card-gallery,
+.card-hover-effect-subtle-zoom .product-card:hover .product-card__image {
+  transform: none !important;
+}
+
+/* Card-gallery: safer opacity swap (keep slides in layout) */
+.card-gallery {
+  position: relative;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 749px) {
   .resource-list__blank-item,
-  .resource-list__item {
+  .resource-list__item,
+  .collection-card,
+  .product-card {
     width: 100%;
     height: auto;
     aspect-ratio: auto;
+    flex: 1 1 100%;
   }
 }
 
 @container resource-list (max-width: 449px) {
   .resource-list__blank-item,
   .resource-list__item {
-    width: 100%;
+    width: 100;
     height: auto;
     aspect-ratio: auto;
   }
