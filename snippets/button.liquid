@@ -33,6 +33,52 @@
 </a>
 
 {% stylesheet %}
+  .button,
+  button.shopify-payment-button__button--unbranded {
+    --button-color: transparent;
+    --button-background-color: transparent;
+    --button-border-color: transparent;
+    --button-border-width: none;
+  }
+
+  .button {
+    background-color: transparent;
+    outline: 1px solid white !important;
+    color: white;
+    padding: 5px 10px;
+    margin: 0;
+    height: fit-content;
+
+    &:hover {
+      background-color: transparent;
+      outline: 2px solid white !important;
+      margin: 0;
+      -webkit-text-stroke: 0.09px white;
+
+      a {
+        font-family: "ZT Nature";
+        font-weight: 600;
+      }
+    }
+  }
+
+  .button-secondary {
+    background-color: transparent;
+    outline: 1px solid black !important;
+    color: black;
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 0;
+    height: fit-content;
+
+    &:hover {
+      background-color: transparent;
+      outline: 2px solid black !important;
+      margin: 0;
+      -webkit-text-stroke: 0.09px black;
+    }
+  }
+
   .link {
     text-decoration: none;
     text-decoration-color: currentcolor;

@@ -67,7 +67,8 @@
     carousel_ref: 'collectionList',
     slide_count: max_items,
     content_type: 'collections',
-    test_id: 'collections-list-grid'
+    test_id: 'collections-list-grid',
+    featured_heading: section.settings.featured_heading
   %}
 </div>
 
@@ -115,6 +116,17 @@
       "type": "collection_list",
       "id": "collection_list",
       "label": "t:settings.collection_list"
+    },
+    {
+      "type": "header",
+      "content": "Featured Heading"
+    },
+    {
+      "type": "text",
+      "id": "featured_heading",
+      "label": "Heading Text",
+      "default": "Featured Collection",
+      "placeholder": "Enter your featured heading text"
     },
     {
       "type": "header",

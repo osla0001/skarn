@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   margin: 0;
   min-height: 100svh;
-  font-variation-settings: 'slnt' 0;
+  font-variation-settings: "slnt" 0;
 }
 
 :root {
@@ -135,7 +135,8 @@ select {
 .predictive-search-results__card--product,
 .predictive-search-results__card {
   position: relative;
-  transition: transform var(--hover-transition-duration) var(--hover-transition-timing),
+  transition:
+    transform var(--hover-transition-duration) var(--hover-transition-timing),
     box-shadow var(--hover-transition-duration) var(--hover-transition-timing);
   z-index: var(--layer-flat);
 }
@@ -305,11 +306,11 @@ p:empty {
     pointer-events: none;
   }
 
-  html:active-view-transition-type(page-navigation) main[data-page-transition-enabled='true'] {
+  html:active-view-transition-type(page-navigation) main[data-page-transition-enabled="true"] {
     view-transition-name: main-content;
   }
 
-  html:active-view-transition-type(page-navigation) main[data-product-transition='true'][data-template*='product'] {
+  html:active-view-transition-type(page-navigation) main[data-product-transition="true"][data-template*="product"] {
     view-transition-name: none;
   }
 
@@ -322,11 +323,11 @@ p:empty {
   }
 
   html:active-view-transition-type(product-image-transition) {
-    [data-view-transition-type='product-image-transition'] {
+    [data-view-transition-type="product-image-transition"] {
       view-transition-name: product-image-transition;
     }
 
-    [data-view-transition-type='product-details'] {
+    [data-view-transition-type="product-details"] {
       view-transition-name: product-details;
     }
   }
@@ -422,19 +423,12 @@ p:empty {
    full-width background image even if the section content is constrained by the page width. Do not try
    to rewrite this to max-width: --page-width; margin: 0 auto;, it doesn't work. */
 .section {
-  --full-page-grid-central-column-width: min(
-    var(--page-width) - var(--page-margin) * 2,
-    calc(100% - var(--page-margin) * 2)
-  );
+  --full-page-grid-central-column-width: min(var(--page-width) - var(--page-margin) * 2, calc(100% - var(--page-margin) * 2));
   --full-page-grid-margin: minmax(var(--page-margin), 1fr);
-  --full-page-grid-with-margins: var(--full-page-grid-margin) var(--full-page-grid-central-column-width)
-    var(--full-page-grid-margin);
+  --full-page-grid-with-margins: var(--full-page-grid-margin) var(--full-page-grid-central-column-width) var(--full-page-grid-margin);
 
   /* Utility variable gives the grid's first column width. Provides an offset width for components like carousels */
-  --util-page-margin-offset: max(
-    var(--page-margin),
-    calc((100% - min(var(--page-content-width), 100% - var(--page-margin) * 2)) / 2)
-  );
+  --util-page-margin-offset: max(var(--page-margin), calc((100% - min(var(--page-content-width), 100% - var(--page-margin) * 2)) / 2));
 
   /* Offset for full-width sections to account for the page margin,
   used for Marquee — note that --util-page-margin-offset doesn't work here */
@@ -448,7 +442,7 @@ p:empty {
   /* Set up the grid */
   display: grid;
   grid-template-columns: var(--full-page-grid-with-margins);
-  min-height: var(--section-min-height, 'auto');
+  min-height: var(--section-min-height, "auto");
 }
 
 /* Place all direct children in the center column by default */
@@ -466,7 +460,7 @@ p:empty {
 }
 
 .shopify-section:not(.header-section) .section-background {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: var(--layer-section-background);
@@ -525,7 +519,7 @@ p:empty {
 }
 
 .section-content-wrapper.section-content-wrapper {
-  min-height: calc(var(--section-min-height, 'auto') - var(--section-height-offset, 0px));
+  min-height: calc(var(--section-min-height, "auto") - var(--section-height-offset, 0px));
   position: relative;
   width: 100%;
   height: 100%;
@@ -613,17 +607,14 @@ p:empty {
     display: grid;
     gap: 0;
     grid-template-columns: var(--margin-4xl) repeat(var(--centered-column-number), minmax(0, 1fr)) var(--margin-4xl);
-    grid-template-areas: 'column-0 column-1 column-2 column-3 column-4 column-5 column-6 column-7 column-8 column-9 column-10 column-11 column-12 column-13';
+    grid-template-areas: "column-0 column-1 column-2 column-3 column-4 column-5 column-6 column-7 column-8 column-9 column-10 column-11 column-12 column-13";
   }
 }
 
 @media screen and (min-width: 1400px) {
   .grid {
     grid-template-columns:
-      1fr repeat(
-        var(--centered-column-number),
-        minmax(0, calc((var(--page-width) - var(--page-margin) * 2) / var(--centered-column-number)))
-      )
+      1fr repeat(var(--centered-column-number), minmax(0, calc((var(--page-width) - var(--page-margin) * 2) / var(--centered-column-number))))
       1fr;
   }
 }
@@ -780,11 +771,11 @@ p:empty {
   fill: currentColor;
 }
 
-[data-placeholder='true'] * {
+[data-placeholder="true"] * {
   cursor: default;
 }
 
-slideshow-component [data-placeholder='true'] * {
+slideshow-component [data-placeholder="true"] * {
   cursor: grab;
 }
 
@@ -961,7 +952,8 @@ a {
   text-decoration-color: transparent;
   text-decoration-thickness: 0.075em;
   text-underline-offset: 0.125em;
-  transition: text-decoration-color var(--animation-speed) var(--animation-easing),
+  transition:
+    text-decoration-color var(--animation-speed) var(--animation-easing),
     color var(--animation-speed) var(--animation-easing);
 }
 
@@ -971,9 +963,7 @@ a {
 
 /* Add underline to text using our paragraph styles only. */
 p:not(.h1, .h2, .h3, .h4, .h5, .h6) a:where(:not(.button, .button-primary, .button-secondary)),
-.rte
-  :is(p, ul, ol, table):not(.h1, .h2, .h3, .h4, .h5, .h6)
-  a:where(:not(.button, .button-primary, .button-secondary)) {
+.rte :is(p, ul, ol, table):not(.h1, .h2, .h3, .h4, .h5, .h6) a:where(:not(.button, .button-primary, .button-secondary)) {
   text-decoration-color: currentcolor;
 
   &:hover {
@@ -1059,7 +1049,7 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
   border: var(--product-card-border-width) solid rgb(var(--color-border-rgb) / var(--product-card-border-opacity));
 }
 
-.product-grid--organic[product-grid-view='default'] .product-grid__item {
+.product-grid--organic[product-grid-view="default"] .product-grid__item {
   height: fit-content;
 }
 
@@ -1075,11 +1065,11 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
   overflow: hidden;
 }
 
-[product-grid-view='zoom-out'] .product-grid__card {
+[product-grid-view="zoom-out"] .product-grid__card {
   row-gap: var(--padding-xs);
 }
 
-[product-grid-view='default'] {
+[product-grid-view="default"] {
   --product-grid-gap: 16px;
   --padding-block-start: 24px;
   --padding-block-end: 24px;
@@ -1087,11 +1077,11 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
   --padding-inline-end: 0px;
 }
 
-[product-grid-view='default'] .product-grid__item {
+[product-grid-view="default"] .product-grid__item {
   padding-block: 0;
 }
 
-[product-grid-view='mobile-single'],
+[product-grid-view="mobile-single"],
 .product-grid-mobile--large {
   @media screen and (max-width: 749px) {
     grid-template-columns: 1fr;
@@ -1104,29 +1094,24 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
   }
 }
 
-ul[product-grid-view='zoom-out'] .product-grid__card > * {
+ul[product-grid-view="zoom-out"] .product-grid__card > * {
   display: none;
 }
 
-ul[product-grid-view='zoom-out'] .product-grid__card .card-gallery {
+ul[product-grid-view="zoom-out"] .product-grid__card .card-gallery {
   display: block;
 }
 
-[product-grid-view='zoom-out']
-  .card-gallery
-  > :is(quick-add-component, .product-badges, slideshow-component > slideshow-controls) {
+[product-grid-view="zoom-out"] .card-gallery > :is(quick-add-component, .product-badges, slideshow-component > slideshow-controls) {
   display: none;
 }
 
-ul[product-grid-view='zoom-out'] .card-gallery > img {
+ul[product-grid-view="zoom-out"] .card-gallery > img {
   display: block;
 }
 
-[product-grid-view='zoom-out'] {
-  --product-grid-columns-desktop: repeat(
-    10,
-    minmax(clamp(50px, calc(100% - 9 * var(--product-grid-gap)) / 10, 80px), 1fr)
-  );
+[product-grid-view="zoom-out"] {
+  --product-grid-columns-desktop: repeat(10, minmax(clamp(50px, calc(100% - 9 * var(--product-grid-gap)) / 10, 80px), 1fr));
 }
 
 .product-grid-view-zoom-out--details {
@@ -1204,7 +1189,8 @@ ul[product-grid-view='zoom-out'] .card-gallery > img {
 
 results-list[initialized] {
   .product-grid__item {
-    transition: opacity var(--animation-speed) var(--animation-easing),
+    transition:
+      opacity var(--animation-speed) var(--animation-easing),
       transform var(--animation-speed) var(--animation-easing);
 
     @starting-style {
@@ -1374,7 +1360,8 @@ button.shopify-payment-button__button--unbranded {
   font-size: var(--font-paragraph--size);
   line-height: var(--font-paragraph--line-height);
   margin-block: 0;
-  transition: color var(--animation-speed) var(--animation-easing),
+  transition:
+    color var(--animation-speed) var(--animation-easing),
     box-shadow var(--animation-speed) var(--animation-easing),
     background-color var(--animation-speed) var(--animation-easing);
   cursor: pointer;
@@ -1426,8 +1413,8 @@ input:not(:placeholder-shown)::placeholder {
   display: none;
 }
 
-.button[aria-disabled='true'],
-.button-secondary[aria-disabled='true'],
+.button[aria-disabled="true"],
+.button-secondary[aria-disabled="true"],
 .button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -1520,8 +1507,8 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
   height: var(--icon-size-xs);
 }
 
-.show-more[data-expanded='true'] .show-more__label--more,
-.show-more[data-expanded='false'] .show-more__label--less {
+.show-more[data-expanded="true"] .show-more__label--more,
+.show-more[data-expanded="false"] .show-more__label--less {
   display: none;
 }
 
@@ -1536,8 +1523,7 @@ shopify-accelerated-checkout-cart {
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
 }
 
-.product-form-buttons:has(.add-to-cart-button.button-secondary)
-  :is(shopify-accelerated-checkout, shopify-accelerated-checkout-cart) {
+.product-form-buttons:has(.add-to-cart-button.button-secondary) :is(shopify-accelerated-checkout, shopify-accelerated-checkout-cart) {
   --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-secondary);
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
 }
@@ -1586,13 +1572,13 @@ summary .icon-plus :is(.horizontal, .vertical),
 
 details[open] > summary .icon-plus .horizontal,
 .details-open > summary .icon-plus .horizontal,
-.show-more:where([data-expanded='true']) .show-more__button .icon-plus .horizontal {
+.show-more:where([data-expanded="true"]) .show-more__button .icon-plus .horizontal {
   transform: rotate(90deg);
 }
 
 details[open] > summary .icon-plus .vertical,
 .details-open > summary .icon-plus .vertical,
-.show-more:where([data-expanded='true']) .show-more__button .icon-plus .vertical {
+.show-more:where([data-expanded="true"]) .show-more__button .icon-plus .vertical {
   transform: rotate(90deg);
   opacity: 0;
 }
@@ -1786,7 +1772,7 @@ zoom-dialog dialog {
   }
 
   .close-button:focus-visible::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: calc(-1 * var(--focus-outline-offset));
     border: var(--focus-outline-width) solid currentColor;
@@ -1857,7 +1843,7 @@ zoom-dialog dialog {
     aspect-ratio: var(--aspect-ratio);
   }
 
-  &:is([aria-selected='true']) {
+  &:is([aria-selected="true"]) {
     outline: var(--focus-outline-width) solid currentcolor;
     outline-offset: calc(var(--focus-outline-offset) / 2);
     border: var(--style-border-width) solid rgb(var(--color-border-rgb) / var(--media-border-opacity));
@@ -1927,16 +1913,14 @@ slideshow-slide .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui_
 }
 
 @media screen and (max-width: 749px) {
-  slideshow-component:has(:not(.mobile\:hidden) :is(.slideshow-controls__dots, .slideshow-controls__counter))
-    .shopify-model-viewer-ui__controls-area {
+  slideshow-component:has(:not(.mobile\:hidden) :is(.slideshow-controls__dots, .slideshow-controls__counter)) .shopify-model-viewer-ui__controls-area {
     /* Position the controls just above the counter */
     bottom: calc(var(--minimum-touch-target) + var(--padding-sm));
   }
 }
 
 @media screen and (min-width: 750px) {
-  slideshow-component:has(:not(.desktop\:hidden) :is(.slideshow-controls__dots, .slideshow-controls__counter))
-    .shopify-model-viewer-ui__controls-area {
+  slideshow-component:has(:not(.desktop\:hidden) :is(.slideshow-controls__dots, .slideshow-controls__counter)) .shopify-model-viewer-ui__controls-area {
     /* Position the controls just above the counter */
     bottom: calc(var(--minimum-touch-target) + var(--padding-sm));
   }
@@ -2085,27 +2069,15 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
     We also want the result to always be smaller than the input (pdp > everywhere else)
     by some scaling factor.
   */
-  --offset-scaled-width: calc(
-    var(--scaling-factor) * var(--offset-swatch-width) / var(--offset-swatch-height) * var(--offset-max-swatch-size)
-  );
-  --offset-scaled-height: calc(
-    var(--scaling-factor) * var(--offset-swatch-height) / var(--offset-swatch-width) * var(--offset-max-swatch-size)
-  );
+  --offset-scaled-width: calc(var(--scaling-factor) * var(--offset-swatch-width) / var(--offset-swatch-height) * var(--offset-max-swatch-size));
+  --offset-scaled-height: calc(var(--scaling-factor) * var(--offset-swatch-height) / var(--offset-swatch-width) * var(--offset-max-swatch-size));
   --offset-max-swatch-size: calc(var(--max-swatch-size) - var(--min-width));
 
   /* width = min(m + sU, (m + s * W'/H' * M'), M) */
-  --swatch-width: min(
-    calc(var(--min-width) + var(--scaling-factor) * var(--offset-swatch-width) * 1px),
-    calc(var(--min-width) + var(--offset-scaled-width)),
-    var(--max-swatch-size)
-  );
+  --swatch-width: min(calc(var(--min-width) + var(--scaling-factor) * var(--offset-swatch-width) * 1px), calc(var(--min-width) + var(--offset-scaled-width)), var(--max-swatch-size));
 
   /* height = min(m + sV, (m + s * H'/W' * M'), M) */
-  --swatch-height: min(
-    calc(var(--min-height) + var(--scaling-factor) * var(--offset-swatch-height) * 1px),
-    calc(var(--min-height) + var(--offset-scaled-height)),
-    var(--max-swatch-size)
-  );
+  --swatch-height: min(calc(var(--min-height) + var(--scaling-factor) * var(--offset-swatch-height) * 1px), calc(var(--min-height) + var(--offset-scaled-height)), var(--max-swatch-size));
 
   display: block;
   background: var(--swatch-background);
@@ -2235,7 +2207,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   transition: transform var(--animation-speed) var(--animation-easing);
 }
 
-.drawer[data-open='true'] {
+.drawer[data-open="true"] {
   transform: translateX(0);
 }
 
@@ -2274,7 +2246,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -2446,7 +2418,9 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   flex-grow: 1;
   text-align: left;
   border-radius: var(--style-border-radius-inputs);
-  transition: box-shadow var(--animation-speed) ease, background-color var(--animation-speed) ease;
+  transition:
+    box-shadow var(--animation-speed) ease,
+    background-color var(--animation-speed) ease;
   padding: var(--input-padding);
   box-shadow: var(--input-box-shadow);
   background-color: var(--color-input-background);
@@ -2483,7 +2457,9 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
-  transition: top var(--animation-speed) ease, font-size var(--animation-speed) ease;
+  transition:
+    top var(--animation-speed) ease,
+    font-size var(--animation-speed) ease;
 }
 
 /* RTE styles */
@@ -2644,7 +2620,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 }
 
 /* Add to cart button */
-.button[id^='BuyButtons-ProductSubmitButton-'] {
+.button[id^="BuyButtons-ProductSubmitButton-"] {
   position: relative;
   overflow: hidden;
 }
@@ -2758,7 +2734,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   transform: scale(0.9);
 }
 
-.quantity-selector input[type='number'] {
+.quantity-selector input[type="number"] {
   margin: 0;
   text-align: center;
   border: none;
@@ -2770,13 +2746,13 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 }
 
 /* Chrome, Safari, Edge, Opera */
-.quantity-selector input[type='number']::-webkit-inner-spin-button,
-.quantity-selector input[type='number']::-webkit-outer-spin-button {
+.quantity-selector input[type="number"]::-webkit-inner-spin-button,
+.quantity-selector input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
 }
 
 /* Firefox */
-.quantity-selector input[type='number'] {
+.quantity-selector input[type="number"] {
   appearance: textfield;
 }
 
@@ -3168,7 +3144,7 @@ fly-to-cart.fly-to-cart--sticky {
 }
 
 .top-shadow::before {
-  content: '';
+  content: "";
   box-shadow: 0 0 10px var(--color-shadow);
   position: absolute;
   z-index: var(--layer-lowest);
@@ -3183,7 +3159,7 @@ fly-to-cart.fly-to-cart--sticky {
 }
 
 .bottom-shadow::before {
-  content: '';
+  content: "";
   box-shadow: 0 0 10px var(--color-shadow);
   position: absolute;
   z-index: var(--layer-lowest);
@@ -3301,7 +3277,7 @@ slideshow-slides {
   }
 }
 
-slideshow-component[disabled='true'] slideshow-slides {
+slideshow-component[disabled="true"] slideshow-slides {
   overflow: hidden;
 }
 
@@ -3325,11 +3301,11 @@ slideshow-slide {
   overflow: hidden;
 
   slideshow-component[actioned] &,
-  &[aria-hidden='false'] {
+  &[aria-hidden="false"] {
     content-visibility: visible;
   }
 
-  slideshow-component slideshow-slide:not([aria-hidden='false']) {
+  slideshow-component slideshow-slide:not([aria-hidden="false"]) {
     content-visibility: hidden;
   }
 
@@ -3338,7 +3314,7 @@ slideshow-slide {
   }
 
   /* Make inactive slides appear clickable */
-  &[aria-hidden='true'] {
+  &[aria-hidden="true"] {
     cursor: pointer;
   }
 }
@@ -3353,11 +3329,7 @@ slideshow-slide.product-media-container--tallest {
 
 @media screen and (max-width: 749px) {
   /* Media gallery has a peeking slide on the right side always, and on the left side when the current slide is the last one */
-  .media-gallery--hint
-    :is(
-      slideshow-slide:has(+ slideshow-slide[aria-hidden='false']:last-of-type),
-      slideshow-slide[aria-hidden='false'] + slideshow-slide
-    ) {
+  .media-gallery--hint :is(slideshow-slide:has(+ slideshow-slide[aria-hidden="false"]:last-of-type), slideshow-slide[aria-hidden="false"] + slideshow-slide) {
     content-visibility: auto;
 
     slideshow-component[actioned] & {
@@ -3371,11 +3343,7 @@ slideshow-slide.product-media-container--tallest {
  * Card galleries preview the next or previous images on 'pointerenter', so we
  * try to kick load them beforehand (they are lazy loaded otherwise).
  */
-:is(.resource-list__carousel, .card-gallery)
-  :is(
-    slideshow-slide:has(+ slideshow-slide[aria-hidden='false']),
-    slideshow-slide[aria-hidden='false'] + slideshow-slide
-  ) {
+:is(.resource-list__carousel, .card-gallery) :is(slideshow-slide:has(+ slideshow-slide[aria-hidden="false"]), slideshow-slide[aria-hidden="false"] + slideshow-slide) {
   content-visibility: auto;
 
   slideshow-component[actioned] & {
@@ -3391,12 +3359,12 @@ slideshow-component:is([dragging], [transitioning], :hover) > slideshow-containe
   content-visibility: visible;
 }
 
-slideshow-slides[gutters*='start'] {
+slideshow-slides[gutters*="start"] {
   padding-inline-start: var(--gutter-slide-width, 0);
   scroll-padding-inline-start: var(--gutter-slide-width, 0);
 }
 
-slideshow-slides[gutters*='end'] {
+slideshow-slides[gutters*="end"] {
   padding-inline-end: var(--gutter-slide-width, 0);
 }
 
@@ -3422,23 +3390,23 @@ slideshow-container {
 
 @media screen and (min-width: 750px) {
   .media-gallery--carousel slideshow-component:has(slideshow-controls[thumbnails]) {
-    &:has(slideshow-controls[pagination-position='right']) {
+    &:has(slideshow-controls[pagination-position="right"]) {
       display: grid;
       grid-template:
-        'container controls' auto
-        'arrows controls' min-content
+        "container controls" auto
+        "arrows controls" min-content
         / 1fr auto;
     }
 
-    &:has(slideshow-controls[pagination-position='left']) {
+    &:has(slideshow-controls[pagination-position="left"]) {
       display: grid;
       grid-template:
-        'controls container' auto
-        'controls arrows' min-content
+        "controls container" auto
+        "controls arrows" min-content
         / auto 1fr;
     }
 
-    slideshow-controls[pagination-position='left'] {
+    slideshow-controls[pagination-position="left"] {
       order: -1;
     }
   }
@@ -3484,17 +3452,17 @@ slideshow-arrows {
   mix-blend-mode: difference;
   align-items: flex-end;
 
-  &[position='left'] {
+  &[position="left"] {
     justify-content: flex-start;
     padding-inline: var(--padding-xs);
   }
 
-  &[position='right'] {
+  &[position="right"] {
     justify-content: flex-end;
     padding-inline: var(--padding-xs);
   }
 
-  &[position='center'] {
+  &[position="center"] {
     justify-content: space-between;
     align-items: center;
   }
@@ -3505,7 +3473,7 @@ slideshow-arrows:has(.slideshow-control--shape-circle) {
   mix-blend-mode: normal;
 }
 
-slideshow-component[disabled='true'] slideshow-arrows {
+slideshow-component[disabled="true"] slideshow-arrows {
   display: none;
 }
 
@@ -3536,11 +3504,7 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   }
 }
 
-:not(.media-gallery--carousel)
-  > :is(slideshow-component:hover, slideshow-component:focus-within):not(:has(slideshow-controls:hover))
-  > slideshow-container
-  > slideshow-arrows
-  .slideshow-control {
+:not(.media-gallery--carousel) > :is(slideshow-component:hover, slideshow-component:focus-within):not(:has(slideshow-controls:hover)) > slideshow-container > slideshow-arrows .slideshow-control {
   animation: arrowsSlideIn var(--animation-speed) var(--animation-easing) forwards;
 }
 
@@ -3606,8 +3570,7 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 .section-resource-list.section--full-width product-card-link > .group-block,
 .section-carousel.section--full-width product-card-link > .group-block {
   @media screen and (max-width: 749px) {
-    padding-inline: max(var(--padding-xs), var(--padding-inline-start))
-      max(var(--padding-xs), var(--padding-inline-end));
+    padding-inline: max(var(--padding-xs), var(--padding-inline-start)) max(var(--padding-xs), var(--padding-inline-end));
   }
 }
 
@@ -3636,66 +3599,43 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 }
 
 .resource-list--grid {
-  display: grid;
-  gap: var(--resource-list-row-gap) var(--resource-list-column-gap);
-  grid-template-columns: var(--resource-list-columns-mobile);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--resource-list-row-gap);
+  width: 100%;
+}
 
-  @media screen and (min-width: 750px) {
-    grid-template-columns: var(--resource-list-columns);
-  }
-
-  @container resource-list (max-width: 449px) {
-    grid-template-columns: var(--resource-list-columns-mobile);
-  }
-
-  @container resource-list(min-width: 450px) and (max-width: 749px) {
-    --resource-list-columns-per-row: 3;
-
-    grid-template-columns: repeat(var(--resource-list-columns-per-row), 1fr);
-
-    /* Avoid orphan in last row when there are 4, 7, or 10 items */
-    &:has(.resource-list__item:first-child:nth-last-child(3n + 1)),
-    /* Clean two full rows when there are 8 items */
-    &:has(.resource-list__item:first-child:nth-last-child(8n)) {
-      --resource-list-columns-per-row: 4;
-    }
-  }
-
-  @container resource-list (min-width: 750px) {
-    grid-template-columns: repeat(var(--resource-list-columns-per-row), 1fr);
-
-    &:has(.resource-list__item:first-child:nth-last-child(n + 9)) {
-      --resource-list-columns-per-row: 5;
-    }
-
-    &:has(.resource-list__item:first-child:nth-last-child(n + 7):nth-last-child(-n + 8)) {
-      --resource-list-columns-per-row: 4;
-    }
-
-    &:has(.resource-list__item:first-child:nth-last-child(6)) {
-      --resource-list-columns-per-row: 3;
-    }
-
-    &:has(.resource-list__item:first-child:nth-last-child(5)) {
-      --resource-list-columns-per-row: 5;
-    }
-
-    &:has(.resource-list__item:first-child:nth-last-child(-n + 4)) {
-      --resource-list-columns-per-row: 4;
-    }
-  }
-
-  @container resource-list (min-width: 1200px) {
-    &:has(.resource-list__item:first-child:nth-last-child(6)) {
-      --resource-list-columns-per-row: 6;
-    }
-  }
+.resource-list__blank-item {
+  width: 325px;
+  height: 325px;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  flex-shrink: 0;
 }
 
 .resource-list__item {
-  height: 100%;
-  color: var(--color-foreground);
-  text-decoration: none;
+  width: 325px;
+  height: 325px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 749px) {
+  .resource-list__blank-item,
+  .resource-list__item {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
+}
+
+@container resource-list (max-width: 449px) {
+  .resource-list__blank-item,
+  .resource-list__item {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  }
 }
 
 .resource-list__carousel {
@@ -3723,10 +3663,7 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 
 @container resource-list-carousel (min-width: 750px) {
   .resource-list__carousel .resource-list__slide {
-    --section-slide-width: calc(
-      (100% - (var(--resource-list-column-gap) * (var(--column-count) - 1)) - var(--peek-next-slide-size)) /
-        var(--column-count)
-    );
+    --section-slide-width: calc((100% - (var(--resource-list-column-gap) * (var(--column-count) - 1)) - var(--peek-next-slide-size)) / var(--column-count));
     --fallback-slide-width: clamp(150px, var(--mobile-card-size, 60cqw), var(--slide-width-max));
     --slide-width: var(--section-slide-width, var(--fallback-slide-width));
   }
@@ -3822,7 +3759,8 @@ accordion-custom {
       overflow-y: clip;
       opacity: 0;
       interpolate-size: allow-keywords;
-      transition: content-visibility var(--animation-speed-slow) allow-discrete,
+      transition:
+        content-visibility var(--animation-speed-slow) allow-discrete,
         padding-block var(--animation-speed-slow) var(--animation-easing),
         opacity var(--animation-speed-slow) var(--animation-easing),
         block-size var(--animation-speed-slow) var(--animation-easing);
@@ -3861,13 +3799,13 @@ accordion-custom {
   }
 }
 
-accordion-custom[data-disable-on-mobile='true'] summary {
+accordion-custom[data-disable-on-mobile="true"] summary {
   @media screen and (max-width: 749px) {
     cursor: auto;
   }
 }
 
-accordion-custom[data-disable-on-desktop='true'] summary {
+accordion-custom[data-disable-on-desktop="true"] summary {
   @media screen and (min-width: 750px) {
     cursor: auto;
   }
@@ -3891,12 +3829,7 @@ text-component {
     opacity: 0;
     transition: opacity var(--animation-speed-slow) var(--animation-easing);
     pointer-events: none;
-    background-image: linear-gradient(
-      -85deg,
-      var(--shimmer-text-color) 10%,
-      var(--shimmer-color-light) 50%,
-      var(--shimmer-text-color) 90%
-    );
+    background-image: linear-gradient(-85deg, var(--shimmer-text-color) 10%, var(--shimmer-color-light) 50%, var(--shimmer-text-color) 90%);
     background-clip: text;
     background-size: 200% 100%;
     background-position: 100% 0;
@@ -3966,7 +3899,7 @@ text-component {
 }
 
 /* Product card title truncation - applied only to zoom-out view */
-[product-grid-view='zoom-out'] :is(.product-card, .product-grid__card) :is(h4, .h4) {
+[product-grid-view="zoom-out"] :is(.product-card, .product-grid__card) :is(h4, .h4) {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -3992,7 +3925,8 @@ text-component {
 .predictive-search-results__card:hover {
   position: relative;
   z-index: var(--layer-raised);
-  transition: transform var(--hover-transition-duration) var(--hover-transition-timing),
+  transition:
+    transform var(--hover-transition-duration) var(--hover-transition-timing),
     box-shadow var(--hover-transition-duration) var(--hover-transition-timing);
 }
 
@@ -4036,4 +3970,9 @@ text-component {
   .h6.h6 select {
     font-size: max(1rem, 100%);
   }
+}
+
+.button_secondary {
+  --button-color: var(--color, var(--color-button-primary-background));
+  --button-text-color: var(--color, var(--color-button-primary-foreground));
 }

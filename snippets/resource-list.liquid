@@ -42,6 +42,7 @@
   assign slide_count = slide_count | default: 0
   assign content_type = content_type | default: 'collections'
   assign test_id = test_id | default: ''
+  assign featured_heading = featured_heading | default: ''
 
   unless settings != empty
     echo '<!-- Error: settings parameter required for resource-list snippet -->'
@@ -113,6 +114,10 @@
 >
   {% case settings.layout_type %}
     {% when 'grid' %}
+      <!-- Blank white div at the beginning -->
+      <div class="resource-list__blank-item">
+        <h1>{{ featured_heading }}</h1>
+      </div>
       {{ list_items }}
 
     {% when 'bento' %}

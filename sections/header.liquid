@@ -743,6 +743,14 @@
   .header-menu .menu-list__submenu[data-active] {
     content-visibility: visible;
   }
+
+  .menu-list__link-title {
+    font-weight: 300 !important;
+
+    &:hover {
+      -webkit-text-stroke: 0.09px black;
+    }
+  }
 {% endstylesheet %}
 
 {% unless request.design_mode %}
