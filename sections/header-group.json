@@ -80,9 +80,7 @@
           "blocks": {}
         }
       },
-      "custom_css": [
-        "header {text-transform: uppercase;}"
-      ],
+      "custom_css": [],
       "settings": {
         "logo_position": "center",
         "menu_position": "left",
