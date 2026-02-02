@@ -35,11 +35,16 @@
               {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
             {% # theme-check-enable UniqueStaticBlockId %}
           </div>
-
           {% unless forloop.last %}
             <!--@list/split-->
           {% endunless %}
         {% endfor %}
+        <!-- Pil-boks til højre for produkterne -->
+        <a class="product-arrow-box" href="{{ section.settings.collection.url }}" title="Se flere produkter i denne kategori">
+          <svg width="25" height="25" viewBox="0 0 115 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.53564 3.53564L107.536 107.536L3.53564 211.536" stroke="black" stroke-width="10"/>
+          </svg>
+        </a>
       {% endpaginate %}
     {% else %}
       {% for i in (1..max_items) %}

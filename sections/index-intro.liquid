@@ -1,0 +1,28 @@
+{% schema %}
+{
+  "name": "Brugerdefineret HTML",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "custom_html",
+      "label": "Indsæt din HTML her"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brugerdefineret HTML"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="custom-html-section">
+  {{ section.settings.custom_html }}
+<h1>Hej med dig!</h1>
+</div>
+
+<style>
+h1 {
+color: red;
+  }
+</style>

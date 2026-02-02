@@ -1,52 +1,121 @@
-/* Produktkort hover-effekt: vis billede 2 på hover */
-/* Fjernet hover-effekt på produktkort – kun ét billede vises */
-/* Sikrer at billeder i produktkort aldrig bliver strukket */
 .product-card img,
-.card-gallery img,
-.product-card picture,
-.card-gallery picture {
+.product-card svg {
   object-fit: cover !important;
   width: 100%;
   height: 100%;
-  aspect-ratio: 1/1;
+  max-width: 100%;
+  max-height: 100%;
   display: block;
 }
-/* Force remove border from product cards and card-gallery */
-.card-gallery,
-.product-card {
+.product-arrow-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  aspect-ratio: 1/1;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0px 50px;
+  place-self: center;
+  box-sizing: border-box;
+  transition:
+    border 0.2s,
+    transform 0.2s;
+}
+
+.product-arrow-box:hover {
+  transform: scale(1.05);
+  border: 2px solid #000;
+}
+
+.product-arrow-box svg {
+  margin-left: 2px;
+}
+
+.product-arrow-box svg path {
+  transition: 0.2s all;
+}
+
+.product-arrow-box:hover svg path {
+  stroke-width: 15;
+  transition: 0.2s all;
+}
+
+.card-gallery__indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.card-gallery__indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  display: block;
+  transition: opacity 0.3s;
+}
+.card-gallery__indicator--first {
+  opacity: 1;
+}
+.card-gallery__indicator--second {
+  opacity: 0.75;
+}
+.card-gallery__hover-fade-wrapper:hover .card-gallery__indicator--first {
+  opacity: 0.75;
+}
+.card-gallery__hover-fade-wrapper:hover .card-gallery__indicator--second {
+  opacity: 1;
+}
+.card-gallery__hover-fade-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--gallery-aspect-ratio, 1/1);
+}
+.card-gallery__fade-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+.card-gallery__fade-image--primary {
+  opacity: 1;
+  z-index: 1;
+}
+.card-gallery__fade-image--secondary {
+  z-index: 2;
+}
+.card-gallery__hover-fade-wrapper:hover .card-gallery__fade-image--primary {
+  opacity: 0;
+}
+.card-gallery__hover-fade-wrapper:hover .card-gallery__fade-image--secondary {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Tving fjernelse af border og skygge på produktkort uanset utility-klasser */
+.product-card,
+.product-card *,
+.product-card__content,
+.product-card.border-style,
+.product-card .border-style,
+.product-card__content.border-style {
   border: none !important;
   box-shadow: none !important;
-}
-/* Produktkort hover-effekt: vis billede 2 på hover */
-/* Ingen hover-effekt på produktkort – kun ét billede vises */
-* {
-  box-sizing: border-box;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
 }
 
 body {
   margin: 0;
-}
-
-.card-gallery {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Ensure images/media cover the card area */
-.card-gallery .slideshow-slides img,
-.card-gallery .slideshow-slides picture,
-.card-gallery .slideshow-slides video,
-.card-gallery .slideshow-slides deferred-media,
-.card-gallery .slideshow-slides product-model {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
 }
 
 img {
@@ -81,37 +150,32 @@ select {
 /* Editorial layout */
 .resource-list:not(.hidden--desktop) .collection-card--flexible-aspect-ratio,
 .resource-list:not(.hidden--desktop) .blog-post-card--flexible-aspect-ratio {
-  .collection-card__image,
-  .featured-blog-posts-card__image,
-  .blog-placeholder-svg {
-    aspect-ratio: 99;
+  .product-card__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    display: block;
+    backface-visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
-  .collection-card__inner,
-  .featured-blog-posts-card__inner {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  .product-card__image--primary {
+    opacity: 1;
+    z-index: 1;
   }
-
-  .collection-card__content,
-  .featured-blog-posts-card__content {
-    flex-shrink: 0;
+  .product-card__image--secondary {
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
   }
-
-  &:not(.collection-card--image-bg) .collection-card__content,
-  .featured-blog-posts-card__content {
-    height: auto;
+  .product-card__image-wrapper:hover .product-card__image--primary {
+    opacity: 0;
   }
-}
-
-/* Featured heading inside the resource-list blank item
-   These rules were moved below under the `Kollektions overskrift` section
-   so all blank-item styling lives together in one place. */
-
-.collection-card__inner,
-.featured-blog-posts-card__inner {
+  .product-card__image-wrapper:hover .product-card__image--secondary {
+    opacity: 1;
+    pointer-events: auto;
+  }
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -246,54 +310,32 @@ select {
   .predictive-search-results__card .product-card:hover,
   .predictive-search-results__card .collection-card:hover,
   .predictive-search-results__card .resource-card:hover,
-  .header .product-card:hover,
-  .header .collection-card:hover,
-  .header .resource-card:hover,
-  .header-drawer .product-card:hover,
-  .header-drawer .collection-card:hover,
-  .header-drawer .resource-card:hover {
-    transform: none;
-    box-shadow: none;
+  .product-card__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    backface-visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
-
-dialog {
-  /* the ::backdrop inherits from the originating element, custom properties must be set on the dialog element */
-  --backdrop-color-rgb: var(--color-shadow-rgb);
-
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-.wrap-text {
-  overflow-wrap: break-word;
-  word-break: break-word;
-  hyphens: auto;
-}
-
-p:empty {
-  display: none;
-}
-
-:first-child:is(p, h1, h2, h3, h4, h5, h6),
-:first-child:empty + :where(p, h1, h2, h3, h4, h5, h6) {
-  margin-block-start: 0;
-}
-
-/* Remove bottom margin from last text item, or previous to last if the last is empty */
-:last-child:is(p, h1, h2, h3, h4, h5, h6),
-:where(p, h1, h2, h3, h4, h5, h6):nth-child(2):has(+ :last-child:empty) {
-  margin-block-end: 0;
+  .product-card__image--primary {
+    opacity: 1;
+    z-index: 1;
+  }
+  .product-card__image--secondary {
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .product-card__image-wrapper:hover .product-card__image--primary {
+    opacity: 0;
+  }
+  .product-card__image-wrapper:hover .product-card__image--secondary {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 /* view transitions */
@@ -678,28 +720,6 @@ p:empty {
 /* Safer opacity-based swap for slideshow children without removing them from flow */
 .card-gallery slideshow-slides {
   position: relative;
-}
-
-.card-gallery slideshow-slides > slideshow-slide {
-  transition: opacity 220ms ease-in-out;
-  opacity: 0;
-}
-
-.card-gallery slideshow-slides > slideshow-slide:first-of-type {
-  opacity: 1;
-}
-
-.card-gallery:hover slideshow-slides > slideshow-slide:first-of-type {
-  opacity: 0;
-}
-
-.card-gallery:hover slideshow-slides > slideshow-slide:nth-of-type(2) {
-  opacity: 1;
-}
-
-/* Ensure any further slides remain hidden */
-.card-gallery slideshow-slides > slideshow-slide:nth-of-type(n + 3) {
-  opacity: 0;
 }
 
 .justify-center {
@@ -3339,10 +3359,6 @@ slideshow-slide {
     content-visibility: visible;
   }
 
-  slideshow-component slideshow-slide:not([aria-hidden="false"]) {
-    content-visibility: hidden;
-  }
-
   &[hidden]:not([reveal]) {
     display: none;
   }
@@ -3640,8 +3656,6 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   @container resource-list (max-width: 749px) {
     --resource-list-mobile-gap-max: -1px;
   }
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 }
 
 .resource-list--grid {
@@ -3663,6 +3677,8 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   display: flex;
   align-items: center;
   background-color: white;
+  border: 1px solid black !important;
+  border-left: none !important;
 }
 
 /* Kollektions overskrift H1 styling */
@@ -3694,6 +3710,12 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   box-sizing: border-box;
   gap: -1;
   position: relative;
+}
+
+.product-card img {
+  object-fit: fit;
+  border: 1px solid black !important;
+  border-left: none !important;
 }
 
 /* Fjernet: cirkel-indikatorer på produktkort */

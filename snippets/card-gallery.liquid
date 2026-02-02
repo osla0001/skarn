@@ -80,24 +80,40 @@
   {{ block.shopify_attributes }}
 >
   {%- if product.media.size > 0 or product.images.size > 0 -%}
-    {% assign featured_image = product.featured_media | default: product.images[0] %}
-    {% assign second_image = product.media[1] | default: product.images[1] %}
-    <a
-      class="contents"
-      ref="cardGalleryLink"
-      href="{{ product.selected_or_first_available_variant.url }}"
-      aria-label="{{- product.title -}}"
-    >
-      {% if featured_image %}
-        {% render 'product-media', media: featured_image, sizes: image_sizes, loading: 'eager', preview_image_only: true, class: 'product-media-container' %}
-      {% endif %}
-    </a>
+    {% assign images = product.media | where: 'media_type', 'image' %}
+    {% if images.size == 0 %}
+      {% assign images = product.images %}
+    {% endif %}
+    {% assign first_image = images[0] %}
+    {% assign second_image = images[1] %}
+    {% if images.size > 1 %}
+      <div class="card-gallery__hover-fade-wrapper">
+        {% if first_image %}
+          <div class="card-gallery__fade-image card-gallery__fade-image--primary">
+            {% render 'product-media', media: first_image, sizes: image_sizes, loading: 'eager', preview_image_only: true, class: 'product-media-container' %}
+          </div>
+        {% endif %}
+        {% if second_image %}
+          <div class="card-gallery__fade-image card-gallery__fade-image--secondary">
+            {% render 'product-media', media: second_image, sizes: image_sizes, loading: 'lazy', preview_image_only: true, class: 'product-media-container' %}
+          </div>
+        {% endif %}
+        <div class="card-gallery__indicators">
+          <span class="card-gallery__indicator card-gallery__indicator--first"></span>
+          <span class="card-gallery__indicator card-gallery__indicator--second"></span>
+        </div>
+      </div>
+    {% elsif first_image %}
+      <div class="card-gallery__fade-image card-gallery__fade-image--primary" style="position:relative;opacity:1;z-index:1;">
+        {% render 'product-media', media: first_image, sizes: image_sizes, loading: 'eager', preview_image_only: true, class: 'product-media-container' %}
+      </div>
+    {% endif %}
   {% elsif product != blank and product.media.size == 0 %}
     <product-title class="product-card-gallery__title-placeholder">
       <a
         class="contents"
         ref="productTitleLink"
-        href="{{ product.selected_or_first_available_variant.url }}"
+        href="{{ product.selected_or_first_available_variant.url}}"
         aria-hidden="true"
       >
         <span class="title-text">{{- product.title -}}</span>
