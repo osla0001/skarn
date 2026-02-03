@@ -3821,7 +3821,7 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 /* Kollektions overskrift H1 styling */
 .resource-list__blank-item h1 {
   /* H1 font-size scales proportionally with product card size - targets ~100px at max size */
-  font-size: clamp(60px, 6vw, 100px);
+  font-size: clamp(60px, 6vw, 100px) !important;
   line-height: 1.1;
   font-weight: 100 !important;
   color: var(--featured-heading-color, var(--color-foreground));
