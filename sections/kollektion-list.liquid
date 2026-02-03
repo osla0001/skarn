@@ -1,0 +1,82 @@
+{% comment %}
+  Section: Kollektion-list
+  Bruges til at vise årti-kollektioner som links med h2 i hvert kort og en pil til sidst.
+{% endcomment %}
+
+<section class="resource-list--grid">
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.link }}" class="resource-list__item kollektion-list-link">
+      <h2>{{ block.settings.title }}</h2>
+    </a>
+  {% endfor %}
+  <a class="product-arrow-box resource-list__item" href="{{ section.settings.arrow_link }}" title="Se flere produkter i denne kategori"><h2></h2>
+    <svg width="25" height="25" viewBox="0 0 115 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3.53564 3.53564L107.536 107.536L3.53564 211.536" stroke="black" stroke-width="10"/>
+    </svg>
+  </a>
+</section>
+
+{% schema %}
+{
+  "name": "Kollektion-list",
+  "settings": [
+    {
+      "type": "text",
+      "id": "arrow_link",
+      "label": "Link til pil (fx udsalg)",
+      "default": "/collections/udsalg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "kollektion",
+      "name": "Kollektion kort",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Årti titel",
+          "default": "Årti"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link til kollektion",
+          "default": "/collections/all"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Kollektion-list",
+      "category": "Kollektionsrækker"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.kollektion-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+.kollektion-list-link:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateY(-4px) scale(1.03);
+}
+.resource-list__item h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+</style>
