@@ -1,0 +1,61 @@
+{% comment %}
+  Section: Introduktion (section_TidpBp)
+  Denne fil er forbundet til section_TidpBp på forsiden.
+{% endcomment %}
+
+<section class="section-introduktion">
+<div class="intro_1">
+  <h1>Velkommen til dit digitale klædeskab</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Vestibulum quis blandit nibh. Morbi ut nisi et turpis tristique ultricies facilisis et est. 
+
+In convallis nulla at semper posuere. Phasellus hendrerit tortor vel velit elementum sodales. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. 
+
+Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Donec blandit lectus eget sem facilisis cursus.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac metus id porttitor. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+  </div>
+  <div class="black"></div>
+  <div class="button">
+    <button class="secondary-button">{{ section.settings.secondary_button_label | default: 'Sekundær knap' }}</button>
+  </div>
+
+{% schema %}
+{
+  "name": "Introduktion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "secondary_button_label",
+      "label": "Sekundær knap tekst",
+      "default": "Sekundær knap"
+    }
+  ]
+}
+{% endschema %}
+</section>
+
+<style>
+.section-introduktion {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  padding: 0 1rem;
+  max-width: 1290px;
+    margin: 0 auto;
+}
+
+p{
+  color: #3e4753ff;
+}
+
+.black {
+  background-color: #000;
+  width: 1px;
+  height: 100%;
+}
+
+.intro_1{}
+</style>

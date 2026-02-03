@@ -1,3 +1,16 @@
+/* Fjern al styling fra knapper med .button-unstyled */
+.button-unstyled {
+  all: unset;
+  background: none !important;
+  color: inherit !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font: inherit !important;
+  cursor: pointer;
+}
 .product-card img,
 .product-card svg {
   object-fit: cover !important;
@@ -23,6 +36,126 @@
   transition:
     border 0.2s,
     transform 0.2s;
+}
+
+@font-face {
+  font-family: "ZT Nature Thin";
+  src: url("https://cdn.shopify.com/s/files/1/0994/5386/2229/files/ZTNature-Thin.woff?v=1769515351") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZT Nature Light";
+  src: url("https://cdn.shopify.com/s/files/1/0994/5386/2229/files/ZTNature-Light.woff?v=1769516368") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZT Nature Regular";
+  src: url("https://cdn.shopify.com/s/files/1/0994/5386/2229/files/ZTNature-Regular.woff?v=1769512106") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZT Nature Bold";
+  src: url("https://cdn.shopify.com/s/files/1/0994/5386/2229/files/ZTNature-Bold.woff?v=1769512107") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZT Nature Italic";
+  src: url("https://cdn.shopify.com/s/files/1/0994/5386/2229/files/ZTNature-Italic.woff?v=1769512106") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ZT Nature Italic Bold";
+  src: url("https://cdn.shopify.com/s/files/1/0994/5386/2229/files/ZTNature-BoldItalic.woff?v=1769512106") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "ZT Nature Thin", sans-serif !important;
+  font-weight: 100 !important;
+  text-transform: uppercase !important;
+}
+
+h1 {
+  font-size: 3rem !important;
+}
+
+/* Body & UI elements */
+p,
+span,
+div,
+ul,
+ol,
+li,
+a,
+button,
+input,
+select,
+option,
+label,
+legend,
+textarea,
+small {
+  font-family: "ZT Nature Thin", sans-serif !important;
+  font-weight: 100 !important;
+  font-size: 16px !important;
+}
+
+marquee-component {
+  background: black !important;
+}
+
+marquee-component p {
+  color: white !important;
+}
+
+.marquee__dot {
+  margin: 0px 2px !important;
+}
+
+.button-secondary {
+  background-color: transparent;
+  outline: 1px solid black !important;
+  color: black;
+  padding: 5px 10px;
+  margin: 0;
+  border-radius: 0;
+  height: fit-content;
+  background: none !important;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.button-secondary:hover {
+  background-color: transparent;
+  outline: 2px solid black !important;
+  margin: 0;
+  -webkit-text-stroke: 0.09px black;
 }
 
 .product-arrow-box:hover {
@@ -1470,7 +1603,7 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
 
 .button-secondary {
   --button-color: var(--color-secondary-button-text);
-  --button-background-color: var(--color-secondary-button-background);
+  --button-background-color: transparent !important;
   --button-border-color: var(--color-secondary-button-border);
   --button-border-width: var(--style-border-width-secondary);
 }
