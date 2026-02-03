@@ -27,9 +27,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac m
   </div>
   <div class="black"></div>
 <div class="intro_2">
-  <div class="intro-grid">
-    
-  </div>
+  {% if section.settings.collection != blank %}
+    {% assign intro_collection = collections[section.settings.collection] %}
+    {% if intro_collection and intro_collection.products_count > 0 %}
+      <div class="intro-grid">
+        {% for product in intro_collection.products limit: 3 %}
+          <div class="intro-product-card">
+            <div class="intro-product-image-wrapper">
+              <img class="intro-product-image" src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}">
+            </div>
+            <div class="intro-product-title">{{ product.title }}</div>
+            <div class="intro-product-price">{{ product.price | money }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Ingen produkter fundet.</p>
+    {% endif %}
+  {% else %}
+    <p>Vælg en kollektion i theme editoren.</p>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -47,6 +64,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac m
       "id": "secondary_button_link",
       "label": "Sekundær knap link",
       "default": "/collections/all"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Kollektion (fx Selektion)"
     }
   ]
 }
