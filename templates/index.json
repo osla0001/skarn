@@ -88,10 +88,15 @@
               "blocks": {}
             }
           },
-          "block_order": ["logo_VbbBBx", "button_BpDGiH"]
+          "block_order": [
+            "logo_VbbBBx",
+            "button_BpDGiH"
+          ]
         }
       },
-      "block_order": ["group_zePjiU"],
+      "block_order": [
+        "group_zePjiU"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -165,7 +170,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_4KfqK6"],
+      "block_order": [
+        "text_4KfqK6"
+      ],
       "name": "Fragt banner",
       "settings": {
         "movement_direction": "normal",
@@ -286,7 +293,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_YFtzcL", "product_list_button_MWeP9V"]
+          "block_order": [
+            "product_list_text_YFtzcL",
+            "product_list_button_MWeP9V"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -323,7 +333,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_677WP3"]
+          "block_order": [
+            "product_card_gallery_677WP3"
+          ]
         }
       },
       "name": "Nyeste selektion",
@@ -459,7 +471,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_EMaHaV", "product_list_button_7fKbUP"]
+          "block_order": [
+            "product_list_text_EMaHaV",
+            "product_list_button_7fKbUP"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -478,7 +493,37 @@
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
-          "blocks": {}
+          "blocks": {
+            "text_tfRj8W": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>Nexus</h2>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "center",
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_tfRj8W"
+          ]
         }
       },
       "name": "Årti sektion",
@@ -583,7 +628,11 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_mCTcUa", "text_KdxEFV", "email_signup_W7KCbh"],
+      "block_order": [
+        "text_mCTcUa",
+        "text_KdxEFV",
+        "email_signup_W7KCbh"
+      ],
       "name": "t:names.email_signup",
       "settings": {
         "content_direction": "column",
@@ -693,7 +742,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_JXRpxN", "product_list_button_jDXF3f"]
+          "block_order": [
+            "product_list_text_JXRpxN",
+            "product_list_button_jDXF3f"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -730,7 +782,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_F4rRLc"]
+          "block_order": [
+            "product_card_gallery_F4rRLc"
+          ]
         }
       },
       "name": "Udsalgs sektion",
@@ -756,5 +810,15 @@
       }
     }
   },
-  "order": ["hero_jVaWmY", "section_TidpBp", "marquee_AEpFgk", "section_XTg8pN", "product_list_fa6P9H", "section_di9kKX", "product_list_9jHadJ", "section_Kb4cmG", "product_list_P79JKH"]
+  "order": [
+    "hero_jVaWmY",
+    "section_TidpBp",
+    "marquee_AEpFgk",
+    "section_XTg8pN",
+    "product_list_fa6P9H",
+    "section_di9kKX",
+    "product_list_9jHadJ",
+    "section_Kb4cmG",
+    "product_list_P79JKH"
+  ]
 }
