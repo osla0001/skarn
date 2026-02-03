@@ -135,7 +135,8 @@
       "name": "Introduktion",
       "settings": {
         "secondary_button_label": "Besøg butik →",
-        "secondary_button_link": "shopify://collections/all"
+        "secondary_button_link": "shopify://collections/all",
+        "collection": "selektion"
       }
     },
     "marquee_AEpFgk": {
