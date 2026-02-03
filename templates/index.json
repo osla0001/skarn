@@ -134,6 +134,8 @@
       "type": "introduktion",
       "name": "Introduktion",
       "settings": {
+        "intro_heading": "Velkommen til dit digitale klædeskab",
+        "intro_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Vestibulum quis blandit nibh. Morbi ut nisi et turpis tristique ultricies facilisis et est.\n\nIn convallis nulla at semper posuere. Phasellus hendrerit tortor vel velit elementum sodales. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae.\n\nCurabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Donec blandit lectus eget sem facilisis cursus.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac metus id porttitor. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "secondary_button_label": "Besøg butik →",
         "secondary_button_link": "shopify://collections/all",
         "collection": "selektion"
@@ -420,6 +422,131 @@
         "padding-block-end": 0
       }
     },
+    "custom_liquid_VwxDnc": {
+      "type": "custom-liquid",
+      "name": "Årti-kollektion",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "section_Kb4cmG": {
+      "type": "section",
+      "blocks": {
+        "text_mCTcUa": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>Tilmeld dig vores mails</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_KdxEFV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vær den første til at få besked om nye kollektioner og særlige tilbud. </p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "email_signup_W7KCbh": {
+          "type": "email-signup",
+          "settings": {
+            "width": "custom",
+            "custom_width": 50,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "heading": "",
+            "heading_preset": "h3",
+            "border_style": "all",
+            "border_width": 1,
+            "border_radius": 100,
+            "input_type_preset": "paragraph",
+            "style_class": "button-unstyled",
+            "display_type": "arrow",
+            "label": "Tilmeld",
+            "integrated_button": true,
+            "button_type_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_mCTcUa",
+        "text_KdxEFV",
+        "email_signup_W7KCbh"
+      ],
+      "name": "t:names.email_signup",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-2",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
     "product_list_P79JKH": {
       "type": "product-list",
       "blocks": {
@@ -576,6 +703,8 @@
     "product_list_fa6P9H",
     "section_di9kKX",
     "section_wVMj4V",
+    "custom_liquid_VwxDnc",
+    "section_Kb4cmG",
     "product_list_P79JKH"
   ]
 }
