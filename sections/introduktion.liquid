@@ -5,18 +5,8 @@
 
 <section class="section-introduktion">
 <div class="intro_1">
-  <h1>Velkommen til dit digitale klædeskab</h1>
-    <p class="tekst">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Vestibulum quis blandit nibh. Morbi ut nisi et turpis tristique ultricies facilisis et est. 
-
-In convallis nulla at semper posuere. Phasellus hendrerit tortor vel velit elementum sodales. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. 
-
-Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Donec blandit lectus eget sem facilisis cursus.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac metus id porttitor. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </p>
+  <h1>{{ section.settings.intro_heading }}</h1>
+  <p class="tekst">{{ section.settings.intro_text }}</p>
     <div class="button-container">
         <button class="button-secondary">
       <a href="{{ section.settings.secondary_button_link }}">
@@ -53,6 +43,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac m
 {
   "name": "Introduktion",
   "settings": [
+        {
+          "type": "text",
+          "id": "intro_heading",
+          "label": "Overskrift (h1)",
+          "default": "Velkommen til dit digitale klædeskab"
+        },
+        {
+          "type": "textarea",
+          "id": "intro_text",
+          "label": "Intro tekst (p)",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Vestibulum quis blandit nibh. Morbi ut nisi et turpis tristique ultricies facilisis et est.\n\nIn convallis nulla at semper posuere. Phasellus hendrerit tortor vel velit elementum sodales. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae.\n\nCurabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Donec blandit lectus eget sem facilisis cursus.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac metus id porttitor. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
     {
       "type": "text",
       "id": "secondary_button_label",
