@@ -1,0 +1,78 @@
+<section class="aarti_collection">
+    <div class="aarti-list--grid">
+        <div class="resource-list__blank-item">
+        <h1>SHOP ÅRTI</h1>
+        </div>
+        <a href="/collections/nexus" class="resource-list__item aarti-kollektion-link">
+          <h2>NEXUS</h2>
+        </a>
+        <a href="/collections/y2k" class="resource-list__item aarti-kollektion-link">
+          <h2>Y2K</h2>
+        </a>
+        <a href="/collections/90s" class="resource-list__item aarti-kollektion-link">
+          <h2>90s</h2>
+        </a>
+        <a href="/collections/80s" class="resource-list__item aarti-kollektion-link">
+          <h2>80s</h2>
+        </a>
+        <a href="/collections/70s" class="resource-list__item aarti-kollektion-link">
+          <h2>70s</h2>
+        </a>
+        <a href="/collections/60s" class="resource-list__item aarti-kollektion-link">
+          <h2>60s</h2>
+        </a>
+    </div>
+
+</section>
+
+<style>
+.aarti_collection {
+--resource-list-mobile-gap-max: 9999px;
+  --resource-list-column-gap: -1px;
+  --resource-card-size: clamp(220px, 22vw, 358px);
+
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  scrollbar-width: none;
+}
+
+  @media screen and (max-width: 749px) {
+    --resource-list-mobile-gap-max: -1px;
+  }
+
+  @container resource-list (max-width: 749px) {
+    --resource-list-mobile-gap-max: -1px;
+  }
+
+.aarti-list--grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--resource-list-column-gap);
+  width: fit-content;
+  align-items: start;
+}
+
+.aarti_collection .aarti-kollektion-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
+}
+
+.aarti_collection .aarti-kollektion-link h2 {
+  font-size: clamp(40px, 6vw, 40px) !important;
+  text-align: center;
+  text-transform: capitalize !important;
+}
+
+.aarti_collection .aarti-kollektion-link:hover {
+  box-shadow: inset 0 0 0 1px black;
+    transition: box-shadow 0.2s;
+}
+</style>
