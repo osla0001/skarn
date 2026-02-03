@@ -125,7 +125,7 @@ small {
 
 marquee-component {
   background: black !important;
-  padding: 1rem 0 !important;
+  padding: 0.5rem 0 !important;
   border-top: 1rem solid white !important;
   border-bottom: 1rem solid white !important;
   outline: 1px solid black !important;

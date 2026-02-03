@@ -25,29 +25,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac m
     </button>
     </div>
   </div>
-  <div class="black"></div>
-<div class="intro_2">
-  {% if section.settings.collection != blank %}
-    {% assign intro_collection = collections[section.settings.collection] %}
-    {% if intro_collection and intro_collection.products_count > 0 %}
-      <div class="intro-grid">
-        {% for product in intro_collection.products limit: 3 %}
-          <div class="intro-product-card">
-            <div class="intro-product-image-wrapper">
-              <img class="intro-product-image" src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}">
-            </div>
-            <div class="intro-product-title">{{ product.title }}</div>
-            <div class="intro-product-price">{{ product.price | money }}</div>
+{% assign intro_collection = collections[section.settings.collection] %}
+{% if intro_collection and intro_collection.products_count > 0 %}
+  <div class="intro-grid">
+    {% for product in intro_collection.products limit: 9 %}
+      <div class="grid_card{% if forloop.index > 6 %} grid_card--hide-tablet{% endif %}">
+        <a href="{{ product.url }}" class="card-gallery__hover-fade-wrapper" style="display:block; width:100%; height:100%; position:relative;">
+          <img class="grid_card__image grid_card__image--main" src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
+          {% if product.images.size > 1 %}
+            <img class="grid_card__image grid_card__image--hover" src="{{ product.images[1] | img_url: '600x' }}" alt="{{ product.title }}" loading="lazy">
+          {% endif %}
+          <div class="card-gallery__indicators">
+            <span class="card-gallery__indicator card-gallery__indicator--first"></span>
+            {% if product.images.size > 1 %}
+              <span class="card-gallery__indicator card-gallery__indicator--second"></span>
+            {% endif %}
           </div>
-        {% endfor %}
+        </a>
       </div>
-    {% else %}
-      <p>Ingen produkter fundet.</p>
-    {% endif %}
-  {% else %}
-    <p>Vælg en kollektion i theme editoren.</p>
-  {% endif %}
-</div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>Ingen produkter fundet.</p>
+{% endif %}
 
 {% schema %}
 {
@@ -78,19 +78,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac m
 <style>
 .section-introduktion {
   display: grid;
-  grid-template-columns: 1fr 1px 1fr;
-  padding: 0 1rem;
+  grid-template-columns: 1fr 1fr;
 }
 
 p {
   color: #3e4753ff;
 }
 
-.black {
-  background-color: #000;
-  width: 1px;
-  height: 100%;
-}
 
 .button-container{
 width: 100%;
@@ -101,7 +95,7 @@ justify-content: end;
 .intro_1{
  max-width: 550px;
  margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
 .tekst{
@@ -119,56 +113,126 @@ margin-bottom: 2rem;}
   }
 }
 
-
-.intro_2 {
-  width: 100%;
-  margin: 3rem auto;
-}
 .intro-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.intro-product-card {
-  aspect-ratio: 1/1;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition: box-shadow 0.2s;
-}
-.intro-product-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-}
-.intro-product-image-wrapper {
-  width: 80%;
-  height: 0;
-  padding-bottom: 80%;
-  position: relative;
-}
-.intro-product-image {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;
-}
-.intro-product-title {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-top: 0.5rem;
-  text-align: center;
-}
-.intro-product-price {
-  font-size: 0.95rem;
-  color: #222;
-  margin-top: 0.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: stretch;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
 }
 @media screen and (max-width: 1200px) {
   .intro-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+  }
+}
+@media screen and (max-width: 749px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .intro-grid {
+   display: none;
+  }
+
+    .section-introduktion {
+    display: block;}
+}
+
+/* --- Nyeste selektion grid card style --- */
+.grid_card {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.2s;
+  min-width: 0;
+  width: 100%;
+}
+
+
+.grid_card__image-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+.grid_card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+border: 1px solid black;
+}
+
+.grid_card a {
+  width: 100%;
+
+}
+.grid_card__image--hover {
+  opacity: 0;
+  z-index: 2;
+}
+.grid_card:hover .grid_card__image--hover {
+  opacity: 1;
+}
+.grid_card__info {
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  text-align: center;
+}
+.grid_card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #222;
+}
+.grid_card__price {
+  font-size: 0.95rem;
+  color: #3e4753ff;
+}
+
+.card-gallery__indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.card-gallery__indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  display: block;
+  transition: opacity 0.3s;
+}
+.card-gallery__indicator--first {
+  opacity: 1;
+}
+.card-gallery__indicator--second {
+  opacity: 0.75;
+}
+.card-gallery__hover-fade-wrapper:hover .card-gallery__indicator--first {
+  opacity: 0.75;
+}
+.card-gallery__hover-fade-wrapper:hover .card-gallery__indicator--second {
+  opacity: 1;
+}
+@media screen and (max-width: 1200px) {
+  .intro-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 749px) {
@@ -176,8 +240,11 @@ margin-bottom: 2rem;}
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 1fr);
   }
-  .intro-product-card {
-    aspect-ratio: 1/1;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 750px) {
+  .grid_card--hide-tablet {
+    display: none !important;
   }
 }
 </style>
