@@ -1,0 +1,67 @@
+{% comment %}
+  Skarn custom frontpage section. Connected to section_bWTT6D in index.json.
+  Add HTML and CSS as needed. Follows Shopify section conventions.
+{% endcomment %}
+
+<section>
+<div class="index-skarn_heading">
+    <h1>{{ section.settings.heading }}</h1>
+   <img src="{{ settings.logo | image_url: width: 320 }}" alt="Logo" class="index-skarn__logo" style="max-width: 200px; height: auto; margin-bottom: 24px;" />
+
+</div>
+<div class="index-skarn_text">
+   <p>{{ section.settings.text }}</p>
+   </div>
+</section>
+
+{% stylesheet %}
+.index-skarn_heading {
+    text-align: center;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.index-skarn__logo{
+    margin-top: 0.3rem;
+}
+
+.index-skarn_text {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #3e4753ff;
+}
+
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Hvem er Skarn",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Overskrift",
+      "default": "Hvem er"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Tekst",
+      "default": "bla bla"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Hvem er Skarn"
+    }
+  ]
+}
+{% endschema %}

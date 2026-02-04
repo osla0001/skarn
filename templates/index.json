@@ -351,7 +351,7 @@
       }
     },
     "section_bWTT6D": {
-      "type": "section",
+      "type": "index-skarn",
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
