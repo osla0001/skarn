@@ -8,6 +8,7 @@
  * ------------------------------------------------------------
  */
 {
+  // Hero sektion
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
@@ -125,6 +126,7 @@
         "padding-block-end": 72
       }
     },
+    // Intro sektion
     "section_TidpBp": {
       "type": "introduktion",
       "name": "Introduktion",
