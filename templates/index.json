@@ -8,7 +8,6 @@
  * ------------------------------------------------------------
  */
 {
-  // Hero sektion
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
@@ -89,10 +88,15 @@
               "blocks": {}
             }
           },
-          "block_order": ["logo_VbbBBx", "button_BpDGiH"]
+          "block_order": [
+            "logo_VbbBBx",
+            "button_BpDGiH"
+          ]
         }
       },
-      "block_order": ["group_zePjiU"],
+      "block_order": [
+        "group_zePjiU"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -126,7 +130,6 @@
         "padding-block-end": 72
       }
     },
-    // Intro sektion
     "section_TidpBp": {
       "type": "introduktion",
       "name": "Introduktion",
@@ -167,7 +170,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_4KfqK6"],
+      "block_order": [
+        "text_4KfqK6"
+      ],
       "name": "Fragt banner",
       "settings": {
         "movement_direction": "normal",
@@ -288,7 +293,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_YFtzcL", "product_list_button_MWeP9V"]
+          "block_order": [
+            "product_list_text_YFtzcL",
+            "product_list_button_MWeP9V"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -325,7 +333,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_677WP3"]
+          "block_order": [
+            "product_card_gallery_677WP3"
+          ]
         }
       },
       "name": "Nyeste selektion",
@@ -354,31 +364,8 @@
       "type": "index-skarn",
       "name": "t:names.custom_section",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "small",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "heading": "Hvem er",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa dolor, euismod vitae augue vehicula, auctor consequat magna. Vestibulum molestie id justo ut ullamcorper. Nam mauris sem, cursus in tristique a, convallis ac erat. Integer vitae nunc eleifend, dignissim quam sit amet, sollicitudin nisi. Proin vitae elementum nisi. In ultrices magna lorem, a lacinia ligula congue in. Etiam tincidunt interdum lectus at bibendum. Vivamus ac quam id orci malesuada consectetur sit amet sed leo. Mauris laoreet nulla non nisl volutpat blandit. Vivamus felis justo, imperdiet eu arcu sit amet, dapibus viverra ante. Mauris sed risus sed lectus vulputate molestie. Cras in dictum sem, at scelerisque ligula. Donec tristique scelerisque dictum. Nullam id quam ex.\n\nMaecenas interdum convallis enim. Nullam sed ex ac tellus lobortis interdum id a enim. Nam molestie faucibus pulvinar. Proin fermentum tincidunt dolor, eget condimentum tellus facilisis eu. Sed vel justo lacus. Aliquam tincidunt erat in mi pharetra, vel accumsan libero interdum. Sed elementum suscipit erat, eget fermentum nulla euismod a. Quisque ut egestas dui, nec mollis nulla. Vestibulum et erat ut lacus convallis finibus. Quisque rhoncus nisi vel ante suscipit faucibus. Nam ac mauris tincidunt, mollis eros in, cursus velit. Sed pellentesque, erat vel auctor placerat, dui sem convallis velit, vel cursus ante enim et urna. Fusce posuere vel nisl sed feugiat.\n\nNam metus ex, faucibus ut mollis in, lobortis et lacus. Morbi suscipit faucibus eros. Morbi purus arcu, venenatis in risus ut, tempor molestie tortor. Sed convallis dictum metus, dignissim eleifend purus gravida in. Etiam id massa consectetur, fermentum lacus quis, gravida dolor. In id gravida sapien. Phasellus vulputate a mauris et viverra.\n\nCras sodales metus quam, volutpat eleifend risus accumsan nec. Integer mauris augue, ullamcorper sed libero at, hendrerit scelerisque velit. Donec ex sapien, porttitor at auctor non, consequat sit amet neque. In eu tellus vitae dui rhoncus faucibus. Cras dictum risus eu lorem fermentum posuere. Pellentesque suscipit ullamcorper commodo."
       }
     },
     "section_di9kKX": {
@@ -466,7 +453,11 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_mCTcUa", "text_KdxEFV", "email_signup_W7KCbh"],
+      "block_order": [
+        "text_mCTcUa",
+        "text_KdxEFV",
+        "email_signup_W7KCbh"
+      ],
       "name": "t:names.email_signup",
       "settings": {
         "content_direction": "column",
@@ -576,7 +567,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_JXRpxN", "product_list_button_jDXF3f"]
+          "block_order": [
+            "product_list_text_JXRpxN",
+            "product_list_button_jDXF3f"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -613,7 +607,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_F4rRLc"]
+          "block_order": [
+            "product_card_gallery_F4rRLc"
+          ]
         }
       },
       "name": "Udsalgs sektion",
@@ -639,5 +635,15 @@
       }
     }
   },
-  "order": ["hero_jVaWmY", "section_TidpBp", "marquee_AEpFgk", "section_XTg8pN", "product_list_fa6P9H", "section_bWTT6D", "section_di9kKX", "section_Kb4cmG", "product_list_P79JKH"]
+  "order": [
+    "hero_jVaWmY",
+    "section_TidpBp",
+    "marquee_AEpFgk",
+    "section_XTg8pN",
+    "product_list_fa6P9H",
+    "section_bWTT6D",
+    "section_di9kKX",
+    "section_Kb4cmG",
+    "product_list_P79JKH"
+  ]
 }
