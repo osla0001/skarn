@@ -21,6 +21,7 @@
     size-style
     {{ block_settings.style_class }}
     {{ block_settings.style_class }}--{{ block.id }}
+    {%- unless block_settings.style_class contains 'secondary' or block_settings.style_class contains 'tertiary' -%}button-primary{%- endunless -%}
   "
   style="{% render 'size-style', settings: block_settings %}"
   {%- if block_settings.open_in_new_tab -%}
@@ -43,21 +44,46 @@
 
   .button {
     background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    margin: 0;
+    height: fit-content;
+    
+
+    &:hover {
+      background-color: transparent;
+      margin: 0;
+      -webkit-text-stroke: 0.09px inherit;
+      font-weight: 600 !important;
+
+
+      a {
+        font-family: "ZT Nature";
+        font-weight: 600 !important;
+      }
+    }
+  }
+
+    .button-primary {
+    background-color: transparent;
     outline: 1px solid white !important;
     color: white;
     padding: 5px 10px;
     margin: 0;
     height: fit-content;
+    
 
     &:hover {
       background-color: transparent;
       outline: 2px solid white !important;
       margin: 0;
       -webkit-text-stroke: 0.09px white;
+      font-weight: 600 !important;
+
 
       a {
         font-family: "ZT Nature";
-        font-weight: 600;
+        font-weight: 600 !important;
       }
     }
   }
@@ -76,6 +102,10 @@
       outline: 2px solid black !important;
       margin: 0;
       -webkit-text-stroke: 0.09px black;
+      
+      a{
+                font-weight: 600 !important;
+      }
     }
   }
 

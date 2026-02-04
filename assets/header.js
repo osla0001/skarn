@@ -188,59 +188,28 @@ class HeaderComponent extends Component {
   };
 
   #updateScrollState = () => {
+    // Tving altid scrollDirection til 'down'
+    this.dataset.scrollDirection = "down";
+    // Bevar stickyState logik hvis nødvendigt
     const stickyMode = this.getAttribute("sticky");
     if (!this.#offscreen && stickyMode !== "always") return;
-
     const scrollTop = document.scrollingElement?.scrollTop ?? 0;
     const headerTop = this.getBoundingClientRect().top;
-    const isScrollingUp = scrollTop < this.#lastScrollTop;
     const isAtTop = headerTop >= 0;
-
     if (this.#timeout) {
       clearTimeout(this.#timeout);
       this.#timeout = null;
     }
-
     if (stickyMode === "always") {
-      if (isAtTop) {
-        this.dataset.scrollDirection = "none";
-      } else if (isScrollingUp) {
-        this.dataset.scrollDirection = "up";
-      } else {
-        this.dataset.scrollDirection = "down";
-      }
-
       this.#lastScrollTop = scrollTop;
       return;
     }
-
-    if (isScrollingUp) {
-      this.removeAttribute("data-animating");
-
-      if (isAtTop) {
-        // reset sticky state when header is scrolled up to natural position
-        this.#offscreen = false;
-        this.dataset.stickyState = "inactive";
-        this.dataset.scrollDirection = "none";
-      } else {
-        // show sticky header when scrolling up
-        this.dataset.stickyState = "active";
-        this.dataset.scrollDirection = "up";
-      }
-    } else if (this.dataset.stickyState === "active") {
-      this.dataset.scrollDirection = "none";
-      // delay transitioning to idle hidden state for hiding animation
-      this.setAttribute("data-animating", "");
-
-      this.#timeout = setTimeout(() => {
-        this.dataset.stickyState = "idle";
-        this.removeAttribute("data-animating");
-      }, this.#animationDelay);
+    if (isAtTop) {
+      this.#offscreen = false;
+      this.dataset.stickyState = "inactive";
     } else {
-      this.dataset.scrollDirection = "none";
-      this.dataset.stickyState = "idle";
+      this.dataset.stickyState = "active";
     }
-
     this.#lastScrollTop = scrollTop;
   };
 

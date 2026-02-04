@@ -65,12 +65,7 @@
 
 <div
   ref="cardGallery"
-  class="card-gallery card-gallery-{{ block.id }} spacing-style border-style{% if has_badges %} card-gallery--badge-{{ badge_position }}{% endif %}"
-  style="
-    {% render 'border-override', settings: block_settings %}
-    {% render 'spacing-style', settings: block_settings %}
-    --gallery-aspect-ratio: {{ ratio }};
-  "
+  class="card-gallery card-gallery-{{ block.id }} spacing-style border-style{% if has_badges %} card-gallery--badge-{{ badge_position }}{% endif %}"  "
   data-product-id="{{ product.id }}"
   {%- comment -%} Hover image preview handled with CSS instead of pointer events to avoid JS swipe behavior {%- endcomment -%}
   {% if settings.transition_to_main_product %}

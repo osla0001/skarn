@@ -1,3 +1,14 @@
+/* Sørg for at indholdet i heroen altid er 100% centreret */
+.hero__content-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  text-align: center;
+}
 /* Fjern al styling fra knapper med .button-unstyled */
 .button-unstyled {
   all: unset;
@@ -180,6 +191,11 @@ button {
   transition: 0.2s all;
 }
 
+.product-card {
+  border: 1px solid black !important;
+  border-left: none !important;
+}
+
 .card-gallery__indicators {
   position: absolute;
   left: 50%;
@@ -237,6 +253,7 @@ button {
   opacity: 1;
   pointer-events: auto;
 }
+
 /* Tving fjernelse af border og skygge på produktkort uanset utility-klasser */
 .product-card,
 .product-card *,
@@ -244,11 +261,6 @@ button {
 .product-card.border-style,
 .product-card .border-style,
 .product-card__content.border-style {
-  border: none !important;
-  box-shadow: none !important;
-  border-width: 0 !important;
-  border-style: none !important;
-  border-color: transparent !important;
 }
 
 body {
@@ -3858,12 +3870,6 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   box-sizing: border-box;
   gap: -1;
   position: relative;
-}
-
-.product-card img {
-  object-fit: fit;
-  border: 1px solid black !important;
-  border-left: none !important;
 }
 
 /* Fjernet: cirkel-indikatorer på produktkort */

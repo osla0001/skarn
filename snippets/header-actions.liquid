@@ -92,7 +92,7 @@
       {% endif %}
     >
       <button
-        class="button header-actions__action button-unstyled"
+        class="button header-actions__action button-unstyled button-menu"
         on:click="/open"
         aria-haspopup="dialog"
         aria-label="{{ 'accessibility.cart' | t }}"
@@ -193,7 +193,7 @@
   {% else %}
     <a
       href="{{ routes.cart_url }}"
-      class="header-actions__action action__cart"
+      class="header-actions__action action__cart button-menu"
       aria-label="{{ 'accessibility.cart' | t }}"
       aria-describedby="cart-bubble-text"
     >
