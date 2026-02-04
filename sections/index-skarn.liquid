@@ -3,7 +3,7 @@
   Add HTML and CSS as needed. Follows Shopify section conventions.
 {% endcomment %}
 
-<section>
+<section class="skarn_section">
 <div class="index-skarn_heading">
     <h1>{{ section.settings.heading }}</h1>
    <img src="{{ settings.logo | image_url: width: 320 }}" alt="Logo" class="index-skarn__logo" style="max-width: 200px; height: auto; margin-bottom: 24px;" />
@@ -11,10 +11,16 @@
 </div>
 <div class="index-skarn_text">
    <p>{{ section.settings.text }}</p>
+   knap
    </div>
 </section>
 
 {% stylesheet %}
+.skarn_section{
+    padding: 2rem 2rem;
+    margin: 0 auto;
+}
+
 .index-skarn_heading {
     text-align: center;
     margin-bottom: 32px;
@@ -25,14 +31,28 @@
     gap: 1rem;
 }
 
+@media screen and (max-width: 700px) {
+    .index-skarn_heading {
+        flex-direction: column;
+        gap: 0;
+    }
+    .index-skarn_heading h1{
+margin-bottom: 1rem;
+}
+}
+
+.index-skarn_heading h1{
+text-wrap: nowrap !important;
+}
+
 .index-skarn__logo{
     margin-top: 0.3rem;
 }
 
 .index-skarn_text {
-    max-width: 1200px;
+        max-width: 550px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     font-size: 1.1rem;
     line-height: 1.6;
     color: #3e4753ff;
