@@ -38,6 +38,8 @@
   -webkit-overflow-scrolling: touch;
   display: block;
   scrollbar-width: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
   @media screen and (max-width: 749px) {
@@ -56,6 +58,10 @@
   align-items: start;
 }
 
+.aarti_collection .resource-list__blank-item {
+border: none !important;
+}
+
 .aarti_collection .aarti-kollektion-link{
   display: flex;
   align-items: center;
@@ -72,7 +78,7 @@
 }
 
 .aarti_collection .aarti-kollektion-link:hover {
-  box-shadow: inset 0 0 0 1px black;
-    transition: box-shadow 0.2s;
+  box-shadow: inset 1px 0 0 0 black, inset -1px 0 0 0 black;
+  transition: box-shadow 0.2s;
 }
 </style>

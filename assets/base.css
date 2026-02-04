@@ -3883,8 +3883,6 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   .product-card {
     width: 100%;
     height: auto;
-    aspect-ratio: auto;
-    flex: 1 1 100%;
   }
 }
 
