@@ -1166,8 +1166,15 @@ summary::-webkit-details-marker {
 }
 
 /* When header is transparent, pull the first main content section up to sit under the floating header */
+
+/* Sørg for at første sektion altid har offset for headeren, så headeren aldrig blokerer toppen */
+.content-for-layout > .shopify-section:first-child {
+  margin-top: var(--header-group-height, 0px);
+  transition: margin-top 0.3s;
+}
+
 body:has(.header[transparent]) .content-for-layout > .shopify-section:first-child {
-  margin-top: calc(var(--header-group-height) * -1);
+  margin-top: 0 !important;
 }
 
 body:has(.header[transparent]) #header-group > .header-section {
