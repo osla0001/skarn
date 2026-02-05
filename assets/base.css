@@ -1,3 +1,11 @@
+/* Skjul scrollbar baggrund på html og body */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  background: transparent;
+}
+html {
+  scrollbar-width: thin;
+}
 /* Sørg for at indholdet i heroen altid er 100% centreret */
 .hero__content-wrapper {
   display: flex !important;

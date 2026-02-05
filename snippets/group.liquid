@@ -22,12 +22,6 @@
     {% if settings.inherit_color_scheme == false %} color-{{ settings.color_scheme }}{% endif %}
     {{ class }}
   "
-  style="
-    {% render 'border-override', settings: settings %}
-    {% render 'spacing-style', settings: settings %}
-    {% render 'size-style', settings: settings %}
-    {{ style }}
-  "
   {{ shopify_attributes }}
   data-testid="group-block"
 >
