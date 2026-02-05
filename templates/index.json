@@ -185,25 +185,28 @@
     "campaign": {
       "type": "campaign",
       "blocks": {
+        "right_7LUeFg": {
+          "type": "right",
+          "settings": {
+            "show_heading": false,
+            "heading_text": "Overskrift",
+            "image": "shopify://shop_images/skarn_logo.svg",
+            "image_width": 40,
+            "show_button": true,
+            "button_label": "Køb",
+            "button_link": ""
+          }
+        },
         "left_qk7C6X": {
           "type": "left",
           "settings": {
             "content": ""
           }
-        },
-        "right_38rwMX": {
-          "type": "right",
-          "settings": {
-            "image": "shopify://shop_images/skarn_logo_8e53d89b-ba0d-4c72-b801-286125c6a253.svg",
-            "show_button": true,
-            "button_label": "Læs mere",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
-        "left_qk7C6X",
-        "right_38rwMX"
+        "right_7LUeFg",
+        "left_qk7C6X"
       ],
       "name": "Kampagne billede",
       "settings": {
