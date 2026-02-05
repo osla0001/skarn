@@ -365,13 +365,77 @@
       "name": "t:names.custom_section",
       "settings": {
         "heading": "Hvem er",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa dolor, euismod vitae augue vehicula, auctor consequat magna. Vestibulum molestie id justo ut ullamcorper. Nam mauris sem, cursus in tristique a, convallis ac erat. Integer vitae nunc eleifend, dignissim quam sit amet, sollicitudin nisi. Proin vitae elementum nisi. In ultrices magna lorem, a lacinia ligula congue in. Etiam tincidunt interdum lectus at bibendum. Vivamus ac quam id orci malesuada consectetur sit amet sed leo. Mauris laoreet nulla non nisl volutpat blandit. Vivamus felis justo, imperdiet eu arcu sit amet, dapibus viverra ante. Mauris sed risus sed lectus vulputate molestie. Cras in dictum sem, at scelerisque ligula. Donec tristique scelerisque dictum. Nullam id quam ex.\n\nMaecenas interdum convallis enim. Nullam sed ex ac tellus lobortis interdum id a enim. Nam molestie faucibus pulvinar. Proin fermentum tincidunt dolor, eget condimentum tellus facilisis eu. Sed vel justo lacus. Aliquam tincidunt erat in mi pharetra, vel accumsan libero interdum. Sed elementum suscipit erat, eget fermentum nulla euismod a. Quisque ut egestas dui, nec mollis nulla. Vestibulum et erat ut lacus convallis finibus. Quisque rhoncus nisi vel ante suscipit faucibus. Nam ac mauris tincidunt, mollis eros in, cursus velit. Sed pellentesque, erat vel auctor placerat, dui sem convallis velit, vel cursus ante enim et urna. Fusce posuere vel nisl sed feugiat.\n\nNam metus ex, faucibus ut mollis in, lobortis et lacus. Morbi suscipit faucibus eros. Morbi purus arcu, venenatis in risus ut, tempor molestie tortor. Sed convallis dictum metus, dignissim eleifend purus gravida in. Etiam id massa consectetur, fermentum lacus quis, gravida dolor. In id gravida sapien. Phasellus vulputate a mauris et viverra.\n\nCras sodales metus quam, volutpat eleifend risus accumsan nec. Integer mauris augue, ullamcorper sed libero at, hendrerit scelerisque velit. Donec ex sapien, porttitor at auctor non, consequat sit amet neque. In eu tellus vitae dui rhoncus faucibus. Cras dictum risus eu lorem fermentum posuere. Pellentesque suscipit ullamcorper commodo."
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa dolor, euismod vitae augue vehicula, auctor consequat magna. Vestibulum molestie id justo ut ullamcorper. Nam mauris sem, cursus in tristique a, convallis ac erat. Integer vitae nunc eleifend, dignissim quam sit amet, sollicitudin nisi. Proin vitae elementum nisi. In ultrices magna lorem, a lacinia ligula congue in. Etiam tincidunt interdum lectus at bibendum. Vivamus ac quam id orci malesuada consectetur sit amet sed leo. Mauris laoreet nulla non nisl volutpat blandit. Vivamus felis justo, imperdiet eu arcu sit amet, dapibus viverra ante. Mauris sed risus sed lectus vulputate molestie. Cras in dictum sem, at scelerisque ligula. Donec tristique scelerisque dictum. Nullam id quam ex.\n\nMaecenas interdum convallis enim. Nullam sed ex ac tellus lobortis interdum id a enim. Nam molestie faucibus pulvinar. Proin fermentum tincidunt dolor, eget condimentum tellus facilisis eu. Sed vel justo lacus. Aliquam tincidunt erat in mi pharetra, vel accumsan libero interdum. Sed elementum suscipit erat, eget fermentum nulla euismod a. Quisque ut egestas dui, nec mollis nulla. Vestibulum et erat ut lacus convallis finibus. Quisque rhoncus nisi vel ante suscipit faucibus. Nam ac mauris tincidunt, mollis eros in, cursus velit. Sed pellentesque, erat vel auctor placerat, dui sem convallis velit, vel cursus ante enim et urna. Fusce posuere vel nisl sed feugiat.\n\nNam metus ex, faucibus ut mollis in, lobortis et lacus. Morbi suscipit faucibus eros. Morbi purus arcu, venenatis in risus ut, tempor molestie tortor. Sed convallis dictum metus, dignissim eleifend purus gravida in. Etiam id massa consectetur, fermentum lacus quis, gravida dolor. In id gravida sapien. Phasellus vulputate a mauris et viverra.\n\nCras sodales metus quam, volutpat eleifend risus accumsan nec. Integer mauris augue, ullamcorper sed libero at, hendrerit scelerisque velit. Donec ex sapien, porttitor at auctor non, consequat sit amet neque. In eu tellus vitae dui rhoncus faucibus. Cras dictum risus eu lorem fermentum posuere. Pellentesque suscipit ullamcorper commodo.",
+        "button_link": "",
+        "secondary_button_label": "Læs mere →",
+        "secondary_button_link": "",
+        "color_scheme": ""
       }
     },
     "section_di9kKX": {
       "type": "collection-view",
+      "blocks": {
+        "collection_link_y4jKjF": {
+          "type": "collection_link",
+          "name": "Nexus",
+          "settings": {
+            "collection_name": "Nexus",
+            "collection_year": "(2010)"
+          }
+        },
+        "collection_link_XPynXP": {
+          "type": "collection_link",
+          "name": "Y2K",
+          "settings": {
+            "collection_name": "Y2K",
+            "collection_year": "(2000)"
+          }
+        },
+        "collection_link_JR7fpH": {
+          "type": "collection_link",
+          "name": "Core",
+          "settings": {
+            "collection_name": "Core",
+            "collection_year": "(1990)"
+          }
+        },
+        "collection_link_Umnmkx": {
+          "type": "collection_link",
+          "name": "Retro",
+          "settings": {
+            "collection_name": "Retro",
+            "collection_year": "(1980)"
+          }
+        },
+        "collection_link_WqqVKK": {
+          "type": "collection_link",
+          "name": "Boho",
+          "settings": {
+            "collection_name": "Boho",
+            "collection_year": "(1970)"
+          }
+        },
+        "collection_link_V4aJGL": {
+          "type": "collection_link",
+          "name": "Mod",
+          "settings": {
+            "collection_name": "Mod",
+            "collection_year": "(1960)"
+          }
+        }
+      },
+      "block_order": [
+        "collection_link_y4jKjF",
+        "collection_link_XPynXP",
+        "collection_link_JR7fpH",
+        "collection_link_Umnmkx",
+        "collection_link_WqqVKK",
+        "collection_link_V4aJGL"
+      ],
       "name": "Årti oversigt",
-      "settings": {}
+      "settings": {
+        "heading": "SHOP ÅRTI"
+      }
     },
     "section_Kb4cmG": {
       "type": "section",
