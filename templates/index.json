@@ -46,6 +46,7 @@
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
+            "padding-block-start": 0,
             "padding-block-end": 80,
             "padding-inline-start": 0,
             "padding-inline-end": 0
@@ -87,10 +88,15 @@
               "blocks": {}
             }
           },
-          "block_order": ["logo_VbbBBx", "button_BpDGiH"]
+          "block_order": [
+            "logo_VbbBBx",
+            "button_BpDGiH"
+          ]
         }
       },
-      "block_order": ["group_zePjiU"],
+      "block_order": [
+        "group_zePjiU"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -164,7 +170,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_4KfqK6"],
+      "block_order": [
+        "text_4KfqK6"
+      ],
       "name": "Fragt banner",
       "settings": {
         "movement_direction": "normal",
@@ -185,21 +193,25 @@
         },
         "right_7LUeFg": {
           "type": "right",
+          "name": "Indhold",
           "settings": {
             "gap": 0,
-            "image_margin_bottom": 0,
+            "image_margin_bottom": 15,
             "show_heading": true,
-            "heading_text": "Gør dig klar til vinter",
-            "image": "shopify://shop_images/skarn_logo.svg",
-            "image_width": 55,
-            "show_button": true,
+            "heading_text": "Dit kurerede klædeskab",
+            "image": "shopify://shop_images/skarn_logo_8e53d89b-ba0d-4c72-b801-286125c6a253.svg",
+            "image_width": 65,
+            "show_button": false,
             "button_label": "vinter 2026",
             "button_link": ""
           }
         }
       },
-      "block_order": ["left_qk7C6X", "right_7LUeFg"],
-      "name": "Kampagne billede",
+      "block_order": [
+        "left_qk7C6X",
+        "right_7LUeFg"
+      ],
+      "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne.png",
         "section_height": "200px"
@@ -285,7 +297,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_YFtzcL", "product_list_button_MWeP9V"]
+          "block_order": [
+            "product_list_text_YFtzcL",
+            "product_list_button_MWeP9V"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -322,7 +337,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_677WP3"]
+          "block_order": [
+            "product_card_gallery_677WP3"
+          ]
         }
       },
       "name": "Nyeste selektion",
@@ -349,7 +366,7 @@
     },
     "section_bWTT6D": {
       "type": "index-skarn",
-      "name": "t:names.custom_section",
+      "name": "Hvem er Skarn",
       "settings": {
         "heading": "Hvem er",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa dolor, euismod vitae augue vehicula, auctor consequat magna. Vestibulum molestie id justo ut ullamcorper. Nam mauris sem, cursus in tristique a, convallis ac erat. Integer vitae nunc eleifend, dignissim quam sit amet, sollicitudin nisi. Proin vitae elementum nisi. In ultrices magna lorem, a lacinia ligula congue in. Etiam tincidunt interdum lectus at bibendum. Vivamus ac quam id orci malesuada consectetur sit amet sed leo. Mauris laoreet nulla non nisl volutpat blandit. Vivamus felis justo, imperdiet eu arcu sit amet, dapibus viverra ante. Mauris sed risus sed lectus vulputate molestie. Cras in dictum sem, at scelerisque ligula. Donec tristique scelerisque dictum. Nullam id quam ex.\n\nMaecenas interdum convallis enim. Nullam sed ex ac tellus lobortis interdum id a enim. Nam molestie faucibus pulvinar. Proin fermentum tincidunt dolor, eget condimentum tellus facilisis eu. Sed vel justo lacus. Aliquam tincidunt erat in mi pharetra, vel accumsan libero interdum. Sed elementum suscipit erat, eget fermentum nulla euismod a. Quisque ut egestas dui, nec mollis nulla. Vestibulum et erat ut lacus convallis finibus. Quisque rhoncus nisi vel ante suscipit faucibus. Nam ac mauris tincidunt, mollis eros in, cursus velit. Sed pellentesque, erat vel auctor placerat, dui sem convallis velit, vel cursus ante enim et urna. Fusce posuere vel nisl sed feugiat.\n\nNam metus ex, faucibus ut mollis in, lobortis et lacus. Morbi suscipit faucibus eros. Morbi purus arcu, venenatis in risus ut, tempor molestie tortor. Sed convallis dictum metus, dignissim eleifend purus gravida in. Etiam id massa consectetur, fermentum lacus quis, gravida dolor. In id gravida sapien. Phasellus vulputate a mauris et viverra.\n\nCras sodales metus quam, volutpat eleifend risus accumsan nec. Integer mauris augue, ullamcorper sed libero at, hendrerit scelerisque velit. Donec ex sapien, porttitor at auctor non, consequat sit amet neque. In eu tellus vitae dui rhoncus faucibus. Cras dictum risus eu lorem fermentum posuere. Pellentesque suscipit ullamcorper commodo.",
@@ -357,6 +374,41 @@
         "secondary_button_label": "Læs mere →",
         "secondary_button_link": "",
         "color_scheme": ""
+      }
+    },
+    "campaign_4Bx8cp": {
+      "type": "campaign",
+      "blocks": {
+        "right_iNirNG": {
+          "type": "right",
+          "name": "Indhold",
+          "settings": {
+            "gap": 5,
+            "image_margin_bottom": 15,
+            "show_heading": true,
+            "heading_text": "Gør dig klar til vinter",
+            "image": "shopify://shop_images/skarn_logo_8e53d89b-ba0d-4c72-b801-286125c6a253.svg",
+            "image_width": 40,
+            "show_button": true,
+            "button_label": "vinter 2026",
+            "button_link": "shopify://collections"
+          }
+        },
+        "left_J8gJnr": {
+          "type": "left",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "right_iNirNG",
+        "left_J8gJnr"
+      ],
+      "name": "Kampagne",
+      "settings": {
+        "background_image": "shopify://shop_images/Kampagne2.png",
+        "section_height": "200px"
       }
     },
     "section_di9kKX": {
@@ -411,7 +463,14 @@
           }
         }
       },
-      "block_order": ["collection_link_y4jKjF", "collection_link_XPynXP", "collection_link_JR7fpH", "collection_link_Umnmkx", "collection_link_WqqVKK", "collection_link_V4aJGL"],
+      "block_order": [
+        "collection_link_y4jKjF",
+        "collection_link_XPynXP",
+        "collection_link_JR7fpH",
+        "collection_link_Umnmkx",
+        "collection_link_WqqVKK",
+        "collection_link_V4aJGL"
+      ],
       "name": "Årti oversigt",
       "settings": {
         "heading": "SHOP ÅRTI"
@@ -506,7 +565,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_JXRpxN", "product_list_button_jDXF3f"]
+          "block_order": [
+            "product_list_text_JXRpxN",
+            "product_list_button_jDXF3f"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -543,7 +605,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_F4rRLc"]
+          "block_order": [
+            "product_card_gallery_F4rRLc"
+          ]
         }
       },
       "name": "Udsalgs sektion",
@@ -569,5 +633,16 @@
       }
     }
   },
-  "order": ["hero_jVaWmY", "section_TidpBp", "marquee_AEpFgk", "campaign", "product_list_fa6P9H", "section_bWTT6D", "section_di9kKX", "newsletter", "product_list_P79JKH"]
+  "order": [
+    "hero_jVaWmY",
+    "section_TidpBp",
+    "marquee_AEpFgk",
+    "campaign",
+    "product_list_fa6P9H",
+    "section_bWTT6D",
+    "campaign_4Bx8cp",
+    "section_di9kKX",
+    "newsletter",
+    "product_list_P79JKH"
+  ]
 }
