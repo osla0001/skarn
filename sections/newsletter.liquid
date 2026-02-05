@@ -30,12 +30,46 @@
             <div class="email-signup__input-group" style="--border-width: 1px; --border-radius: 0px;">
               <label for="EmailInput-newsletter" class="visually-hidden">Mail</label>
               <input id="EmailInput-newsletter" class="email-signup__input email-signup__input--all paragraph" type="email" name="contact[email]" autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="{{ section.settings.input_placeholder | default: 'Mailadresse' }}" required>
-              <button class="email-signup__button email-signup__button--text paragraph button-secondary" type="submit">
-                {{ section.settings.button_label | default: 'Tilmeld' }}
+              <button id="newsletter-submit" class="email-signup__button email-signup__button--text paragraph button-secondary" type="submit">
+                <span id="newsletter-btn-text">{{ section.settings.button_label | default: 'Tilmeld' }}</span>
+                <span id="newsletter-check" style="display:none;margin-left:8px;">&#10003;</span>
               </button>
             </div>
           </form>
         </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('contact_form');
+  var btn = document.getElementById('newsletter-submit');
+  var btnText = document.getElementById('newsletter-btn-text');
+  var check = document.getElementById('newsletter-check');
+  if(form && btn && btnText && check) {
+    form.addEventListener('submit', function(e) {
+      setTimeout(function() {
+        btn.style.background = '#000';
+        btn.style.color = '#fff';
+        btnText.textContent = 'Tilmeldt';
+        check.style.display = 'inline-block';
+      }, 300);
+    });
+  }
+});
+</script>
+
+<style>
+#newsletter-submit {
+  transition: background 0.2s, color 0.2s;
+}
+#newsletter-submit[disabled], #newsletter-submit.submitted {
+  background: #000 !important;
+  color: #fff !important;
+}
+#newsletter-check {
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+</style>
 
       </div>
     </div>
