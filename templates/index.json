@@ -185,28 +185,30 @@
     "campaign": {
       "type": "campaign",
       "blocks": {
-        "right_7LUeFg": {
-          "type": "right",
-          "settings": {
-            "show_heading": false,
-            "heading_text": "Overskrift",
-            "image": "shopify://shop_images/skarn_logo.svg",
-            "image_width": 40,
-            "show_button": true,
-            "button_label": "Køb",
-            "button_link": ""
-          }
-        },
         "left_qk7C6X": {
           "type": "left",
           "settings": {
             "content": ""
           }
+        },
+        "right_7LUeFg": {
+          "type": "right",
+          "settings": {
+            "gap": 0,
+            "image_margin_bottom": 0,
+            "show_heading": true,
+            "heading_text": "Gør dig klar til vinter",
+            "image": "shopify://shop_images/skarn_logo.svg",
+            "image_width": 55,
+            "show_button": true,
+            "button_label": "vinter 2026",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "right_7LUeFg",
-        "left_qk7C6X"
+        "left_qk7C6X",
+        "right_7LUeFg"
       ],
       "name": "Kampagne billede",
       "settings": {
