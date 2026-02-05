@@ -10,11 +10,11 @@
           </div>
         {% when 'right' %}
           <div class="campaign-right" style="gap: {{ block.settings.gap | default: 16 }}px;">
-            {% if block.settings.show_heading and block.settings.heading_text != blank %}
-              <h4 class="campaign-right-heading">{{ block.settings.heading_text }}</h4>
-            {% endif %}
             {% if block.settings.image != blank %}
               <img src="{{ block.settings.image | image_url: width: 800 }}" alt="" class="campaign-right-image" style="width: {{ block.settings.image_width | default: '100' }}%; max-width: 100%; margin-bottom: {{ block.settings.image_margin_bottom | default: 0 }}px;" />
+            {% endif %}
+             {% if block.settings.show_heading and block.settings.heading_text != blank %}
+              <h4 class="campaign-right-heading">{{ block.settings.heading_text }}</h4>
             {% endif %}
              {% if block.settings.show_button %}
                 <button class="button-secondary">
@@ -49,6 +49,17 @@
       "name": "Blank",
       "settings": [
         {
+          "type": "richtext",
+          "id": "content",
+          "label": "Indhold"
+        }
+      ]
+    },
+    {
+      "type": "right",
+      "name": "Højre billede og knap",
+      "settings": [
+        {
           "type": "range",
           "id": "gap",
           "label": "Afstand mellem elementer (px)",
@@ -67,61 +78,50 @@
           "default": 0
         },
         {
-          "type": "richtext",
-          "id": "content",
-          "label": "Indhold"
+          "type": "checkbox",
+          "id": "show_heading",
+          "label": "Vis overskrift",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "heading_text",
+          "label": "Overskrift tekst",
+          "default": "Overskrift"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Billede"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "label": "Billedets bredde (%)",
+          "min": 10,
+          "max": 100,
+          "step": 1,
+          "default": 100
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button",
+          "label": "Vis sekundær knap",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Knap tekst",
+          "default": "Læs mere"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Knap link"
         }
       ]
-    },
-      {
-        "type": "right",
-        "name": "Højre billede og knap",
-        "settings": [
-          {
-            "type": "checkbox",
-            "id": "show_heading",
-            "label": "Vis overskrift",
-            "default": false
-          },
-          {
-            "type": "text",
-            "id": "heading_text",
-            "label": "Overskrift tekst",
-            "default": "Overskrift"
-          },
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Billede"
-          },
-          {
-            "type": "range",
-            "id": "image_width",
-            "label": "Billedets bredde (%)",
-            "min": 10,
-            "max": 100,
-            "step": 1,
-            "default": 100
-          },
-          {
-            "type": "checkbox",
-            "id": "show_button",
-            "label": "Vis sekundær knap",
-            "default": true
-          },
-          {
-            "type": "text",
-            "id": "button_label",
-            "label": "Knap tekst",
-            "default": "Læs mere"
-          },
-          {
-            "type": "url",
-            "id": "button_link",
-            "label": "Knap link"
-          }
-        ]
-      }
+    }
   ],
   "max_blocks": 2
 }
