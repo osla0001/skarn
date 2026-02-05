@@ -6,6 +6,7 @@ body::-webkit-scrollbar {
 html {
   scrollbar-width: thin;
 }
+
 /* Sørg for at indholdet i heroen altid er 100% centreret */
 .hero__content-wrapper {
   display: flex !important;

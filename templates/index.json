@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {}
+    },
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
@@ -88,15 +92,10 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "logo_VbbBBx",
-            "button_BpDGiH"
-          ]
+          "block_order": ["logo_VbbBBx", "button_BpDGiH"]
         }
       },
-      "block_order": [
-        "group_zePjiU"
-      ],
+      "block_order": ["group_zePjiU"],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -170,9 +169,7 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "text_4KfqK6"
-      ],
+      "block_order": ["text_4KfqK6"],
       "name": "Fragt banner",
       "settings": {
         "movement_direction": "normal",
@@ -293,10 +290,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_list_text_YFtzcL",
-            "product_list_button_MWeP9V"
-          ]
+          "block_order": ["product_list_text_YFtzcL", "product_list_button_MWeP9V"]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -333,9 +327,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_card_gallery_677WP3"
-          ]
+          "block_order": ["product_card_gallery_677WP3"]
         }
       },
       "name": "Nyeste selektion",
@@ -424,131 +416,10 @@
           }
         }
       },
-      "block_order": [
-        "collection_link_y4jKjF",
-        "collection_link_XPynXP",
-        "collection_link_JR7fpH",
-        "collection_link_Umnmkx",
-        "collection_link_WqqVKK",
-        "collection_link_V4aJGL"
-      ],
+      "block_order": ["collection_link_y4jKjF", "collection_link_XPynXP", "collection_link_JR7fpH", "collection_link_Umnmkx", "collection_link_WqqVKK", "collection_link_V4aJGL"],
       "name": "Årti oversigt",
       "settings": {
         "heading": "SHOP ÅRTI"
-      }
-    },
-    "section_Kb4cmG": {
-      "type": "section",
-      "blocks": {
-        "text_mCTcUa": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<h2>Nyhedsbrev</h2>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_KdxEFV": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Vær den første til at få besked om nye kollektioner og særlige tilbud. </p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "paragraph",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "email_signup_W7KCbh": {
-          "type": "email-signup",
-          "settings": {
-            "width": "custom",
-            "custom_width": 50,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "heading": "",
-            "heading_preset": "h3",
-            "border_style": "all",
-            "border_width": 1,
-            "border_radius": 0,
-            "input_type_preset": "paragraph",
-            "style_class": "button-secondary",
-            "display_type": "text",
-            "label": "Tilmeld",
-            "integrated_button": false,
-            "button_type_preset": "paragraph",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_mCTcUa",
-        "text_KdxEFV",
-        "email_signup_W7KCbh"
-      ],
-      "name": "t:names.email_signup",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-2",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40
       }
     },
     "product_list_P79JKH": {
@@ -631,10 +502,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_list_text_JXRpxN",
-            "product_list_button_jDXF3f"
-          ]
+          "block_order": ["product_list_text_JXRpxN", "product_list_button_jDXF3f"]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -671,9 +539,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_card_gallery_F4rRLc"
-          ]
+          "block_order": ["product_card_gallery_F4rRLc"]
         }
       },
       "name": "Udsalgs sektion",
@@ -699,15 +565,5 @@
       }
     }
   },
-  "order": [
-    "hero_jVaWmY",
-    "section_TidpBp",
-    "marquee_AEpFgk",
-    "section_XTg8pN",
-    "product_list_fa6P9H",
-    "section_bWTT6D",
-    "section_di9kKX",
-    "section_Kb4cmG",
-    "product_list_P79JKH"
-  ]
+  "order": ["hero_jVaWmY", "section_TidpBp", "marquee_AEpFgk", "section_XTg8pN", "product_list_fa6P9H", "section_bWTT6D", "section_di9kKX", "newsletter", "product_list_P79JKH"]
 }
