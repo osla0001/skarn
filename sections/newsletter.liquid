@@ -38,19 +38,33 @@
           </form>
         </div>
 
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var form = document.getElementById('contact_form');
   var btn = document.getElementById('newsletter-submit');
   var btnText = document.getElementById('newsletter-btn-text');
   var check = document.getElementById('newsletter-check');
+  // Funktion til at vise "tilmeldt" state
+  function setSubscribedState() {
+    btn.style.background = '#000';
+    btn.style.color = '#fff';
+    btn.setAttribute('disabled', 'disabled');
+    btn.classList.add('submitted');
+    btnText.textContent = 'Tilmeldt';
+    btnText.style.color = '#fff';
+    check.style.display = 'inline-block';
+  }
+  // Hvis brugeren allerede har tilmeldt sig (tjek localStorage)
+  if(window.localStorage && localStorage.getItem('newsletter_subscribed')) {
+    setSubscribedState();
+  }
   if(form && btn && btnText && check) {
     form.addEventListener('submit', function(e) {
+      // Vent på at Shopify har sendt formularen
       setTimeout(function() {
-        btn.style.background = '#000';
-        btn.style.color = '#fff';
-        btnText.textContent = 'Tilmeldt';
-        check.style.display = 'inline-block';
+        setSubscribedState();
+        if(window.localStorage) localStorage.setItem('newsletter_subscribed', '1');
       }, 300);
     });
   }
@@ -60,14 +74,28 @@ document.addEventListener('DOMContentLoaded', function() {
 <style>
 #newsletter-submit {
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 #newsletter-submit[disabled], #newsletter-submit.submitted {
   background: #000 !important;
+  color: #fff !important;
+  cursor: not-allowed;
+}
+#newsletter-btn-text {
+  transition: color 0.2s;
+}
+#newsletter-submit[disabled] #newsletter-btn-text,
+#newsletter-submit.submitted #newsletter-btn-text {
   color: #fff !important;
 }
 #newsletter-check {
   font-size: 1.2em;
   vertical-align: middle;
+  display: inline-block;
+  margin-left: 0;
 }
 </style>
 
