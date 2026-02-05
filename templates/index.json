@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {}
-    },
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
@@ -92,10 +88,15 @@
               "blocks": {}
             }
           },
-          "block_order": ["logo_VbbBBx", "button_BpDGiH"]
+          "block_order": [
+            "logo_VbbBBx",
+            "button_BpDGiH"
+          ]
         }
       },
-      "block_order": ["group_zePjiU"],
+      "block_order": [
+        "group_zePjiU"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -169,7 +170,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_4KfqK6"],
+      "block_order": [
+        "text_4KfqK6"
+      ],
       "name": "Fragt banner",
       "settings": {
         "movement_direction": "normal",
@@ -181,8 +184,32 @@
     },
     "campaign": {
       "type": "campaign",
+      "blocks": {
+        "left_qk7C6X": {
+          "type": "left",
+          "settings": {
+            "content": ""
+          }
+        },
+        "right_38rwMX": {
+          "type": "right",
+          "settings": {
+            "image": "shopify://shop_images/skarn_logo_8e53d89b-ba0d-4c72-b801-286125c6a253.svg",
+            "show_button": true,
+            "button_label": "Læs mere",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "left_qk7C6X",
+        "right_38rwMX"
+      ],
       "name": "Kampagne billede",
-      "settings": {}
+      "settings": {
+        "background_image": "shopify://shop_images/Kampagne.png",
+        "section_height": "200px"
+      }
     },
     "product_list_fa6P9H": {
       "type": "product-list",
@@ -264,7 +291,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_YFtzcL", "product_list_button_MWeP9V"]
+          "block_order": [
+            "product_list_text_YFtzcL",
+            "product_list_button_MWeP9V"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -301,7 +331,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_677WP3"]
+          "block_order": [
+            "product_card_gallery_677WP3"
+          ]
         }
       },
       "name": "Nyeste selektion",
@@ -390,10 +422,26 @@
           }
         }
       },
-      "block_order": ["collection_link_y4jKjF", "collection_link_XPynXP", "collection_link_JR7fpH", "collection_link_Umnmkx", "collection_link_WqqVKK", "collection_link_V4aJGL"],
+      "block_order": [
+        "collection_link_y4jKjF",
+        "collection_link_XPynXP",
+        "collection_link_JR7fpH",
+        "collection_link_Umnmkx",
+        "collection_link_WqqVKK",
+        "collection_link_V4aJGL"
+      ],
       "name": "Årti oversigt",
       "settings": {
         "heading": "SHOP ÅRTI"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Nyhedsbrev",
+        "subtext": "Vær den første til at få besked om nye kollektioner og særlige tilbud.",
+        "input_placeholder": "mail@adresse.dk",
+        "button_label": "Tilmeld"
       }
     },
     "product_list_P79JKH": {
@@ -476,7 +524,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_JXRpxN", "product_list_button_jDXF3f"]
+          "block_order": [
+            "product_list_text_JXRpxN",
+            "product_list_button_jDXF3f"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -513,7 +564,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_F4rRLc"]
+          "block_order": [
+            "product_card_gallery_F4rRLc"
+          ]
         }
       },
       "name": "Udsalgs sektion",
@@ -539,5 +592,15 @@
       }
     }
   },
-  "order": ["hero_jVaWmY", "section_TidpBp", "marquee_AEpFgk", "campaign", "product_list_fa6P9H", "section_bWTT6D", "section_di9kKX", "newsletter", "product_list_P79JKH"]
+  "order": [
+    "hero_jVaWmY",
+    "section_TidpBp",
+    "marquee_AEpFgk",
+    "campaign",
+    "product_list_fa6P9H",
+    "section_bWTT6D",
+    "section_di9kKX",
+    "newsletter",
+    "product_list_P79JKH"
+  ]
 }
