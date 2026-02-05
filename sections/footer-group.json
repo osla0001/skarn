@@ -65,21 +65,9 @@
         "padding-block-start": 20,
         "padding-block-end": 48
       }
-    },
-    "custom_liquid_PgDyx9": {
-      "type": "custom-liquid",
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "Logo",
-        "color_scheme": "",
-        "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
-    "footer_utilities_jLGE8U",
-    "custom_liquid_PgDyx9"
+    "footer_utilities_jLGE8U"
   ]
 }
