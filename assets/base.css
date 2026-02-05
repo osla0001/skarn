@@ -1,3 +1,9 @@
+/* Sikrer at header-padding ikke giver overflow */
+.header,
+.header__row,
+.header__columns {
+  box-sizing: border-box;
+}
 /* Skjul scrollbar baggrund på html og body */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -200,7 +206,7 @@ button {
   transition: 0.2s all;
 }
 
-.product-card {
+.resource-list--grid .product-card {
   border: 1px solid black !important;
   border-left: none !important;
 }
