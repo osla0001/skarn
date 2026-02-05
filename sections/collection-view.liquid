@@ -1,26 +1,50 @@
 <section class="aarti_collection">
     <div class="aarti-list--grid">
         <div class="resource-list__blank-item">
-        <h1>SHOP ÅRTI</h1>
+          <h1>{{ section.settings.heading }}</h1>
         </div>
-        <a href="/collections/nexus" class="resource-list__item aarti-kollektion-link">
-          <h2>NEXUS</h2>
-        </a>
-        <a href="/collections/y2k" class="resource-list__item aarti-kollektion-link">
-          <h2>Y2K</h2>
-        </a>
-        <a href="/collections/90s" class="resource-list__item aarti-kollektion-link">
-          <h2>90s</h2>
-        </a>
-        <a href="/collections/80s" class="resource-list__item aarti-kollektion-link">
-          <h2>80s</h2>
-        </a>
-        <a href="/collections/70s" class="resource-list__item aarti-kollektion-link">
-          <h2>70s</h2>
-        </a>
-        <a href="/collections/60s" class="resource-list__item aarti-kollektion-link">
-          <h2>60s</h2>
-        </a>
+        {% assign collection_data = "Nexus:2010,Y2K:2000,Core:1990,Retro:1980,Boho:1970,Mod:1960" | split: "," %}
+        {% for item in collection_data %}
+          {% assign parts = item | split: ":" %}
+          {% assign name = parts[0] %}
+          {% capture year_id %}{{ name }}_year{% endcapture %}
+          {% if section.settings[year_id] != blank %}
+            {% assign year = section.settings[year_id] %}
+          {% else %}
+            {% assign year = parts[1] %}
+          {% endif %}
+          <a href="/collections/{{ name | handleize }}" class="resource-list__item aarti-kollektion-link">
+            <h2>{{ name }}</h2>
+            <h3>({{ year }})</h3>
+          </a>
+        {% endfor %}
+    {% schema %}
+    {
+      "name": "Collection View",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Overskrift",
+          "default": "SHOP ÅRTI"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "collection_link",
+          "name": "Kollektions-link",
+          "settings": [
+            {
+              "type": "text",
+              "id": "collection_name",
+              "label": "Kollektionens navn (bruges til både tekst og link)"
+            }
+          ]
+        }
+      ],
+      "max_blocks": 12
+    }
+    {% endschema %}
     </div>
 
 </section>
@@ -74,11 +98,33 @@ border: none !important;
 .aarti_collection .aarti-kollektion-link h2 {
   font-size: clamp(40px, 6vw, 40px) !important;
   text-align: center;
-  text-transform: capitalize !important;
+  text-transform: uppercase !important;
+}
+
+.aarti_collection .aarti-kollektion-link h3 {
+  font-size: clamp(18px, 6vw, 18px) !important;
+  text-align: center;
+  text-transform: uppercase !important;
+  color: var(--paragraph-text-color);
+  opacity: 0.7;
 }
 
 .aarti_collection .aarti-kollektion-link:hover {
   box-shadow: inset 1px 0 0 0 black, inset -1px 0 0 0 black;
   transition: box-shadow 0.2s;
+}
+
+.aarti-kollektion-link{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: auto;
+gap: 0.25rem;
+}
+
+.aarti-kollektion-link h2, .aarti-kollektion-link h3 {
+margin: 0;
+padding: 0;
 }
 </style>
