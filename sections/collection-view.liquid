@@ -3,21 +3,25 @@
         <div class="resource-list__blank-item">
           <h1>{{ section.settings.heading }}</h1>
         </div>
-        {% assign collection_data = "Nexus:2010,Y2K:2000,Core:1990,Retro:1980,Boho:1970,Mod:1960" | split: "," %}
-        {% for item in collection_data %}
-          {% assign parts = item | split: ":" %}
-          {% assign name = parts[0] %}
-          {% capture year_id %}{{ name }}_year{% endcapture %}
-          {% if section.settings[year_id] != blank %}
-            {% assign year = section.settings[year_id] %}
-          {% else %}
-            {% assign year = parts[1] %}
-          {% endif %}
-          <a href="/collections/{{ name | handleize }}" class="resource-list__item aarti-kollektion-link">
-            <h2>{{ name }}</h2>
-            <h3>({{ year }})</h3>
-          </a>
-        {% endfor %}
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == 'collection_link' and block.settings.collection_name != blank %}
+              <a href="/collections/{{ block.settings.collection_name | handleize }}" class="resource-list__item aarti-kollektion-link">
+                <h2>{{ block.settings.collection_name }}</h2>
+                <h3>{{ block.settings.collection_year }}</h3>
+              </a>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% assign collection_data = "Nexus:2000,Y2K:2000,Core:1990,Retro:1980,Boho:1970,Mod:1960" | split: "," %}
+          {% for item in collection_data %}
+            {% assign parts = item | split: ":" %}
+            <a href="/collections/{{ parts[0] | handleize }}" class="resource-list__item aarti-kollektion-link">
+              <h2>{{ parts[0] }}</h2>
+              <h3>{{ parts[1] }}</h3>
+            </a>
+          {% endfor %}
+        {% endif %}
     {% schema %}
     {
       "name": "Collection View",
@@ -38,6 +42,11 @@
               "type": "text",
               "id": "collection_name",
               "label": "Kollektionens navn (bruges til både tekst og link)"
+            },
+            {
+              "type": "text",
+              "id": "collection_year",
+              "label": "Årstal"
             }
           ]
         }
