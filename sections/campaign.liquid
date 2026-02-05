@@ -1,0 +1,132 @@
+<section class="campaign-section" style="
+  {% if section.settings.background_image != blank %}background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}'); background-size: cover; background-position: center;{% endif %}
+  {% if section.settings.section_height != blank %}height: {{ section.settings.section_height }};{% endif %}">
+  <div class="campaign-grid">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'left' %}
+          <div class="campaign-left">
+            {{ block.settings.content }}
+          </div>
+        {% when 'right' %}
+          <div class="campaign-right">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | image_url: width: 800 }}" alt="" class="campaign-right-image" />
+            {% endif %}
+            {% if block.settings.show_button %}
+              <a href="{{ block.settings.button_link }}" class="secondary-button">{{ block.settings.button_label }}</a>
+            {% endif %}
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kampagne billede",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Baggrundsbillede"
+    },
+    {
+      "type": "text",
+      "id": "section_height",
+      "label": "Sektionens højde (fx 500px, 60vh, auto)",
+      "default": "auto"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left",
+      "name": "Venstre indhold",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Indhold"
+        }
+      ]
+    },
+    {
+      "type": "right",
+      "name": "Højre billede og knap",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Billede"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button",
+          "label": "Vis sekundær knap",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Knap tekst",
+          "default": "Læs mere"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Knap link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 2
+}
+{% endschema %}
+
+{% stylesheet %}
+.campaign-section {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+}
+.campaign-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.campaign-left {
+  /* Tilpas evt. styling */
+}
+.campaign-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.campaign-right-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.secondary-button {
+  display: inline-block;
+  padding: 0.75em 2em;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.secondary-button:hover {
+  background: #000;
+  color: #fff;
+}
+@media (max-width: 800px) {
+  .campaign-grid {
+    grid-template-columns: 1fr;
+  }
+}
+{% endstylesheet %}
