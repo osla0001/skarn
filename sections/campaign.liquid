@@ -9,28 +9,19 @@
             {{ block.settings.content }}
           </div>
         {% when 'right' %}
-          <div class="campaign-right">
+          <div class="campaign-right" style="gap: {{ block.settings.gap | default: 16 }}px;">
+            {% if block.settings.show_heading and block.settings.heading_text != blank %}
+              <h4 class="campaign-right-heading">{{ block.settings.heading_text }}</h4>
+            {% endif %}
             {% if block.settings.image != blank %}
-              <img src="{{ block.settings.image | image_url: width: 800 }}" alt="" class="campaign-right-image" />
+              <img src="{{ block.settings.image | image_url: width: 800 }}" alt="" class="campaign-right-image" style="width: {{ block.settings.image_width | default: '100' }}%; max-width: 100%; margin-bottom: {{ block.settings.image_margin_bottom | default: 0 }}px;" />
             {% endif %}
-            {% if block.settings.show_button %}
-              <button class="button-secondary">
-                <a href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
-              </button>
-            {% endif %}
-          </div>
-              {% if block.settings.show_heading and block.settings.heading_text != blank %}
-                <h4 class="campaign-right-heading">{{ block.settings.heading_text }}</h4>
-              {% endif %}
-              {% if block.settings.image != blank %}
-                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="" class="campaign-right-image" style="width: {{ block.settings.image_width | default: '100' }}%; max-width: 100%;" />
-              {% endif %}
-              {% if block.settings.show_button %}
+             {% if block.settings.show_button %}
                 <button class="button-secondary">
                   <a href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
                 </button>
               {% endif %}
-            </div>
+          </div>
       {% endcase %}
     {% endfor %}
   </div>
@@ -57,6 +48,24 @@
       "type": "left",
       "name": "Blank",
       "settings": [
+        {
+          "type": "range",
+          "id": "gap",
+          "label": "Afstand mellem elementer (px)",
+          "min": 0,
+          "max": 64,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "image_margin_bottom",
+          "label": "Afstand under billede (px)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 0
+        },
         {
           "type": "richtext",
           "id": "content",
@@ -131,7 +140,8 @@
   align-items: center;
 }
 .campaign-left {
-  /* Tilpas evt. styling */
+    height: 100%;
+    width: 100%;
 }
 .campaign-right {
   display: flex;
