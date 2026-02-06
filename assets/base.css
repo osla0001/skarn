@@ -44,7 +44,7 @@ html body .tmenu-watermark {
   visibility: hidden !important;
 }
 
-.tmenu_item_active ~ .header {
+.tmenu_item_active ~ header-component {
   backdrop-filter: blur(5px);
 }
 
