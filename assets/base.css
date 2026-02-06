@@ -34,6 +34,11 @@ html body .tmenu-watermark {
   display: none !important;
 }
 
+.tmenu-watermark > a {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 .tmenu-watermark > span {
   display: none !important;
   visibility: hidden !important;
