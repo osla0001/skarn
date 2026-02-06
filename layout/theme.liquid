@@ -120,5 +120,7 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+
+    {{ 'header-blur.js' | asset_url | script_tag }}
   </body>
 </html>
