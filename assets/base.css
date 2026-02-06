@@ -44,6 +44,11 @@ html body .tmenu-watermark {
   visibility: hidden !important;
 }
 
+header-component[data-sticky-state="inactive"] .tmenu_submenu_type_flyout .tmenu_submenu,
+header-component[data-sticky-state="inactive"] .tmenu_item--root > .tmenu_submenu {
+  background: transparent !important;
+}
+
 /* Sørg for at indholdet i heroen altid er 100% centreret */
 .hero__content-wrapper {
   display: flex !important;
