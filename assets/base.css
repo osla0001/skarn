@@ -54,8 +54,9 @@ header-component[data-sticky-state="active"] .tmenu_item--root > .tmenu_submenu 
   border-bottom: 1px solid black !important;
 }
 
-.tmenu_item--root,
-.tmenu_submenu {
+html body .tmenu_item--root,
+html body .tmenu_submenu,
+html body .tmenu_item--root > .tmenu_submenu {
   box-shadow: none !important;
 }
 
