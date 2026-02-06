@@ -13,11 +13,13 @@ html {
   scrollbar-width: thin;
 }
 
-.menu-list__link-title {
+.menu-list__link-title,
+.tmenu_item_text {
   font-weight: 300 !important;
   text-transform: uppercase !important;
 }
-.menu-list__link-title:hover {
+.menu-list__link-title:hover,
+.tmenu_item_text:hover {
   -webkit-text-stroke: 0.09px black;
 }
 
