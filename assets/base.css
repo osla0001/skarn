@@ -46,7 +46,17 @@ html body .tmenu-watermark {
 
 header-component[data-sticky-state="inactive"] .tmenu_submenu_type_flyout .tmenu_submenu,
 header-component[data-sticky-state="inactive"] .tmenu_item--root > .tmenu_submenu {
-  background: transparent !important;
+  background: rgba(255, 255, 255, 0.255);
+}
+
+header-component[data-sticky-state="active"] .tmenu_submenu_type_flyout .tmenu_submenu,
+header-component[data-sticky-state="active"] .tmenu_item--root > .tmenu_submenu {
+  border-bottom: 1px solid black !important;
+}
+
+.tmenu_item--root > .tmenu_submenu {
+  box-shadow: none !important;
+  border-bottom: 1px solid black !important;
 }
 
 /* Sørg for at indholdet i heroen altid er 100% centreret */
