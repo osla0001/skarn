@@ -4268,8 +4268,3 @@ text-component {
   --button-text-color: var(--color, var(--color-button-primary-foreground));
 }
 
-/*qkf-hide theme menu*/
-.header-menu__inner .menu-list {
-  opacity: 0;
-}
-/*qkf end */
