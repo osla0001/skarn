@@ -29,6 +29,16 @@ html body .tmenu-watermark {
   display: none !important;
 }
 
+.tmenu-watermark {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+.tmenu-watermark > span {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 /* Sørg for at indholdet i heroen altid er 100% centreret */
 .hero__content-wrapper {
   display: flex !important;
