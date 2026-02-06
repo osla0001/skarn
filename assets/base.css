@@ -44,9 +44,16 @@ html body .tmenu-watermark {
   visibility: hidden !important;
 }
 
+.tmenu_item_active > .header {
+  backdrop-filter: blur(5px);
+}
+
 header-component[data-sticky-state="inactive"] .tmenu_submenu_type_flyout .tmenu_submenu,
 header-component[data-sticky-state="inactive"] .tmenu_item--root > .tmenu_submenu {
-  background: rgba(255, 255, 255, 0.255) !important;
+  /* background: rgba(255, 255, 255, 0.255) !important; */
+  background: transparent !important;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.255) !important;
 }
 
 header-component[data-sticky-state="active"] .tmenu_submenu_type_flyout .tmenu_submenu,
