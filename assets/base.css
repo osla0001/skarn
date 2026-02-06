@@ -13,6 +13,14 @@ html {
   scrollbar-width: thin;
 }
 
+.menu-list__link-title {
+  font-weight: 300 !important;
+  text-transform: uppercase !important;
+}
+.menu-list__link-title:hover {
+  -webkit-text-stroke: 0.09px black;
+}
+
 /* Sørg for at indholdet i heroen altid er 100% centreret */
 .hero__content-wrapper {
   display: flex !important;
