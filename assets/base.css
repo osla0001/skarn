@@ -4268,3 +4268,8 @@ text-component {
   --button-text-color: var(--color, var(--color-button-primary-foreground));
 }
 
+/*qkf-hide theme menu*/
+#header-component > div > div > div.header__column.header__column--left > header-menu > div > nav > div > overflow-list {
+  opacity: 0;
+}
+/*qkf end */
