@@ -61,6 +61,11 @@ html body .tmenu_item--root > .tmenu_submenu {
   box-shadow: none !important;
 }
 
+html body .tmenu_submenu_type_mega {
+  max-width: 1280px;
+  padding: var(--page-margin) !important;
+}
+
 /* Sørg for at indholdet i heroen altid er 100% centreret */
 .hero__content-wrapper {
   display: flex !important;
