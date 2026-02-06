@@ -88,6 +88,11 @@
         "type": "shopify://apps/wishlist-by-square/blocks/app-embed/88ec2beb-ce43-48ed-b791-0a6554082c2b",
         "disabled": false,
         "settings": {}
+      },
+      "15623156175785154009": {
+        "type": "shopify://apps/qikify-smart-menu/blocks/app-embed/19d2f1cd-1836-4a32-8937-03df3c601dc8",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
