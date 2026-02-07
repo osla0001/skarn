@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
       var wrapper = document.createElement("div");
       wrapper.className = "sub-menu_wrapper";
       megaMenu.insertBefore(wrapper, megaMenu.firstChild);
+      // Flyt alle li-elementer ind i wrapper
+      var liItems = Array.from(megaMenu.querySelectorAll(":scope > li"));
+      liItems.forEach(function (li) {
+        wrapper.appendChild(li);
+      });
     }
   }
 
