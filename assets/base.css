@@ -561,7 +561,16 @@ select {
   }
 }
 
-/* view transitions deaktiveret */
+.Vtl-WishlistIcon__Wrapper {
+  position: absolute;
+  z-index: 10;
+  place-self: end;
+  bottom: 20%;
+}
+
+main[data-template*="collection"] product-card {
+  border: 1px solid black !important;
+}
 
 /* Focus */
 *:focus-visible {
