@@ -24,6 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Inject CSS for wrapper
   var style = document.createElement("style");
-  style.innerHTML = ".tmenu_submenu_type_mega .sub-menu_wrapper { width: 100vw !important; max-width: 100vw !important; position: relative; left: 50%; transform: translateX(-50%); }";
+  style.innerHTML = "";
   document.head.appendChild(style);
 });
