@@ -22,13 +22,10 @@
     {%- endif -%}
 
     {% comment %} This a way to wait for main content to load when navigating to a new page so that the view transitions can work consistently {% endcomment %}
-    {% if settings.transition_to_main_product or settings.page_transition_enabled %}
-      <link
-        rel="expect"
-        href="#MainContent"
-        blocking="render"
-        id="view-transition-render-blocker"
-      >
+    {% assign page_transition_enabled = false %}
+    {% assign transition_to_main_product = false %}
+    {% if page_transition_enabled or transition_to_main_product %}
+      <!-- Page transition disabled -->
     {% endif %}
 
     {%- render 'meta-tags' -%}
@@ -106,8 +103,8 @@
       id="MainContent"
       class="content-for-layout"
       role="main"
-      data-page-transition-enabled="{{ settings.page_transition_enabled }}"
-      data-product-transition="{{ settings.transition_to_main_product }}"
+      data-page-transition-enabled="false"
+      data-product-transition="false"
       data-template="{{ template }}"
     >
       {{ content_for_layout }}
