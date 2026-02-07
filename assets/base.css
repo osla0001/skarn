@@ -116,6 +116,9 @@ html body .tmenu_submenu_type_mega {
     transform 0.2s;
 }
 
+#ResultsList {
+}
+
 @font-face {
   font-family: "ZT Nature Thin";
   src: url("https://cdn.shopify.com/s/files/1/0994/5386/2229/files/ZTNature-Thin.woff?v=1769515351") format("woff");

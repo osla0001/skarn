@@ -1,0 +1,77 @@
+<body>
+  <section class="grid">
+    <div class="card">
+      <div class="top">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjV5UUqfSmhG1UF25l12fLfoBGvZ6EcdnNgw&s" alt="" class="product_image" />
+      </div>
+      <div class="bottom">
+        <div class="info_left">
+          <h4>2000 été - T-shirt</h4>
+          <div class="flex_right">
+            <p>Str. L</p>
+            <p>|</p>
+            <p>COMME des GARÇONS</p>
+          </div>
+        </div>
+        <div class="info_right">
+          <p>1.200 DKK</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+<style>
+  body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    aspect-ratio: 10/10;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+  }
+  .product_image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-bottom: 1px solid black;
+  }
+
+  .info_right {
+    border-left: 1px solid black;
+  }
+
+  .flex_right {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  h4 {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 0;
+  }
+</style>
