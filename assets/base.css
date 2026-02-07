@@ -120,6 +120,7 @@ html body .tmenu_submenu_type_mega {
   display: flex !important;
   float: none !important;
   max-width: 1220px !important;
+  margin: 0 auto !important;
 }
 
 @font-face {
