@@ -62,7 +62,7 @@ html body .tmenu_item--root > .tmenu_submenu {
 }
 
 html body .tmenu_submenu_type_mega {
-  padding: var(--page-margin) !important;
+  padding: 30px !important;
 }
 
 /* Sørg for at indholdet i heroen altid er 100% centreret */
@@ -116,7 +116,10 @@ html body .tmenu_submenu_type_mega {
     transform 0.2s;
 }
 
-#ResultsList {
+.sub-menu_wrapper {
+  display: flex !important;
+  float: none !important;
+  max-width: 1220px !important;
 }
 
 @font-face {
