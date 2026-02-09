@@ -572,6 +572,39 @@ main[data-template*="collection"] product-card {
   border: 1px solid black !important;
 }
 
+main[data-template*="collection"] .resource-list__item,
+main[data-template*="collection"] .collection-card,
+main[data-template*="collection"] .product-card {
+  aspect-ratio: auto;
+  border-bottom: 1px solid black;
+}
+
+main[data-template*="collection"] .card-gallery__hover-fade-wrapper {
+  border-bottom: 1px solid black;
+}
+
+.rte p {
+  font-weight: 600 !important;
+}
+
+div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > a > div > p {
+  font-family: "ZT Nature Regular" !important;
+  font-size: 14px !important;
+}
+
+product-card h3 {
+  font-family: "ZT Nature Regular" !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+  opacity: 0.5 !important;
+}
+
+product-card h4 {
+  font-family: "ZT Nature Regular" !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+}
+
 /* Focus */
 *:focus-visible {
   outline: var(--focus-outline-width) solid currentcolor;

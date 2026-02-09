@@ -98,6 +98,16 @@
       {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
     "
   >
+    {% for block in section.blocks %}
+      {% if block.type == 'brand' %}
+        <div class="product-card__brand">{{ product.vendor }}</div>
+      {% elsif block.type == 'size' %}
+        <div class="product-card__size">
+          {% assign size_option = product.options_with_values | where: "name", "Størrelse" | first %}
+          {% if size_option %}{{ size_option.value }}{% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
     {{ children }}
   </div>
 </product-card>
