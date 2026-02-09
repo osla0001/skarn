@@ -98,16 +98,19 @@
       {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
     "
   >
-    {% for block in section.blocks %}
-      {% if block.type == 'brand' %}
-        <div class="product-card__brand">{{ product.vendor }}</div>
-      {% elsif block.type == 'size' %}
-        <div class="product-card__size">
-          {% assign size_option = product.options_with_values | where: "name", "Størrelse" | first %}
-          {% if size_option %}{{ size_option.value }}{% endif %}
-        </div>
-      {% endif %}
-    {% endfor %}
+    {%- assign brand = variant_to_link.metafields.custom.brand | default: variant_to_link.brand | default: nil -%}
+    <div class="product-card__brand">
+      {%- if brand -%}
+        {{ brand }}
+      {%- else -%}
+        {%- assign brand_option = product.options_with_values | where: "name", "Brand" | first -%}
+        {%- if brand_option -%}{{ brand_option.value }}{%- endif -%}
+      {%- endif -%}
+    </div>
+    <div class="product-card__size">
+      {% assign size_option = product.options_with_values | where: "name", "Størrelse" | first %}
+      {% if size_option %}{{ size_option.value }}{% endif %}
+    </div>
     {{ children }}
   </div>
 </product-card>
