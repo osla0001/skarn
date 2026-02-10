@@ -102,17 +102,8 @@
       {% if block.type == 'custom-liquid' %}
         <div class="product-card__custom-liquid">
           {%- comment -%} Mærke (reference eller tekst) {%- endcomment -%}
-          {% if product.metafields.custom.maerke.value %}
-            {{ product.metafields.custom.maerke.value }}
-          {% elsif product.metafields.custom.maerke %}
-            {{ product.metafields.custom.maerke }}
-          {% endif %}
-          {%- comment -%} Størrelse (reference eller tekst) {%- endcomment -%}
-          {% if product.metafields.custom.storrelse.value %}
-            {{ product.metafields.custom.storrelse.value }}
-          {% elsif product.metafields.custom.storrelse %}
-            {{ product.metafields.custom.storrelse }}
-          {% endif %}
+          {{ product.metafields.custom.maerke }}
+          {{ product.metafields.custom.storrelse }}
         </div>
       {% endif %}
     {% endfor %}
