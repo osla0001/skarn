@@ -623,11 +623,6 @@ span.price {
 
 div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column {
   gap: 5px !important;
-  /* padding: 5px !important; */
-}
-
-.layout-panel-flex--column > .group-block--height-fit {
-  /* padding: 5px; */
 }
 
 div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column {
@@ -641,6 +636,7 @@ div.group-block.group-block--height-fit.group-block--width-fill.border-style.spa
 
 main[data-template*="index"] {
   max-width: none;
+  padding: 0px;
 }
 
 main {
