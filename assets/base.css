@@ -639,7 +639,7 @@ div.group-block.group-block--height-fit.group-block--width-fill.border-style.spa
   gap: 1rem;
 }
 
-main[data-template*="collection"] #MainContent {
+main[data-template*="collection"] {
   max-width: 1220px;
   margin: 0 auto;
 }
