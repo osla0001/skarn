@@ -12,6 +12,23 @@
     "section": {
       "type": "section",
       "blocks": {
+        "simple_breadcrumb_breadcrumb_MDNHyJ": {
+          "type": "shopify://apps/simple-breadcrumb/blocks/breadcrumb/72abe039-63af-4862-822d-d042976a1a4f",
+          "settings": {
+            "color_scheme": "accent-1",
+            "seperator": "gt",
+            "custom_seperator": "",
+            "home_label": "Forside",
+            "products_label": "Katalog",
+            "products_url": "shopify://collections/all",
+            "padding": 5,
+            "font_size": 50,
+            "align_center": false,
+            "uppercase": true,
+            "disable_wrap": true,
+            "page_width": true
+          }
+        },
         "text_tqQTNE": {
           "type": "text",
           "name": "Title",
@@ -66,6 +83,7 @@
         }
       },
       "block_order": [
+        "simple_breadcrumb_breadcrumb_MDNHyJ",
         "text_tqQTNE",
         "text_twGGkJ"
       ],
@@ -94,7 +112,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 0,
+        "padding-block-start": 48,
         "padding-block-end": 48
       }
     },
