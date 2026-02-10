@@ -597,12 +597,45 @@ product-card h3 {
   font-size: 14px !important;
   text-transform: none !important;
   opacity: 0.5 !important;
+  text-wrap: nowrap !important;
 }
 
 product-card h4 {
   font-family: "ZT Nature Regular" !important;
   font-size: 14px !important;
   text-transform: none !important;
+  text-wrap: nowrap !important;
+}
+
+.group-block.group-block--height-fill.group-block--width-fit-content.border-style.spacing-style.size-style {
+  height: 100%;
+  width: auto;
+  min-width: 50px;
+  padding: 0 0.5rem;
+  border-left: 1px solid black !important;
+}
+
+span.price {
+  font-family: "ZT Nature Bold" !important;
+  font-size: 16px !important;
+  text-decoration: underline;
+}
+
+div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column {
+  gap: 5px !important;
+  /* padding: 5px !important; */
+}
+
+.layout-panel-flex--column > .group-block--height-fit {
+  /* padding: 5px; */
+}
+
+div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column {
+  padding: 5px !important;
+  gap: 5px !important;
+}
+
+#shopify-section-template--28109749911893__main > results-list > div {
 }
 
 /* Focus */
