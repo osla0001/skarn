@@ -639,6 +639,11 @@ div.group-block.group-block--height-fit.group-block--width-fill.border-style.spa
   gap: 1rem;
 }
 
+#MainContent {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
 /* Focus */
 *:focus-visible {
   outline: var(--focus-outline-width) solid currentcolor;
