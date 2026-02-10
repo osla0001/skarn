@@ -98,19 +98,17 @@
       {% if block_settings.inherit_color_scheme == false %} color-{{ block_settings.color_scheme }}{% endif %}
     "
   >
-    {%- assign brand = variant_to_link.metafields.custom.brand | default: variant_to_link.brand | default: nil -%}
-    <div class="product-card__brand">
-      {%- if brand -%}
-        {{ brand }}
-      {%- else -%}
-        {%- assign brand_option = product.options_with_values | where: "name", "Brand" | first -%}
-        {%- if brand_option -%}{{ brand_option.value }}{%- endif -%}
-      {%- endif -%}
-    </div>
-    <div class="product-card__size">
-      {% assign size_option = product.options_with_values | where: "name", "Størrelse" | first %}
-      {% if size_option %}{{ size_option.value }}{% endif %}
-    </div>
+    {% for block in section.blocks %}
+      {% if block.type == 'product-brand' %}
+        <div class="product-card__brand">
+          {{ product.metafields.custom.brand }}
+        </div>
+      {% elsif block.type == 'category-size' %}
+        <div class="product-card__size">
+          {{ product.metafields.custom.category_size }}
+        </div>
+      {% endif %}
+    {% endfor %}
     {{ children }}
   </div>
 </product-card>
