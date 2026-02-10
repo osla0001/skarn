@@ -101,7 +101,10 @@
     {% for block in section.blocks %}
       {% if block.type == 'custom-liquid' %}
         <div class="product-card__custom-liquid">
-          {{ block.settings.custom_liquid }}
+          {%- comment -%} Mærke (reference eller tekst) {%- endcomment -%}
+          {{ product.metafields.custom.maerke.value | default: product.metafields.custom.maerke }}
+          {%- comment -%} Størrelse (reference eller tekst) {%- endcomment -%}
+          {{ product.metafields.custom.storrelse.value | default: product.metafields.custom.storrelse }}
         </div>
       {% endif %}
     {% endfor %}
