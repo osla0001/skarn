@@ -302,7 +302,7 @@
                           "type": "text",
                           "name": "Størrelse",
                           "settings": {
-                            "text": "<h3>Str. {{ product.metafields.custom.storrelse.value }}</h3>",
+                            "text": "<h3>Str. {{ closest.product.metafields.custom.storrelse.value }}</h3>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -354,7 +354,7 @@
                           "type": "text",
                           "name": "Mærke",
                           "settings": {
-                            "text": "<p>{{ product.metafields.custom.maerke.value }}</p>",
+                            "text": "<p>{{ closest.product.metafields.custom.maerke.value }}</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
