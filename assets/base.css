@@ -635,7 +635,8 @@ div.group-block.group-block--height-fit.group-block--width-fill.border-style.spa
   gap: 5px !important;
 }
 
-#shopify-section-template--28109749911893__main > results-list > div {
+#ResultsList > div > ul {
+  gap: 1rem;
 }
 
 /* Focus */
