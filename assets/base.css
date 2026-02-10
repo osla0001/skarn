@@ -565,7 +565,7 @@ select {
   position: absolute;
   z-index: 10;
   place-self: end;
-  bottom: 20%;
+  bottom: 13%;
 }
 
 main[data-template*="collection"] product-card {
@@ -646,6 +646,7 @@ main[data-template*="index"] {
 main {
   max-width: 1220px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Focus */
