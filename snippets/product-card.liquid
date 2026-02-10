@@ -99,13 +99,9 @@
     "
   >
     {% for block in section.blocks %}
-      {% if block.type == 'maerke' %}
-        <div class="product-card__brand">
-          {{ product.metafields.custom.maerke }}
-        </div>
-      {% elsif block.type == 'size' %}
-        <div class="product-card__size">
-          {{ product.metafields.shopify.size }}
+      {% if block.type == 'custom-liquid' %}
+        <div class="product-card__custom-liquid">
+          {{ block.settings.custom_liquid }}
         </div>
       {% endif %}
     {% endfor %}
