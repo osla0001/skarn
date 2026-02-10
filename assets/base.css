@@ -645,6 +645,15 @@ main {
   padding: 0 1rem;
 }
 
+.bg-breadcrumb li {
+  padding-right: 0.4rem;
+  text-transform: uppercase !important;
+}
+.bg-breadcrumb li a {
+  padding-right: 0.4rem;
+  text-transform: uppercase !important;
+}
+
 /* Focus */
 *:focus-visible {
   outline: var(--focus-outline-width) solid currentcolor;
