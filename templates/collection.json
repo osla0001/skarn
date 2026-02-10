@@ -354,7 +354,7 @@
                           "type": "text",
                           "name": "Mærke",
                           "settings": {
-                            "text": "<p>{{ closest.product.metafields.custom.maerke.value }}</p>",
+                            "text": "<h4>{{ closest.product.metafields.custom.maerke.value }}</h4>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
