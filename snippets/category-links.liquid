@@ -1,0 +1,16 @@
+{%- comment -%}
+Dynamisk generering af kategori-links baseret på produkt-metafield 'kategori'.
+{%- endcomment -%}
+
+<ul class="category-links">
+  {%- assign kategorier = "" -%}
+  {%- for product in collections.all.products -%}
+    {%- assign kategori = product.metafields.custom.kategori -%}
+    {%- if kategori != blank and kategorier contains kategori == false -%}
+      <li>
+        <a href="/collections/all?filter.p.custom.kategori={{ kategori | url_encode }}">{{ kategori }}</a>
+      </li>
+      {%- assign kategorier = kategorier | append: kategori | append: "," -%}
+    {%- endif -%}
+  {%- endfor -%}
+</ul>
