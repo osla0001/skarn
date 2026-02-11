@@ -93,23 +93,6 @@
         "type": "shopify://apps/qikify-smart-menu/blocks/app-embed/19d2f1cd-1836-4a32-8937-03df3c601dc8",
         "disabled": false,
         "settings": {}
-      },
-      "6810584612362904079": {
-        "type": "shopify://apps/findter-custom-filter-search/blocks/search-filters-core/bf706e6d-709f-4687-a2e2-1fbe1b007cc7",
-        "disabled": true,
-        "settings": {
-          "search_input_selector": "[name=q]",
-          "link_no_results": "shopify://collections/all",
-          "custom_css": ""
-        }
-      },
-      "1408126219959914567": {
-        "type": "shopify://apps/findter-custom-filter-search/blocks/search-suggestion/bf706e6d-709f-4687-a2e2-1fbe1b007cc7",
-        "disabled": true,
-        "settings": {
-          "search_input_selector": "[name=q]",
-          "predictive_body_selector": ".predictive-search-form__content-wrapper,.predictive-search"
-        }
       }
     },
     "color_schemes": {
