@@ -4,6 +4,20 @@
 .header__columns {
   box-sizing: border-box;
 }
+/* Flex styling for filter dropdowns */
+.collection-filter-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.custom-filter-dropdown {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 /* Skjul scrollbar baggrund på html og body */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
