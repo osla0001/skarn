@@ -61,7 +61,7 @@
                 "unit": "percent",
                 "percent_width": 30,
                 "pixel_height": 96,
-                "custom_mobile_size": false,
+                "custom_mobile_size": true,
                 "unit_mobile": "percent",
                 "percent_width_mobile": 100,
                 "pixel_height_mobile": 120,
@@ -88,10 +88,15 @@
               "blocks": {}
             }
           },
-          "block_order": ["logo_VbbBBx", "button_BpDGiH"]
+          "block_order": [
+            "logo_VbbBBx",
+            "button_BpDGiH"
+          ]
         }
       },
-      "block_order": ["group_zePjiU"],
+      "block_order": [
+        "group_zePjiU"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -165,7 +170,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_4KfqK6"],
+      "block_order": [
+        "text_4KfqK6"
+      ],
       "name": "Fragt banner",
       "settings": {
         "movement_direction": "normal",
@@ -200,7 +207,10 @@
           }
         }
       },
-      "block_order": ["left_qk7C6X", "right_7LUeFg"],
+      "block_order": [
+        "left_qk7C6X",
+        "right_7LUeFg"
+      ],
       "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne.png",
@@ -287,7 +297,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_YFtzcL", "product_list_button_MWeP9V"]
+          "block_order": [
+            "product_list_text_YFtzcL",
+            "product_list_button_MWeP9V"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -324,7 +337,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_677WP3"]
+          "block_order": [
+            "product_card_gallery_677WP3"
+          ]
         }
       },
       "name": "Nyeste selektion",
@@ -386,7 +401,10 @@
           }
         }
       },
-      "block_order": ["right_iNirNG", "left_J8gJnr"],
+      "block_order": [
+        "right_iNirNG",
+        "left_J8gJnr"
+      ],
       "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne2.png",
@@ -445,7 +463,14 @@
           }
         }
       },
-      "block_order": ["collection_link_y4jKjF", "collection_link_XPynXP", "collection_link_JR7fpH", "collection_link_Umnmkx", "collection_link_WqqVKK", "collection_link_V4aJGL"],
+      "block_order": [
+        "collection_link_y4jKjF",
+        "collection_link_XPynXP",
+        "collection_link_JR7fpH",
+        "collection_link_Umnmkx",
+        "collection_link_WqqVKK",
+        "collection_link_V4aJGL"
+      ],
       "name": "Årti oversigt",
       "settings": {
         "heading": "SHOP ÅRTI"
@@ -540,7 +565,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_list_text_JXRpxN", "product_list_button_jDXF3f"]
+          "block_order": [
+            "product_list_text_JXRpxN",
+            "product_list_button_jDXF3f"
+          ]
         },
         "static-product-card": {
           "type": "_product-card",
@@ -577,7 +605,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_F4rRLc"]
+          "block_order": [
+            "product_card_gallery_F4rRLc"
+          ]
         }
       },
       "name": "Udsalgs sektion",
@@ -603,5 +633,16 @@
       }
     }
   },
-  "order": ["hero_jVaWmY", "section_TidpBp", "marquee_AEpFgk", "campaign", "product_list_fa6P9H", "section_bWTT6D", "campaign_4Bx8cp", "section_di9kKX", "newsletter", "product_list_P79JKH"]
+  "order": [
+    "hero_jVaWmY",
+    "section_TidpBp",
+    "marquee_AEpFgk",
+    "campaign",
+    "product_list_fa6P9H",
+    "section_bWTT6D",
+    "campaign_4Bx8cp",
+    "section_di9kKX",
+    "newsletter",
+    "product_list_P79JKH"
+  ]
 }
