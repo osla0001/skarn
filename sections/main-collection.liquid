@@ -37,7 +37,6 @@
   >
     <div class="collection-filter-menu">
       {% render 'custom-filter-menu' %}
-        {% content_for 'block', type: 'filters', id: 'filters', results: collection, results_size: collection.products_count %}
     </div>
       {% content_for 'block',
         type: 'filters',
@@ -53,45 +52,18 @@
 
       {% paginate collection.products by products_per_page %}
         {% capture children %}
-          {% assign filter_storrelse = request.params['filter.p.custom.storrelse'] %}
-          {% assign filter_kategori = request.params['filter.p.custom.kategori'] %}
-          {% assign filter_maerke = request.params['filter.p.custom.maerke'] %}
-          {% assign filter_koen = request.params['filter.p.custom.koen'] %}
           {% for product in collection.products %}
-            {% assign show_product = true %}
-            {% if filter_storrelse %}
-              {% unless product.metafields.custom.storrelse == filter_storrelse %}
-                {% assign show_product = false %}
-              {% endunless %}
-            {% endif %}
-            {% if filter_kategori %}
-              {% unless product.metafields.custom.kategori == filter_kategori %}
-                {% assign show_product = false %}
-              {% endunless %}
-            {% endif %}
-            {% if filter_maerke %}
-              {% unless product.metafields.custom.maerke == filter_maerke %}
-                {% assign show_product = false %}
-              {% endunless %}
-            {% endif %}
-            {% if filter_koen %}
-              {% unless product.metafields.custom.koen == filter_koen %}
-                {% assign show_product = false %}
-              {% endunless %}
-            {% endif %}
-            {% if show_product %}
-              <li
-                id="{{ section.id }}-{{ product.id }}"
-                class="product-grid__item product-grid__item--{{ forloop.index0 }}"
-                data-page="{{ paginate.current_page }}"
-                data-product-id="{{ product.id }}"
-                ref="cards[]"
-              >
-                {% # theme-check-disable %}
-                {% content_for 'block', type: '_product-card', id: 'product-card', closest.product: product %}
-                {% # theme-check-enable %}
-              </li>
-            {% endif %}
+            <li
+              id="{{ section.id }}-{{ product.id }}"
+              class="product-grid__item product-grid__item--{{ forloop.index0 }}"
+              data-page="{{ paginate.current_page }}"
+              data-product-id="{{ product.id }}"
+              ref="cards[]"
+            >
+              {% # theme-check-disable %}
+              {% content_for 'block', type: '_product-card', id: 'product-card', closest.product: product %}
+              {% # theme-check-enable %}
+            </li>
           {% endfor %}
         {% endcapture %}
 
