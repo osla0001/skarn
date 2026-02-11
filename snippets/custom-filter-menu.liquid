@@ -1,0 +1,19 @@
+{%- comment -%}
+Custom filter-menu for product metafield 'Størrelse'.
+Viser alle unikke størrelser som links, der filtrerer collectionen.
+{%- endcomment -%}
+
+<ul class="custom-filter-menu">
+  {%- assign sizes = "" -%}
+  {%- for product in collection.products -%}
+    {%- assign size = product.metafields.custom.storrelse -%}
+    {%- if size != blank -%}
+      {%- unless sizes contains size -%}
+        <li>
+          <a href="?filter.p.custom.storrelse={{ size | url_encode }}">{{ size }}</a>
+        </li>
+        {%- assign sizes = sizes | append: size | append: "," -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+</ul>
