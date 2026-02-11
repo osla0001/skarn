@@ -677,6 +677,10 @@ main {
   font-size: 16px !important;
 }
 
+main[data-template*="collection"] summary {
+  padding: 0 !important;
+}
+
 /* Focus */
 *:focus-visible {
   outline: var(--focus-outline-width) solid currentcolor;
