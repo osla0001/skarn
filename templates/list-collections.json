@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "collection_list_Wfgh3m": {
       "type": "main-collection-list",
@@ -15,7 +16,6 @@
           "type": "group",
           "name": "t:names.header",
           "settings": {
-            "open_in_new_tab": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -43,6 +43,9 @@
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
             "padding-block-start": 0,
             "padding-block-end": 48,
             "padding-inline-start": 0,
@@ -148,6 +151,7 @@
       "block_order": [
         "group_4FtiAg"
       ],
+      "disabled": true,
       "name": "Collection list",
       "settings": {
         "layout_type": "grid",
@@ -166,9 +170,135 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "collection_view_eFNFB4": {
+      "type": "collection-view",
+      "blocks": {
+        "collection_link_bcLhkm": {
+          "type": "collection_link",
+          "settings": {
+            "collection_name": "NYT",
+            "collection_year": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_link_bcLhkm"
+      ],
+      "name": "Kollektions oversigt",
+      "settings": {
+        "heading": "KATE-GORI"
+      }
+    },
+    "section_kE7iNe": {
+      "type": "section",
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "custom",
+        "section_height_custom": 10,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "collection_view_4FpkVi": {
+      "type": "collection-view",
+      "blocks": {
+        "collection_link_749Aqj": {
+          "type": "collection_link",
+          "name": "Nexus",
+          "settings": {
+            "collection_name": "Nexus",
+            "collection_year": "(2010)"
+          }
+        },
+        "collection_link_BW3wFq": {
+          "type": "collection_link",
+          "name": "Y2K",
+          "settings": {
+            "collection_name": "Y2K",
+            "collection_year": "(2000)"
+          }
+        },
+        "collection_link_QXQhaz": {
+          "type": "collection_link",
+          "name": "Core",
+          "settings": {
+            "collection_name": "Core",
+            "collection_year": "(1990)"
+          }
+        },
+        "collection_link_U4MWnf": {
+          "type": "collection_link",
+          "name": "Retro",
+          "settings": {
+            "collection_name": "Retro",
+            "collection_year": "(1980)"
+          }
+        },
+        "collection_link_WYK4MB": {
+          "type": "collection_link",
+          "name": "Boho",
+          "settings": {
+            "collection_name": "Boho",
+            "collection_year": "(1970)"
+          }
+        },
+        "collection_link_nKEcn8": {
+          "type": "collection_link",
+          "name": "Mod",
+          "settings": {
+            "collection_name": "Mod",
+            "collection_year": "(1960)"
+          }
+        },
+        "collection_link_qYz6mm": {
+          "type": "collection_link",
+          "settings": {
+            "collection_name": "",
+            "collection_year": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_link_749Aqj",
+        "collection_link_BW3wFq",
+        "collection_link_QXQhaz",
+        "collection_link_U4MWnf",
+        "collection_link_WYK4MB",
+        "collection_link_nKEcn8",
+        "collection_link_qYz6mm"
+      ],
+      "name": "Årti oversigt",
+      "settings": {
+        "heading": "SHOP ÅRTI"
+      }
     }
   },
   "order": [
-    "collection_list_Wfgh3m"
+    "collection_list_Wfgh3m",
+    "collection_view_eFNFB4",
+    "section_kE7iNe",
+    "collection_view_4FpkVi"
   ]
 }
