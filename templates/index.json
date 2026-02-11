@@ -393,64 +393,6 @@
         "section_height": "200px"
       }
     },
-    "section_di9kKX": {
-      "type": "collection-view",
-      "blocks": {
-        "collection_link_y4jKjF": {
-          "type": "collection_link",
-          "name": "Nexus",
-          "settings": {
-            "collection_name": "Nexus",
-            "collection_year": "(2010)"
-          }
-        },
-        "collection_link_XPynXP": {
-          "type": "collection_link",
-          "name": "Y2K",
-          "settings": {
-            "collection_name": "Y2K",
-            "collection_year": "(2000)"
-          }
-        },
-        "collection_link_JR7fpH": {
-          "type": "collection_link",
-          "name": "Core",
-          "settings": {
-            "collection_name": "Core",
-            "collection_year": "(1990)"
-          }
-        },
-        "collection_link_Umnmkx": {
-          "type": "collection_link",
-          "name": "Retro",
-          "settings": {
-            "collection_name": "Retro",
-            "collection_year": "(1980)"
-          }
-        },
-        "collection_link_WqqVKK": {
-          "type": "collection_link",
-          "name": "Boho",
-          "settings": {
-            "collection_name": "Boho",
-            "collection_year": "(1970)"
-          }
-        },
-        "collection_link_V4aJGL": {
-          "type": "collection_link",
-          "name": "Mod",
-          "settings": {
-            "collection_name": "Mod",
-            "collection_year": "(1960)"
-          }
-        }
-      },
-      "block_order": ["collection_link_y4jKjF", "collection_link_XPynXP", "collection_link_JR7fpH", "collection_link_Umnmkx", "collection_link_WqqVKK", "collection_link_V4aJGL"],
-      "name": "Årti oversigt",
-      "settings": {
-        "heading": "SHOP ÅRTI"
-      }
-    },
     "newsletter": {
       "type": "newsletter",
       "settings": {
@@ -603,5 +545,5 @@
       }
     }
   },
-  "order": ["hero_jVaWmY", "section_TidpBp", "marquee_AEpFgk", "campaign", "product_list_fa6P9H", "section_bWTT6D", "campaign_4Bx8cp", "section_di9kKX", "newsletter", "product_list_P79JKH"]
+  "order": ["hero_jVaWmY", "section_TidpBp", "marquee_AEpFgk", "campaign", "product_list_fa6P9H", "section_bWTT6D", "campaign_4Bx8cp", "newsletter", "product_list_P79JKH"]
 }
