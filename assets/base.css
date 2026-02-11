@@ -1304,7 +1304,7 @@ summary::-webkit-details-marker {
 
 /* Sørg for at første sektion altid har offset for headeren, så headeren aldrig blokerer toppen */
 .content-for-layout > .shopify-section:first-child {
-  margin-top: var(--header-group-height, 0px);
+  margin-top: 2rem;
   transition: margin-top 0.3s;
 }
 
