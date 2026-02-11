@@ -596,26 +596,29 @@ main[data-template*="collection"] .card-gallery__hover-fade-wrapper {
   border-bottom: 1px solid black;
 }
 
-.rte p {
-  font-weight: 600 !important;
-}
-
-div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > a > div > p {
+/* Produkt titel */
+product-card p {
   font-family: "ZT Nature Regular" !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
+  -webkit-text-stroke: 0.3px;
+  -webkit-text-color: inherit;
+  max-width: max-content !important;
+  text-wrap: nowrap !important;
 }
 
+/* Størrelse */
 product-card h3 {
   font-family: "ZT Nature Regular" !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   text-transform: none !important;
   opacity: 0.5 !important;
   text-wrap: nowrap !important;
 }
 
+/* Mærke */
 product-card h4 {
   font-family: "ZT Nature Regular" !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   text-transform: none !important;
   text-wrap: nowrap !important;
 }
@@ -630,7 +633,7 @@ product-card h4 {
 
 span.price {
   font-family: "ZT Nature Bold" !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   text-decoration: underline;
 }
 
