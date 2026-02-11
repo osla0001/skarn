@@ -79,9 +79,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "text_fRMQMR"
-          ]
+          "block_order": ["text_fRMQMR"]
         },
         "static-collection-card": {
           "type": "_collection-card",
@@ -143,14 +141,10 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "collection_title_7YgBPU"
-          ]
+          "block_order": ["collection_title_7YgBPU"]
         }
       },
-      "block_order": [
-        "group_4FtiAg"
-      ],
+      "block_order": ["group_4FtiAg"],
       "disabled": true,
       "name": "Collection list",
       "settings": {
@@ -182,9 +176,7 @@
           }
         }
       },
-      "block_order": [
-        "collection_link_bcLhkm"
-      ],
+      "block_order": ["collection_link_bcLhkm"],
       "name": "Kollektions oversigt",
       "settings": {
         "heading": "KATE-GORI"
@@ -280,25 +272,12 @@
           }
         }
       },
-      "block_order": [
-        "collection_link_749Aqj",
-        "collection_link_BW3wFq",
-        "collection_link_QXQhaz",
-        "collection_link_U4MWnf",
-        "collection_link_WYK4MB",
-        "collection_link_nKEcn8",
-        "collection_link_qYz6mm"
-      ],
+      "block_order": ["collection_link_749Aqj", "collection_link_BW3wFq", "collection_link_QXQhaz", "collection_link_U4MWnf", "collection_link_WYK4MB", "collection_link_nKEcn8", "collection_link_qYz6mm"],
       "name": "Årti oversigt",
       "settings": {
         "heading": "SHOP ÅRTI"
       }
     }
   },
-  "order": [
-    "collection_list_Wfgh3m",
-    "collection_view_eFNFB4",
-    "section_kE7iNe",
-    "collection_view_4FpkVi"
-  ]
+  "order": ["collection_list_Wfgh3m", "collection_view_eFNFB4", "section_kE7iNe", "collection_view_4FpkVi"]
 }

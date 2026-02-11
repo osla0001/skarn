@@ -572,7 +572,6 @@ main[data-template*="collection"] product-card {
   border: 1px solid black !important;
 }
 
-main[data-template*="collection"] .resource-list__item,
 main[data-template*="collection"] .collection-card,
 main[data-template*="collection"] .product-card {
   aspect-ratio: auto;
@@ -635,6 +634,11 @@ div.group-block.group-block--height-fit.group-block--width-fill.border-style.spa
 }
 
 main[data-template*="index"] {
+  max-width: none;
+  padding: 0px;
+}
+
+main[data-template*="collections"] {
   max-width: none;
   padding: 0px;
 }
