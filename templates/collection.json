@@ -320,7 +320,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>- {{ closest.product.metafields.custom.kategori.value }}</p>",
+                            "text": "<p>– {{ closest.product.metafields.custom.kategori.value }}</p>",
                             "width": "fit-content",
                             "max_width": "narrow",
                             "alignment": "left",
