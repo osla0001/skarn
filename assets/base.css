@@ -3160,6 +3160,23 @@ html {
   --paragraph-text-color: #3e4753;
 }
 
+div > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style,
+div > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column {
+  width: 100% !important;
+}
+
+div > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > div:nth-child(1) > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column,
+div > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > div:nth-child(2) > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column,
+div > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column {
+  flex-direction: row !important;
+}
+
+@media screen and (max-width: 749px) {
+  .product-card__content {
+    padding: 0 !important;
+  }
+}
+
 /* Fly to cart animation */
 fly-to-cart {
   --offset-y: 10px;
