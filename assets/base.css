@@ -33,6 +33,15 @@ results-list > div > div.facets-block-wrapper.facets-block-wrapper--horizontal {
   flex-direction: column;
   margin: 0;
 }
+
+.facets__title-wrapper {
+  margin: 2.5rem 0 2rem 0 !important;
+}
+
+.facets__label {
+  margin-top: 1rem;
+}
+
 /* Skjul scrollbar baggrund på html og body */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -2284,7 +2293,7 @@ slideshow-slide .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui_
   }
 }
 
-:is(deferred-media, .video-placeholder-wrapper).border-style {
+:is(deferred-media, .video-placeholder-wrapper) {
   /* Apply the border radius to the video */
   overflow: hidden;
 }
@@ -2549,11 +2558,11 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   background-color: var(--color-background);
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0; /* Tilføjes */
   bottom: 0;
   width: var(--sidebar-width);
   z-index: var(--layer-raised);
-  transform: translateX(-120%);
+  transform: translateX(120%); /* Ændres fra -120% til 120% */
   transition: transform var(--animation-speed) var(--animation-easing);
 }
 
@@ -4461,3 +4470,7 @@ text-component {
   opacity: 0;
 }
 /*qkf end */
+
+.facets-drawer__close {
+  margin-right: 1rem !important;
+}
