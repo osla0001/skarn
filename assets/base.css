@@ -1,3 +1,18 @@
+/* Tving filter-knappen til at være synlig på desktop */
+.facets-toggle,
+.facets-toggle__button {
+  display: flex !important;
+  align-items: center;
+}
+/* Skjul altid den vandrette filterliste, så kun filter-knappen bruges */
+.facets--horizontal {
+  display: none !important;
+}
+
+results-list > div > div.facets-block-wrapper.facets-block-wrapper--horizontal {
+  display: none;
+}
+
 /* Sikrer at header-padding ikke giver overflow */
 .header,
 .header__row,

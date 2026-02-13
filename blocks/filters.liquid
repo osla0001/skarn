@@ -277,39 +277,37 @@
       {{ facets_margin_style }}
     "
   >
-    {% if block_settings.enable_filtering %}
-      <div class="facets-toggle__wrapper">
-        <button
-          class="button facets-toggle__button button-unstyled button-unstyled--with-icon"
-          on:click="#filters-drawer/showDialog"
-          type="button"
-        >
-          <span class="svg-wrapper">
-            {{ 'icon-filter.svg' | inline_asset_content }}
-          </span>
+    <div class="facets-toggle__wrapper">
+      <button
+        class="button facets-toggle__button button-unstyled button-unstyled--with-icon"
+        on:click="#filters-drawer/showDialog"
+        type="button"
+      >
+        <span class="svg-wrapper">
+          {{ 'icon-filter.svg' | inline_asset_content }}
+        </span>
 
-          {{ 'actions.show_filters' | t }}
+        {{ 'actions.show_filters' | t }}
 
-          {% if total_active_values > 0 %}
-            <div
-              id="filter-count-bubble-toggle"
-              class="filter-count-bubble"
-              aria-label="{{ 'accessibility.filter_count' | t: count: total_active_values }}"
+        {% if total_active_values > 0 %}
+          <div
+            id="filter-count-bubble-toggle"
+            class="filter-count-bubble"
+            aria-label="{{ 'accessibility.filter_count' | t: count: total_active_values }}"
+          >
+            <span class="filter-count-bubble__background"></span>
+
+            <span
+              ref="cartBubbleText"
+              class="filter-count-bubble__text"
+              aria-hidden="true"
             >
-              <span class="filter-count-bubble__background"></span>
-
-              <span
-                ref="cartBubbleText"
-                class="filter-count-bubble__text"
-                aria-hidden="true"
-              >
-                {{ total_active_values }}
-              </span>
-            </div>
-          {% endif %}
-        </button>
-      </div>
-    {% endif %}
+              {{ total_active_values }}
+            </span>
+          </div>
+        {% endif %}
+      </button>
+    </div>
 
     {% liquid
       assign child_count = 0
