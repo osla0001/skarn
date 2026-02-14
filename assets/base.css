@@ -199,6 +199,14 @@ div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:
   grid-template-columns: 2fr 1fr;
 }
 
+div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(2) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style {
+  width: 100% !important;
+}
+
+add-to-cart-component button {
+  text-wrap: nowrap !important;
+}
+
 @media screen and (max-width: 1100px) {
   div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(2) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row {
     display: block;
