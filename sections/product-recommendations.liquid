@@ -79,6 +79,10 @@
         endif
       %}
       {% capture list_items %}
+        <div class="resource-list__blank-item">
+          <h1>{{ section.settings.blank_item_heading | default: 'ud-forsk' }}</h1>
+        </div>
+        <!--@list/split-->
         {% for product in products limit: section.settings.max_products %}
           <div class="resource-list__item">
             {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
@@ -226,6 +230,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "text",
+      "id": "blank_item_heading",
+      "label": "Blank item overskrift",
+      "default": "ud-forsk"
+    },
     {
       "type": "product",
       "id": "product",

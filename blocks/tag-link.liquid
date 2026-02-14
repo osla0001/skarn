@@ -3,21 +3,28 @@
 
 {%- assign filter_key = block.settings.filter_key -%}
 {%- assign filter_value = block.settings.filter_value -%}
-{%- assign label = block.settings.label | default: filter_value -%}
+{%- assign label = block.settings.label -%}
 {%- assign collection_url = block.settings.collection_url | default: '/collections/all' -%}
 
 {%- if filter_key != blank and filter_value != blank -%}
-  {%- assign values = filter_value | split: ',' -%}
+  {%- assign temp = filter_value | replace: ' og ', ',' -%}
+  {%- assign values = temp | split: ',' -%}
   <div class="tag-link-list">
     {%- for value in values -%}
       {%- assign trimmed_value = value | strip -%}
-      <a
-        href="{{ collection_url }}?{{ filter_key }}={{ trimmed_value | url_encode }}"
-        class="tag-link"
-        {{ block.shopify_attributes }}
-      >
-        {{ label | default: trimmed_value }}
-      </a>
+      <span class="tag-link-wrapper">
+        <a
+          href="{{ collection_url }}?{{ filter_key }}={{ trimmed_value | url_encode }}"
+          class="tag-link"
+          {{ block.shopify_attributes }}
+        >
+          {%- if label != blank and values.size == 1 -%}
+            {{ label }}
+          {%- else -%}
+            {{ trimmed_value }}
+          {%- endif -%}
+        </a>
+      </span>
     {%- endfor -%}
   </div>
 {%- endif -%}
@@ -62,20 +69,23 @@
     flex-wrap: wrap;
     gap: 0.5em;
   }
+  .tag-link-wrapper {
+    display: inline-block;
+  }
   .tag-link {
-    background-color: transparent;
-    outline: 1px solid black !important;
-    color: black;
-    padding: 5px 5px;
-    margin: 0;
-    border-radius: 0;
-    height: fit-content;
-    background: none !important;
-    opacity: 0.5 !important;
-    font-size: 12px !important;
-    text-transform: uppercase !important;
-    margin-right: 0.1rem !important;
-    font-weight: 600 !important;
+  background-color: transparent;
+  outline: 1px solid black !important;
+  color: black;
+  padding: 2.5px 5px;
+  margin: 0;
+  border-radius: 0;
+  height: fit-content;
+  background: none !important;
+  opacity: 0.5 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  margin-right: 0.1rem !important;
+  font-weight: 600 !important;
   }
   .tag-link:hover {
     opacity: 0.75 !important;
