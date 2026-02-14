@@ -3678,7 +3678,7 @@ fly-to-cart.fly-to-cart--sticky {
 slideshow-component {
   --cursor: grab;
   --slide-offset: 6px;
-
+  border: 1px solid black;
   position: relative;
   display: flex;
   flex-direction: column;
