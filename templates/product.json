@@ -427,13 +427,13 @@
             },
             "text_GGmRxV": {
               "type": "text",
-              "name": "Farve",
+              "name": "Udforsk",
               "settings": {
-                "text": "<p><strong>Udforsk lignende</strong></p>",
+                "text": "<h4><strong>Udforsk lignende</strong></h4>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "h4",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -491,7 +491,7 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_rhc7eL": {
+                "text_JbxbfP": {
                   "type": "text",
                   "name": "Størrelse",
                   "settings": {
@@ -517,11 +517,11 @@
                   },
                   "blocks": {}
                 },
-                "text_xXpdgq": {
+                "text_nfQjx4": {
                   "type": "text",
                   "name": "Farve",
                   "settings": {
-                    "text": "",
+                    "text": "<p>{{ closest.product.metafields.custom.farve | metafield_text }}</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -543,37 +543,11 @@
                   },
                   "blocks": {}
                 },
-                "text_EXgPE8": {
+                "text_fqTPjJ": {
                   "type": "text",
-                  "name": "Størrelse",
+                  "name": "Tags",
                   "settings": {
-                    "text": "<p>Str. {{ closest.product.metafields.custom.storrelse.value }}</p>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "text_fyGq3y": {
-                  "type": "text",
-                  "name": "Størrelse",
-                  "settings": {
-                    "text": "<p>Str. {{ closest.product.metafields.custom.storrelse.value }}</p>",
+                    "text": "<p>{{ closest.product.metafields.custom.tags | metafield_text }}</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -597,10 +571,9 @@
                 }
               },
               "block_order": [
-                "text_rhc7eL",
-                "text_xXpdgq",
-                "text_EXgPE8",
-                "text_fyGq3y"
+                "text_JbxbfP",
+                "text_nfQjx4",
+                "text_fqTPjJ"
               ]
             }
           },
