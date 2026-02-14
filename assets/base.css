@@ -38,6 +38,15 @@ div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:
   color: #222;
   font-size: 0.97rem;
   line-height: 1.5;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-accordion-content.open {
+  max-height: 500px;
+  padding: 0.5rem 0 0 0;
 }
 /* Tving filter-knappen til at være synlig på desktop */
 .facets-toggle,
@@ -1141,7 +1150,6 @@ main[data-template*="collection"] summary {
 
 .card-gallery {
   position: relative;
-  overflow: hidden;
 }
 
 /* Safer opacity-based swap for slideshow children without removing them from flow */
@@ -1566,14 +1574,6 @@ ul[product-grid-view="zoom-out"] .product-grid__card > * {
 }
 
 ul[product-grid-view="zoom-out"] .product-grid__card .card-gallery {
-  display: block;
-}
-
-[product-grid-view="zoom-out"] .card-gallery > :is(quick-add-component, .product-badges, slideshow-component > slideshow-controls) {
-  display: none;
-}
-
-ul[product-grid-view="zoom-out"] .card-gallery > img {
   display: block;
 }
 
@@ -2406,7 +2406,7 @@ slideshow-slide .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui_
   overflow: hidden;
 }
 
-deferred-media {
+.deferred-media {
   /* The overflow hidden in the deferred-media won't let the button show the focus ring */
   &:has(:focus-visible) {
     outline: var(--focus-outline-width) solid currentcolor;
@@ -2432,20 +2432,20 @@ deferred-media {
   transition: opacity 0.3s ease;
 }
 
-deferred-media img {
+.deferred-media img {
   height: 100%;
   object-fit: cover;
   transition: opacity 0.3s ease;
 }
 
-deferred-media iframe {
+.deferred-media iframe {
   width: 100%;
   height: 100%;
   border: none;
   aspect-ratio: var(--size-style-aspect-ratio, auto);
 }
 
-deferred-media[data-media-loaded] img {
+.deferred-media[data-media-loaded] img {
   opacity: 0;
 }
 
@@ -2478,7 +2478,7 @@ deferred-media[data-media-loaded] img {
   }
 }
 
-deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__poster-button ~ video) {
+.deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__poster-button ~ video) {
   /* only apply this on the video block not product media */
   object-fit: cover;
   height: 100%;
