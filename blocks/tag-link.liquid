@@ -1,0 +1,65 @@
+{%- comment -%}
+  Tag link block: Renders a link for a product tag that filters the product listing page by the selected tag.
+  Usage: Place this block on a product page to allow users to filter by tag (e.g., size, brand).
+{%- endcomment -%}
+
+{%- assign tag = block.settings.tag -%}
+{%- assign label = block.settings.label | default: tag -%}
+{%- assign collection_url = block.settings.collection_url | default: '/collections/all' -%}
+
+{%- if tag != blank -%}
+  <a
+    href="{{ collection_url }}?filter.v.tag={{ tag | url_encode }}"
+    class="tag-link"
+    {{ block.shopify_attributes }}
+  >
+    {{ label }}
+  </a>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Tag link",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Tag (e.g., Str. L, BrandX)",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label (optional)",
+      "default": ""
+    },
+    {
+      "type": "url",
+      "id": "collection_url",
+      "label": "Collection URL (optional)",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tag link"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.tag-link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  background: var(--color-background, #f5f5f5);
+  color: var(--color-text, #222);
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.tag-link:hover {
+  background: var(--color-accent, #e0e0e0);
+}
+{% endstylesheet %}

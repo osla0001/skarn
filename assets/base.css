@@ -170,7 +170,7 @@ html body .tmenu_submenu_type_mega {
   padding: 0 !important;
 }
 
-div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(5) > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column p,
+div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(4) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style rte-formatter p,
 .metafield-single_line_text_field-array li {
   background-color: transparent;
   outline: 1px solid black !important;
