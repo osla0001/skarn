@@ -353,7 +353,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": ["text_GTN3XN", "text_naHFk6"]
+                          "block_order": [
+                            "text_GTN3XN",
+                            "text_naHFk6"
+                          ]
                         },
                         "group_48rrKL": {
                           "type": "group",
@@ -448,7 +451,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": ["text_NJTmxB", "text_TYHR8C"]
+                          "block_order": [
+                            "text_NJTmxB",
+                            "text_TYHR8C"
+                          ]
                         },
                         "group_iFj8bq": {
                           "type": "group",
@@ -543,7 +549,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": ["text_cRKKhX", "text_bdmYEB"]
+                          "block_order": [
+                            "text_cRKKhX",
+                            "text_bdmYEB"
+                          ]
                         },
                         "group_WqQGJM": {
                           "type": "group",
@@ -638,10 +647,18 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": ["text_KiUJw8", "text_mbkpV3"]
+                          "block_order": [
+                            "text_KiUJw8",
+                            "text_mbkpV3"
+                          ]
                         }
                       },
-                      "block_order": ["group_xkFQ78", "group_48rrKL", "group_iFj8bq", "group_WqQGJM"]
+                      "block_order": [
+                        "group_xkFQ78",
+                        "group_48rrKL",
+                        "group_iFj8bq",
+                        "group_WqQGJM"
+                      ]
                     },
                     "price_6jRHV3": {
                       "type": "price",
@@ -704,10 +721,20 @@
                       "block_order": []
                     }
                   },
-                  "block_order": ["group_DYA6tx", "price_6jRHV3", "buy_buttons_tNAtqe"]
+                  "block_order": [
+                    "group_DYA6tx",
+                    "price_6jRHV3",
+                    "buy_buttons_tNAtqe"
+                  ]
                 }
               },
-              "block_order": ["text_xrnftG", "divider_yrmztY", "text_ViRCQk", "custom_liquid_tnDAe7", "group_NMxaha"]
+              "block_order": [
+                "text_xrnftG",
+                "divider_yrmztY",
+                "text_ViRCQk",
+                "custom_liquid_tnDAe7",
+                "group_NMxaha"
+              ]
             },
             "divider_DpVtDq": {
               "type": "_divider",
@@ -721,9 +748,93 @@
               },
               "blocks": {}
             },
+            "group_t7V7CJ": {
+              "type": "group",
+              "name": "Accordions",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 0,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "product_accordion_p7WTXC": {
+                  "type": "product-accordion",
+                  "name": "Mål",
+                  "settings": {
+                    "heading": "Mål",
+                    "description": ""
+                  },
+                  "blocks": {}
+                },
+                "product_accordion_azyUiG": {
+                  "type": "product-accordion",
+                  "name": "Formål",
+                  "settings": {
+                    "heading": "Formål",
+                    "description": ""
+                  },
+                  "blocks": {}
+                },
+                "product_accordion_Xrqmqf": {
+                  "type": "product-accordion",
+                  "name": "Nyhedsbrev",
+                  "settings": {
+                    "heading": "Nyhedsbrev",
+                    "description": ""
+                  },
+                  "blocks": {}
+                },
+                "product_accordion_dP6g3B": {
+                  "type": "product-accordion",
+                  "name": "Levering og retunering",
+                  "settings": {
+                    "heading": "Levering og retunering",
+                    "description": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "product_accordion_p7WTXC",
+                "product_accordion_azyUiG",
+                "product_accordion_Xrqmqf",
+                "product_accordion_dP6g3B"
+              ]
+            },
             "group_h4EUdT": {
               "type": "group",
-              "name": "t:names.group",
+              "name": "Tags",
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -861,10 +972,17 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["tag_link_9CYyVY", "tag_link_kGXkMm", "tag_link_Xibj9z"]
+                  "block_order": [
+                    "tag_link_9CYyVY",
+                    "tag_link_kGXkMm",
+                    "tag_link_Xibj9z"
+                  ]
                 }
               },
-              "block_order": ["text_hkwTWa", "group_qK4paK"]
+              "block_order": [
+                "text_hkwTWa",
+                "group_qK4paK"
+              ]
             },
             "divider_gGyp4D": {
               "type": "_divider",
@@ -879,7 +997,13 @@
               "blocks": {}
             }
           },
-          "block_order": ["group_icgrde", "divider_DpVtDq", "group_h4EUdT", "divider_gGyp4D"]
+          "block_order": [
+            "group_icgrde",
+            "divider_DpVtDq",
+            "group_t7V7CJ",
+            "group_h4EUdT",
+            "divider_gGyp4D"
+          ]
         }
       },
       "settings": {
@@ -923,7 +1047,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_ybEGgH"],
+      "block_order": [
+        "text_ybEGgH"
+      ],
       "name": "t:names.marquee_section",
       "settings": {
         "movement_direction": "normal",
@@ -971,7 +1097,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_DNizbJ"]
+          "block_order": [
+            "product_card_gallery_DNizbJ"
+          ]
         }
       },
       "name": "t:names.product_recommendations",
@@ -1019,7 +1147,10 @@
           }
         }
       },
-      "block_order": ["left_r3NWbE", "right_7tR34B"],
+      "block_order": [
+        "left_r3NWbE",
+        "right_7tR34B"
+      ],
       "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne.png",
@@ -1027,5 +1158,10 @@
       }
     }
   },
-  "order": ["main", "marquee_ryHf4K", "product_recommendations_qggXJq", "campaign_GCUVrF"]
+  "order": [
+    "main",
+    "marquee_ryHf4K",
+    "product_recommendations_qggXJq",
+    "campaign_GCUVrF"
+  ]
 }
