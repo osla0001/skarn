@@ -1,7 +1,11 @@
 /* Product Accordion Block Styles */
+div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(4) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column div {
+  width: 100% !important;
+}
 .product-accordion-block {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #2222220e;
   padding: 0.75rem 0;
+  width: 100%;
 }
 .product-accordion-toggle {
   display: flex;
