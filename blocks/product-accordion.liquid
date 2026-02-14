@@ -1,0 +1,54 @@
+{% comment %}
+Accordion block for product page
+- Heading (h3) left, arrow SVG right
+- Click toggles description
+{% endcomment %}
+
+<div class="product-accordion-block">
+  <button class="product-accordion-toggle" type="button" aria-expanded="false">
+    <span class="product-accordion-heading">{{ block.settings.heading }}</span>
+    <span class="product-accordion-arrow" aria-hidden="true">
+      <!-- SVG arrow, replace with your SVG if needed -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 10L12 14L16 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </button>
+  <div class="product-accordion-content" hidden>
+    <div class="product-accordion-description">{{ block.settings.description }}</div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Overskrift"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Beskrivende tekst"
+    }
+  ],
+  "presets": [
+    { "name": "Accordion" }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.product-accordion-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      var content = btn.parentElement.querySelector('.product-accordion-content');
+      if (content) {
+        content.hidden = expanded;
+      }
+    });
+  });
+});
+{% endjavascript %}

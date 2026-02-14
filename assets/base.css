@@ -1,3 +1,40 @@
+/* Product Accordion Block Styles */
+.product-accordion-block {
+  border-bottom: 1px solid #222;
+  padding: 0.75rem 0;
+}
+.product-accordion-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.product-accordion-heading {
+  font-family: "ZT Nature Regular", Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #111;
+}
+.product-accordion-arrow {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.product-accordion-toggle[aria-expanded="true"] .product-accordion-arrow {
+  transform: rotate(180deg);
+}
+.product-accordion-content {
+  padding: 0.5rem 0 0 0;
+  color: #222;
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
 /* Tving filter-knappen til at være synlig på desktop */
 .facets-toggle,
 .facets-toggle__button {
