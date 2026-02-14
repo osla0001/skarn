@@ -1,11 +1,10 @@
-{%- comment -%}
-  Tag link block: Renders a link for a product tag that filters the product listing page by the selected tag.
-  Usage: Place this block on a product page to allow users to filter by tag (e.g., size, brand).
-{%- endcomment -%}
+
+
 
 {%- assign tag = block.settings.tag -%}
 {%- assign label = block.settings.label | default: tag -%}
 {%- assign collection_url = block.settings.collection_url | default: '/collections/all' -%}
+
 
 {%- if tag != blank -%}
   <a
@@ -17,6 +16,7 @@
   </a>
 {%- endif -%}
 
+
 {% schema %}
 {
   "name": "Tag link",
@@ -25,13 +25,13 @@
       "type": "text",
       "id": "tag",
       "label": "Tag (e.g., Str. L, BrandX)",
-      "default": ""
+      "default": "Indtast tag her"
     },
     {
       "type": "text",
       "id": "label",
       "label": "Label (optional)",
-      "default": ""
+      "default": "Tag label"
     },
     {
       "type": "url",
@@ -39,14 +39,10 @@
       "label": "Collection URL (optional)",
       "default": "/collections/all"
     }
-  ],
-  "presets": [
-    {
-      "name": "Tag link"
-    }
   ]
 }
 {% endschema %}
+
 
 {% stylesheet %}
 .tag-link {
