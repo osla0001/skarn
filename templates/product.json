@@ -856,97 +856,42 @@
                   "blocks": {
                     "tag_link_9CYyVY": {
                       "type": "tag-link",
+                      "name": "Størrelse",
                       "settings": {
-                        "tag": "{{ closest.product.metafields.custom.storrelse.value }}",
+                        "filter_key": "filter.p.m.custom.storrelse",
+                        "filter_value": "L",
                         "label": "Str. {{ closest.product.metafields.custom.storrelse.value }}",
                         "collection_url": "/collections/all"
                       },
                       "blocks": {}
                     },
-                    "text_JbxbfP": {
-                      "type": "text",
-                      "name": "Størrelse",
+                    "tag_link_kGXkMm": {
+                      "type": "tag-link",
+                      "name": "Farver",
                       "settings": {
-                        "text": "<p>Str. {{ closest.product.metafields.custom.storrelse.value }}</p>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
+                        "filter_key": "filter.p.m.custom.farve",
+                        "filter_value": "{{ closest.product.metafields.custom.farve | metafield_text }}",
+                        "label": "{{ closest.product.metafields.custom.farve | metafield_text }}",
+                        "collection_url": "/collections/all"
                       },
                       "blocks": {}
                     },
-                    "text_nfQjx4": {
-                      "type": "text",
-                      "name": "Farve",
-                      "settings": {
-                        "text": "<p>{{ closest.product.metafields.custom.farve | metafield_text }}</p>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    },
-                    "text_fqTPjJ": {
-                      "type": "text",
+                    "tag_link_Xibj9z": {
+                      "type": "tag-link",
                       "name": "Tags",
                       "settings": {
-                        "text": "{{ closest.product.metafields.custom.tags | metafield_tag }}",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
+                        "filter_key": "filter.p.m.custom.tags",
+                        "filter_value": "{{ closest.product.metafields.custom.tags | metafield_text }}",
+                        "label": "{{ closest.product.metafields.custom.tags | metafield_text }}",
+                        "collection_url": "/collections/all"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
                     "tag_link_9CYyVY",
-                    "text_JbxbfP",
-                    "text_nfQjx4",
-                    "text_fqTPjJ"
+                    "tag_link_kGXkMm",
+                    "tag_link_Xibj9z"
                   ]
                 }
               },
