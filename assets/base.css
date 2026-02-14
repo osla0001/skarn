@@ -780,6 +780,17 @@ main {
   padding: 0 1rem;
 }
 
+main[data-template="product"] marquee-component,
+main[data-template="product"] product-recommendations,
+main[data-template="product"] .shopify-section .campaign-section {
+  max-width: none !important;
+  width: 100vw !important;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  left: 0;
+  right: 50%;
+  position: relative;
+}
+
 main[data-template*="collection"] summary {
   padding: 0 !important;
 }
