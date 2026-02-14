@@ -736,18 +736,6 @@
                 "group_NMxaha"
               ]
             },
-            "divider_DpVtDq": {
-              "type": "_divider",
-              "name": "t:names.divider",
-              "settings": {
-                "thickness": 1,
-                "corner_radius": "square",
-                "width_percent": 100,
-                "padding-block-start": 0,
-                "padding-block-end": 0
-              },
-              "blocks": {}
-            },
             "group_t7V7CJ": {
               "type": "group",
               "name": "Accordions",
@@ -788,6 +776,18 @@
                 "padding-inline-end": 0
               },
               "blocks": {
+                "divider_QRcYFM": {
+                  "type": "_divider",
+                  "name": "t:names.divider",
+                  "settings": {
+                    "thickness": 1,
+                    "corner_radius": "square",
+                    "width_percent": 100,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0
+                  },
+                  "blocks": {}
+                },
                 "product_accordion_p7WTXC": {
                   "type": "product-accordion",
                   "name": "Mål",
@@ -826,6 +826,7 @@
                 }
               },
               "block_order": [
+                "divider_QRcYFM",
                 "product_accordion_p7WTXC",
                 "product_accordion_azyUiG",
                 "product_accordion_Xrqmqf",
@@ -999,7 +1000,6 @@
           },
           "block_order": [
             "group_icgrde",
-            "divider_DpVtDq",
             "group_t7V7CJ",
             "group_h4EUdT",
             "divider_gGyp4D"
