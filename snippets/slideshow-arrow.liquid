@@ -39,11 +39,16 @@
   on:click="/{{ action }}"
   ref="{{ action }}"
 >
-  <span class="svg-wrapper icon-{{ icon_name }}">
-    {%- if icon_name == 'caret' -%}
-      {{- 'icon-caret.svg' | inline_asset_content -}}
-    {%- else -%}
-      {{- 'icon-arrow.svg' | inline_asset_content -}}
-    {%- endif -%}
+  <span class="icon-custom-arrow">
+    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="27.5" cy="27.5" r="24.5" fill="transparent" stroke="black" stroke-width="1.5"/>
+      <path d="M21 14L35 27.5L21 41" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </span>
 </button>
+
+{%  stylesheet %}
+  svg{
+    padding: 0.5rem;
+  }
+{% endstylesheet %}

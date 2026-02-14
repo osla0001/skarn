@@ -1135,8 +1135,8 @@ main[data-template*="collection"] summary {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: var(--icon-size-sm);
-  height: var(--icon-size-sm);
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
   pointer-events: none;
 }
 
@@ -3928,7 +3928,6 @@ slideshow-arrows {
   display: flex;
   z-index: var(--layer-heightened);
   pointer-events: none;
-  mix-blend-mode: difference;
   align-items: flex-end;
 
   &[position="left"] {
