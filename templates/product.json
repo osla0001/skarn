@@ -68,6 +68,15 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "tag_link_demo": {
+              "type": "tag-link",
+              "settings": {
+                "tag": "Str. L",
+                "label": "Str. L",
+                "collection_url": "/collections/all"
+              },
+              "blocks": {}
+            },
             "group_icgrde": {
               "type": "group",
               "name": "Header",
@@ -353,10 +362,7 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "text_GTN3XN",
-                            "text_naHFk6"
-                          ]
+                          "block_order": ["text_GTN3XN", "text_naHFk6"]
                         },
                         "group_48rrKL": {
                           "type": "group",
@@ -451,10 +457,7 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "text_NJTmxB",
-                            "text_TYHR8C"
-                          ]
+                          "block_order": ["text_NJTmxB", "text_TYHR8C"]
                         },
                         "group_iFj8bq": {
                           "type": "group",
@@ -549,10 +552,7 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "text_cRKKhX",
-                            "text_bdmYEB"
-                          ]
+                          "block_order": ["text_cRKKhX", "text_bdmYEB"]
                         },
                         "group_WqQGJM": {
                           "type": "group",
@@ -647,18 +647,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": [
-                            "text_KiUJw8",
-                            "text_mbkpV3"
-                          ]
+                          "block_order": ["text_KiUJw8", "text_mbkpV3"]
                         }
                       },
-                      "block_order": [
-                        "group_xkFQ78",
-                        "group_48rrKL",
-                        "group_iFj8bq",
-                        "group_WqQGJM"
-                      ]
+                      "block_order": ["group_xkFQ78", "group_48rrKL", "group_iFj8bq", "group_WqQGJM"]
                     },
                     "price_6jRHV3": {
                       "type": "price",
@@ -721,20 +713,10 @@
                       "block_order": []
                     }
                   },
-                  "block_order": [
-                    "group_DYA6tx",
-                    "price_6jRHV3",
-                    "buy_buttons_tNAtqe"
-                  ]
+                  "block_order": ["group_DYA6tx", "price_6jRHV3", "buy_buttons_tNAtqe"]
                 }
               },
-              "block_order": [
-                "text_xrnftG",
-                "divider_yrmztY",
-                "text_ViRCQk",
-                "custom_liquid_tnDAe7",
-                "group_NMxaha"
-              ]
+              "block_order": ["text_xrnftG", "divider_yrmztY", "text_ViRCQk", "custom_liquid_tnDAe7", "group_NMxaha"]
             },
             "divider_DpVtDq": {
               "type": "_divider",
@@ -933,17 +915,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "text_JbxbfP",
-                    "text_nfQjx4",
-                    "text_fqTPjJ"
-                  ]
+                  "block_order": ["text_JbxbfP", "text_nfQjx4", "text_fqTPjJ"]
                 }
               },
-              "block_order": [
-                "text_hkwTWa",
-                "group_qK4paK"
-              ]
+              "block_order": ["text_hkwTWa", "group_qK4paK"]
             },
             "divider_gGyp4D": {
               "type": "_divider",
@@ -958,12 +933,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "group_icgrde",
-            "divider_DpVtDq",
-            "group_h4EUdT",
-            "divider_gGyp4D"
-          ]
+          "block_order": ["tag_link_demo", "group_icgrde", "divider_DpVtDq", "group_h4EUdT", "divider_gGyp4D"]
         }
       },
       "settings": {
@@ -1047,9 +1017,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "product_card_gallery_DNizbJ"
-          ]
+          "block_order": ["product_card_gallery_DNizbJ"]
         }
       },
       "name": "t:names.product_recommendations",
@@ -1135,9 +1103,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "collection_title_AQFDJN"
-          ]
+          "block_order": ["collection_title_AQFDJN"]
         }
       },
       "name": "t:names.collections_grid",
@@ -1163,10 +1129,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "section_Twy7Ln",
-    "product_recommendations_qggXJq",
-    "collection_list_YtpGJJ"
-  ]
+  "order": ["main", "section_Twy7Ln", "product_recommendations_qggXJq", "collection_list_YtpGJJ"]
 }
