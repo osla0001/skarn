@@ -3046,8 +3046,6 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 
 /* Cart bubble */
 .cart-bubble {
-  --cart-padding: 0.2em;
-
   position: relative;
   width: 20px;
   aspect-ratio: 1;
