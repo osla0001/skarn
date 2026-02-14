@@ -244,6 +244,16 @@ main[data-template="product"] .group-block-content h4 {
   text-wrap: nowrap !important;
 }
 
+@media screen and (max-width: 750px) {
+  main[data-template="product"] .product-information__grid {
+    display: block;
+  }
+
+  h1 {
+    margin-top: 1rem !important;
+  }
+}
+
 div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(2) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -4117,7 +4127,7 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 
   /* Card size is scalable: use a vw-based clamp so cards resize on desktop
      and never exceed the max (here 358px). Tweak the clamp values if needed. */
-  --resource-card-size: clamp(220px, 22vw, 358px);
+  --resource-card-size: clamp(140px, 22vw, 358px);
 
   width: 100%;
   max-width: 100%;
@@ -4172,9 +4182,14 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   padding-left: 0.5rem;
 }
 
-@media (max-width: 749px) {
+@media (max-width: 1000px) {
   .resource-list__blank-item h1 {
-    font-size: 22px;
+    font-size: 6cqw !important;
+  }
+}
+@media (max-width: 750px) {
+  .resource-list__blank-item h1 {
+    font-size: 40px !important;
   }
 }
 
