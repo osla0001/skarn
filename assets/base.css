@@ -755,7 +755,7 @@ product-card h4 {
 }
 
 /* Pris */
-span.price {
+main[data-template*="collection"] span.price {
   font-family: "ZT Nature Bold" !important;
   font-size: 14px !important;
   text-decoration: underline;
@@ -853,6 +853,12 @@ main[data-template="product"] .shopify-section .campaign-section {
 
 main[data-template*="collection"] summary {
   padding: 0 !important;
+}
+
+main[data-template*="product"] .product-information {
+  width: 97%;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 /* Focus */
