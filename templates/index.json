@@ -344,7 +344,7 @@
       },
       "name": "Nyeste selektion",
       "settings": {
-        "collection": "all",
+        "collection": "newest-products",
         "featured_heading": "Nye items",
         "layout_type": "grid",
         "carousel_on_mobile": false,
