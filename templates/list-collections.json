@@ -1016,6 +1016,24 @@
     "collection_links_EgbBCb": {
       "type": "collection-links",
       "blocks": {
+        "link_hJ3YUR": {
+          "type": "link",
+          "settings": {
+            "label": "",
+            "link_type": "collection",
+            "collection": "",
+            "custom_url": "/"
+          }
+        },
+        "link_byVEp7": {
+          "type": "link",
+          "settings": {
+            "label": "Toppe",
+            "link_type": "custom",
+            "collection": "",
+            "custom_url": "/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=toppe/"
+          }
+        },
         "link_rFYrgW": {
           "type": "link",
           "settings": {
@@ -1036,11 +1054,19 @@
         }
       },
       "block_order": [
+        "link_hJ3YUR",
+        "link_byVEp7",
         "link_rFYrgW",
         "link_cj7Taa"
       ],
       "name": "t:names.collection_links_text",
-      "settings": {}
+      "settings": {
+        "layout": "text",
+        "section_width": "full-width",
+        "alignment": "center",
+        "image_position": "right",
+        "color_scheme": ""
+      }
     }
   },
   "order": [
