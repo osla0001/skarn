@@ -3,7 +3,7 @@
   Add HTML and CSS as needed. Follows Shopify section conventions.
 {% endcomment %}
 
-<section class="skarn_section">
+<section class="skarn_section{% if section.settings.show_border_bottom %} skarn_section--border-bottom{% endif %}">
 <div class="index-skarn_heading">
     <h1>{{ section.settings.heading }}</h1>
    <img src="{{ settings.logo | image_url: width: 320 }}" alt="Logo" class="index-skarn__logo" style="max-width: 200px; height: auto; margin-bottom: 24px;" />
@@ -11,19 +11,24 @@
 </div>
 <div class="index-skarn_text">
    <p>{{ section.settings.text }}</p>
-   <button class="button-secondary">
-     <a href="{{ section.settings.secondary_button_link | default: '#' }}" style="text-decoration: none; color: inherit; display: block; width: 100%; height: 100%;">
-       {{ section.settings.secondary_button_label | default: 'Sekundær knap' }}
-     </a>
-   </button>
+   {% if section.settings.show_secondary_button %}
+     <button class="button-secondary">
+       <a href="{{ section.settings.secondary_button_link | default: '#' }}" style="text-decoration: none; color: inherit; display: block; width: 100%; height: 100%;">
+         {{ section.settings.secondary_button_label | default: 'Sekundær knap' }}
+       </a>
+     </button>
+   {% endif %}
    </div>
 </section>
 
 {% stylesheet %}
-.skarn_section{
-    padding: 2rem 2rem;
-    margin: 0 auto;
-    border-bottom: 1px solid black;
+
+.skarn_section {
+  padding: 2rem 2rem;
+  margin: 0 auto;
+}
+.skarn_section--border-bottom {
+  border-bottom: 1px solid black;
 }
 
 .index-skarn_heading {
@@ -78,6 +83,18 @@ text-wrap: nowrap !important;
   "name": "Hvem er Skarn",
   "tag": "section",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_border_bottom",
+      "label": "Vis sort bundlinje",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_button",
+      "label": "Vis sekundær knap",
+      "default": true
+    },
     {
       "type": "text",
       "id": "heading",
