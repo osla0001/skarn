@@ -847,10 +847,12 @@ main[data-template*="collection"] summary {
   padding: 0 !important;
 }
 
-main[data-template*="product"] .product-information {
-  width: 97%;
-  margin: 0 auto;
-  margin-top: 1rem;
+@media screen and (min-width: 750px) {
+  main[data-template*="product"] .product-information {
+    width: 97%;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
 }
 
 /* Focus */
