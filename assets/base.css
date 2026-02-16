@@ -2,6 +2,13 @@ strong,
 b {
   font-family: "ZT Nature Regular" !important;
 }
+
+/* Megamenu */
+header-menu > div > nav > div > div > nav > ul > li.tmenu_item.tmenu_item--root.tmenu_item_level_0.tmenu_item_submenu_type_mega.tmenu_item_submenu_mega_position_fullwidth.tmenu_item_has_child.\.menu-list__link-title > ul,
+.tmenu_submenu_type_mega {
+  border-bottom: 1px solid black !important;
+}
+
 /* Product Accordion Block Styles */
 div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(3) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column .shopify-block {
   width: 100% !important;
