@@ -59,6 +59,34 @@
         "padding-block-end": 80
       }
     },
+    "index_skarn_FfcBRe": {
+      "type": "index-skarn",
+      "name": "Hvem er Skarn",
+      "settings": {
+        "show_border_bottom": false,
+        "show_secondary_button": false,
+        "heading": "Hvem er",
+        "text": "<p>Skarn er en webshop, der sælger håndplukket vintage og brugt tøj, hvor kvalitet og stil går hånd i hånd. Vi går ind for bæredygtighed og siger nej til fast fashion, fordi vi tror på, at mode kan have både personlighed og omtanke. Hos Skarn finder du unikke items, som ikke bare ser godt ud, men også har sin egen historie.</p>",
+        "button_link": "",
+        "secondary_button_label": "Læs mere →",
+        "secondary_button_link": "",
+        "color_scheme": ""
+      }
+    },
+    "divider_y8cXQi": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "full-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 24,
+        "padding-block-end": 24
+      }
+    },
     "section_RLCxew": {
       "type": "section",
       "blocks": {
@@ -119,6 +147,7 @@
         "text_NDqKYH",
         "text_KL6M3N"
       ],
+      "disabled": true,
       "name": "t:names.rich_text_section",
       "settings": {
         "content_direction": "column",
@@ -218,7 +247,7 @@
                 "text": "<h4>Bæredygtighed og </h4><h4>afvisning af fast fashion</h4><p></p>",
                 "width": "100%",
                 "max_width": "normal",
-                "alignment": "right",
+                "alignment": "left",
                 "type_preset": "h3",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
@@ -242,7 +271,7 @@
               "settings": {
                 "text": "<p>Fast fashion skader både miljøet og mennesker. Hos Skarn siger vi nej til masseproduceret tøj og ja til bæredygtighed, kvalitet og omtanke. Vores udvalg består af håndplukket vintage og brugt tøj, som hver især har sin egen historie. På den måde mindsker vi spild og giver tøjet et nyt liv. Når du handler hos os, får du et produkt, der er unikt, samtidig med at du støtter en god sag. Dit valg af tøj er et statement – for bæredygtighed, for ansvar og for fremtid.</p>",
                 "width": "100%",
-                "max_width": "none",
+                "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -276,7 +305,7 @@
       "name": "t:names.image_with_text",
       "settings": {
         "content_direction": "row",
-        "vertical_on_mobile": true,
+        "vertical_on_mobile": false,
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
@@ -431,7 +460,7 @@
               "settings": {
                 "text": "<p>Skarn samarbejder med <strong>Mission Afrika</strong>, en organisation, der arbejder for at styrke uddannelsen i Den Centralafrikanske Republik. Mange børn og unge har aldrig haft muligheden for at gå i skole på grund af flere års borgerkrig og manglende ressourcer. Mission Afrika driver 31 grundskoler i den vestlige del af landet, hvor 6.395 børn får undervisning under ofte udfordrende forhold. Gennem dette samarbejde sikrer vi, at de får adgang til lærere, bøger og faciliteter, der giver dem en reel chance for at lære og udvikle deres potentiale. Dit køb hos Skarn bidrager direkte til at give børnene denne mulighed og styrke deres fremtid.</p>",
                 "width": "100%",
-                "max_width": "none",
+                "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -621,7 +650,7 @@
               "settings": {
                 "text": "<p>Alt overskud fra dine køb går direkte til skolegang og uddannelse. Det betyder bøger, undervisningsmaterialer, lærere og stipendier til piger, så alle børn får lige muligheder. Mange børn i Den Centralafrikanske Republik har teoretisk adgang til gratis skolegang, men de har ofte ikke haft mulighed for at deltage på grund af krig og manglende ressourcer. Din støtte hjælper med at give dem adgang til grundskole, som kan åbne døren til ungdomsskole og videre uddannelse. Skolegang er en investering i fremtiden – hvert barn, der lærer at læse og skrive, får mulighed for at skabe sin egen vej og bidrage til samfundets udvikling.</p>",
                 "width": "100%",
-                "max_width": "none",
+                "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -822,7 +851,7 @@
               "settings": {
                 "text": "<p>Tidligere foregik undervisningen på flere af skolerne under enkle stråtag, hvilket gjorde skolerne sårbare over for regnvejr og afbrød undervisningen. Med støtte fra projektet er mange skoler blevet opgraderet med mere solide bygninger og bliktag, men der er stadig arbejde at gøre. Vi fortsætter med at forbedre faciliteterne, så alle børn får et trygt og stabilt læringsmiljø. Hvert køb hos Skarn bidrager til denne udvikling. Sammen kan vi sikre, at børnene får mulighed for at knække læsekoden, lære nye færdigheder og drømme om en bedre fremtid.</p>",
                 "width": "100%",
-                "max_width": "none",
+                "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
@@ -885,6 +914,8 @@
   },
   "order": [
     "main",
+    "index_skarn_FfcBRe",
+    "divider_y8cXQi",
     "section_RLCxew",
     "section_Yk7EWR",
     "marquee_3KzPtQ",
