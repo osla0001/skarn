@@ -44,9 +44,18 @@
   {% content_for 'block', type: '_image', id: 'image', loading: loading, placeholder: placeholder_name %}
 {% endcapture %}
 
+{%- assign link_url = nil -%}
+{%- if block.settings.link_type == 'custom' and block.settings.custom_link != blank -%}
+  {%- assign link_url = block.settings.custom_link -%}
+{%- elsif block.settings.link_type == 'collection' and block.settings.collection != blank -%}
+  {%- assign link_url = block.settings.collection.url -%}
+{%- else -%}
+  {%- assign link_url = closest.collection.url -%}
+{%- endif -%}
+
 {% if image_only %}
   <a
-    href="{{ closest.collection.url }}"
+    href="{{ link_url }}"
     class="collection-links__image"
     size="{{ section.settings.image_height }}"
     {% if onboarding %}
@@ -57,7 +66,7 @@
   </a>
 {% else %}
   <a
-    href="{{ closest.collection.url }}"
+    href="{{ link_url }}"
     class="collection-links__link"
     ref="links[]"
     on:pointerenter="/select/{{ index }}"
@@ -168,6 +177,26 @@
     {
       "type": "paragraph",
       "content": "t:content.resource_reference_collection_card"
+    },
+    {
+      "type": "select",
+      "id": "link_type",
+      "label": "Link type",
+      "options": [
+        { "value": "collection", "label": "Shopify kollektion" },
+        { "value": "custom", "label": "Manuelt link" }
+      ],
+      "default": "collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Vælg kollektion"
+    },
+    {
+      "type": "url",
+      "id": "custom_link",
+      "label": "Manuelt link"
     },
     {
       "type": "checkbox",
