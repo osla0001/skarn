@@ -855,6 +855,21 @@ main[data-template*="collection"] summary {
   }
 }
 
+main[data-template*="product"] .price {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 24px !important;
+  font-family: "ZT Nature Regular" !important;
+}
+
+div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div > h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 24px !important;
+  font-family: "ZT Nature Regular" !important;
+  text-transform: lowercase !important;
+}
+
 /* Focus */
 *:focus-visible {
   outline: var(--focus-outline-width) solid currentcolor;
