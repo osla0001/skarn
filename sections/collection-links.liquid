@@ -25,9 +25,26 @@
       class="collection-links__container"
       ref="container"
     >
-      {% for block in section.blocks %}
-        {% render block %}
-      {% endfor %}
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          {% assign link_label = block.settings.label %}
+          {% if link_label == blank and block.settings.link_type == 'collection' and block.settings.collection != blank %}
+            {% assign link_label = block.settings.collection.title %}
+          {% endif %}
+          {% if block.settings.link_type == 'custom' and block.settings.custom_url != blank %}
+            {% assign link_url = block.settings.custom_url %}
+          {% elsif block.settings.link_type == 'collection' and block.settings.collection != blank %}
+            {% assign link_url = block.settings.collection.url %}
+          {% else %}
+            {% assign link_url = '#' %}
+          {% endif %}
+          <a class="collection-links__link" href="{{ link_url }}">
+            <span>{{ link_label }}</span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <div style="padding:2rem; color:#222; background:#fff; border:1px solid #eee;">Ingen links tilføjet – tilføj blokke i Theme Editor for at vise links her.</div>
+      {% endif %}
     </div>
 
     {% case section.settings.layout %}
@@ -130,8 +147,45 @@
 
   .collection-links__container {
     display: flex;
-    gap: var(--gap-md);
     flex-direction: column;
+    gap: var(--gap-md);
+    min-height: 200px;
+    min-width: 100%;
+    align-items: flex-start;
+  }
+
+  .collection-links__link {
+    display: flex;
+    align-items: center;
+    font-size: 1.35rem;
+    color: #222 !important;
+    background: none;
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    padding: 0;
+    margin: 12px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: inherit;
+    transition: font-family 0.2s;
+  }
+
+  .collection-links__link:hover {
+    font-family: "ZT Nature Regular", sans-serif !important;
+  }
+  }
+
+  .collection-links__count {
+    font-size: 1rem;
+    color: #888;
+    margin-left: 12px;
+    font-weight: 400;
+  }
+  }
+
+  .collection-links__container > * {
+    display: block;
   }
 
   .collection-links__images {
