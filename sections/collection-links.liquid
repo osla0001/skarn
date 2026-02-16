@@ -171,7 +171,34 @@
     {
       "type": "link",
       "name": "Kollektionslink",
-      "settings": []
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Link label"
+        },
+        {
+          "type": "select",
+          "id": "link_type",
+          "label": "Link type",
+          "options": [
+            { "value": "collection", "label": "Shopify kollektion" },
+            { "value": "custom", "label": "Manuelt link (filter)" }
+          ],
+          "default": "collection"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Vælg kollektion"
+        },
+        {
+          "type": "url",
+          "id": "custom_url",
+          "label": "Manuelt link (indsæt URL)",
+          "default": "/"
+        }
+      ]
     }
   ]
 }

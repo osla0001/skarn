@@ -44,13 +44,19 @@
   {% content_for 'block', type: '_image', id: 'image', loading: loading, placeholder: placeholder_name %}
 {% endcapture %}
 
+
 {%- assign link_url = nil -%}
-{%- if block.settings.link_type == 'custom' and block.settings.custom_link != blank -%}
-  {%- assign link_url = block.settings.custom_link -%}
+{%- if block.settings.link_type == 'custom' and block.settings.custom_url != blank -%}
+  {%- assign link_url = block.settings.custom_url -%}
 {%- elsif block.settings.link_type == 'collection' and block.settings.collection != blank -%}
   {%- assign link_url = block.settings.collection.url -%}
 {%- else -%}
-  {%- assign link_url = closest.collection.url -%}
+  {%- assign link_url = '#' -%}
+{%- endif -%}
+
+{%- assign link_label = block.settings.label | default: '' -%}
+{%- if link_label == '' and block.settings.link_type == 'collection' and block.settings.collection != blank -%}
+  {%- assign link_label = block.settings.collection.title -%}
 {%- endif -%}
 
 {% if image_only %}
@@ -77,7 +83,7 @@
     {% endif %}
     {{ block.shopify_attributes }}
   >
-    {{ title_block }}
+    <span class="text-block">{{ link_label }}</span>
 
     {% if section.settings.layout == 'text' %}
       <div
