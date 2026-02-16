@@ -63,8 +63,10 @@
       "type": "index-skarn",
       "name": "Hvem er Skarn",
       "settings": {
+        "show_border_bottom": true,
+        "show_secondary_button": true,
         "heading": "Hvem er",
-        "text": "bla bla",
+        "text": "<p>Hos <strong>Skarn</strong> finder du håndplukket vintage, hvor hvert stykke tøj har sin egen historie. Vi siger nej til fast fashion og ja til bæredygtige valg, som giver mening. Dit køb gør mere end at se godt ud – det skaber muligheder for børn og unge i Afrika. Gennem vores samarbejde med <strong>Mission Afrika</strong> støtter vi skolegang og uddannelse.<br/>Pengene går til bøger, lærere, skolebygninger og stipendier, så børn kan lære at læse og skrive. I Den Centralafrikanske Republik har mange voksne aldrig haft chancen for skolegang – vi hjælper med at ændre det.<br/>Hvert køb er en investering i fremtiden og giver børnene en reel mulighed for at skabe deres egen vej. Mindre fast fashion. Mere skolegang. Mere fremtid.<br/><br/></p>",
         "button_link": "",
         "secondary_button_label": "Læs mere →",
         "secondary_button_link": "",
