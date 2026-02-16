@@ -377,16 +377,13 @@ marquee-component p {
   background: none !important;
 }
 
+.button-secondary a {
+  font-family: "ZT Nature Light" !important;
+}
+
 button {
   background: none;
   border: none;
-}
-
-.button-secondary:hover {
-  background-color: transparent;
-  outline: 2px solid black !important;
-  margin: 0;
-  -webkit-text-stroke: 0.09px black;
 }
 
 .product-arrow-box:hover {
