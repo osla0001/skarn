@@ -153,6 +153,53 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "options": [
+            { "value": "text", "label": "Tekst" },
+            { "value": "spotlight", "label": "Spotlight" }
+          ],
+          "default": "text"
+        },
+        {
+          "type": "select",
+          "id": "section_width",
+          "label": "Sektion bredde",
+          "options": [
+            { "value": "page-width", "label": "Sidebredde" },
+            { "value": "full-width", "label": "Fuld bredde" }
+          ],
+          "default": "page-width"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Justering",
+          "options": [
+            { "value": "left", "label": "Venstre" },
+            { "value": "center", "label": "Centreret" },
+            { "value": "right", "label": "Højre" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Billedposition",
+          "options": [
+            { "value": "left", "label": "Venstre" },
+            { "value": "right", "label": "Højre" }
+          ],
+          "default": "right"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "Farveskema",
+          "default": "scheme-1"
+        },
     {
       "type": "header",
       "content": "t:content.layout"
@@ -202,5 +249,5 @@
     }
   ]
 }
+
 {% endschema %}
-{% # theme-check-enable ValidBlockTarget %}
