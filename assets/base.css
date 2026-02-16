@@ -1,3 +1,7 @@
+strong,
+b {
+  font-family: "ZT Nature Regular" !important;
+}
 /* Product Accordion Block Styles */
 div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(3) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column .shopify-block {
   width: 100% !important;
