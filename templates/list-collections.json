@@ -524,227 +524,17 @@
             "collection": "udsalg",
             "custom_url": "/"
           }
-        },
-        "link_toppe_xy": {
-          "type": "link",
-          "settings": {
-            "label": "Toppe (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=toppe"
-          }
-        },
-        "link_toppe_xx": {
-          "type": "link",
-          "settings": {
-            "label": "Toppe (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=toppe"
-          }
-        },
-        "link_toppe_unisex": {
-          "type": "link",
-          "settings": {
-            "label": "Toppe (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=toppe"
-          }
-        },
-        "link_kjoler_xy": {
-          "type": "link",
-          "settings": {
-            "label": "Kjoler (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=kjoler"
-          }
-        },
-        "link_kjoler_xx": {
-          "type": "link",
-          "settings": {
-            "label": "Kjoler (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=kjoler"
-          }
-        },
-        "link_kjoler_unisex": {
-          "type": "link",
-          "settings": {
-            "label": "Kjoler (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=kjoler"
-          }
-        },
-        "link_bukser_xy": {
-          "type": "link",
-          "settings": {
-            "label": "Bukser (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=bukser"
-          }
-        },
-        "link_bukser_xx": {
-          "type": "link",
-          "settings": {
-            "label": "Bukser (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=bukser"
-          }
-        },
-        "link_bukser_unisex": {
-          "type": "link",
-          "settings": {
-            "label": "Bukser (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=bukser"
-          }
-        },
-        "link_suits_xy": {
-          "type": "link",
-          "settings": {
-            "label": "Suits & sæt (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=suits"
-          }
-        },
-        "link_suits_xx": {
-          "type": "link",
-          "settings": {
-            "label": "Suits & sæt (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=suits"
-          }
-        },
-        "link_suits_unisex": {
-          "type": "link",
-          "settings": {
-            "label": "Suits & sæt (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=suits"
-          }
-        },
-        "link_nederdele_xy": {
-          "type": "link",
-          "settings": {
-            "label": "Nederdele (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=nederdele"
-          }
-        },
-        "link_nederdele_xx": {
-          "type": "link",
-          "settings": {
-            "label": "Nederdele (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=nederdele"
-          }
-        },
-        "link_nederdele_unisex": {
-          "type": "link",
-          "settings": {
-            "label": "Nederdele (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=nederdele"
-          }
-        },
-        "link_overtoj_xy": {
-          "type": "link",
-          "settings": {
-            "label": "Overtøj (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=overtoj"
-          }
-        },
-        "link_overtoj_xx": {
-          "type": "link",
-          "settings": {
-            "label": "Overtøj (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=overtoj"
-          }
-        },
-        "link_overtoj_unisex": {
-          "type": "link",
-          "settings": {
-            "label": "Overtøj (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=overtoj"
-          }
-        },
-        "link_accessories_xy": {
-          "type": "link",
-          "settings": {
-            "label": "Accessories (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=accessories"
-          }
-        },
-        "link_accessories_xx": {
-          "type": "link",
-          "settings": {
-            "label": "Accessories (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=accessories"
-          }
-        },
-        "link_accessories_unisex": {
-          "type": "link",
-          "settings": {
-            "label": "Accessories (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=accessories"
-          }
         }
       },
       "block_order": [
         "link_rFYrgW",
-        "link_cj7Taa",
-        "link_toppe_xy",
-        "link_toppe_xx",
-        "link_toppe_unisex",
-        "link_kjoler_xy",
-        "link_kjoler_xx",
-        "link_kjoler_unisex",
-        "link_bukser_xy",
-        "link_bukser_xx",
-        "link_bukser_unisex",
-        "link_suits_xy",
-        "link_suits_xx",
-        "link_suits_unisex",
-        "link_nederdele_xy",
-        "link_nederdele_xx",
-        "link_nederdele_unisex",
-        "link_overtoj_xy",
-        "link_overtoj_xx",
-        "link_overtoj_unisex",
-        "link_accessories_xy",
-        "link_accessories_xx",
-        "link_accessories_unisex"
+        "link_cj7Taa"
       ],
-      "name": "t:names.collection_links_text",
+      "name": "Kollektionslinks: Nyt",
       "settings": {
         "heading": "Nyt",
         "show_heading": true,
-        "padding-block-start": 0,
+        "padding-block-start": 20,
         "padding-block-end": 24,
         "layout": "text",
         "section_width": "full-width",
@@ -756,208 +546,195 @@
     "collection_links_k8NxMG": {
       "type": "collection-links",
       "blocks": {
-        "link_xHpf6C": {
-          "type": "link",
-          "settings": {
-            "label": "Nyeste fund",
-            "link_type": "collection",
-            "collection": "newest-products",
-            "custom_url": "/"
-          }
-        },
-        "link_GmC9Vj": {
-          "type": "link",
-          "settings": {
-            "label": "Udsalg",
-            "link_type": "collection",
-            "collection": "udsalg",
-            "custom_url": "/"
-          }
-        },
-        "link_d43EKi": {
-          "type": "link",
-          "settings": {
-            "label": "Toppe (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=toppe"
-          }
-        },
         "link_4m8DaV": {
           "type": "link",
           "settings": {
-            "label": "Toppe (XX)",
+            "label": "Toppe",
             "link_type": "custom",
             "collection": "",
             "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=toppe"
           }
         },
-        "link_Nqg7J7": {
-          "type": "link",
-          "settings": {
-            "label": "Toppe (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=toppe"
-          }
-        },
-        "link_qrqbET": {
-          "type": "link",
-          "settings": {
-            "label": "Kjoler (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=kjoler"
-          }
-        },
         "link_XbVMky": {
           "type": "link",
           "settings": {
-            "label": "Kjoler (XX)",
+            "label": "Kjoler",
             "link_type": "custom",
             "collection": "",
             "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=kjoler"
           }
         },
-        "link_BHL4KW": {
-          "type": "link",
-          "settings": {
-            "label": "Kjoler (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=kjoler"
-          }
-        },
         "link_pFgyMR": {
           "type": "link",
           "settings": {
-            "label": "Bukser (XY)",
+            "label": "Bukser & Jeans",
             "link_type": "custom",
             "collection": "",
             "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=bukser"
           }
         },
-        "link_NKBtEw": {
-          "type": "link",
-          "settings": {
-            "label": "Bukser (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=bukser"
-          }
-        },
-        "link_VnAa6r": {
-          "type": "link",
-          "settings": {
-            "label": "Bukser (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=bukser"
-          }
-        },
-        "link_kxLnj8": {
-          "type": "link",
-          "settings": {
-            "label": "Suits & sæt (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=suits"
-          }
-        },
-        "link_afwHVy": {
-          "type": "link",
-          "settings": {
-            "label": "Suits & sæt (XX)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=suits"
-          }
-        },
-        "link_cxjw9i": {
-          "type": "link",
-          "settings": {
-            "label": "Suits & sæt (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=suits"
-          }
-        },
-        "link_gHwgyX": {
-          "type": "link",
-          "settings": {
-            "label": "Nederdele (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=nederdele"
-          }
-        },
         "link_EGTf99": {
           "type": "link",
           "settings": {
-            "label": "Nederdele (XX)",
+            "label": "Nederdele",
             "link_type": "custom",
             "collection": "",
             "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=nederdele"
           }
         },
-        "link_reHHqg": {
-          "type": "link",
-          "settings": {
-            "label": "Nederdele (Unisex)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=nederdele"
-          }
-        },
-        "link_wpVLgw": {
-          "type": "link",
-          "settings": {
-            "label": "Overtøj (XY)",
-            "link_type": "custom",
-            "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=overtoj"
-          }
-        },
         "link_w4GHQy": {
           "type": "link",
           "settings": {
-            "label": "Overtøj (XX)",
+            "label": "Overtøj",
             "link_type": "custom",
             "collection": "",
             "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=overtoj"
           }
         },
-        "link_P9edcN": {
+        "link_3xVCPH": {
           "type": "link",
           "settings": {
-            "label": "Overtøj (Unisex)",
+            "label": "Accessories",
             "link_type": "custom",
             "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=overtoj"
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=accessories"
           }
-        },
-        "link_9xnRrB": {
+        }
+      },
+      "block_order": [
+        "link_4m8DaV",
+        "link_XbVMky",
+        "link_pFgyMR",
+        "link_EGTf99",
+        "link_w4GHQy",
+        "link_3xVCPH"
+      ],
+      "name": "Kollektionslinks: XX",
+      "settings": {
+        "heading": "XX",
+        "show_heading": true,
+        "padding-block-start": 20,
+        "padding-block-end": 24,
+        "layout": "text",
+        "section_width": "full-width",
+        "alignment": "center",
+        "image_position": "right",
+        "color_scheme": ""
+      }
+    },
+    "collection_links_THVRzj": {
+      "type": "collection-links",
+      "blocks": {
+        "link_GNEbHg": {
           "type": "link",
           "settings": {
-            "label": "Accessories (XY)",
+            "label": "T-shirts",
+            "link_type": "custom",
+            "collection": "",
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=kjoler"
+          }
+        },
+        "link_dCqXiR": {
+          "type": "link",
+          "settings": {
+            "label": "Skjorter",
+            "link_type": "custom",
+            "collection": "",
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=kjoler"
+          }
+        },
+        "link_QJBBiH": {
+          "type": "link",
+          "settings": {
+            "label": "Bukser & Jeans",
+            "link_type": "custom",
+            "collection": "",
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=bukser"
+          }
+        },
+        "link_UxBmXh": {
+          "type": "link",
+          "settings": {
+            "label": "Suits & sæt",
+            "link_type": "custom",
+            "collection": "",
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=suits"
+          }
+        },
+        "link_8Vfwyi": {
+          "type": "link",
+          "settings": {
+            "label": "Overtøj",
+            "link_type": "custom",
+            "collection": "",
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=overtoj"
+          }
+        },
+        "link_AHCVY7": {
+          "type": "link",
+          "settings": {
+            "label": "Accessories",
+            "link_type": "custom",
+            "collection": "",
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=accessories"
+          }
+        }
+      },
+      "block_order": [
+        "link_GNEbHg",
+        "link_dCqXiR",
+        "link_QJBBiH",
+        "link_UxBmXh",
+        "link_8Vfwyi",
+        "link_AHCVY7"
+      ],
+      "name": "Kollektionslinks: XY",
+      "settings": {
+        "heading": "XY",
+        "show_heading": true,
+        "padding-block-start": 20,
+        "padding-block-end": 24,
+        "layout": "text",
+        "section_width": "full-width",
+        "alignment": "center",
+        "image_position": "right",
+        "color_scheme": ""
+      }
+    },
+    "collection_links_JX6Bjd": {
+      "type": "collection-links",
+      "blocks": {
+        "link_eEGcxT": {
+          "type": "link",
+          "settings": {
+            "label": "Overdele",
+            "link_type": "custom",
+            "collection": "",
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=overtoj"
+          }
+        },
+        "link_xVHFWz": {
+          "type": "link",
+          "settings": {
+            "label": "Underdele",
             "link_type": "custom",
             "collection": "",
             "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XY&filter.p.t.category=accessories"
           }
         },
-        "link_3xVCPH": {
+        "link_GRmcr4": {
           "type": "link",
           "settings": {
-            "label": "Accessories (XX)",
+            "label": "Overtøj",
             "link_type": "custom",
             "collection": "",
-            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=XX&filter.p.t.category=accessories"
+            "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=overtoj"
           }
         },
-        "link_jwqtmt": {
+        "link_JVbktd": {
           "type": "link",
           "settings": {
-            "label": "Accessories (Unisex)",
+            "label": "Accessories",
             "link_type": "custom",
             "collection": "",
             "custom_url": "https://skarn.dk/collections/all?filter.p.m.custom.kon=Unisex&filter.p.t.category=accessories"
@@ -965,35 +742,95 @@
         }
       },
       "block_order": [
-        "link_xHpf6C",
-        "link_GmC9Vj",
-        "link_d43EKi",
-        "link_4m8DaV",
-        "link_Nqg7J7",
-        "link_qrqbET",
-        "link_XbVMky",
-        "link_BHL4KW",
-        "link_pFgyMR",
-        "link_NKBtEw",
-        "link_VnAa6r",
-        "link_kxLnj8",
-        "link_afwHVy",
-        "link_cxjw9i",
-        "link_gHwgyX",
-        "link_EGTf99",
-        "link_reHHqg",
-        "link_wpVLgw",
-        "link_w4GHQy",
-        "link_P9edcN",
-        "link_9xnRrB",
-        "link_3xVCPH",
-        "link_jwqtmt"
+        "link_eEGcxT",
+        "link_xVHFWz",
+        "link_GRmcr4",
+        "link_JVbktd"
       ],
-      "name": "t:names.collection_links_text",
+      "name": "Kollektionslinks: UNISEX",
       "settings": {
         "heading": "XX",
         "show_heading": true,
-        "padding-block-start": 0,
+        "padding-block-start": 20,
+        "padding-block-end": 24,
+        "layout": "text",
+        "section_width": "full-width",
+        "alignment": "center",
+        "image_position": "right",
+        "color_scheme": ""
+      }
+    },
+    "collection_links_Rk4wKX": {
+      "type": "collection-links",
+      "blocks": {
+        "link_483Ey4": {
+          "type": "link",
+          "settings": {
+            "label": "Nexus",
+            "link_type": "collection",
+            "collection": "nexus",
+            "custom_url": ""
+          }
+        },
+        "link_Y6mCUh": {
+          "type": "link",
+          "settings": {
+            "label": "Y2K",
+            "link_type": "collection",
+            "collection": "y2k",
+            "custom_url": ""
+          }
+        },
+        "link_cP7hUL": {
+          "type": "link",
+          "settings": {
+            "label": "Core",
+            "link_type": "collection",
+            "collection": "core",
+            "custom_url": "/"
+          }
+        },
+        "link_Vxyw3J": {
+          "type": "link",
+          "settings": {
+            "label": "Retro",
+            "link_type": "custom",
+            "collection": "retro",
+            "custom_url": ""
+          }
+        },
+        "link_BW8mEw": {
+          "type": "link",
+          "settings": {
+            "label": "Boho",
+            "link_type": "collection",
+            "collection": "boho",
+            "custom_url": ""
+          }
+        },
+        "link_TcPQXx": {
+          "type": "link",
+          "settings": {
+            "label": "Mod",
+            "link_type": "collection",
+            "collection": "mod",
+            "custom_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "link_483Ey4",
+        "link_Y6mCUh",
+        "link_cP7hUL",
+        "link_Vxyw3J",
+        "link_BW8mEw",
+        "link_TcPQXx"
+      ],
+      "name": "Kollektionslinks: Årtier",
+      "settings": {
+        "heading": "Årtier",
+        "show_heading": true,
+        "padding-block-start": 20,
         "padding-block-end": 24,
         "layout": "text",
         "section_width": "full-width",
@@ -1007,6 +844,9 @@
     "collection_list_Wfgh3m",
     "section_LFzeEx",
     "collection_links_EgbBCb",
-    "collection_links_k8NxMG"
+    "collection_links_k8NxMG",
+    "collection_links_THVRzj",
+    "collection_links_JX6Bjd",
+    "collection_links_Rk4wKX"
   ]
 }
