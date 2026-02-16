@@ -862,7 +862,7 @@ main[data-template*="product"] .price {
   font-family: "ZT Nature Regular" !important;
 }
 
-div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div > h3 {
+main[data-template*="product"] div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div > h3 {
   margin: 0 !important;
   padding: 0 !important;
   font-size: 24px !important;
