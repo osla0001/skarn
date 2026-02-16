@@ -10,7 +10,7 @@
 
 </div>
 <div class="index-skarn_text">
-   <p>{{ section.settings.text }}</p>
+  {{ section.settings.text }}
    {% if section.settings.show_secondary_button %}
      <button class="button-secondary">
        <a href="{{ section.settings.secondary_button_link | default: '#' }}" style="text-decoration: none; color: inherit; display: block; width: 100%; height: 100%;">
@@ -102,10 +102,10 @@ text-wrap: nowrap !important;
       "default": "Hvem er"
     },
     {
-      "type": "textarea",
+      "type": "richtext",
       "id": "text",
       "label": "Tekst",
-      "default": "bla bla"
+      "default": "<p>bla bla</p>"
     },
     {
       "type": "url",
