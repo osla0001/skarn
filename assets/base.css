@@ -19,10 +19,9 @@ div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:
   font: inherit;
 }
 .product-accordion-heading {
-  font-family: "ZT Nature Regular", Arial, sans-serif;
+  font-family: "ZT Nature Light" !important;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
   color: #111;
 }
 .product-accordion-arrow {
