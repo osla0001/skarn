@@ -961,6 +961,7 @@
     },
     "collection_links_EgbBCb": {
       "type": "collection-links",
+      "heading": "Kategorier",
       "blocks": {
         "link_rFYrgW": {
           "type": "link",
@@ -1177,7 +1178,8 @@
         "section_width": "full-width",
         "alignment": "center",
         "image_position": "right",
-        "color_scheme": ""
+        "color_scheme": "",
+        "heading": "Kategorier"
       }
     }
   },
