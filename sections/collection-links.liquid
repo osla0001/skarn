@@ -12,6 +12,7 @@
 <div
   class="section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }} spacing-style"
   style="{% render 'spacing-style', settings: section.settings %}"
+  style="padding-top: {{ section.settings.padding_top | default: 0 }}px; padding-bottom: {{ section.settings.padding_bottom | default: 24 }}px; {% render 'spacing-style', settings: section.settings %}"
   data-testid="collection-links-{{ section.id }}"
 >
   <h2 style="text-align:center;" class="h2_title">{{ section.settings.heading | default: 'Kategorier' }}</h2>
@@ -261,10 +262,30 @@
           "label": "Farveskema",
           "default": "scheme-1"
         },
-    {
-      "type": "header",
-      "content": "t:content.layout"
-    },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Ud fyldning top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Ud fyldning bund",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 24
+        },
+        {
+          "type": "header",
+          "content": "t:content.layout"
+        }
   ],
   "presets": [
     {
