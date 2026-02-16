@@ -164,7 +164,7 @@
                     >
                     <button
                       type="submit"
-                      class="button button--primary cart-discount__button"
+                      class="button button-secondary cart-discount__button"
                     >
                       {{ 'actions.apply' | t }}
                     </button>
@@ -261,7 +261,7 @@
   <button
     type="submit"
     id="checkout"
-    class="cart__checkout-button button"
+    class="cart__checkout-button button-secondary"
     name="checkout"
     {% if cart == empty %}
       disabled
@@ -315,7 +315,8 @@
     border-color: var(--color-input-border);
     border-style: solid;
     border-radius: var(--style-border-radius-inputs);
-    padding: var(--padding-sm) var(--padding-md);
+    padding: 1rem 0.5rem;
+        height: fit-content;
     height: 100%;
     flex-grow: 1;
     min-width: 0;
@@ -324,6 +325,11 @@
 
   .cart-discount__input::placeholder {
     color: rgb(var(--color-input-text-rgb) / var(--opacity-subdued-text));
+  }
+
+  .cart__checkout-button{
+    height: fit-content;
+        padding: 1rem 0.5rem;
   }
 
   .cart-discount__pill-code {
