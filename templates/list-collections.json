@@ -1016,18 +1016,28 @@
     "collection_links_EgbBCb": {
       "type": "collection-links",
       "blocks": {
+        "link_rFYrgW": {
+          "type": "link",
+          "settings": {
+            "label": "Nyeste fund",
+            "link_type": "collection",
+            "collection": "newest-products",
+            "custom_url": "/"
+          }
+        },
         "link_cj7Taa": {
           "type": "link",
-          "settings": {}
-        },
-        "link_hYc6bU": {
-          "type": "link",
-          "settings": {}
+          "settings": {
+            "label": "Udsalg",
+            "link_type": "collection",
+            "collection": "udsalg",
+            "custom_url": "/"
+          }
         }
       },
       "block_order": [
-        "link_cj7Taa",
-        "link_hYc6bU"
+        "link_rFYrgW",
+        "link_cj7Taa"
       ],
       "name": "t:names.collection_links_text",
       "settings": {}
