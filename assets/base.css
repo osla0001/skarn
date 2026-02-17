@@ -837,7 +837,7 @@ main[data-template*="index"] {
 main {
   max-width: 1260px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1rem !important;
 }
 
 main[data-template="product"] marquee-component,
@@ -3363,12 +3363,12 @@ div > div.group-block.group-block--height-fit.group-block--width-fill.border-sty
     padding: 0 !important;
   }
 
-  div.section.section--full-width.color-scheme-1 > div.border-style.custom-section-content > div {
+  main[data-template*="collection"] div.section.section--full-width.color-scheme-1 > div.border-style.custom-section-content > div {
     padding: 0 !important;
   }
 }
 
-div.section.section--full-width.color-scheme-1 > div.border-style.custom-section-content > div {
+main[data-template*="collection"] div.section.section--full-width.color-scheme-1 > div.border-style.custom-section-content > div {
   padding: 0 1rem;
 }
 
