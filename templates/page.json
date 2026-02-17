@@ -127,298 +127,13 @@
       ],
       "name": "Split Grid",
       "settings": {
+        "padding_top": "none",
+        "padding_bottom": "medium",
         "grid_type": "1-1",
         "gap": 10
       }
     },
-    "section_RLCxew": {
-      "type": "section",
-      "blocks": {
-        "text_NDqKYH": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<h2>Hvem er Skarn?</h2>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_KL6M3N": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>Skarn er en webshop, der sælger håndplukket vintage og brugt tøj, hvor kvalitet og stil går hånd i hånd. Vi går ind for bæredygtighed og siger nej til fast fashion, fordi vi tror på, at mode kan have både personlighed og omtanke. Hos Skarn finder du unikke items, som ikke bare ser godt ud, men også har sin egen historie.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_NDqKYH",
-        "text_KL6M3N"
-      ],
-      "disabled": true,
-      "name": "t:names.rich_text_section",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 25,
-        "section_width": "page-width",
-        "section_height": "small",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "section_Yk7EWR": {
-      "type": "section",
-      "blocks": {
-        "image_rdPC9b": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/30642DC4-85D0-42B4-9A80-F9DF751501B8.jpg",
-            "link": "",
-            "image_ratio": "landscape",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "group_P4cXbC": {
-          "type": "group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_LDhDpA": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h4>Bæredygtighed og </h4><h4>afvisning af fast fashion</h4><p></p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_6tMwar": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Fast fashion skader både miljøet og mennesker. Hos Skarn siger vi nej til masseproduceret tøj og ja til bæredygtighed, kvalitet og omtanke. Vores udvalg består af håndplukket vintage og brugt tøj, som hver især har sin egen historie. På den måde mindsker vi spild og giver tøjet et nyt liv. Når du handler hos os, får du et produkt, der er unikt, samtidig med at du støtter en god sag. Dit valg af tøj er et statement – for bæredygtighed, for ansvar og for fremtid.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_LDhDpA",
-            "text_6tMwar"
-          ]
-        }
-      },
-      "block_order": [
-        "image_rdPC9b",
-        "group_P4cXbC"
-      ],
-      "name": "t:names.image_with_text",
-      "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": false,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "marquee_3KzPtQ": {
-      "type": "marquee",
-      "blocks": {
-        "text_cLWrgF": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Vi laver ting, der fungerer bedre og holder længere.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "tight",
-            "letter_spacing": "tight",
-            "case": "none",
-            "wrap": "nowrap",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_cLWrgF"
-      ],
-      "disabled": true,
-      "name": "t:names.marquee_section",
-      "settings": {
-        "movement_direction": "normal",
-        "color_scheme": "",
-        "padding-block-start": 24,
-        "padding-block-end": 24,
-        "gap_between_elements": 24
-      }
-    },
-    "divider_CqL4kq": {
+    "divider_fTxfqc": {
       "type": "divider",
       "name": "t:names.divider_section",
       "settings": {
@@ -432,173 +147,48 @@
         "padding-block-end": 24
       }
     },
-    "section_xr7VNm": {
-      "type": "section",
+    "split_grid_tzyJ6G": {
+      "type": "split-grid",
       "blocks": {
-        "group_rPi88f": {
-          "type": "group",
+        "left_iMNLcG": {
+          "type": "left",
           "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_TDYzwJ": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h4>Mission Afrika bag projektet</h4>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_EhqyMF": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Skarn samarbejder med <strong>Mission Afrika</strong>, en organisation, der arbejder for at styrke uddannelsen i Den Centralafrikanske Republik. Mange børn og unge har aldrig haft muligheden for at gå i skole på grund af flere års borgerkrig og manglende ressourcer. Mission Afrika driver 31 grundskoler i den vestlige del af landet, hvor 6.395 børn får undervisning under ofte udfordrende forhold. Gennem dette samarbejde sikrer vi, at de får adgang til lærere, bøger og faciliteter, der giver dem en reel chance for at lære og udvikle deres potentiale. Dit køb hos Skarn bidrager direkte til at give børnene denne mulighed og styrke deres fremtid.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button_hWhFYP": {
-              "type": "button",
-              "settings": {
-                "label": "Køb nu",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_TDYzwJ",
-            "text_EhqyMF",
-            "button_hWhFYP"
-          ]
+            "image_1_width": 40,
+            "image_2_width": 50,
+            "image_3_width": 100,
+            "heading_1": "DU GØR EN FORSKEL FOR BØRN OG UNGE I AFRIKA",
+            "text_1": "<p>Alt overskud fra dine køb går direkte til skolegang og uddannelse. Det betyder bøger, undervisningsmaterialer, lærere og stipendier til piger, så alle børn får lige muligheder. Mange børn i Den Centralafrikanske Republik har teoretisk adgang til gratis skolegang, men de har ofte ikke haft mulighed for at deltage på grund af krig og manglende ressourcer. Din støtte hjælper med at give dem adgang til grundskole, som kan åbne døren til ungdomsskole og videre uddannelse. Skolegang er en investering i fremtiden – hvert barn, der lærer at læse og skrive, får mulighed for at skabe sin egen vej og bidrage til samfundets udvikling.</p>",
+            "heading_2": "",
+            "text_2": "",
+            "button_label": "",
+            "button_link": ""
+          }
         },
-        "image_FUB4Vn": {
-          "type": "image",
+        "right_yz38PN": {
+          "type": "right",
           "settings": {
-            "link": "",
-            "image_ratio": "landscape",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "image_1_width": 100,
+            "image_2_width": 100,
+            "image_3_width": 100,
+            "heading_1": "",
+            "text_1": "",
+            "heading_2": "",
+            "text_2": "",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "group_rPi88f",
-        "image_FUB4Vn"
+        "left_iMNLcG",
+        "right_yz38PN"
       ],
-      "name": "t:names.image_with_text",
+      "name": "Split Grid",
       "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding_top": "none",
+        "padding_bottom": "medium",
+        "grid_type": "1-1",
+        "gap": 10
       }
     },
     "section_U6NxkX": {
@@ -808,11 +398,8 @@
     "index_skarn_FfcBRe",
     "divider_y8cXQi",
     "split_grid_YcfdLg",
-    "section_RLCxew",
-    "section_Yk7EWR",
-    "marquee_3KzPtQ",
-    "divider_CqL4kq",
-    "section_xr7VNm",
+    "divider_fTxfqc",
+    "split_grid_tzyJ6G",
     "section_U6NxkX",
     "divider_jtPc8c",
     "campaign_BtyPmB"
