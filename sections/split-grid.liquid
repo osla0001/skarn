@@ -4,6 +4,28 @@
   "settings": [
     {
       "type": "select",
+      "id": "left_alignment",
+      "label": "Venstre kolonne: tekstjustering",
+      "options": [
+        { "value": "left", "label": "Venstre" },
+        { "value": "center", "label": "Centreret" },
+        { "value": "right", "label": "Højre" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "right_alignment",
+      "label": "Højre kolonne: tekstjustering",
+      "options": [
+        { "value": "left", "label": "Venstre" },
+        { "value": "center", "label": "Centreret" },
+        { "value": "right", "label": "Højre" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
       "id": "padding_top",
       "label": "Mellemrum over (top padding)",
       "options": [
@@ -131,16 +153,16 @@
           {% endif %}
         </div>
         {% if block.settings.heading_1 != blank %}
-          <h4 style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.heading_1 }}</h4>
+          <h4 style="text-align:{{ section.settings.left_alignment }};">{{ block.settings.heading_1 }}</h4>
         {% endif %}
         {% if block.settings.text_1 != blank %}
-          <div class="split-grid__text" style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.text_1 }}</div>
+          <div class="split-grid__text" style="text-align:{{ section.settings.left_alignment }};">{{ block.settings.text_1 }}</div>
         {% endif %}
         {% if block.settings.heading_2 != blank %}
-          <h4 style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.heading_2 }}</h4>
+          <h4 style="text-align:{{ section.settings.left_alignment }};">{{ block.settings.heading_2 }}</h4>
         {% endif %}
         {% if block.settings.text_2 != blank %}
-          <div class="split-grid__text" style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.text_2 }}</div>
+          <div class="split-grid__text" style="text-align:{{ section.settings.left_alignment }};">{{ block.settings.text_2 }}</div>
         {% endif %}
         {% if block.settings.button_label != blank and block.settings.button_link != blank %}
           <a href="{{ block.settings.button_link }}" class="split-grid__button">{{ block.settings.button_label }}</a>
@@ -164,16 +186,16 @@
           {% endif %}
         </div>
         {% if block.settings.heading_1 != blank %}
-          <h4 style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.heading_1 }}</h4>
+          <h4 style="text-align:{{ section.settings.right_alignment }};">{{ block.settings.heading_1 }}</h4>
         {% endif %}
         {% if block.settings.text_1 != blank %}
-          <div class="split-grid__text" style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.text_1 }}</div>
+          <div class="split-grid__text" style="text-align:{{ section.settings.right_alignment }};">{{ block.settings.text_1 }}</div>
         {% endif %}
         {% if block.settings.heading_2 != blank %}
-          <h4 style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.heading_2 }}</h4>
+          <h4 style="text-align:{{ section.settings.right_alignment }};">{{ block.settings.heading_2 }}</h4>
         {% endif %}
         {% if block.settings.text_2 != blank %}
-          <div class="split-grid__text" style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.text_2 }}</div>
+          <div class="split-grid__text" style="text-align:{{ section.settings.right_alignment }};">{{ block.settings.text_2 }}</div>
         {% endif %}
         {% if block.settings.button_label != blank and block.settings.button_link != blank %}
           <a href="{{ block.settings.button_link }}" class="split-grid__button">{{ block.settings.button_label }}</a>
