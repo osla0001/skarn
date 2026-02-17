@@ -110,7 +110,7 @@
           "settings": {
             "content_alignment": "left",
             "image_1": "shopify://shop_images/skraldepose.svg",
-            "image_1_width": 30,
+            "image_1_width": 25,
             "image_2_width": 100,
             "image_3_width": 100,
             "heading_1": "",
@@ -128,12 +128,10 @@
       ],
       "name": "Split Grid",
       "settings": {
-        "left_alignment": "right",
-        "right_alignment": "left",
         "padding_top": "none",
-        "padding_bottom": "none",
+        "padding_bottom": "small",
         "grid_type": "1-1",
-        "gap": 10
+        "gap": 50
       }
     },
     "split_grid_pt8GqJ": {
@@ -177,12 +175,10 @@
       ],
       "name": "Split Grid",
       "settings": {
-        "left_alignment": "left",
-        "right_alignment": "left",
         "padding_top": "none",
         "padding_bottom": "medium",
         "grid_type": "1-1",
-        "gap": 10
+        "gap": 50
       }
     },
     "campaign_BtyPmB": {
@@ -260,12 +256,10 @@
       "custom_css": [],
       "name": "Split Grid",
       "settings": {
-        "left_alignment": "right",
-        "right_alignment": "left",
         "padding_top": "small",
         "padding_bottom": "medium",
         "grid_type": "1-1",
-        "gap": 20
+        "gap": 50
       }
     },
     "divider_jtPc8c": {
