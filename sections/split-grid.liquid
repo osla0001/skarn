@@ -152,7 +152,7 @@
   <div class="split-grid__col split-grid__col--right" id="split_right">
     {% for block in section.blocks %}
       {% if block.type == 'right' %}
-        <div class="split-grid__images">
+        <div class="split-grid__images{% if block.settings.image_1 != blank or block.settings.image_2 != blank or block.settings.image_3 != blank %} has-images{% endif %}">
           {% if block.settings.image_1 != blank %}
             <img src="{{ block.settings.image_1 | image_url }}" alt="" style="width:{{ block.settings.image_1_width | default: 100 }}%; height:auto;" />
           {% endif %}
@@ -203,29 +203,37 @@
   h4{
     font-size: 32px;
     margin-bottom: 1rem;
+    max-width: 22ch;
   }
 
   p{
-    max-width: 55ch;
+    max-width: 45ch;
   }
 
-  #split_left p{
+  .skarn_section p{
+    max-width: none;
+  }
+
+  #split_left p,   #split_left h4{
     text-align: right;
     place-self: end;
   }
-  #split_left .has-images{
+.split-grid__images{
     display: flex;
-justify-content: flex-end;
+justify-content: center;
+align-items: center;
+  }
+
+  .split-grid__images img{
+    align-self: center;
+  }
+
+  .split-grid__images.has-images{
+height: 100%;
   }
 
   .split-grid_text{
     width: 100%;
   }
 
-.split-grid__col--left{
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-end; */
-    justify-content: center;
-}
 {% endstylesheet %}
