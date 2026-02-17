@@ -25,17 +25,28 @@
   ],
   "blocks": [
     {
-      "type": "left",
-      "name": "Venstre kolonne",
-      "settings": []
-    },
-    {
-      "type": "right",
-      "name": "Højre kolonne",
-      "settings": []
+      "type": "block",
+      "name": "Indhold",
+      "settings": [
+        {
+          "type": "select",
+          "id": "column",
+          "label": "Kolonne",
+          "options": [
+            { "value": "left", "label": "Venstre" },
+            { "value": "right", "label": "Højre" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "custom_class",
+          "label": "Custom CSS klasse (valgfri)",
+          "default": ""
+        }
+      ]
     }
   ],
-  "max_blocks": 2,
   "presets": [
     {
       "name": "Split Grid"
@@ -47,14 +58,14 @@
 <div class="split-grid-section split-grid-{{ section.settings.grid_type }}" style="display: grid; grid-template-columns: {% if section.settings.grid_type == '2-1' %}2fr 1fr{% elsif section.settings.grid_type == '1-2' %}1fr 2fr{% else %}1fr 1fr{% endif %}; gap: {{ section.settings.gap | default: 24 }}px;">
   <div class="split-grid__col split-grid__col--left">
     {% for block in section.blocks %}
-      {% if block.type == 'left' %}
+      {% if block.settings.column == 'left' %}
         {% render block %}
       {% endif %}
     {% endfor %}
   </div>
   <div class="split-grid__col split-grid__col--right">
     {% for block in section.blocks %}
-      {% if block.type == 'right' %}
+      {% if block.settings.column == 'right' %}
         {% render block %}
       {% endif %}
     {% endfor %}
