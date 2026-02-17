@@ -92,11 +92,21 @@
       "blocks": {
         "right_G9K6zn": {
           "type": "right",
-          "settings": {}
+          "settings": {
+            "heading": "Bæredygtighed og afvisning af fast fashion",
+            "text": "Fast fashion skader både miljøet og mennesker. Hos Skarn siger vi nej til masseproduceret tøj og ja til bæredygtighed, kvalitet og omtanke. Vores udvalg består af håndplukket vintage og brugt tøj, som hver især har sin egen historie. På den måde mindsker vi spild og giver tøjet et nyt liv. Når du handler hos os, får du et produkt, der er unikt, samtidig med at du støtter en god sag. Dit valg af tøj er et statement – for bæredygtighed, for ansvar og for fremtid.",
+            "button_label": "",
+            "button_link": ""
+          }
         },
         "left_GXza99": {
           "type": "left",
-          "settings": {}
+          "settings": {
+            "heading": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
