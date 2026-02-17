@@ -842,7 +842,8 @@ main {
 
 main[data-template="product"] marquee-component,
 main[data-template="product"] product-recommendations,
-main[data-template="product"] .shopify-section .campaign-section {
+main[data-template="product"] .shopify-section .campaign-section,
+main[data-template="page"] .shopify-section .campaign-section {
   max-width: none !important;
   width: 100vw !important;
   margin-left: calc(-1 * (100vw - 100%) / 2);
