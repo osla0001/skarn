@@ -52,6 +52,17 @@
       "type": "left",
       "name": "Venstre kolonne",
       "settings": [
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "label": "Indhold justering",
+          "options": [
+            { "value": "left", "label": "Venstre" },
+            { "value": "center", "label": "Centreret" },
+            { "value": "right", "label": "Højre" }
+          ],
+          "default": "left"
+        },
         { "type": "image_picker", "id": "image_1", "label": "Billede 1" },
         { "type": "range", "id": "image_1_width", "label": "Billede 1 bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
         { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
@@ -70,6 +81,17 @@
       "type": "right",
       "name": "Højre kolonne",
       "settings": [
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "label": "Indhold justering",
+          "options": [
+            { "value": "left", "label": "Venstre" },
+            { "value": "center", "label": "Centreret" },
+            { "value": "right", "label": "Højre" }
+          ],
+          "default": "left"
+        },
         { "type": "image_picker", "id": "image_1", "label": "Billede 1" },
         { "type": "range", "id": "image_1_width", "label": "Billede 1 bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
         { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
@@ -109,16 +131,16 @@
           {% endif %}
         </div>
         {% if block.settings.heading_1 != blank %}
-          <h4>{{ block.settings.heading_1 }}</h4>
+          <h4 style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.heading_1 }}</h4>
         {% endif %}
         {% if block.settings.text_1 != blank %}
-          <div class="split-grid__text">{{ block.settings.text_1 }}</div>
+          <div class="split-grid__text" style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.text_1 }}</div>
         {% endif %}
         {% if block.settings.heading_2 != blank %}
-          <h4>{{ block.settings.heading_2 }}</h4>
+          <h4 style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.heading_2 }}</h4>
         {% endif %}
         {% if block.settings.text_2 != blank %}
-          <div class="split-grid__text">{{ block.settings.text_2 }}</div>
+          <div class="split-grid__text" style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.text_2 }}</div>
         {% endif %}
         {% if block.settings.button_label != blank and block.settings.button_link != blank %}
           <a href="{{ block.settings.button_link }}" class="split-grid__button">{{ block.settings.button_label }}</a>
@@ -142,16 +164,16 @@
           {% endif %}
         </div>
         {% if block.settings.heading_1 != blank %}
-          <h4>{{ block.settings.heading_1 }}</h4>
+          <h4 style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.heading_1 }}</h4>
         {% endif %}
         {% if block.settings.text_1 != blank %}
-          <div class="split-grid__text">{{ block.settings.text_1 }}</div>
+          <div class="split-grid__text" style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.text_1 }}</div>
         {% endif %}
         {% if block.settings.heading_2 != blank %}
-          <h4>{{ block.settings.heading_2 }}</h4>
+          <h4 style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.heading_2 }}</h4>
         {% endif %}
         {% if block.settings.text_2 != blank %}
-          <div class="split-grid__text">{{ block.settings.text_2 }}</div>
+          <div class="split-grid__text" style="text-align:{{ block.settings.content_alignment }};">{{ block.settings.text_2 }}</div>
         {% endif %}
         {% if block.settings.button_label != blank and block.settings.button_link != blank %}
           <a href="{{ block.settings.button_link }}" class="split-grid__button">{{ block.settings.button_label }}</a>
@@ -228,5 +250,14 @@
          .split-grid__images img:nth-child(1) {
           order: -1;
          }
+  }
+
+  h4{
+    font-size: 32px;
+    margin-bottom: 1rem;
+  }
+
+  p{
+    max-width: 55ch;
   }
 {% endstylesheet %}
