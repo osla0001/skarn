@@ -4,6 +4,30 @@
   "settings": [
     {
       "type": "select",
+      "id": "padding_top",
+      "label": "Mellemrum over (top padding)",
+      "options": [
+        { "value": "none", "label": "Ingen" },
+        { "value": "small", "label": "Lille" },
+        { "value": "medium", "label": "Mellem" },
+        { "value": "large", "label": "Stor" }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "Mellemrum under (bund padding)",
+      "options": [
+        { "value": "none", "label": "Ingen" },
+        { "value": "small", "label": "Lille" },
+        { "value": "medium", "label": "Mellem" },
+        { "value": "large", "label": "Stor" }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
       "id": "grid_type",
       "label": "Grid layout",
       "options": [
@@ -69,7 +93,7 @@
 }
 {% endschema %}
 
-<div class="split-grid-section split-grid-{{ section.settings.grid_type }}" style="display: grid; grid-template-columns: {% if section.settings.grid_type == '2-1' %}2fr 1fr{% elsif section.settings.grid_type == '1-2' %}1fr 2fr{% else %}1fr 1fr{% endif %}; gap: {{ section.settings.gap | default: 24 }}px;">
+<div class="split-grid-section split-grid-{{ section.settings.grid_type }} section-padding-top--{{ section.settings.padding_top }} section-padding-bottom--{{ section.settings.padding_bottom }}" style="display: grid; grid-template-columns: {% if section.settings.grid_type == '2-1' %}2fr 1fr{% elsif section.settings.grid_type == '1-2' %}1fr 2fr{% else %}1fr 1fr{% endif %}; gap: {{ section.settings.gap | default: 24 }}px;">
   <div class="split-grid__col split-grid__col--left">
     {% for block in section.blocks %}
       {% if block.type == 'left' %}
@@ -138,6 +162,15 @@
 </div>
 
 {% stylesheet %}
+/* Shopify standard padding utility classes */
+.section-padding-top--none { padding-top: 0 !important; }
+.section-padding-top--small { padding-top: 2rem !important; }
+.section-padding-top--medium { padding-top: 4rem !important; }
+.section-padding-top--large { padding-top: 8rem !important; }
+.section-padding-bottom--none { padding-bottom: 0 !important; }
+.section-padding-bottom--small { padding-bottom: 2rem !important; }
+.section-padding-bottom--medium { padding-bottom: 4rem !important; }
+.section-padding-bottom--large { padding-bottom: 8rem !important; }
  .split-grid-section {
    width: 100%;
  }
