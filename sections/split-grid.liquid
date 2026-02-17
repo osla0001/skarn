@@ -1,0 +1,71 @@
+{% schema %}
+{
+  "name": "Split Grid",
+  "settings": [
+    {
+      "type": "select",
+      "id": "grid_type",
+      "label": "Grid layout",
+      "options": [
+        { "value": "1-1", "label": "1fr / 1fr (halv-halv)" },
+        { "value": "2-1", "label": "2fr / 1fr (venstre bred)" },
+        { "value": "1-2", "label": "1fr / 2fr (højre bred)" }
+      ],
+      "default": "1-1"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Mellemrum mellem kolonner (px)",
+      "min": 0,
+      "max": 64,
+      "step": 1,
+      "default": 24
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left",
+      "name": "Venstre kolonne",
+      "settings": []
+    },
+    {
+      "type": "right",
+      "name": "Højre kolonne",
+      "settings": []
+    }
+  ],
+  "max_blocks": 2,
+  "presets": [
+    {
+      "name": "Split Grid"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="split-grid-section split-grid-{{ section.settings.grid_type }}" style="display: grid; grid-template-columns: {% if section.settings.grid_type == '2-1' %}2fr 1fr{% elsif section.settings.grid_type == '1-2' %}1fr 2fr{% else %}1fr 1fr{% endif %}; gap: {{ section.settings.gap | default: 24 }}px;">
+  <div class="split-grid__col split-grid__col--left">
+    {% for block in section.blocks %}
+      {% if block.type == 'left' %}
+        {% render block %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="split-grid__col split-grid__col--right">
+    {% for block in section.blocks %}
+      {% if block.type == 'right' %}
+        {% render block %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% stylesheet %}
+.split-grid-section {
+  width: 100%;
+}
+.split-grid__col {
+  min-height: 100px;
+}
+{% endstylesheet %}

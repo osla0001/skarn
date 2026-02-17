@@ -829,10 +829,10 @@ main[data-template*="index"] {
   border-bottom: 1px solid black !important;
 }
 
-main[data-template*="collections"] {
+/* main[data-template*="collections"] {
   max-width: none;
   padding: 0px;
-}
+} */
 
 main {
   max-width: 1260px;
