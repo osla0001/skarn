@@ -186,7 +186,8 @@
         "right_yz38PN": {
           "type": "right",
           "settings": {
-            "image_1_width": 100,
+            "image_1": "shopify://shop_images/afrika_outline.svg",
+            "image_1_width": 60,
             "image_2_width": 100,
             "image_3_width": 100,
             "heading_1": "",
@@ -204,7 +205,7 @@
       ],
       "name": "Split Grid",
       "settings": {
-        "padding_top": "none",
+        "padding_top": "small",
         "padding_bottom": "medium",
         "grid_type": "1-1",
         "gap": 10
