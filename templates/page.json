@@ -94,9 +94,9 @@
           "type": "left",
           "settings": {
             "image_1": "shopify://shop_images/skraldepose.svg",
-            "image_1_width": 36,
-            "image_2": "shopify://shop_images/donationscontainer.svg",
-            "image_2_width": 47,
+            "image_1_width": 40,
+            "image_2": "shopify://shop_images/donationscontainer_1dc6ddd3-92ec-43fa-96de-60ca32722b1b.svg",
+            "image_2_width": 50,
             "image_3_width": 100,
             "heading_1": "",
             "text_1": "",
@@ -128,7 +128,7 @@
       "name": "Split Grid",
       "settings": {
         "grid_type": "1-1",
-        "gap": 24
+        "gap": 0
       }
     },
     "section_RLCxew": {
