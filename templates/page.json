@@ -93,6 +93,7 @@
         "left_GXza99": {
           "type": "left",
           "settings": {
+            "content_alignment": "left",
             "image_1": "shopify://shop_images/skraldepose.svg",
             "image_1_width": 40,
             "image_2": "shopify://shop_images/donationscontainer_1dc6ddd3-92ec-43fa-96de-60ca32722b1b.svg",
@@ -109,10 +110,11 @@
         "right_G9K6zn": {
           "type": "right",
           "settings": {
+            "content_alignment": "left",
             "image_1_width": 100,
             "image_2_width": 100,
             "image_3_width": 100,
-            "heading_1": "Bæredygtighed og afvisning af fast fashion",
+            "heading_1": "Bæredygtighed og <br>afvisning af fast fashion",
             "text_1": "<p>Skarn samarbejder med Mission Afrika, en organisation, der arbejder for at styrke uddannelsen i Den Centralafrikanske Republik. Mange børn og unge har aldrig haft muligheden for at gå i skole på grund af flere års borgerkrig og manglende ressourcer. Mission Afrika driver 31 grundskoler i den vestlige del af landet, hvor 6.395 børn får undervisning under ofte udfordrende forhold. Gennem dette samarbejde sikrer vi, at de får adgang til lærere, bøger og faciliteter, der giver dem en reel chance for at lære og udvikle deres potentiale. Dit køb hos Skarn bidrager direkte til at give børnene denne mulighed og styrke deres fremtid.</p>",
             "heading_2": "Mission Afrika bag projektet",
             "text_2": "<p>Alt overskud fra dine køb går direkte til skolegang og uddannelse. Det betyder bøger, undervisningsmaterialer, lærere og stipendier til piger, så alle børn får lige muligheder. Mange børn i Den Centralafrikanske Republik har teoretisk adgang til gratis skolegang, men de har ofte ikke haft mulighed for at deltage på grund af krig og manglende ressourcer. Din støtte hjælper med at give dem adgang til grundskole, som kan åbne døren til ungdomsskole og videre uddannelse. Skolegang er en investering i fremtiden – hvert barn, der lærer at læse og skrive, får mulighed for at skabe sin egen vej og bidrage til samfundets udvikling.</p>",
@@ -172,10 +174,11 @@
         "left_iMNLcG": {
           "type": "left",
           "settings": {
+            "content_alignment": "left",
             "image_1_width": 40,
             "image_2_width": 50,
             "image_3_width": 100,
-            "heading_1": "DU GØR EN FORSKEL FOR BØRN OG UNGE I AFRIKA",
+            "heading_1": "DU GØR EN FORSKEL FOR <br>BØRN OG UNGE I AFRIKA",
             "text_1": "<p>Alt overskud fra dine køb går direkte til skolegang og uddannelse. Det betyder bøger, undervisningsmaterialer, lærere og stipendier til piger, så alle børn får lige muligheder. Mange børn i Den Centralafrikanske Republik har teoretisk adgang til gratis skolegang, men de har ofte ikke haft mulighed for at deltage på grund af krig og manglende ressourcer. Din støtte hjælper med at give dem adgang til grundskole, som kan åbne døren til ungdomsskole og videre uddannelse. Skolegang er en investering i fremtiden – hvert barn, der lærer at læse og skrive, får mulighed for at skabe sin egen vej og bidrage til samfundets udvikling.</p>",
             "heading_2": "",
             "text_2": "",
@@ -186,6 +189,7 @@
         "right_yz38PN": {
           "type": "right",
           "settings": {
+            "content_alignment": "left",
             "image_1": "shopify://shop_images/afrika_outline.svg",
             "image_1_width": 60,
             "image_2_width": 100,
