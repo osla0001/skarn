@@ -87,6 +87,28 @@
         "padding-block-end": 24
       }
     },
+    "split_grid_YcfdLg": {
+      "type": "split-grid",
+      "blocks": {
+        "right_G9K6zn": {
+          "type": "right",
+          "settings": {}
+        },
+        "left_GXza99": {
+          "type": "left",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "right_G9K6zn",
+        "left_GXza99"
+      ],
+      "name": "Split Grid",
+      "settings": {
+        "grid_type": "1-1",
+        "gap": 24
+      }
+    },
     "section_RLCxew": {
       "type": "section",
       "blocks": {
@@ -763,6 +785,7 @@
     "main",
     "index_skarn_FfcBRe",
     "divider_y8cXQi",
+    "split_grid_YcfdLg",
     "section_RLCxew",
     "section_Yk7EWR",
     "marquee_3KzPtQ",
