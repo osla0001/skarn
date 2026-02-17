@@ -32,9 +32,9 @@
         { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
         { "type": "image_picker", "id": "image_3", "label": "Billede 3" },
         { "type": "text", "id": "heading_1", "label": "Overskrift 1" },
-        { "type": "textarea", "id": "text_1", "label": "Tekst 1" },
+        { "type": "richtext", "id": "text_1", "label": "Tekst 1" },
         { "type": "text", "id": "heading_2", "label": "Overskrift 2" },
-        { "type": "textarea", "id": "text_2", "label": "Tekst 2" },
+        { "type": "richtext", "id": "text_2", "label": "Tekst 2" },
         { "type": "text", "id": "button_label", "label": "Knap tekst" },
         { "type": "url", "id": "button_link", "label": "Knap link" }
       ]
@@ -47,9 +47,9 @@
         { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
         { "type": "image_picker", "id": "image_3", "label": "Billede 3" },
         { "type": "text", "id": "heading_1", "label": "Overskrift 1" },
-        { "type": "textarea", "id": "text_1", "label": "Tekst 1" },
+        { "type": "richtext", "id": "text_1", "label": "Tekst 1" },
         { "type": "text", "id": "heading_2", "label": "Overskrift 2" },
-        { "type": "textarea", "id": "text_2", "label": "Tekst 2" },
+        { "type": "richtext", "id": "text_2", "label": "Tekst 2" },
         { "type": "text", "id": "button_label", "label": "Knap tekst" },
         { "type": "url", "id": "button_link", "label": "Knap link" }
       ]
@@ -74,6 +74,15 @@
           {% if block.settings.image_2 != blank %}
             <img src="{{ block.settings.image_2 | image_url }}" alt="" />
           {% endif %}
+        {% if block.settings.image_1_width != blank %}
+          <img src="{{ block.settings.image_1 | image_url }}" alt="" style="width:{{ block.settings.image_1_width }}%; height:auto;" />
+        {% endif %}
+        {% if block.settings.image_2_width != blank %}
+          <img src="{{ block.settings.image_2 | image_url }}" alt="" style="width:{{ block.settings.image_2_width }}%; height:auto;" />
+        {% endif %}
+        {% if block.settings.image_3_width != blank %}
+          <img src="{{ block.settings.image_3 | image_url }}" alt="" style="width:{{ block.settings.image_3_width }}%; height:auto;" />
+        {% endif %}
           {% if block.settings.image_3 != blank %}
             <img src="{{ block.settings.image_3 | image_url }}" alt="" />
           {% endif %}
@@ -105,6 +114,15 @@
           {% endif %}
           {% if block.settings.image_2 != blank %}
             <img src="{{ block.settings.image_2 | image_url }}" alt="" />
+          {% if block.settings.image_1_width != blank %}
+            <img src="{{ block.settings.image_1 | image_url }}" alt="" style="width:{{ block.settings.image_1_width }}%; height:auto;" />
+          {% endif %}
+          {% if block.settings.image_2_width != blank %}
+            <img src="{{ block.settings.image_2 | image_url }}" alt="" style="width:{{ block.settings.image_2_width }}%; height:auto;" />
+          {% endif %}
+          {% if block.settings.image_3_width != blank %}
+            <img src="{{ block.settings.image_3 | image_url }}" alt="" style="width:{{ block.settings.image_3_width }}%; height:auto;" />
+          {% endif %}
           {% endif %}
           {% if block.settings.image_3 != blank %}
             <img src="{{ block.settings.image_3 | image_url }}" alt="" />
@@ -133,6 +151,11 @@
 {% stylesheet %}
 .split-grid-section {
   width: 100%;
+@media (max-width: 768px) {
+  .split-grid-section {
+    display: block !important;
+  }
+}
 }
 .split-grid__col {
   min-height: 100px;
