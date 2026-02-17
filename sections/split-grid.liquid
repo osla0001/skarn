@@ -31,8 +31,10 @@
         { "type": "image_picker", "id": "image_1", "label": "Billede 1" },
         { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
         { "type": "image_picker", "id": "image_3", "label": "Billede 3" },
-        { "type": "text", "id": "heading", "label": "Overskrift" },
-        { "type": "textarea", "id": "text", "label": "Beskrivende tekst" },
+        { "type": "text", "id": "heading_1", "label": "Overskrift 1" },
+        { "type": "textarea", "id": "text_1", "label": "Tekst 1" },
+        { "type": "text", "id": "heading_2", "label": "Overskrift 2" },
+        { "type": "textarea", "id": "text_2", "label": "Tekst 2" },
         { "type": "text", "id": "button_label", "label": "Knap tekst" },
         { "type": "url", "id": "button_link", "label": "Knap link" }
       ]
@@ -44,8 +46,10 @@
         { "type": "image_picker", "id": "image_1", "label": "Billede 1" },
         { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
         { "type": "image_picker", "id": "image_3", "label": "Billede 3" },
-        { "type": "text", "id": "heading", "label": "Overskrift" },
-        { "type": "textarea", "id": "text", "label": "Beskrivende tekst" },
+        { "type": "text", "id": "heading_1", "label": "Overskrift 1" },
+        { "type": "textarea", "id": "text_1", "label": "Tekst 1" },
+        { "type": "text", "id": "heading_2", "label": "Overskrift 2" },
+        { "type": "textarea", "id": "text_2", "label": "Tekst 2" },
         { "type": "text", "id": "button_label", "label": "Knap tekst" },
         { "type": "url", "id": "button_link", "label": "Knap link" }
       ]
@@ -74,11 +78,17 @@
             <img src="{{ block.settings.image_3 | image_url }}" alt="" />
           {% endif %}
         </div>
-        {% if block.settings.heading != blank %}
-          <h2>{{ block.settings.heading }}</h2>
+        {% if block.settings.heading_1 != blank %}
+          <h4>{{ block.settings.heading_1 }}</h4>
         {% endif %}
-        {% if block.settings.text != blank %}
-          <div class="split-grid__text">{{ block.settings.text }}</div>
+        {% if block.settings.text_1 != blank %}
+          <div class="split-grid__text">{{ block.settings.text_1 }}</div>
+        {% endif %}
+        {% if block.settings.heading_2 != blank %}
+          <h4>{{ block.settings.heading_2 }}</h4>
+        {% endif %}
+        {% if block.settings.text_2 != blank %}
+          <div class="split-grid__text">{{ block.settings.text_2 }}</div>
         {% endif %}
         {% if block.settings.button_label != blank and block.settings.button_link != blank %}
           <a href="{{ block.settings.button_link }}" class="split-grid__button">{{ block.settings.button_label }}</a>
@@ -100,11 +110,17 @@
             <img src="{{ block.settings.image_3 | image_url }}" alt="" />
           {% endif %}
         </div>
-        {% if block.settings.heading != blank %}
-          <h2>{{ block.settings.heading }}</h2>
+        {% if block.settings.heading_1 != blank %}
+          <h4>{{ block.settings.heading_1 }}</h4>
         {% endif %}
-        {% if block.settings.text != blank %}
-          <div class="split-grid__text">{{ block.settings.text }}</div>
+        {% if block.settings.text_1 != blank %}
+          <div class="split-grid__text">{{ block.settings.text_1 }}</div>
+        {% endif %}
+        {% if block.settings.heading_2 != blank %}
+          <h4>{{ block.settings.heading_2 }}</h4>
+        {% endif %}
+        {% if block.settings.text_2 != blank %}
+          <div class="split-grid__text">{{ block.settings.text_2 }}</div>
         {% endif %}
         {% if block.settings.button_label != blank and block.settings.button_link != blank %}
           <a href="{{ block.settings.button_link }}" class="split-grid__button">{{ block.settings.button_label }}</a>
