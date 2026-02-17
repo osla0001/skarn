@@ -129,6 +129,8 @@
       ],
       "name": "Split Grid",
       "settings": {
+        "left_alignment": "left",
+        "right_alignment": "left",
         "padding_top": "none",
         "padding_bottom": "medium",
         "grid_type": "1-1",
@@ -178,7 +180,7 @@
             "image_1_width": 40,
             "image_2_width": 50,
             "image_3_width": 100,
-            "heading_1": "DU GØR EN FORSKEL FOR <br>BØRN OG UNGE I AFRIKA",
+            "heading_1": "DU GØR EN FORSKEL FOR <br> BØRN OG UNGE I AFRIKA",
             "text_1": "<p>Alt overskud fra dine køb går direkte til skolegang og uddannelse. Det betyder bøger, undervisningsmaterialer, lærere og stipendier til piger, så alle børn får lige muligheder. Mange børn i Den Centralafrikanske Republik har teoretisk adgang til gratis skolegang, men de har ofte ikke haft mulighed for at deltage på grund af krig og manglende ressourcer. Din støtte hjælper med at give dem adgang til grundskole, som kan åbne døren til ungdomsskole og videre uddannelse. Skolegang er en investering i fremtiden – hvert barn, der lærer at læse og skrive, får mulighed for at skabe sin egen vej og bidrage til samfundets udvikling.</p>",
             "heading_2": "",
             "text_2": "",
@@ -207,12 +209,15 @@
         "left_iMNLcG",
         "right_yz38PN"
       ],
+      "custom_css": [],
       "name": "Split Grid",
       "settings": {
+        "left_alignment": "right",
+        "right_alignment": "left",
         "padding_top": "small",
         "padding_bottom": "medium",
         "grid_type": "1-1",
-        "gap": 10
+        "gap": 20
       }
     },
     "divider_jtPc8c": {
