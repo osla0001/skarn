@@ -96,12 +96,8 @@
             "content_alignment": "left",
             "image_1": "shopify://shop_images/mission_afrika.svg",
             "image_1_width": 100,
-            "image_2_width": 30,
-            "image_3_width": 100,
             "heading_1": "",
             "text_1": "",
-            "heading_2": "",
-            "text_2": "",
             "button_label": "",
             "button_link": ""
           }
@@ -111,12 +107,8 @@
           "settings": {
             "content_alignment": "left",
             "image_1_width": 100,
-            "image_2_width": 100,
-            "image_3_width": 100,
-            "heading_1": "",
-            "text_1": "",
-            "heading_2": "Mission Afrika bag projektet",
-            "text_2": "<p>Skarn samarbejder med Mission Afrika, en organisation, der arbejder for at styrke uddannelsen i Den Centralafrikanske Republik. Mange børn og unge har aldrig haft muligheden for at gå i skole på grund af flere års borgerkrig og manglende ressourcer. Mission Afrika driver 31 grundskoler i den vestlige del af landet, hvor 6.395 børn får undervisning under ofte udfordrende forhold. Gennem dette samarbejde sikrer vi, at de får adgang til lærere, bøger og faciliteter, der giver dem en reel chance for at lære og udvikle deres potentiale. Dit køb hos Skarn bidrager direkte til at give børnene denne mulighed og styrke deres fremtid.</p>",
+            "heading_1": "Mission Afrika bag projektet",
+            "text_1": "<p>Skarn samarbejder med <a href=\"https://missionafrika.dk/\" title=\"https://missionafrika.dk/\"><strong>Mission Afrika.</strong></a> Et partnerskab bygget på <strong>ansvarlighed</strong>, <strong>fællesskab</strong> og <strong>langsigtet forandring</strong>. Organisationen arbejder for at styrke <strong>uddannelse</strong> i Den Centralafrikanske Republik, hvor mange børn og unge aldrig har haft muligheden for at gå i skole på grund af borgerkrig og manglende ressourcer. Mission Afrika driver <strong>31 grundskoler</strong> i den vestlige del af landet, hvor <strong>6.395 børn </strong>modtager undervisning under ofte udfordrende forhold. Her handler det om mere end skolegang, det handler om <strong>muligheder</strong>, <strong>udvikling</strong> og håb for fremtiden. Gennem samarbejdet er vi med til at sikre adgang til <strong>lærere</strong>, <strong>bøger</strong> og ordentlige faciliteter, så børnene får en reel chance for at lære, vokse og udfolde deres potentiale. Når du handler hos Skarn, støtter du ikke kun <strong>genbrug</strong> og <strong>bevidst forbrug.</strong> Du investerer i <strong>uddannelse</strong>, <strong>lige muligheder</strong> og en stærkere fremtid for næste generation.</p>",
             "button_label": "",
             "button_link": ""
           }
@@ -142,12 +134,8 @@
           "settings": {
             "content_alignment": "left",
             "image_1_width": 40,
-            "image_2_width": 50,
-            "image_3_width": 100,
             "heading_1": "Bæredygtighed og afvisning af fast fashion",
             "text_1": "<p>Fast fashion skader både miljøet og mennesker. Hos Skarn siger vi nej til masseproduceret tøj og ja til bæredygtighed, kvalitet og omtanke. Vores udvalg består af håndplukket vintage og brugt tøj, som hver især har sin egen historie. På den måde mindsker vi spild og giver tøjet et nyt liv. Når du handler hos os, får du et produkt, der er unikt, samtidig med at du støtter en god sag. Dit valg af tøj er et statement – for bæredygtighed, for ansvar og for fremtid.</p>",
-            "heading_2": "",
-            "text_2": "",
             "button_label": "",
             "button_link": ""
           }
@@ -158,12 +146,8 @@
             "content_alignment": "left",
             "image_1": "shopify://shop_images/skraldepose.svg",
             "image_1_width": 25,
-            "image_2_width": 100,
-            "image_3_width": 100,
             "heading_1": "",
             "text_1": "",
-            "heading_2": "",
-            "text_2": "",
             "button_label": "",
             "button_link": ""
           }
