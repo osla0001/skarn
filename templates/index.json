@@ -52,9 +52,33 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "image_qbxJtk": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/skarn_logo_38f23e00-e304-449a-b1e6-41751cd39622.gif",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "custom",
+                "custom_width": 40,
+                "width_mobile": "custom",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "logo_VbbBBx": {
               "type": "logo",
               "name": "t:names.logo",
+              "disabled": true,
               "settings": {
                 "inverse": true,
                 "font": "heading",
@@ -89,6 +113,7 @@
             }
           },
           "block_order": [
+            "image_qbxJtk",
             "logo_VbbBBx",
             "button_BpDGiH"
           ]
