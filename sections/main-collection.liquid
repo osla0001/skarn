@@ -24,6 +24,47 @@
 
 {% comment %} We always render this full-width, as the child blocks have width: page/full settings {% endcomment %}
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+
+{%- comment -%}
+  Dynamisk overskrift: vis filtertitel hvis aktivt filter, ellers kollektionens titel
+{%- endcomment -%}
+{%- assign filter_title = '' -%}
+{%- assign gender_found = false -%}
+{%- assign category_found = false -%}
+{%- assign gender_label = '' -%}
+{%- assign category_label = '' -%}
+{%- assign first_label = '' -%}
+{%- if collection.filters and collection.filters.size > 0 -%}
+  {%- for filter in collection.filters -%}
+    {%- if filter.active_values.size > 0 -%}
+      {%- if filter.label == 'Køn' and gender_found == false -%}
+        {%- assign gender_label = filter.active_values[0].label -%}
+        {%- assign gender_found = true -%}
+      {%- elsif filter.label == 'Kategori' and category_found == false -%}
+        {%- assign category_label = filter.active_values[0].label -%}
+        {%- assign category_found = true -%}
+      {%- if first_label == '' -%}
+        {%- assign first_label = filter.active_values[0].label -%}
+      {%- endif -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if gender_label != '' -%}
+    {%- assign filter_title = gender_label -%}
+  {%- elsif category_label != '' -%}
+    {%- assign filter_title = category_label -%}
+  {%- elsif first_label != '' -%}
+    {%- assign filter_title = first_label -%}
+  {%- endif -%}
+{%- endif -%}
+<h1 class="collection-dynamic-title">
+  {%- if filter_title != '' -%}
+    {{ filter_title }}
+  {%- else -%}
+    {{ collection.title }}
+  {%- endif -%}
+</h1>
+
 <results-list
   class="section product-grid-container color-{{ section.settings.color_scheme }}"
   style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px;"

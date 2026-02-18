@@ -82,11 +82,7 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "simple_breadcrumb_breadcrumb_MDNHyJ",
-        "text_tqQTNE",
-        "text_twGGkJ"
-      ],
+      "block_order": ["simple_breadcrumb_breadcrumb_MDNHyJ", "text_tqQTNE", "text_twGGkJ"],
       "name": "Collection heading",
       "settings": {
         "content_direction": "column",
@@ -374,10 +370,7 @@
                           "blocks": {}
                         }
                       },
-                      "block_order": [
-                        "product_title_jJHWQf",
-                        "text_mwdXGn"
-                      ]
+                      "block_order": ["product_title_jJHWQf", "text_mwdXGn"]
                     },
                     "product_card_group_xhAVPz": {
                       "type": "_product-card-group",
@@ -497,17 +490,10 @@
                           "blocks": {}
                         }
                       },
-                      "block_order": [
-                        "text_DnCGCT",
-                        "text_6Q3N6t",
-                        "text_TzdbUb"
-                      ]
+                      "block_order": ["text_DnCGCT", "text_6Q3N6t", "text_TzdbUb"]
                     }
                   },
-                  "block_order": [
-                    "product_card_group_Xy77kf",
-                    "product_card_group_xhAVPz"
-                  ]
+                  "block_order": ["product_card_group_Xy77kf", "product_card_group_xhAVPz"]
                 },
                 "product_card_group_8FETHd": {
                   "type": "_product-card-group",
@@ -571,21 +557,13 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": [
-                    "price_gxRMLa"
-                  ]
+                  "block_order": ["price_gxRMLa"]
                 }
               },
-              "block_order": [
-                "product_card_group_Dw6PTB",
-                "product_card_group_8FETHd"
-              ]
+              "block_order": ["product_card_group_Dw6PTB", "product_card_group_8FETHd"]
             }
           },
-          "block_order": [
-            "card-gallery",
-            "product_card_group_Kc9bCY"
-          ]
+          "block_order": ["card-gallery", "product_card_group_Kc9bCY"]
         }
       },
       "settings": {
@@ -606,9 +584,5 @@
       }
     }
   },
-  "order": [
-    "section",
-    "section_HfGDjC",
-    "main"
-  ]
+  "order": ["section", "section_HfGDjC", "main"]
 }
