@@ -32,6 +32,7 @@
         "text_tqQTNE": {
           "type": "text",
           "name": "Title",
+          "disabled": true,
           "settings": {
             "text": "<h1>{{ closest.collection.title }}</h1>",
             "width": "fit-content",
@@ -82,7 +83,11 @@
           "blocks": {}
         }
       },
-      "block_order": ["simple_breadcrumb_breadcrumb_MDNHyJ", "text_tqQTNE", "text_twGGkJ"],
+      "block_order": [
+        "simple_breadcrumb_breadcrumb_MDNHyJ",
+        "text_tqQTNE",
+        "text_twGGkJ"
+      ],
       "name": "Collection heading",
       "settings": {
         "content_direction": "column",
@@ -97,37 +102,6 @@
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "scheme-1",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "section_HfGDjC": {
-      "type": "section",
-      "name": "t:names.custom_section",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 0,
-        "section_width": "page-width",
-        "section_height": "custom",
-        "section_height_custom": 3,
-        "color_scheme": "",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -370,7 +344,10 @@
                           "blocks": {}
                         }
                       },
-                      "block_order": ["product_title_jJHWQf", "text_mwdXGn"]
+                      "block_order": [
+                        "product_title_jJHWQf",
+                        "text_mwdXGn"
+                      ]
                     },
                     "product_card_group_xhAVPz": {
                       "type": "_product-card-group",
@@ -490,10 +467,17 @@
                           "blocks": {}
                         }
                       },
-                      "block_order": ["text_DnCGCT", "text_6Q3N6t", "text_TzdbUb"]
+                      "block_order": [
+                        "text_DnCGCT",
+                        "text_6Q3N6t",
+                        "text_TzdbUb"
+                      ]
                     }
                   },
-                  "block_order": ["product_card_group_Xy77kf", "product_card_group_xhAVPz"]
+                  "block_order": [
+                    "product_card_group_Xy77kf",
+                    "product_card_group_xhAVPz"
+                  ]
                 },
                 "product_card_group_8FETHd": {
                   "type": "_product-card-group",
@@ -557,13 +541,21 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["price_gxRMLa"]
+                  "block_order": [
+                    "price_gxRMLa"
+                  ]
                 }
               },
-              "block_order": ["product_card_group_Dw6PTB", "product_card_group_8FETHd"]
+              "block_order": [
+                "product_card_group_Dw6PTB",
+                "product_card_group_8FETHd"
+              ]
             }
           },
-          "block_order": ["card-gallery", "product_card_group_Kc9bCY"]
+          "block_order": [
+            "card-gallery",
+            "product_card_group_Kc9bCY"
+          ]
         }
       },
       "settings": {
@@ -584,5 +576,8 @@
       }
     }
   },
-  "order": ["section", "section_HfGDjC", "main"]
+  "order": [
+    "section",
+    "main"
+  ]
 }
