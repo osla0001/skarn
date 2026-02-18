@@ -191,6 +191,17 @@
       margin-inline-end: calc(-1 * max(var(--padding-xs), var(--padding-inline-end)));
     }
   }
+
+  .collection-dynamic-title{
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    .collection-dynamic-title{
+      margin-left: 0 !important;
+    }
+  }
 {% endstylesheet %}
 
 {% schema %}
