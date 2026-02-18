@@ -63,16 +63,10 @@
           ],
           "default": "left"
         },
-        { "type": "image_picker", "id": "image_1", "label": "Billede 1" },
-        { "type": "range", "id": "image_1_width", "label": "Billede 1 bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
-        { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
-        { "type": "range", "id": "image_2_width", "label": "Billede 2 bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
-        { "type": "image_picker", "id": "image_3", "label": "Billede 3" },
-        { "type": "range", "id": "image_3_width", "label": "Billede 3 bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
-        { "type": "text", "id": "heading_1", "label": "Overskrift 1" },
-        { "type": "richtext", "id": "text_1", "label": "Tekst 1" },
-        { "type": "text", "id": "heading_2", "label": "Overskrift 2" },
-        { "type": "richtext", "id": "text_2", "label": "Tekst 2" },
+        { "type": "image_picker", "id": "image_1", "label": "Billede" },
+        { "type": "range", "id": "image_1_width", "label": "Billede bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
+        { "type": "text", "id": "heading_1", "label": "Overskrift" },
+        { "type": "richtext", "id": "text_1", "label": "Beskrivende tekst" },
         { "type": "text", "id": "button_label", "label": "Knap tekst" },
         { "type": "url", "id": "button_link", "label": "Knap link" }
       ]
@@ -92,16 +86,10 @@
           ],
           "default": "left"
         },
-        { "type": "image_picker", "id": "image_1", "label": "Billede 1" },
-        { "type": "range", "id": "image_1_width", "label": "Billede 1 bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
-        { "type": "image_picker", "id": "image_2", "label": "Billede 2" },
-        { "type": "range", "id": "image_2_width", "label": "Billede 2 bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
-        { "type": "image_picker", "id": "image_3", "label": "Billede 3" },
-        { "type": "range", "id": "image_3_width", "label": "Billede 3 bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
-        { "type": "text", "id": "heading_1", "label": "Overskrift 1" },
-        { "type": "richtext", "id": "text_1", "label": "Tekst 1" },
-        { "type": "text", "id": "heading_2", "label": "Overskrift 2" },
-        { "type": "richtext", "id": "text_2", "label": "Tekst 2" },
+        { "type": "image_picker", "id": "image_1", "label": "Billede" },
+        { "type": "range", "id": "image_1_width", "label": "Billede bredde (%)", "min": 10, "max": 100, "step": 1, "default": 100 },
+        { "type": "text", "id": "heading_1", "label": "Overskrift" },
+        { "type": "richtext", "id": "text_1", "label": "Beskrivende tekst" },
         { "type": "text", "id": "button_label", "label": "Knap tekst" },
         { "type": "url", "id": "button_link", "label": "Knap link" }
       ]
@@ -119,15 +107,9 @@
   <div class="split-grid__col split-grid__col--left" id="split_left">
     {% for block in section.blocks %}
       {% if block.type == 'left' %}
-        <div class="split-grid__images{% if block.settings.image_1 != blank or block.settings.image_2 != blank or block.settings.image_3 != blank %} has-images{% endif %}">
+        <div class="split-grid__images{% if block.settings.image_1 != blank %} has-images{% endif %}">
           {% if block.settings.image_1 != blank %}
             <img src="{{ block.settings.image_1 | image_url }}" alt="" style="width:{{ block.settings.image_1_width | default: 100 }}%; height:auto;" />
-          {% endif %}
-          {% if block.settings.image_2 != blank %}
-            <img src="{{ block.settings.image_2 | image_url }}" alt="" style="width:{{ block.settings.image_2_width | default: 100 }}%; height:auto;" />
-          {% endif %}
-          {% if block.settings.image_3 != blank %}
-            <img src="{{ block.settings.image_3 | image_url }}" alt="" style="width:{{ block.settings.image_3_width | default: 100 }}%; height:auto;" />
           {% endif %}
         </div>
         {% if block.settings.heading_1 != blank %}
@@ -135,12 +117,6 @@
         {% endif %}
         {% if block.settings.text_1 != blank %}
           {{ block.settings.text_1 }}
-        {% endif %}
-        {% if block.settings.heading_2 != blank %}
-          <h4 style="text-align:right;">{{ block.settings.heading_2 }}</h4>
-        {% endif %}
-        {% if block.settings.text_2 != blank %}
-          {{ block.settings.text_2 }}
         {% endif %}
         {% if block.settings.button_label != blank and block.settings.button_link != blank %}
           <a href="{{ block.settings.button_link }}" class="split-grid__button">{{ block.settings.button_label }}</a>
@@ -152,15 +128,9 @@
   <div class="split-grid__col split-grid__col--right" id="split_right">
     {% for block in section.blocks %}
       {% if block.type == 'right' %}
-        <div class="split-grid__images{% if block.settings.image_1 != blank or block.settings.image_2 != blank or block.settings.image_3 != blank %} has-images{% endif %}">
+        <div class="split-grid__images{% if block.settings.image_1 != blank %} has-images{% endif %}">
           {% if block.settings.image_1 != blank %}
             <img src="{{ block.settings.image_1 | image_url }}" alt="" style="width:{{ block.settings.image_1_width | default: 100 }}%; height:auto;" />
-          {% endif %}
-          {% if block.settings.image_2 != blank %}
-            <img src="{{ block.settings.image_2 | image_url }}" alt="" style="width:{{ block.settings.image_2_width | default: 100 }}%; height:auto;" />
-          {% endif %}
-          {% if block.settings.image_3 != blank %}
-            <img src="{{ block.settings.image_3 | image_url }}" alt="" style="width:{{ block.settings.image_3_width | default: 100 }}%; height:auto;" />
           {% endif %}
         </div>
         {% if block.settings.heading_1 != blank %}
@@ -168,12 +138,6 @@
         {% endif %}
         {% if block.settings.text_1 != blank %}
           {{ block.settings.text_1 }}
-        {% endif %}
-        {% if block.settings.heading_2 != blank %}
-          <h4 style="text-align:left;">{{ block.settings.heading_2 }}</h4>
-        {% endif %}
-        {% if block.settings.text_2 != blank %}
-          {{ block.settings.text_2 }}
         {% endif %}
         {% if block.settings.button_label != blank and block.settings.button_link != blank %}
           <a href="{{ block.settings.button_link }}" class="split-grid__button">{{ block.settings.button_label }}</a>
