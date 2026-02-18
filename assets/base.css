@@ -8,6 +8,11 @@ b {
   filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.09));
 }
 
+/* Søgefunktion */
+#shopify-section-template--28109750108501__search > div.section.color-scheme-1 {
+  display: flex;
+}
+
 /* Megamenu */
 header-menu > div > nav > div > div > nav > ul > li.tmenu_item.tmenu_item--root.tmenu_item_level_0.tmenu_item_submenu_type_mega.tmenu_item_submenu_mega_position_fullwidth.tmenu_item_has_child.\.menu-list__link-title > ul,
 .tmenu_submenu_type_mega {
