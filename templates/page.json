@@ -141,8 +141,8 @@
           "type": "left",
           "settings": {
             "content_alignment": "left",
-            "image_1_width": 22,
-            "image_2": "shopify://shop_images/donationscontainer_1dc6ddd3-92ec-43fa-96de-60ca32722b1b.svg",
+            "image_1": "shopify://shop_images/mission_afrika.svg",
+            "image_1_width": 100,
             "image_2_width": 30,
             "image_3_width": 100,
             "heading_1": "",
