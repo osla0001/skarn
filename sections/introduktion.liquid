@@ -50,11 +50,12 @@
           "default": "Velkommen til dit digitale klædeskab"
         },
         {
-          "type": "textarea",
+          "type": "richtext",
           "id": "intro_text",
-          "label": "Intro tekst (p)",
-          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Vestibulum quis blandit nibh. Morbi ut nisi et turpis tristique ultricies facilisis et est.\n\nIn convallis nulla at semper posuere. Phasellus hendrerit tortor vel velit elementum sodales. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae.\n\nCurabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Donec blandit lectus eget sem facilisis cursus.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac metus id porttitor. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          "label": "Intro tekst (richtext)",
+          "default": "<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Vestibulum quis blandit nibh. Morbi ut nisi et turpis tristique ultricies facilisis et est.</p>"
         },
+      <div class="tekst">{{ section.settings.intro_text }}</div>
     {
       "type": "text",
       "id": "secondary_button_label",

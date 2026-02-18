@@ -3,6 +3,11 @@ b {
   font-family: "ZT Nature Regular" !important;
 }
 
+/* Hero */
+#Hero-template--28109750075733__hero_jVaWmY > div > div.hero__content-wrapper.layout-panel-flex.layout-panel-flex--row.mobile-column.section-content-wrapper.full-width > div > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > div > img {
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.09));
+}
+
 /* Megamenu */
 header-menu > div > nav > div > div > nav > ul > li.tmenu_item.tmenu_item--root.tmenu_item_level_0.tmenu_item_submenu_type_mega.tmenu_item_submenu_mega_position_fullwidth.tmenu_item_has_child.\.menu-list__link-title > ul,
 .tmenu_submenu_type_mega {
