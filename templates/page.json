@@ -94,7 +94,6 @@
           "type": "left",
           "settings": {
             "content_alignment": "left",
-            "image_1": "shopify://shop_images/mission_afrika.svg",
             "image_1_width": 100,
             "heading_1": "",
             "text_1": "",
@@ -123,7 +122,7 @@
         "padding_top": "none",
         "padding_bottom": "medium",
         "grid_type": "1-1",
-        "gap": 50
+        "gap": 20
       }
     },
     "split_grid_YcfdLg": {
@@ -144,8 +143,8 @@
           "type": "right",
           "settings": {
             "content_alignment": "left",
-            "image_1": "shopify://shop_images/skraldepose.svg",
-            "image_1_width": 25,
+            "image_1": "shopify://shop_images/mission_afrika.svg",
+            "image_1_width": 95,
             "heading_1": "",
             "text_1": "",
             "button_label": "",
@@ -162,7 +161,7 @@
         "padding_top": "none",
         "padding_bottom": "small",
         "grid_type": "1-1",
-        "gap": 50
+        "gap": 20
       }
     },
     "campaign_BtyPmB": {
