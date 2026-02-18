@@ -182,10 +182,50 @@
     text-align: right;
     place-self: end;
   }
+
 .split-grid__images{
-    display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+#split_left .split-grid__images{
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .split-grid-section {
+display: block !important;
+margin: 0 auto;
   }
+
+  #split_left .split-grid__images{
+  justify-content: center;
+margin: 0;
+place-self: center;
+}
+
+.split-grid__col{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  #split_left p,   #split_left h4{
+    text-align: left !important;
+    place-self: center;
+  }
+
+  #split_right{
+    justify-content: center;
+  }
+
+    #split_right img{
+      margin: 0 auto;
+    }
+
+}
 
 
 #split_left > div{
