@@ -60,9 +60,9 @@
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "custom",
-                "custom_width": 40,
+                "custom_width": 35,
                 "width_mobile": "custom",
-                "custom_width_mobile": 100,
+                "custom_width_mobile": 90,
                 "height": "fit",
                 "border": "none",
                 "border_width": 1,
@@ -160,7 +160,7 @@
       "name": "Introduktion",
       "settings": {
         "intro_heading": "Velkommen til dit digitale klædeskab",
-        "intro_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Vestibulum quis blandit nibh. Morbi ut nisi et turpis tristique ultricies facilisis et est.\n\nIn convallis nulla at semper posuere. Phasellus hendrerit tortor vel velit elementum sodales. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae.\n\nCurabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Nulla sit amet bibendum odio. Vestibulum feugiat ac metus id porttitor.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Integer blandit maximus condimentum. Donec blandit lectus eget sem facilisis cursus.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat ac metus id porttitor. Curabitur tincidunt libero magna, ut consectetur magna condimentum vitae. Donec blandit lectus eget sem facilisis cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "intro_text": "Her finder du nøje udvalgte vintage styles med historie, karakter og kant. Vi håndplukker secondhand pieces fra forskellige årtier – fra 60’ernes silhuetter til 00’ernes attitude – og giver dem nyt liv i en moderne garderobe.\n\nSkarn er et alternativ til fast fashion. Et mere bæredygtigt valg, hvor genbrug bliver til personlig stil, og hvor hvert item er udvalgt med omtanke. Mindre spild. Mere personlighed.",
         "secondary_button_label": "Besøg butik →",
         "secondary_button_link": "shopify://collections/all",
         "collection": "selektion"
