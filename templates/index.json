@@ -160,7 +160,7 @@
       "name": "Introduktion",
       "settings": {
         "intro_heading": "Velkommen til dit digitale klædeskab",
-        "intro_text": "<p>Her finder du nøje udvalgte vintage styles med historie, karakter og kant. Vi håndplukker secondhand pieces fra forskellige årtier. Fra 60’ernes silhuetter til 00’ernes attitude, og giver dem nyt liv i en moderne garderobe.<br/><br/>Skarn er et alternativ til fast fashion. Et mere bæredygtigt valg, hvor genbrug bliver til personlig stil, og hvor hvert item er udvalgt med omtanke. Mindre spild. Mere personlighed.</p>",
+        "intro_text": "<p>Hos <strong>Skarn</strong> finder du håndplukket vintage og secondhand fra udvalgte årtier. Nøje kurateret med fokus på kvalitet, pasform og karakter. Vi sammensætter kollektioner, der giver tidligere tiders design nyt liv i en moderne garderobe.<br/><br/>Skarn bygger på principperne om <strong>cirkulær mode</strong>, <strong>genbrug</strong> og mere <strong>ansvarligt forbrug</strong>. I stedet for at producere nyt, forlænger vi levetiden på eksisterende styles.</p><p><br/>Vi tror på, at personlig stil og bæredygtighed kan gå hånd i hånd. Mindre fast fashion. <strong>Mere bevidst garderobe.</strong></p>",
         "secondary_button_label": "Besøg butik →",
         "secondary_button_link": "shopify://collections/all",
         "collection": "selektion"
