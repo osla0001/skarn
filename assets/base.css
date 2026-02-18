@@ -719,17 +719,21 @@ select {
   bottom: 13%;
 }
 
-main[data-template*="collection"] product-card {
+main[data-template*="collection"] product-card,
+main[data-template*="search"] product-card {
   border: 1px solid black !important;
 }
 
 main[data-template*="collection"] .collection-card,
-main[data-template*="collection"] .product-card {
+main[data-template*="collection"] .product-card,
+main[data-template*="search"] .collection-card,
+main[data-template*="search"] .product-card {
   aspect-ratio: auto;
   border-bottom: 1px solid black;
 }
 
-main[data-template*="collection"] .card-gallery__hover-fade-wrapper {
+main[data-template*="collection"] .card-gallery__hover-fade-wrapper,
+main[data-template*="search"] .card-gallery__hover-fade-wrapper {
   border-bottom: 1px solid black;
 }
 
@@ -761,7 +765,8 @@ product-card h4 {
 }
 
 /* Pris */
-main[data-template*="collection"] span.price {
+main[data-template*="collection"] span.price,
+main[data-template*="search"] span.price {
   font-family: "ZT Nature Bold" !important;
   font-size: 14px !important;
   text-decoration: underline;
