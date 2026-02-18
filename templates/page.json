@@ -66,7 +66,7 @@
         "show_border_bottom": false,
         "show_secondary_button": false,
         "heading": "Hvem er",
-        "text": "<p>Skarn er en webshop, der sælger håndplukket vintage og brugt tøj, hvor kvalitet og stil går hånd i hånd. Vi går ind for bæredygtighed og siger nej til fast fashion, fordi vi tror på, at mode kan have både personlighed og omtanke. Hos Skarn finder du unikke items, som ikke bare ser godt ud, men også har sin egen historie.</p>",
+        "text": "<p><strong>Skarn</strong> er en webshop med håndplukket vintage og secondhand, hvor kvalitet, personlig stil og <strong>bevidste valg</strong> går hånd i hånd. Navnet er ikke tilfældigt. Det, nogen kalder skarn – gammelt, glemt eller “affald” – ser vi som <strong>skjulte skatte</strong>. Vi finder det, udvælger det og giver det nyt liv. For bare fordi noget er kasseret, betyder det ikke, at det har mistet sin værdi.<br/><br/>Vi tror på at bruge de ressourcer, der <strong>allerede findes</strong>. Hvis et stykke tøj intet fejler, hvorfor så producere nyt? Hos os handler det om <strong>genbrug</strong>, <strong>respekt for materialer</strong> og en mere <strong>ansvarlig tilgang</strong> til garderoben. Tøj kan sagtens få flere kapitler – det kræver bare de rigtige hænder.<br/><br/>Hvert item er nøje udvalgt med fokus på <strong>holdbarhed</strong>, <strong>karakter</strong> og <strong>originalitet</strong>. Ingen masseproduktion. Ingen tilfældigheder. Kun styles med personlighed og historie. Vi går ind for <strong>individualitet</strong>, <strong>langsigtet kvalitet</strong> og en kultur, hvor man tør skille sig ud i stedet for at ligne alle andre.<br/><br/>Når du shopper hos Skarn, vælger du mere end bare tøj. Du vælger en <strong>bevidst livsstil</strong>, hvor stil og omtanke ikke udelukker hinanden. Det, andre kalder skarn, kalder vi <strong>potentiale</strong>.</p>",
         "button_link": "",
         "secondary_button_label": "Læs mere →",
         "secondary_button_link": "",
@@ -85,53 +85,6 @@
         "alignment_horizontal": "center",
         "padding-block-start": 24,
         "padding-block-end": 24
-      }
-    },
-    "split_grid_YcfdLg": {
-      "type": "split-grid",
-      "blocks": {
-        "left_GXza99": {
-          "type": "left",
-          "settings": {
-            "content_alignment": "left",
-            "image_1_width": 40,
-            "image_2_width": 50,
-            "image_3_width": 100,
-            "heading_1": "Bæredygtighed og afvisning af fast fashion",
-            "text_1": "<p>Fast fashion skader både miljøet og mennesker. Hos Skarn siger vi nej til masseproduceret tøj og ja til bæredygtighed, kvalitet og omtanke. Vores udvalg består af håndplukket vintage og brugt tøj, som hver især har sin egen historie. På den måde mindsker vi spild og giver tøjet et nyt liv. Når du handler hos os, får du et produkt, der er unikt, samtidig med at du støtter en god sag. Dit valg af tøj er et statement – for bæredygtighed, for ansvar og for fremtid.</p>",
-            "heading_2": "",
-            "text_2": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "right_G9K6zn": {
-          "type": "right",
-          "settings": {
-            "content_alignment": "left",
-            "image_1": "shopify://shop_images/skraldepose.svg",
-            "image_1_width": 25,
-            "image_2_width": 100,
-            "image_3_width": 100,
-            "heading_1": "",
-            "text_1": "",
-            "heading_2": "",
-            "text_2": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "left_GXza99",
-        "right_G9K6zn"
-      ],
-      "name": "Split Grid",
-      "settings": {
-        "padding_top": "none",
-        "padding_bottom": "small",
-        "grid_type": "1-1",
-        "gap": 50
       }
     },
     "split_grid_pt8GqJ": {
@@ -181,6 +134,53 @@
         "gap": 50
       }
     },
+    "split_grid_YcfdLg": {
+      "type": "split-grid",
+      "blocks": {
+        "left_GXza99": {
+          "type": "left",
+          "settings": {
+            "content_alignment": "left",
+            "image_1_width": 40,
+            "image_2_width": 50,
+            "image_3_width": 100,
+            "heading_1": "Bæredygtighed og afvisning af fast fashion",
+            "text_1": "<p>Fast fashion skader både miljøet og mennesker. Hos Skarn siger vi nej til masseproduceret tøj og ja til bæredygtighed, kvalitet og omtanke. Vores udvalg består af håndplukket vintage og brugt tøj, som hver især har sin egen historie. På den måde mindsker vi spild og giver tøjet et nyt liv. Når du handler hos os, får du et produkt, der er unikt, samtidig med at du støtter en god sag. Dit valg af tøj er et statement – for bæredygtighed, for ansvar og for fremtid.</p>",
+            "heading_2": "",
+            "text_2": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "right_G9K6zn": {
+          "type": "right",
+          "settings": {
+            "content_alignment": "left",
+            "image_1": "shopify://shop_images/skraldepose.svg",
+            "image_1_width": 25,
+            "image_2_width": 100,
+            "image_3_width": 100,
+            "heading_1": "",
+            "text_1": "",
+            "heading_2": "",
+            "text_2": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "left_GXza99",
+        "right_G9K6zn"
+      ],
+      "name": "Split Grid",
+      "settings": {
+        "padding_top": "none",
+        "padding_bottom": "small",
+        "grid_type": "1-1",
+        "gap": 50
+      }
+    },
     "campaign_BtyPmB": {
       "type": "campaign",
       "blocks": {
@@ -212,54 +212,6 @@
       "settings": {
         "background_image": "shopify://shop_images/Kampagne2.png",
         "section_height": "250px"
-      }
-    },
-    "split_grid_tzyJ6G": {
-      "type": "split-grid",
-      "blocks": {
-        "left_iMNLcG": {
-          "type": "left",
-          "settings": {
-            "content_alignment": "left",
-            "image_1_width": 40,
-            "image_2_width": 50,
-            "image_3_width": 100,
-            "heading_1": "DU GØR EN FORSKEL FOR  BØRN OG UNGE I AFRIKA",
-            "text_1": "<p>Alt overskud fra dine køb går direkte til skolegang og uddannelse. Det betyder bøger, undervisningsmaterialer, lærere og stipendier til piger, så alle børn får lige muligheder. Mange børn i Den Centralafrikanske Republik har teoretisk adgang til gratis skolegang, men de har ofte ikke haft mulighed for at deltage på grund af krig og manglende ressourcer. Din støtte hjælper med at give dem adgang til grundskole, som kan åbne døren til ungdomsskole og videre uddannelse. Skolegang er en investering i fremtiden – hvert barn, der lærer at læse og skrive, får mulighed for at skabe sin egen vej og bidrage til samfundets udvikling.</p>",
-            "heading_2": "",
-            "text_2": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "right_yz38PN": {
-          "type": "right",
-          "settings": {
-            "content_alignment": "left",
-            "image_1": "shopify://shop_images/afrika_outline.svg",
-            "image_1_width": 45,
-            "image_2_width": 100,
-            "image_3_width": 100,
-            "heading_1": "",
-            "text_1": "",
-            "heading_2": "",
-            "text_2": "",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "left_iMNLcG",
-        "right_yz38PN"
-      ],
-      "custom_css": [],
-      "name": "Split Grid",
-      "settings": {
-        "padding_top": "small",
-        "padding_bottom": "medium",
-        "grid_type": "1-1",
-        "gap": 50
       }
     },
     "divider_jtPc8c": {
@@ -573,10 +525,9 @@
     "main",
     "index_skarn_FfcBRe",
     "divider_y8cXQi",
-    "split_grid_YcfdLg",
     "split_grid_pt8GqJ",
+    "split_grid_YcfdLg",
     "campaign_BtyPmB",
-    "split_grid_tzyJ6G",
     "divider_jtPc8c",
     "section_GHbGfz"
   ]
