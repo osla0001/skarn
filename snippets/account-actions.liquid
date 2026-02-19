@@ -38,7 +38,7 @@
 
         <a
           href="{% if request.design_mode %}{{ routes.account_url }}{% else %}{{ routes.storefront_login_url }}{% endif %}"
-          class="account-actions__link button"
+          class="account-actions__link button_secondary"
         >
           <span class="account-actions__sign-in-text">
             {{ 'actions.sign_in_options' | t }}

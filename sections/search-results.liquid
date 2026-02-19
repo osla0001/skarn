@@ -19,6 +19,10 @@
   <div
     class="collection-wrapper grid gap-style resource-list--grid"
   >
+
+    <div class="collection-filter-menu">
+      {% render 'custom-filter-menu' %}
+    </div>
     {% assign products_per_page = 24 %}
 
     {% if section.settings.enable_infinite_scroll == false %}
