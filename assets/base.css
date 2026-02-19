@@ -142,7 +142,9 @@ html {
 
 @media screen and (max-width: 750px) {
   .menu-list__link-title,
-  .tmenu_item_text {
+  .tmenu_item_text,
+  .menu-drawer__menu-item-text.wrap-text,
+  .menu-drawer__menu-item--mainlist {
     font-size: 24px !important;
   }
 }
