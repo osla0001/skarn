@@ -290,6 +290,47 @@ add-to-cart-component button {
   }
 }
 
+/* Favorit side */
+.Vtl-WishlistPage h1,
+.Vtl-WishlistPage h2 {
+  text-align: left !important;
+}
+
+.Vtl-WishlistPage__Products {
+  justify-content: start !important;
+}
+
+.Vtl-WishlistProduct {
+  border: 1px solid black;
+}
+
+.Vtl-WishlistProduct__ImageWrapper {
+  border: none !important;
+}
+
+.Vtl-WishlistProduct__Title,
+.Vtl-WishlistProduct__PriceSection {
+  text-align: left !important;
+}
+
+.Vtl-WishlistProduct__PriceSection {
+  font-family: "ZT Nature Regular" !important;
+  text-decoration: underline;
+}
+
+.Vtl-WishlistProduct__Image {
+  border-radius: none !important;
+}
+
+.Vtl-CloseButton {
+  background: transparent !important;
+  outline: 1px solid black;
+}
+
+.Vtl-CloseButton svg {
+  fill: black !important;
+}
+
 @font-face {
   font-family: "ZT Nature Thin";
   src: url("https://cdn.shopify.com/s/files/1/0994/5386/2229/files/ZTNature-Thin.woff?v=1769515351") format("woff");
