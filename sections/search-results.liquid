@@ -1,3 +1,23 @@
+<style>
+/* Override hover-effekt for resource-card i search-results sektionen */
+@media (any-pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .predictive-search-results__card .resource-card:hover,
+  .predictive-search-results__card .product-card:hover,
+  .predictive-search-results__card .collection-card:hover {
+    position: static !important;
+    inset: unset !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    backface-visibility: hidden !important;
+    transition: none !important;
+  }
+}
+
+.predictive-search-results__card--product:hover{
+  background: transparent !important;
+}
+</style>
 
 
 <script
@@ -10,14 +30,14 @@
 
 <results-list
   class="section product-grid-container spacing-style color-{{ section.settings.color_scheme }}"
-  style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px;"
+  style="--padding-block-start: {{ section.settings.padding-block-start }}px; --padding-block-end: {{ section.settings.padding-block-end }}px; width: 100%;"
   section-id="{{ section.id }}"
   infinite-scroll="{{ section.settings.enable_infinite_scroll }}"
 >
   {% render 'skip-to-content-link', href: '#ResultsList', text: 'accessibility.skip_to_results_list' %}
 
   <div
-    class="collection-wrapper grid gap-style resource-list--grid"
+    class="collection-wrapper grid gap-style resource-list--grid" style="width: 100%;"
   >
 
     <div class="collection-filter-menu">

@@ -81,6 +81,22 @@
             </span>
             <button
               type="button"
+
+                /* Override hover-effekt for resource-card i search-modal sektionen */
+                @media (any-pointer: fine) and (prefers-reduced-motion: no-preference) {
+                  .search-modal .predictive-search-results__card .resource-card:hover,
+                  .search-modal .predictive-search-results__card .product-card:hover,
+                  .search-modal .predictive-search-results__card .collection-card:hover {
+                    position: static !important;
+                    inset: unset !important;
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: cover !important;
+                    display: block !important;
+                    backface-visibility: hidden !important;
+                    transition: none !important;
+                  }
+                }
               class="button-unstyled predictive-search__reset-button"
               ref="resetButton"
               hidden
@@ -91,10 +107,11 @@
           </div>
           <button
             type="button"
-            class="button predictive-search__close-modal-button"
+            class="button_secondary predictive-search__close-modal-button"
             aria-label="{{ 'accessibility.close_dialog' | t }}"
             on:click="dialog-component/closeDialog"
             ref="closeModalButton"
+            style="margin-right: 0.5rem; cursor: pointer;"
           >
             <span class="svg-wrapper">
               {{ 'icon-close.svg' | inline_asset_content }}
@@ -459,7 +476,6 @@
     border-radius: 50%;
 
     &:hover {
-      background-color: rgb(var(--color-primary-hover-rgb) / var(--opacity-8));
     }
   }
 
@@ -526,4 +542,32 @@
     --button-color: var(--color-foreground);
     --button-background-color: transparent;
   }
+
+  
 {% endstylesheet %}
+
+<style>
+  /* Deaktiver hover-effekter på produktkort og billeder i search-modal */
+  .search-modal .product-card__image--hover,
+  .search-modal .product-card__image--secondary {
+    display: none !important;
+  }
+  .search-modal .product-card__image--hover {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .search-modal .product-card__image--primary,
+  .search-modal .resource-card__image {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+  .search-modal .card-gallery__hover-fade-wrapper:hover .card-gallery__indicator--first,
+  .search-modal .card-gallery__hover-fade-wrapper:hover .card-gallery__indicator--second,
+  .search-modal .card-gallery__hover-fade-wrapper:hover .card-gallery__fade-image--primary,
+  .search-modal .card-gallery__hover-fade-wrapper:hover .card-gallery__fade-image--secondary,
+  .search-modal .product-card__image-wrapper:hover .product-card__image--primary,
+  .search-modal .product-card__image-wrapper:hover .product-card__image--secondary {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+</style>

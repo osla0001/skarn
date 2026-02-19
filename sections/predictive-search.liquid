@@ -350,7 +350,7 @@
 
   .predictive-search-results__title {
     display: flex;
-    justify-content: space-between;
+gap: 2rem;
     align-items: center;
     font-size: var(--font-size--body-md);
     font-weight: 500;
@@ -412,10 +412,8 @@
     }
 
     &:hover {
-      background-color: var(--card-bg-hover);
       border-radius: var(--product-corner-radius);
       padding: calc(var(--padding-2xs) + 2px);
-      margin: calc((var(--padding-2xs) + 2px) * -1);
     }
 
     &:is([aria-selected='true'].keyboard-focus, &:focus-visible, &:has(.resource-card:focus-visible)) {
