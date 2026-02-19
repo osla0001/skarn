@@ -309,6 +309,10 @@ add-to-cart-component button {
   }
 }
 
+#ProductInformation-template--28109750174037__main > div {
+  width: 100% !important;
+}
+
 /* Favorit side */
 .Vtl-WishlistPage h1,
 .Vtl-WishlistPage h2 {
