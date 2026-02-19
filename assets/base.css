@@ -3785,15 +3785,14 @@ fly-to-cart.fly-to-cart--sticky {
 
 .bubble {
   display: inline-flex;
-  height: calc(var(--variant-picker-swatch-height) / 1.5);
   font-size: var(--font-size--xs);
   border-radius: 20px;
-  min-width: 20px;
-  padding: 0 6px;
-  background-color: rgb(var(--color-foreground-rgb) / var(--opacity-10-25));
+  min-width: 30px;
   color: var(--color-foreground);
   align-items: center;
   justify-content: center;
+  aspect-ratio: 1/1;
+  border: 0.75px solid rgba(0, 0, 0, 0.451);
 }
 
 .bubble svg {

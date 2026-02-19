@@ -14,6 +14,11 @@ Accordion block for product page
   </button>
   <div class="product-accordion-content" hidden>
     <div class="product-accordion-description">{{ block.settings.description }}</div>
+    {% if product.metafields.custom.kategori_billede %}
+      <div class="product-accordion-image-wrapper" style="margin-top: 1rem;">
+        <img src="{{ product.metafields.custom.kategori_billede | image_url: width: 600 }}" class="product-accordion-image" alt="Kategori billede">
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -30,6 +35,11 @@ Accordion block for product page
       "type": "textarea",
       "id": "description",
       "label": "Beskrivende tekst"
+    },
+    {
+      "type": "image_picker",
+      "id": "accordion_image",
+      "label": "Accordion billede"
     }
   ],
   "presets": [
