@@ -317,7 +317,13 @@ add-to-cart-component button {
 .Vtl-WishlistProduct__PriceSection {
   font-family: "ZT Nature Regular" !important;
   text-decoration: underline;
-  justify-content: left;
+  justify-content: left !important;
+  font-weight: 400 !important;
+}
+
+.Vtl-WishlistProduct__PriceSection span {
+  font-family: "ZT Nature Regular" !important;
+  font-weight: 400 !important;
 }
 
 .Vtl-WishlistProduct__Image {
