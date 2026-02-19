@@ -305,21 +305,23 @@ add-to-cart-component button {
 }
 
 .Vtl-WishlistProduct__ImageWrapper {
-  border: none !important;
+  border: 0 !important;
 }
 
 .Vtl-WishlistProduct__Title,
 .Vtl-WishlistProduct__PriceSection {
   text-align: left !important;
+  padding-left: 1rem;
 }
 
 .Vtl-WishlistProduct__PriceSection {
   font-family: "ZT Nature Regular" !important;
   text-decoration: underline;
+  justify-content: left;
 }
 
 .Vtl-WishlistProduct__Image {
-  border-radius: none !important;
+  border-radius: 0 !important;
 }
 
 .Vtl-CloseButton {
@@ -329,6 +331,10 @@ add-to-cart-component button {
 
 .Vtl-CloseButton svg {
   fill: black !important;
+}
+
+.Vtl-WishlistProduct__AddToCart {
+  border-radius: 0 !important;
 }
 
 @font-face {
