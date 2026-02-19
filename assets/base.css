@@ -23,6 +23,17 @@ header-menu > div > nav > div > div > nav > ul > li.tmenu_item.tmenu_item--root.
   border-bottom: 1px solid black !important;
 }
 
+/* Input felter */
+/* Fjern sort outline/border på alle input og textarea ved :focus og :focus-visible globalt */
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #000 !important;
+}
+
 /* Product Accordion Block Styles */
 div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(3) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column .shopify-block {
   width: 100% !important;
