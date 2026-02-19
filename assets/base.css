@@ -140,6 +140,18 @@ html {
   -webkit-text-stroke: 0.09px black;
 }
 
+@media screen and (max-width: 750px) {
+  .menu-list__link-title,
+  .tmenu_item_text {
+    font-size: 24px !important;
+  }
+}
+
+.tmenu_item_mobile .tmenu_item_active > .tmenu_item_link,
+.tmenu_item_mobile.tmenu_item_active > .tmenu_item_link {
+  background-color: transparent !important;
+}
+
 body .tmenu-watermark,
 html body .tmenu-watermark {
   visibility: hidden !important;
