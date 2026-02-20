@@ -309,7 +309,7 @@ add-to-cart-component button {
   }
 }
 
-#ProductInformation-template--28109750174037__main > div {
+main[data-template="product"] .group-block {
   width: 100% !important;
 }
 
