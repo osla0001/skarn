@@ -312,6 +312,9 @@ add-to-cart-component button {
 main[data-template="product"] .group-block {
   width: 100% !important;
 }
+main[data-template="product"] .group-block-content {
+  justify-content: flex-start !important;
+}
 
 /* Favorit side */
 .Vtl-WishlistPage h1,
@@ -868,6 +871,18 @@ main[data-template*="search"] span.price {
   padding-right: 0.4rem;
   text-transform: uppercase !important;
   font-size: 16px !important;
+}
+
+@media screen and (min-width: 750px) {
+  main[data-template*="product"] .bg-breadcrumb {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main[data-template*="product"] .bg-breadcrumb {
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (max-width: 750px) {
