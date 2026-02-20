@@ -108,7 +108,7 @@ export class Component extends DeclarativeShadowElement {
    */
   #updateRefs() {
     window.dispatchEvent(new CustomEvent('SETUP_MEGAMENU'));
-window.dispatchEvent(new CustomEvent('SETUP_MOBILEMENU'));
+    window.dispatchEvent(new CustomEvent('SETUP_MOBILEMENU'));
     const refs = /** @type any */ ({});
     const elements = this.roots.reduce((acc, root) => {
       for (const element of root.querySelectorAll("[ref]")) {
