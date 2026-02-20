@@ -445,6 +445,14 @@
           "type": "collection_link",
           "name": "Nexus",
           "settings": {
+            "collection_name": "Street",
+            "collection_year": "(2020)"
+          }
+        },
+        "collection_link_DEzXJ3": {
+          "type": "collection_link",
+          "name": "Nexus",
+          "settings": {
             "collection_name": "Nexus",
             "collection_year": "(2010)"
           }
@@ -492,6 +500,7 @@
       },
       "block_order": [
         "collection_link_y4jKjF",
+        "collection_link_DEzXJ3",
         "collection_link_XPynXP",
         "collection_link_JR7fpH",
         "collection_link_Umnmkx",
