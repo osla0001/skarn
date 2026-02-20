@@ -36,7 +36,7 @@ Accordion block for product page
             </div>
           {%- else -%}
             <div class="product-accordion-image-wrapper">
-              <img src="{{ 'sti/til/ingen-maal.jpg' }}" class="product-accordion-image" alt="Ingen mål billede">
+              <svg width="120" height="120" viewBox="0 0 120 120" fill="#fff" xmlns="http://www.w3.org/2000/svg"></svg>
             </div>
         {%- endcase -%}
       </div>
@@ -126,12 +126,9 @@ document.addEventListener('DOMContentLoaded', function() {
   color: #000 !important;
   stroke: #000 !important;
 }
-</style>
-<style>
 .product-accordion-content--with-image .product-accordion-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 3fr 2fr;
   align-items: start;
 }
 .product-accordion-image-wrapper {
@@ -144,5 +141,4 @@ document.addEventListener('DOMContentLoaded', function() {
   height: auto;
   display: block;
 }
-</style>
 </style>
