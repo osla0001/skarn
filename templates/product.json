@@ -30,7 +30,9 @@
           }
         }
       },
-      "block_order": ["simple_breadcrumb_breadcrumb_FXGedd"],
+      "block_order": [
+        "simple_breadcrumb_breadcrumb_FXGedd"
+      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -273,7 +275,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["text_dRdMr9", "price_A4JxGz"]
+                  "block_order": [
+                    "text_dRdMr9",
+                    "price_A4JxGz"
+                  ]
                 },
                 "divider_yrmztY": {
                   "type": "_divider",
@@ -494,7 +499,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": ["text_GTN3XN", "text_naHFk6"]
+                          "block_order": [
+                            "text_GTN3XN",
+                            "text_naHFk6"
+                          ]
                         },
                         "group_48rrKL": {
                           "type": "group",
@@ -589,7 +597,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": ["text_NJTmxB", "text_TYHR8C"]
+                          "block_order": [
+                            "text_NJTmxB",
+                            "text_TYHR8C"
+                          ]
                         },
                         "group_iFj8bq": {
                           "type": "group",
@@ -684,7 +695,10 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": ["text_cRKKhX", "text_bdmYEB"]
+                          "block_order": [
+                            "text_cRKKhX",
+                            "text_bdmYEB"
+                          ]
                         },
                         "group_WqQGJM": {
                           "type": "group",
@@ -779,10 +793,18 @@
                               "blocks": {}
                             }
                           },
-                          "block_order": ["text_KiUJw8", "text_mbkpV3"]
+                          "block_order": [
+                            "text_KiUJw8",
+                            "text_mbkpV3"
+                          ]
                         }
                       },
-                      "block_order": ["group_xkFQ78", "group_48rrKL", "group_iFj8bq", "group_WqQGJM"]
+                      "block_order": [
+                        "group_xkFQ78",
+                        "group_48rrKL",
+                        "group_iFj8bq",
+                        "group_WqQGJM"
+                      ]
                     },
                     "group_4fhWhe": {
                       "type": "group",
@@ -862,13 +884,25 @@
                           "block_order": []
                         }
                       },
-                      "block_order": ["buy_buttons_JjtkDX"]
+                      "block_order": [
+                        "buy_buttons_JjtkDX"
+                      ]
                     }
                   },
-                  "block_order": ["group_DYA6tx", "group_4fhWhe"]
+                  "block_order": [
+                    "group_DYA6tx",
+                    "group_4fhWhe"
+                  ]
                 }
               },
-              "block_order": ["text_xrnftG", "group_BLTRf3", "divider_yrmztY", "text_ViRCQk", "custom_liquid_tnDAe7", "group_NMxaha"]
+              "block_order": [
+                "text_xrnftG",
+                "group_BLTRf3",
+                "divider_yrmztY",
+                "text_ViRCQk",
+                "custom_liquid_tnDAe7",
+                "group_NMxaha"
+              ]
             },
             "group_t7V7CJ": {
               "type": "group",
@@ -927,7 +961,8 @@
                   "name": "Mål",
                   "settings": {
                     "heading": "Mål",
-                    "description": "Vi måler alle vores produkter nøje, så du kan finde den perfekte pasform. Overtøj måles fra armhule til armhule og fra top-nakke til bund, mens underdele måles fra hofte til bund. Hatte og accessories måles på omrids, så du altid kan se, hvordan de passer. Se billederne for detaljerede mål på hvert produkt."
+                    "description": "Vi måler alle vores produkter nøje, så du kan finde den perfekte pasform. Overtøj måles fra armhule til armhule og fra top-nakke til bund, mens underdele måles fra hofte til bund. Hatte og accessories måles på omrids, så du altid kan se, hvordan de passer. Se billederne for detaljerede mål på hvert produkt.",
+                    "accordion_image": "shopify://shop_images/Kampagne.png"
                   },
                   "blocks": {}
                 },
@@ -959,7 +994,13 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["divider_QRcYFM", "product_accordion_p7WTXC", "product_accordion_azyUiG", "product_accordion_Xrqmqf", "product_accordion_dP6g3B"]
+              "block_order": [
+                "divider_QRcYFM",
+                "product_accordion_p7WTXC",
+                "product_accordion_azyUiG",
+                "product_accordion_Xrqmqf",
+                "product_accordion_dP6g3B"
+              ]
             },
             "group_h4EUdT": {
               "type": "group",
@@ -1101,10 +1142,17 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["tag_link_9CYyVY", "tag_link_kGXkMm", "tag_link_Xibj9z"]
+                  "block_order": [
+                    "tag_link_9CYyVY",
+                    "tag_link_kGXkMm",
+                    "tag_link_Xibj9z"
+                  ]
                 }
               },
-              "block_order": ["text_hkwTWa", "group_qK4paK"]
+              "block_order": [
+                "text_hkwTWa",
+                "group_qK4paK"
+              ]
             },
             "divider_gGyp4D": {
               "type": "_divider",
@@ -1119,7 +1167,12 @@
               "blocks": {}
             }
           },
-          "block_order": ["group_icgrde", "group_t7V7CJ", "group_h4EUdT", "divider_gGyp4D"]
+          "block_order": [
+            "group_icgrde",
+            "group_t7V7CJ",
+            "group_h4EUdT",
+            "divider_gGyp4D"
+          ]
         }
       },
       "settings": {
@@ -1163,7 +1216,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_ybEGgH"],
+      "block_order": [
+        "text_ybEGgH"
+      ],
       "name": "t:names.marquee_section",
       "settings": {
         "movement_direction": "normal",
@@ -1211,7 +1266,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["product_card_gallery_DNizbJ"]
+          "block_order": [
+            "product_card_gallery_DNizbJ"
+          ]
         }
       },
       "name": "t:names.product_recommendations",
@@ -1259,7 +1316,10 @@
           }
         }
       },
-      "block_order": ["left_r3NWbE", "right_7tR34B"],
+      "block_order": [
+        "left_r3NWbE",
+        "right_7tR34B"
+      ],
       "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne.png",
@@ -1267,5 +1327,11 @@
       }
     }
   },
-  "order": ["17711721660b977ffe", "main", "marquee_ryHf4K", "product_recommendations_qggXJq", "campaign_GCUVrF"]
+  "order": [
+    "17711721660b977ffe",
+    "main",
+    "marquee_ryHf4K",
+    "product_recommendations_qggXJq",
+    "campaign_GCUVrF"
+  ]
 }
