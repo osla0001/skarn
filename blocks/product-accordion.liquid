@@ -12,20 +12,56 @@ Accordion block for product page
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="color: #000;" xmlns="http://www.w3.org/2000/svg"><path d="M8 10L12 14L16 10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </span>
   </button>
-  <div class="product-accordion-content" hidden>
-    <div class="product-accordion-description">{{ block.settings.description }}</div>
-    {% if product.metafields.custom.kategori_billede %}
-      <div class="product-accordion-image-wrapper" style="margin-top: 1rem;">
-        <img src="{{ product.metafields.custom.kategori_billede | image_url: width: 600 }}" class="product-accordion-image" alt="Kategori billede">
+  {% if block.settings.accordion_type == 'image' %}
+    <div class="product-accordion-content product-accordion-content--with-image" hidden>
+      <div class="product-accordion-grid">
+        <div class="product-accordion-description">{{ block.settings.description }}</div>
+        {%- assign overkategori = product.metafields.custom.overkategori | downcase -%}
+        {%- case overkategori -%}
+          {%- when "overdel" -%}
+            <div class="product-accordion-image-wrapper">
+              <img src="https://cdn.shopify.com/s/files/1/0994/5386/2229/files/Overdel.png?v=1771586352" class="product-accordion-image" alt="Overdel billede">
+            </div>
+          {%- when "underdel" -%}
+            <div class="product-accordion-image-wrapper">
+              <img src="https://cdn.shopify.com/s/files/1/0994/5386/2229/files/Underdel.png?v=1771586352" class="product-accordion-image" alt="Underdel billede">
+            </div>
+          {%- when "hat" -%}
+            <div class="product-accordion-image-wrapper">
+              <img src="https://cdn.shopify.com/s/files/1/0994/5386/2229/files/Hat.png?v=1771586352" class="product-accordion-image" alt="Hat billede">
+            </div>
+          {%- when "taske" -%}
+            <div class="product-accordion-image-wrapper">
+              <img src="https://cdn.shopify.com/s/files/1/0994/5386/2229/files/Taske.png?v=1771586352" class="product-accordion-image" alt="Taske billede">
+            </div>
+          {%- else -%}
+            <div class="product-accordion-image-wrapper">
+              <img src="{{ 'sti/til/ingen-maal.jpg' }}" class="product-accordion-image" alt="Ingen mål billede">
+            </div>
+        {%- endcase -%}
       </div>
-    {% endif %}
-  </div>
+    </div>
+  {% else %}
+    <div class="product-accordion-content" hidden>
+      <div class="product-accordion-description">{{ block.settings.description }}</div>
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
 {
   "name": "Accordion",
   "settings": [
+    {
+      "type": "select",
+      "id": "accordion_type",
+      "label": "Accordion type",
+      "options": [
+        { "value": "normal", "label": "Normal" },
+        { "value": "image", "label": "Med billede" }
+      ],
+      "default": "normal"
+    },
     {
       "type": "text",
       "id": "heading",
@@ -35,11 +71,6 @@ Accordion block for product page
       "type": "textarea",
       "id": "description",
       "label": "Beskrivende tekst"
-    },
-    {
-      "type": "image_picker",
-      "id": "accordion_image",
-      "label": "Accordion billede"
     }
   ],
   "presets": [
@@ -95,4 +126,23 @@ document.addEventListener('DOMContentLoaded', function() {
   color: #000 !important;
   stroke: #000 !important;
 }
+</style>
+<style>
+.product-accordion-content--with-image .product-accordion-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.product-accordion-image-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.product-accordion-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+</style>
 </style>
