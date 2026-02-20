@@ -64,6 +64,9 @@
     {{ collection.title }}
   {%- endif -%}
 </h1>
+{% if collection.description != blank %}
+  <div class="collection-description">{{ collection.description }}</div>
+{% endif %}
 
 <results-list
   class="section product-grid-container color-{{ section.settings.color_scheme }}"
@@ -194,14 +197,25 @@
 
   .collection-dynamic-title{
     margin-left: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 
   @media screen and (max-width: 750px) {
     .collection-dynamic-title{
       margin-left: 0 !important;
     }
+
+      .collection-description{
+    margin-left: 0 !important;
+    margin-bottom: 2rem;
   }
+}
+
+  .collection-description{
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
 {% endstylesheet %}
 
 {% schema %}
