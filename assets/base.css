@@ -847,14 +847,6 @@ product-card h4 {
   text-wrap: nowrap !important;
 }
 
-/* Pris */
-main[data-template*="collection"] span.price,
-main[data-template*="search"] span.price {
-  font-family: "ZT Nature Bold" !important;
-  font-size: 14px !important;
-  text-decoration: underline;
-}
-
 /* Pris class */
 .group-block.group-block--height-fill.group-block--width-fit-content.border-style.spacing-style.size-style {
   height: 100%;
@@ -885,6 +877,19 @@ main[data-template*="search"] span.price {
   }
 }
 
+/* Pris */
+main[data-template*="collection"] span.price,
+main[data-template*="search"] span.price {
+  font-family: "ZT Nature Bold" !important;
+  font-size: 14px !important;
+  text-decoration: underline;
+}
+
+.princecontainer {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 750px) {
   product-card h3,
   product-card h4,
@@ -898,8 +903,8 @@ main[data-template*="search"] span.price {
     padding: 0;
   }
 
-  span.price,
-  div > div.group-block.group-block--height-fit.group-block--width-fill.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column > div.group-block.group-block--height-fill.group-block--width-fit-content.border-style.spacing-style.size-style > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > product-price > div {
+  main[data-template*="collection"] span.price,
+  main[data-template*="search"] span.price {
     font-size: 2.3cqw !important;
     margin: 0 !important;
     padding: 0 !important;
