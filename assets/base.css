@@ -28,26 +28,6 @@ header-menu > div > nav > div > div > nav > ul > li.tmenu_item.tmenu_item--root.
   border-bottom: 1px solid black !important;
 }
 
-.tmenu_submenu--mobile.tmenu_submenu {
-  position: fixed !important;
-  top: 56px !important; /* Juster evt. til din header-højde */
-  left: 0 !important;
-  width: 100vw !important;
-  min-height: calc(100vh - 56px) !important; /* Fylder hele viewport under header */
-  background: #fff !important;
-  z-index: 9999 !important;
-  box-sizing: border-box;
-  overflow-y: auto;
-  transition: none !important;
-}
-/* Sikrer at menuen ikke hopper i højde når sub-menu åbnes/lukkes */
-.tmenu_item_mobile {
-  min-height: 48px !important;
-  display: flex !important;
-  align-items: center !important;
-  box-sizing: border-box;
-}
-
 /* Product Accordion Block Styles */
 div > div.group-block-content.layout-panel-flex.layout-panel-flex--column > div:nth-child(3) > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column .shopify-block {
   width: 100% !important;
