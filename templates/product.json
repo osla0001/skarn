@@ -229,6 +229,7 @@
                     "text_dRdMr9": {
                       "type": "text",
                       "name": "Info",
+                      "disabled": true,
                       "settings": {
                         "text": "<h3>fra</h3>",
                         "width": "fit-content",
