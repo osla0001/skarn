@@ -673,7 +673,7 @@
                               "type": "text",
                               "name": "Kilde",
                               "settings": {
-                                "text": "<p>{{ closest.product.metafields.custom.mal.value }}</p>",
+                                "text": "<p>{{ closest.product.metafields.custom.mal.value }} cm</p>",
                                 "width": "fit-content",
                                 "max_width": "normal",
                                 "alignment": "left",
