@@ -1,13 +1,13 @@
-import { sectionRenderer } from '@theme/section-renderer';
-import { Component } from '@theme/component';
-import { FilterUpdateEvent, ThemeEvents } from '@theme/events';
-import { debounce, formatMoney, startViewTransition } from '@theme/utilities';
+import { sectionRenderer } from "@theme/section-renderer";
+import { Component } from "@theme/component";
+import { FilterUpdateEvent, ThemeEvents } from "@theme/events";
+import { debounce, formatMoney, startViewTransition } from "@theme/utilities";
 
 /**
  * Search query parameter.
  * @type {string}
  */
-const SEARCH_QUERY = 'q';
+const SEARCH_QUERY = "q";
 
 /**
  * Handles the main facets form functionality
@@ -19,7 +19,7 @@ const SEARCH_QUERY = 'q';
  * @extends {Component<FacetsFormRefs>}
  */
 class FacetsFormComponent extends Component {
-  requiredRefs = ['facetsForm'];
+  requiredRefs = ["facetsForm"];
 
   /**
    * Creates URL parameters from form data
@@ -29,10 +29,10 @@ class FacetsFormComponent extends Component {
   createURLParameters(formData = new FormData(this.refs.facetsForm)) {
     let newParameters = new URLSearchParams(/** @type any */ (formData));
 
-    if (newParameters.get('filter.v.price.gte') === '') newParameters.delete('filter.v.price.gte');
-    if (newParameters.get('filter.v.price.lte') === '') newParameters.delete('filter.v.price.lte');
+    if (newParameters.get("filter.v.price.gte") === "") newParameters.delete("filter.v.price.gte");
+    if (newParameters.get("filter.v.price.lte") === "") newParameters.delete("filter.v.price.lte");
 
-    newParameters.delete('page');
+    newParameters.delete("page");
 
     const searchQuery = this.#getSearchQuery();
     if (searchQuery) newParameters.set(SEARCH_QUERY, searchQuery);
@@ -46,12 +46,12 @@ class FacetsFormComponent extends Component {
    */
   #getSearchQuery() {
     const url = new URL(window.location.href);
-    return url.searchParams.get(SEARCH_QUERY) ?? '';
+    return url.searchParams.get(SEARCH_QUERY) ?? "";
   }
 
   get sectionId() {
-    const id = this.getAttribute('section-id');
-    if (!id) throw new Error('Section ID is required');
+    const id = this.getAttribute("section-id");
+    if (!id) throw new Error("Section ID is required");
     return id;
   }
 
@@ -62,12 +62,12 @@ class FacetsFormComponent extends Component {
     const url = new URL(window.location.href);
     const urlParameters = this.createURLParameters();
 
-    url.search = '';
+    url.search = "";
     for (const [param, value] of urlParameters.entries()) {
       url.searchParams.append(param, value);
     }
 
-    history.pushState({ urlParameters: urlParameters.toString() }, '', url.toString());
+    history.pushState({ urlParameters: urlParameters.toString() }, "", url.toString());
   }
 
   /**
@@ -83,10 +83,10 @@ class FacetsFormComponent extends Component {
    * Updates the section
    */
   #updateSection() {
-    const viewTransition = !this.closest('dialog');
+    const viewTransition = !this.closest("dialog");
 
     if (viewTransition) {
-      startViewTransition(() => sectionRenderer.renderSection(this.sectionId), ['product-grid']);
+      startViewTransition(() => sectionRenderer.renderSection(this.sectionId), ["product-grid"]);
     } else {
       sectionRenderer.renderSection(this.sectionId);
     }
@@ -97,14 +97,14 @@ class FacetsFormComponent extends Component {
    * @param {string} url - The URL to update filters with
    */
   updateFiltersByURL(url) {
-    history.pushState('', '', url);
+    history.pushState("", "", url);
     this.dispatchEvent(new FilterUpdateEvent(this.createURLParameters()));
     this.#updateSection();
   }
 }
 
-if (!customElements.get('facets-form-component')) {
-  customElements.define('facets-form-component', FacetsFormComponent);
+if (!customElements.get("facets-form-component")) {
+  customElements.define("facets-form-component", FacetsFormComponent);
 }
 
 /**
@@ -118,8 +118,8 @@ if (!customElements.get('facets-form-component')) {
  */
 class FacetInputsComponent extends Component {
   get sectionId() {
-    const id = this.closest('.shopify-section')?.id;
-    if (!id) throw new Error('FacetInputs component must be a child of a section');
+    const id = this.closest(".shopify-section")?.id;
+    if (!id) throw new Error("FacetInputs component must be a child of a section");
     return id;
   }
 
@@ -127,7 +127,7 @@ class FacetInputsComponent extends Component {
    * Updates filters and the selected facet summary
    */
   updateFilters() {
-    const facetsForm = this.closest('facets-form-component');
+    const facetsForm = this.closest("facets-form-component");
 
     if (!(facetsForm instanceof FacetsFormComponent)) return;
 
@@ -141,11 +141,11 @@ class FacetInputsComponent extends Component {
    */
   handleKeyDown(event) {
     if (!(event.target instanceof HTMLElement)) return;
-    const closestInput = event.target.querySelector('input');
+    const closestInput = event.target.querySelector("input");
 
     if (!(closestInput instanceof HTMLInputElement)) return;
 
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       closestInput.checked = !closestInput.checked;
       this.updateFilters();
@@ -159,17 +159,17 @@ class FacetInputsComponent extends Component {
   prefetchPage = debounce((event) => {
     if (!(event.target instanceof HTMLElement)) return;
 
-    const form = this.closest('form');
+    const form = this.closest("form");
     if (!form) return;
 
     const formData = new FormData(form);
-    const inputElement = event.target.querySelector('input');
+    const inputElement = event.target.querySelector("input");
 
     if (!(inputElement instanceof HTMLInputElement)) return;
 
     if (!inputElement.checked) formData.append(inputElement.name, inputElement.value);
 
-    const facetsForm = this.closest('facets-form-component');
+    const facetsForm = this.closest("facets-form-component");
     if (!(facetsForm instanceof FacetsFormComponent)) return;
 
     const urlParameters = facetsForm.createURLParameters(formData);
@@ -192,8 +192,8 @@ class FacetInputsComponent extends Component {
     if (!this.refs.facetInputs) return;
 
     const checkedInputElements = this.refs.facetInputs.filter((input) => input.checked);
-    const details = this.closest('details');
-    const statusComponent = details?.querySelector('facet-status-component');
+    const details = this.closest("details");
+    const statusComponent = details?.querySelector("facet-status-component");
 
     if (!(statusComponent instanceof FacetStatusComponent)) return;
 
@@ -201,8 +201,8 @@ class FacetInputsComponent extends Component {
   }
 }
 
-if (!customElements.get('facet-inputs-component')) {
-  customElements.define('facet-inputs-component', FacetInputsComponent);
+if (!customElements.get("facet-inputs-component")) {
+  customElements.define("facet-inputs-component", FacetInputsComponent);
 }
 
 /**
@@ -218,12 +218,12 @@ if (!customElements.get('facet-inputs-component')) {
 class PriceFacetComponent extends Component {
   connectedCallback() {
     super.connectedCallback();
-    this.addEventListener('keydown', this.#onKeyDown);
+    this.addEventListener("keydown", this.#onKeyDown);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.removeEventListener('keydown', this.#onKeyDown);
+    this.removeEventListener("keydown", this.#onKeyDown);
   }
 
   /**
@@ -246,7 +246,7 @@ class PriceFacetComponent extends Component {
     this.#adjustToValidValues(minInput);
     this.#adjustToValidValues(maxInput);
 
-    const facetsForm = this.closest('facets-form-component');
+    const facetsForm = this.closest("facets-form-component");
     if (!(facetsForm instanceof FacetsFormComponent)) return;
 
     facetsForm.updateFilters();
@@ -259,11 +259,11 @@ class PriceFacetComponent extends Component {
    * @param {HTMLInputElement} input - The input element to adjust
    */
   #adjustToValidValues(input) {
-    if (input.value.trim() === '') return;
+    if (input.value.trim() === "") return;
 
     const value = Number(input.value);
-    const min = Number(formatMoney(input.getAttribute('data-min') ?? ''));
-    const max = Number(formatMoney(input.getAttribute('data-max') ?? ''));
+    const min = Number(formatMoney(input.getAttribute("data-min") ?? ""));
+    const max = Number(formatMoney(input.getAttribute("data-max") ?? ""));
 
     if (value < min) input.value = min.toString();
     if (value > max) input.value = max.toString();
@@ -275,10 +275,10 @@ class PriceFacetComponent extends Component {
   #setMinAndMaxValues() {
     const { minInput, maxInput } = this.refs;
 
-    if (maxInput.value) minInput.setAttribute('data-max', maxInput.value);
-    if (minInput.value) maxInput.setAttribute('data-min', minInput.value);
-    if (minInput.value === '') maxInput.setAttribute('data-min', '0');
-    if (maxInput.value === '') minInput.setAttribute('data-max', maxInput.getAttribute('data-max') ?? '');
+    if (maxInput.value) minInput.setAttribute("data-max", maxInput.value);
+    if (minInput.value) maxInput.setAttribute("data-min", minInput.value);
+    if (minInput.value === "") maxInput.setAttribute("data-min", "0");
+    if (maxInput.value === "") minInput.setAttribute("data-max", maxInput.getAttribute("data-max") ?? "");
   }
 
   /**
@@ -286,8 +286,8 @@ class PriceFacetComponent extends Component {
    */
   #updateSummary() {
     const { minInput, maxInput } = this.refs;
-    const details = this.closest('details');
-    const statusComponent = details?.querySelector('facet-status-component');
+    const details = this.closest("details");
+    const statusComponent = details?.querySelector("facet-status-component");
 
     if (!(statusComponent instanceof FacetStatusComponent)) return;
 
@@ -295,8 +295,8 @@ class PriceFacetComponent extends Component {
   }
 }
 
-if (!customElements.get('price-facet-component')) {
-  customElements.define('price-facet-component', PriceFacetComponent);
+if (!customElements.get("price-facet-component")) {
+  customElements.define("price-facet-component", PriceFacetComponent);
 }
 
 /**
@@ -304,11 +304,11 @@ if (!customElements.get('price-facet-component')) {
  * @extends {Component}
  */
 class FacetClearComponent extends Component {
-  requiredRefs = ['clearButton'];
+  requiredRefs = ["clearButton"];
 
   connectedCallback() {
     super.connectedCallback();
-    this.addEventListener('keyup', this.#handleKeyUp);
+    this.addEventListener("keyup", this.#handleKeyUp);
     document.addEventListener(ThemeEvents.FilterUpdate, this.#handleFilterUpdate);
   }
 
@@ -325,28 +325,28 @@ class FacetClearComponent extends Component {
     if (!(event.target instanceof HTMLElement)) return;
 
     if (event instanceof KeyboardEvent) {
-      if (event.key !== 'Enter' && event.key !== ' ') {
+      if (event.key !== "Enter" && event.key !== " ") {
         return;
       }
       event.preventDefault();
     }
 
-    const container = event.target.closest('facet-inputs-component, price-facet-component');
+    const container = event.target.closest("facet-inputs-component, price-facet-component");
     container?.querySelectorAll('[type="checkbox"]:checked, input').forEach((input) => {
       if (input instanceof HTMLInputElement) {
         input.checked = false;
-        input.value = '';
+        input.value = "";
       }
     });
 
-    const details = event.target.closest('details');
-    const statusComponent = details?.querySelector('facet-status-component');
+    const details = event.target.closest("details");
+    const statusComponent = details?.querySelector("facet-status-component");
 
     if (!(statusComponent instanceof FacetStatusComponent)) return;
 
     statusComponent.clearSummary();
 
-    const facetsForm = this.closest('facets-form-component');
+    const facetsForm = this.closest("facets-form-component");
     if (!(facetsForm instanceof FacetsFormComponent)) return;
 
     facetsForm.updateFilters();
@@ -358,7 +358,7 @@ class FacetClearComponent extends Component {
    */
   #handleKeyUp = (event) => {
     if (event.metaKey) return;
-    if (event.key === 'Enter') this.clearFilter(event);
+    if (event.key === "Enter") this.clearFilter(event);
   };
 
   /**
@@ -370,13 +370,13 @@ class FacetClearComponent extends Component {
   #handleFilterUpdate = (event) => {
     const { clearButton } = this.refs;
     if (clearButton instanceof Element) {
-      clearButton.classList.toggle('facets__clear--active', event.shouldShowClearAll());
+      clearButton.classList.toggle("facets__clear--active", event.shouldShowClearAll());
     }
   };
 }
 
-if (!customElements.get('facet-clear-component')) {
-  customElements.define('facet-clear-component', FacetClearComponent);
+if (!customElements.get("facet-clear-component")) {
+  customElements.define("facet-clear-component", FacetClearComponent);
 }
 
 /**
@@ -407,7 +407,7 @@ class FacetRemoveComponent extends Component {
    */
   removeFilter({ form }, event) {
     if (event instanceof KeyboardEvent) {
-      if (event.key !== 'Enter' && event.key !== ' ') {
+      if (event.key !== "Enter" && event.key !== " ") {
         return;
       }
       event.preventDefault();
@@ -416,7 +416,7 @@ class FacetRemoveComponent extends Component {
     const url = this.dataset.url;
     if (!url) return;
 
-    const facetsForm = form ? document.getElementById(form) : this.closest('facets-form-component');
+    const facetsForm = form ? document.getElementById(form) : this.closest("facets-form-component");
 
     if (!(facetsForm instanceof FacetsFormComponent)) return;
 
@@ -432,13 +432,13 @@ class FacetRemoveComponent extends Component {
   #handleFilterUpdate = (event) => {
     const { clearButton } = this.refs;
     if (clearButton instanceof Element) {
-      clearButton.classList.toggle('active', event.shouldShowClearAll());
+      clearButton.classList.toggle("active", event.shouldShowClearAll());
     }
   };
 }
 
-if (!customElements.get('facet-remove-component')) {
-  customElements.define('facet-remove-component', FacetRemoveComponent);
+if (!customElements.get("facet-remove-component")) {
+  customElements.define("facet-remove-component", FacetRemoveComponent);
 }
 
 /**
@@ -452,7 +452,7 @@ if (!customElements.get('facet-remove-component')) {
  * @extends {Component}
  */
 class SortingFilterComponent extends Component {
-  requiredRefs = ['details', 'summary', 'listbox'];
+  requiredRefs = ["details", "summary", "listbox"];
 
   /**
    * Handles keyboard navigation in the sorting dropdown
@@ -467,20 +467,20 @@ class SortingFilterComponent extends Component {
     let newFocusIndex = currentFocused ? options.indexOf(currentFocused) : 0;
 
     switch (event.key) {
-      case 'ArrowDown':
+      case "ArrowDown":
         event.preventDefault();
         newFocusIndex = Math.min(newFocusIndex + 1, options.length - 1);
         this.#moveFocus(options, newFocusIndex);
         break;
 
-      case 'ArrowUp':
+      case "ArrowUp":
         event.preventDefault();
         newFocusIndex = Math.max(newFocusIndex - 1, 0);
         this.#moveFocus(options, newFocusIndex);
         break;
 
-      case 'Enter':
-      case ' ':
+      case "Enter":
+      case " ":
         if (event.target instanceof Element) {
           const targetOption = event.target.closest('[role="option"]');
           if (targetOption) {
@@ -490,7 +490,7 @@ class SortingFilterComponent extends Component {
         }
         break;
 
-      case 'Escape':
+      case "Escape":
         event.preventDefault();
         this.#closeDropdown();
         break;
@@ -505,7 +505,7 @@ class SortingFilterComponent extends Component {
     if (!(details instanceof HTMLDetailsElement) || !(summary instanceof HTMLElement)) return;
 
     const isOpen = details.open;
-    summary.setAttribute('aria-expanded', isOpen.toString());
+    summary.setAttribute("aria-expanded", isOpen.toString());
 
     if (isOpen && listbox instanceof Element) {
       // Move focus to selected option when dropdown opens
@@ -546,9 +546,9 @@ class SortingFilterComponent extends Component {
     if (input instanceof HTMLInputElement && option instanceof HTMLElement) {
       // Update aria-selected states
       this.querySelectorAll('[role="option"]').forEach((opt) => {
-        opt.setAttribute('aria-selected', 'false');
+        opt.setAttribute("aria-selected", "false");
       });
-      option.setAttribute('aria-selected', 'true');
+      option.setAttribute("aria-selected", "true");
 
       // Trigger click on the input to ensure normal form behavior
       input.click();
@@ -590,13 +590,12 @@ class SortingFilterComponent extends Component {
    * @param {Event} event - The change event
    */
   updateFilterAndSorting(event) {
-    const facetsForm =
-      this.closest('facets-form-component') || this.closest('.shopify-section')?.querySelector('facets-form-component');
+    const facetsForm = this.closest("facets-form-component") || this.closest(".shopify-section")?.querySelector("facets-form-component");
 
     if (!(facetsForm instanceof FacetsFormComponent)) return;
     const isMobile = window.innerWidth < 750;
 
-    const shouldDisable = this.dataset.shouldUseSelectOnMobile === 'true';
+    const shouldDisable = this.dataset.shouldUseSelectOnMobile === "true";
 
     // Because we have a select element on mobile and a bunch of radio buttons on desktop,
     // we need to disable the input during "form-submission" to prevent duplicate entries.
@@ -645,19 +644,18 @@ class SortingFilterComponent extends Component {
   updateFacetStatus(event) {
     if (!(event.target instanceof HTMLSelectElement)) return;
 
-    const details = this.querySelector('details');
+    const details = this.querySelector("details");
     if (!details) return;
 
-    const facetStatus = details.querySelector('facet-status-component');
+    const facetStatus = details.querySelector("facet-status-component");
     if (!(facetStatus instanceof FacetStatusComponent)) return;
 
-    facetStatus.textContent =
-      event.target.value !== details.dataset.defaultSortBy ? event.target.dataset.optionName ?? '' : '';
+    facetStatus.textContent = event.target.value !== details.dataset.defaultSortBy ? (event.target.dataset.optionName ?? "") : "";
   }
 }
 
-if (!customElements.get('sorting-filter-component')) {
-  customElements.define('sorting-filter-component', SortingFilterComponent);
+if (!customElements.get("sorting-filter-component")) {
+  customElements.define("sorting-filter-component", SortingFilterComponent);
 }
 
 /**
@@ -677,9 +675,7 @@ class FacetStatusComponent extends Component {
   updateListSummary(checkedInputElements) {
     const checkedInputElementsCount = checkedInputElements.length;
 
-    this.getAttribute('facet-type') === 'swatches'
-      ? this.#updateSwatchSummary(checkedInputElements, checkedInputElementsCount)
-      : this.#updateBubbleSummary(checkedInputElements, checkedInputElementsCount);
+    this.getAttribute("facet-type") === "swatches" ? this.#updateSwatchSummary(checkedInputElements, checkedInputElementsCount) : this.#updateBubbleSummary(checkedInputElements, checkedInputElementsCount);
   }
 
   /**
@@ -689,25 +685,25 @@ class FacetStatusComponent extends Component {
    */
   #updateSwatchSummary(checkedInputElements, checkedInputElementsCount) {
     const { facetStatus } = this.refs;
-    facetStatus.classList.remove('bubble', 'facets__bubble');
+    facetStatus.classList.remove("bubble", "facets__bubble");
 
     if (checkedInputElementsCount === 0) {
-      facetStatus.innerHTML = '';
+      facetStatus.innerHTML = "";
       return;
     }
 
     if (checkedInputElementsCount > 3) {
       facetStatus.innerHTML = checkedInputElementsCount.toString();
-      facetStatus.classList.add('bubble', 'facets__bubble');
+      facetStatus.classList.add("bubble", "facets__bubble");
       return;
     }
 
     facetStatus.innerHTML = Array.from(checkedInputElements)
       .map((inputElement) => {
-        const swatch = inputElement.parentElement?.querySelector('span.swatch');
-        return swatch?.outerHTML ?? '';
+        const swatch = inputElement.parentElement?.querySelector("span.swatch");
+        return swatch?.outerHTML ?? "";
       })
-      .join('');
+      .join("");
   }
 
   /**
@@ -719,20 +715,20 @@ class FacetStatusComponent extends Component {
     const { facetStatus } = this.refs;
     const filterStyle = this.dataset.filterStyle;
 
-    facetStatus.classList.remove('bubble', 'facets__bubble');
+    facetStatus.classList.remove("bubble", "facets__bubble");
 
     if (checkedInputElementsCount === 0) {
-      facetStatus.innerHTML = '';
+      facetStatus.innerHTML = "";
       return;
     }
 
-    if (filterStyle === 'horizontal' && checkedInputElementsCount === 1) {
-      facetStatus.innerHTML = checkedInputElements[0]?.dataset.label ?? '';
+    if (filterStyle === "horizontal" && checkedInputElementsCount === 1) {
+      facetStatus.innerHTML = checkedInputElements[0]?.dataset.label ?? "";
       return;
     }
 
     facetStatus.innerHTML = checkedInputElementsCount.toString();
-    facetStatus.classList.add('bubble', 'facets__bubble');
+    facetStatus.classList.add("bubble", "facets__bubble");
   }
 
   /**
@@ -746,11 +742,11 @@ class FacetStatusComponent extends Component {
     const { facetStatus } = this.refs;
 
     if (!minInputValue && !maxInputValue) {
-      facetStatus.innerHTML = '';
+      facetStatus.innerHTML = "";
       return;
     }
 
-    const minInputNum = this.#parseCents(minInputValue, '0');
+    const minInputNum = this.#parseCents(minInputValue, "0");
     const maxInputNum = this.#parseCents(maxInputValue, facetStatus.dataset.rangeMax);
     facetStatus.innerHTML = `${this.#formatMoney(minInputNum)}–${this.#formatMoney(maxInputNum)}`;
   }
@@ -761,13 +757,13 @@ class FacetStatusComponent extends Component {
    * @param {string} fallback - The fallback value in case `value` is invalid
    * @returns {number} The money value in cents
    */
-  #parseCents(value, fallback = '0') {
+  #parseCents(value, fallback = "0") {
     const parts = value ? value.trim().split(/[^0-9]/) : (parseInt(fallback, 10) / 100).toString();
     const [wholeStr, fractionStr, ...rest] = parts;
-    if (typeof wholeStr !== 'string' || rest.length > 0) return parseInt(fallback, 10);
+    if (typeof wholeStr !== "string" || rest.length > 0) return parseInt(fallback, 10);
 
     const whole = parseInt(wholeStr, 10);
-    let fraction = parseInt(fractionStr || '0', 10);
+    let fraction = parseInt(fractionStr || "0", 10);
 
     // Use two most-significant digits, e.g. 1 -> 10, 12 -> 12, 123 -> 12.3, 1234 -> 12.34, etc
     fraction = fraction * Math.pow(10, 2 - fraction.toString().length);
@@ -781,44 +777,44 @@ class FacetStatusComponent extends Component {
    * @returns {string} The formatted money value
    */
   #formatMoney(moneyValue) {
-    if (!(this.refs.moneyFormat instanceof HTMLTemplateElement)) return '';
+    if (!(this.refs.moneyFormat instanceof HTMLTemplateElement)) return "";
 
-    const template = this.refs.moneyFormat.content.textContent || '{{amount}}';
-    const currency = this.refs.facetStatus.dataset.currency || '';
+    const template = this.refs.moneyFormat.content.textContent || "{{amount}}";
+    const currency = this.refs.facetStatus.dataset.currency || "";
 
     return template.replace(/{{\s*(\w+)\s*}}/g, (_, placeholder) => {
-      if (typeof placeholder !== 'string') return '';
-      if (placeholder === 'currency') return currency;
+      if (typeof placeholder !== "string") return "";
+      if (placeholder === "currency") return currency;
 
-      let thousandsSeparator = ',';
-      let decimalSeparator = '.';
+      let thousandsSeparator = ",";
+      let decimalSeparator = ".";
       let precision = CURRENCY_DECIMALS[currency.toUpperCase()] ?? DEFAULT_CURRENCY_DECIMALS;
 
-      if (placeholder === 'amount') {
+      if (placeholder === "amount") {
         // Check first since it's the most common, use defaults.
-      } else if (placeholder === 'amount_no_decimals') {
+      } else if (placeholder === "amount_no_decimals") {
         precision = 0;
-      } else if (placeholder === 'amount_with_comma_separator') {
-        thousandsSeparator = '.';
-        decimalSeparator = ',';
-      } else if (placeholder === 'amount_no_decimals_with_comma_separator') {
+      } else if (placeholder === "amount_with_comma_separator") {
+        thousandsSeparator = ".";
+        decimalSeparator = ",";
+      } else if (placeholder === "amount_no_decimals_with_comma_separator") {
         // Weirdly, this is correct. It uses amount_with_comma_separator's
         // behaviour but removes decimals, resulting in an unintuitive
         // output that can't possibly include commas, despite the name.
-        thousandsSeparator = '.';
+        thousandsSeparator = ".";
         precision = 0;
-      } else if (placeholder === 'amount_no_decimals_with_space_separator') {
-        thousandsSeparator = ' ';
+      } else if (placeholder === "amount_no_decimals_with_space_separator") {
+        thousandsSeparator = " ";
         precision = 0;
-      } else if (placeholder === 'amount_with_space_separator') {
-        thousandsSeparator = ' ';
-        decimalSeparator = ',';
-      } else if (placeholder === 'amount_with_period_and_space_separator') {
-        thousandsSeparator = ' ';
-        decimalSeparator = '.';
-      } else if (placeholder === 'amount_with_apostrophe_separator') {
+      } else if (placeholder === "amount_with_space_separator") {
+        thousandsSeparator = " ";
+        decimalSeparator = ",";
+      } else if (placeholder === "amount_with_period_and_space_separator") {
+        thousandsSeparator = " ";
+        decimalSeparator = ".";
+      } else if (placeholder === "amount_with_apostrophe_separator") {
         thousandsSeparator = "'";
-        decimalSeparator = '.';
+        decimalSeparator = ".";
       }
 
       return this.#formatCents(moneyValue, thousandsSeparator, decimalSeparator, precision);
@@ -836,26 +832,26 @@ class FacetStatusComponent extends Component {
   #formatCents(moneyValue, thousandsSeparator, decimalSeparator, precision) {
     const roundedNumber = (moneyValue / 100).toFixed(precision);
 
-    let [a, b] = roundedNumber.split('.');
-    if (!a) a = '0';
-    if (!b) b = '';
+    let [a, b] = roundedNumber.split(".");
+    if (!a) a = "0";
+    if (!b) b = "";
 
     // Split by groups of 3 digits
     a = a.replace(/\d(?=(\d\d\d)+(?!\d))/g, (digit) => digit + thousandsSeparator);
 
-    return precision <= 0 ? a : a + decimalSeparator + b.padEnd(precision, '0');
+    return precision <= 0 ? a : a + decimalSeparator + b.padEnd(precision, "0");
   }
 
   /**
    * Clears the summary
    */
   clearSummary() {
-    this.refs.facetStatus.innerHTML = '';
+    this.refs.facetStatus.innerHTML = "";
   }
 }
 
-if (!customElements.get('facet-status-component')) {
-  customElements.define('facet-status-component', FacetStatusComponent);
+if (!customElements.get("facet-status-component")) {
+  customElements.define("facet-status-component", FacetStatusComponent);
 }
 
 /**
@@ -910,3 +906,9 @@ const CURRENCY_DECIMALS = {
   XTS: 0,
   XUA: 0,
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".facets-block-wrapper details").forEach(function (detail) {
+    detail.open = false;
+  });
+});
