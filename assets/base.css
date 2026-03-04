@@ -28,6 +28,7 @@ main[data-template*="search"] .resource-list--grid .product-card {
   top: 56px !important; /* Juster til din header-højde */
   left: 0 !important;
   width: 100vw !important;
+  height: auto !important;
   z-index: 9999 !important;
   box-sizing: border-box;
   overflow-y: auto;
@@ -4390,6 +4391,38 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 .card-gallery {
   position: relative;
   overflow: hidden;
+}
+
+/* Card gallery aspect ratio fix for mobile */
+@media screen and (max-width: 750px) {
+  .card-gallery {
+    aspect-ratio: 1/1 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .card-gallery__hover-fade-wrapper,
+  .card-gallery__fade-image,
+  .product-media {
+    aspect-ratio: 1/1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .product-media__image {
+    aspect-ratio: 1/1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block;
+  }
 }
 
 @media screen and (max-width: 749px) {
