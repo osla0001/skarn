@@ -23,17 +23,26 @@ main[data-template*="search"] .resource-list--grid .product-card {
 }
 
 /* Megamenu */
-.tmenu_submenu_type_automatic.tmenu_submenu--mobile {
+.menu-drawer__navigation {
   position: fixed !important;
   top: 56px !important; /* Juster til din header-højde */
   left: 0 !important;
   width: 100vw !important;
-  min-height: calc(100vh - 56px) !important;
+  height: calc(100vh - 56px) !important;
   background: #fff !important;
   z-index: 9999 !important;
   box-sizing: border-box;
   overflow-y: auto;
-  transition: none !important;
+  padding: 0 !important;
+}
+.menu-drawer__menu {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.menu-drawer__menu > li {
+  margin: 0 !important;
+  padding: 0.75rem 1.5rem !important;
+  box-sizing: border-box;
 }
 header-menu > div > nav > div > div > nav > ul > li.tmenu_item.tmenu_item--root.tmenu_item_level_0.tmenu_item_submenu_type_mega.tmenu_item_submenu_mega_position_fullwidth.tmenu_item_has_child.\.menu-list__link-title > ul,
 .tmenu_submenu_type_mega {
