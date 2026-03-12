@@ -1,5 +1,5 @@
 <section class="campaign-section" style="
-  {% if section.settings.background_image != blank %}background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}'); background-size: cover; background-position: center;{% endif %}
+  {% if section.settings.background_image != blank %}background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}'); background-size: cover; background-position: {% if section.settings.object_position == 'left' %}left center{% elsif section.settings.object_position == 'right' %}right center{% else %}center center{% endif %};{% endif %}
   {% if section.settings.section_height != blank %}height: {{ section.settings.section_height }};{% endif %}">
   <div class="campaign-grid">
     {% for block in section.blocks %}
