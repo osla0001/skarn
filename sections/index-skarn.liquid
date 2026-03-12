@@ -19,6 +19,7 @@
      </button>
    {% endif %}
    </div>
+<div class="index-skarn_text hide-on-mobile">{{ section.settings.text_desktop }}</div>
 </section>
 
 {% stylesheet %}
@@ -127,6 +128,12 @@ text-wrap: nowrap !important;
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Farveskema"
+    },
+    {
+      "type": "richtext",
+      "id": "text_desktop",
+      "label": "Tekst (kun desktop)",
+      "default": "<p>Dette tekstfelt vises kun på desktop.</p>"
     }
   ],
   "presets": [
