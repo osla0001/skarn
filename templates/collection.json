@@ -322,7 +322,33 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>– {{ closest.product.metafields.custom.kategori.value }}</p>",
+                            "text": "<p>–</p>",
+                            "width": "fit-content",
+                            "max_width": "narrow",
+                            "alignment": "left",
+                            "type_preset": "paragraph",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "text_zpeEmh": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>{{ closest.product.metafields.custom.kategori.value }}</p>",
                             "width": "fit-content",
                             "max_width": "narrow",
                             "alignment": "left",
@@ -347,7 +373,8 @@
                       },
                       "block_order": [
                         "product_title_jJHWQf",
-                        "text_mwdXGn"
+                        "text_mwdXGn",
+                        "text_zpeEmh"
                       ]
                     },
                     "product_card_group_xhAVPz": {
