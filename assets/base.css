@@ -499,6 +499,16 @@ h1 {
   font-size: 3rem !important;
 }
 
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 12cqw !important;
+  }
+
+  h2 {
+    font-size: 10cqw !important;
+  }
+}
+
 @media screen and (max-width: 700px) {
   h4 {
     font-size: 5cqw !important;
