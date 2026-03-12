@@ -240,7 +240,8 @@
       "settings": {
         "background_image": "shopify://shop_images/Kampagne.png",
         "section_height": "200px",
-        "object_position": "left"
+        "object_position": "left",
+        "object_offset": 23
       }
     },
     "product_list_fa6P9H": {
@@ -437,7 +438,8 @@
       "settings": {
         "background_image": "shopify://shop_images/Kampagne2.png",
         "section_height": "200px",
-        "object_position": "right"
+        "object_position": "right",
+        "object_offset": 23
       }
     },
     "section_di9kKX": {
