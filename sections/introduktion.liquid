@@ -7,6 +7,7 @@
 <div class="intro_1">
   <h1>{{ section.settings.intro_heading }}</h1>
   <p class="tekst">{{ section.settings.intro_text }}</p>
+  <p class="tekst hide-on-mobile">{{ section.settings.intro_text_desktop }}</p>
     <div class="button-container">
         <button class="button-secondary">
       <a href="{{ section.settings.secondary_button_link }}">
@@ -71,6 +72,12 @@
       "type": "collection",
       "id": "collection",
       "label": "Kollektion (fx Selektion)"
+    },
+    {
+      "type": "richtext",
+      "id": "intro_text_desktop",
+      "label": "Intro tekst (kun desktop)",
+      "default": "<p>Dette tekstfelt vises kun på desktop.</p>"
     }
   ]
 }
