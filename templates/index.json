@@ -239,7 +239,8 @@
       "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne.png",
-        "section_height": "200px"
+        "section_height": "200px",
+        "object_position": "left"
       }
     },
     "product_list_fa6P9H": {
@@ -435,7 +436,8 @@
       "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne2.png",
-        "section_height": "200px"
+        "section_height": "200px",
+        "object_position": "right"
       }
     },
     "section_di9kKX": {
