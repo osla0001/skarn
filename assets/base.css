@@ -3,6 +3,21 @@ b {
   font-family: "ZT Nature Regular" !important;
 }
 
+.hide-on-mobile {
+  display: inline;
+}
+.show-on-mobile {
+  display: none;
+}
+@media screen and (max-width: 749px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .show-on-mobile {
+    display: inline !important;
+  }
+}
+
 /* Hero */
 #Hero-template--28109750075733__hero_jVaWmY > div > div.hero__content-wrapper.layout-panel-flex.layout-panel-flex--row.mobile-column.section-content-wrapper.full-width > div > div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column > div > img {
   filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.09)) blur(0.1px);
