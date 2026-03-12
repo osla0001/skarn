@@ -233,6 +233,11 @@ html body .tmenu_submenu_type_mega {
   width: 100%;
   text-align: center;
 }
+/* Sørg for at hero-sektionen altid fylder hele vinduets højde */
+.hero__content-wrapper,
+.hero__container {
+  height: 100vh !important;
+}
 /* Fjern al styling fra knapper med .button-unstyled */
 .button-unstyled {
   all: unset;
@@ -4302,7 +4307,7 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
 
   /* Card size is scalable: use a vw-based clamp so cards resize on desktop
      and never exceed the max (here 358px). Tweak the clamp values if needed. */
-  --resource-card-size: clamp(140px, 22vw, 358px);
+  --resource-card-size: clamp(160px, 22vw, 358px);
 
   width: 100%;
   max-width: 100%;
