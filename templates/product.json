@@ -983,7 +983,7 @@
                   "settings": {
                     "accordion_type": "normal",
                     "heading": "Nyhedsbrev",
-                    "description": ""
+                    "description": "Vil du ikke gå glip af nye kollektioner og håndplukkede fund fra Skarn? Tilmeld dig vores nyhedsbrev via forsiden."
                   },
                   "blocks": {}
                 },
@@ -1327,7 +1327,9 @@
       "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne.png",
-        "section_height": "150"
+        "section_height": "150",
+        "object_position": "center",
+        "object_offset": 10
       }
     }
   },
