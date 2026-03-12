@@ -31,17 +31,6 @@
           "id": "heading",
           "label": "Overskrift",
           "default": "SHOP ÅRTI"
-        },
-        {
-          "type": "select",
-          "id": "object_position",
-          "label": "Billedets anker (object-position)",
-          "options": [
-            { "value": "left", "label": "Venstre" },
-            { "value": "center", "label": "Midten" },
-            { "value": "right", "label": "Højre" }
-          ],
-          "default": "center"
         }
       ],
       "blocks": [
@@ -155,6 +144,6 @@ padding: 0;
 
 .aarti_collection img {
   object-fit: cover;
-  object-position: {{ section.settings.object_position }} center;
+  object-position: center;
 }
 </style>

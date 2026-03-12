@@ -29,7 +29,7 @@
 
 {% schema %}
 {
-  "name": "Kampagne",
+  "name": "Kampagne sektion",
   "tag": "section",
   "settings": [
     {
@@ -42,6 +42,17 @@
       "id": "section_height",
       "label": "Sektionens højde (fx 500px, 60vh, auto)",
       "default": "auto"
+    },
+    {
+      "type": "select",
+      "id": "object_position",
+      "label": "Billedets anker (object-position)",
+      "options": [
+        { "value": "left", "label": "Venstre" },
+        { "value": "center", "label": "Midten" },
+        { "value": "right", "label": "Højre" }
+      ],
+      "default": "center"
     }
   ],
   "blocks": [
@@ -176,6 +187,11 @@
 
 .secondary-button:hover a, .secondary-button:focus a {
   color: #fff;
+}
+
+.campaign-section img {
+  object-fit: cover;
+  object-position: {{ section.settings.object_position }} center;
 }
 
 {% endstylesheet %}
