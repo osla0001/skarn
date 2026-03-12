@@ -39,10 +39,6 @@
   <p>Ingen produkter fundet.</p>
 {% endif %}
 
-{% if section.settings.custom_intro_html %}
-  {{ section.settings.custom_intro_html }}
-{% endif %}
-
 {% schema %}
 {
   "name": "Introduktion",
@@ -75,12 +71,6 @@
       "type": "collection",
       "id": "collection",
       "label": "Kollektion (fx Selektion)"
-    },
-    {
-      "type": "html",
-      "id": "custom_intro_html",
-      "label": "Custom intro tekst (HTML)",
-      "default": "<p>Dette er <span class=\"hide-on-mobile\">kun synligt på desktop</span> og <span class=\"show-on-mobile\">kun synligt på mobil</span>.</p>"
     }
   ]
 }
