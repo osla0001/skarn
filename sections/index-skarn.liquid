@@ -10,7 +10,7 @@
 
 </div>
 <div class="index-skarn_text">
-  {{ section.settings.text }}
+  {{ section.settings.text }} 
   <div class="index-skarn_text hide-on-mobile">{{ section.settings.text_desktop }}</div>
    {% if section.settings.show_secondary_button %}
      <button class="button-secondary">
@@ -75,6 +75,10 @@ text-wrap: nowrap !important;
 
 .index-skarn_text button{
     margin-block-start: auto;
+}
+
+.hide-on-mobile p{
+  margin-top: 0 !important;
 }
 
 {% endstylesheet %}

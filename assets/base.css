@@ -17,6 +17,10 @@ b {
   filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.09)) blur(0.1px);
 }
 
+#Hero-template--28787775078741__hero_jVaWmY > div > div.hero__content-wrapper.layout-panel-flex.layout-panel-flex--row.mobile-column.section-content-wrapper.full-width > div {
+  width: 100%;
+}
+
 /* Søgefunktion */
 #shopify-section-template--28109750108501__search > div.section.color-scheme-1 {
   display: flex;
@@ -493,6 +497,12 @@ h6 {
 
 h1 {
   font-size: 3rem !important;
+}
+
+@media screen and (max-width: 700px) {
+  h4 {
+    font-size: 5cqw !important;
+  }
 }
 
 /* Body & UI elements */
