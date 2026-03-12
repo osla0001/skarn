@@ -1,5 +1,11 @@
+{% assign right_offset = 100 | minus: section.settings.object_offset %}
 <section class="campaign-section" style="
-  {% if section.settings.background_image != blank %}background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}'); background-size: cover; background-position: {% if section.settings.object_position == 'left' %}left center{% elsif section.settings.object_position == 'right' %}right center{% else %}center center{% endif %};{% endif %}
+  {% if section.settings.background_image != blank %}background-image: url('{{ section.settings.background_image | image_url: width: 2000 }}'); background-size: cover; background-position: 
+    {% if section.settings.object_position == 'left' %}{{ section.settings.object_offset }}% center
+    {% elsif section.settings.object_position == 'right' %}{{ right_offset }}% center
+    {% else %}center center
+    {% endif %};
+  {% endif %}
   {% if section.settings.section_height != blank %}height: {{ section.settings.section_height }};{% endif %}">
   <div class="campaign-grid">
     {% for block in section.blocks %}
@@ -53,6 +59,15 @@
         { "value": "right", "label": "Højre" }
       ],
       "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "object_offset",
+      "label": "Billedets margin/offset (%)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10
     }
   ],
   "blocks": [
