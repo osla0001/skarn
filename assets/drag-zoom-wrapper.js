@@ -1,5 +1,5 @@
-import { clamp, preventDefault, isMobileBreakpoint } from './utilities.js';
-import { ZoomDialog } from './zoom-dialog.js';
+import { clamp, preventDefault, isMobileBreakpoint } from "./utilities.js";
+import { ZoomDialog } from "./zoom-dialog.js";
 
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 5;
@@ -40,17 +40,62 @@ export class DragZoomWrapper extends HTMLElement {
   #hasManualZoom = false;
 
   get #image() {
-    return this.querySelector('img');
+    return this.querySelector("img");
   }
 
   connectedCallback() {
+    console.log("drag-zoom-wrapper: connectedCallback", this);
+    if (this.#image) {
+      console.log("drag-zoom-wrapper: image found", this.#image);
+      // Touch events
+      this.#image.addEventListener("touchstart", (e) => {
+        console.log("drag-zoom-wrapper: touchstart", e);
+      });
+      this.#image.addEventListener(
+        "touchmove",
+        (e) => {
+          console.log("drag-zoom-wrapper: touchmove", e);
+        },
+        { passive: false },
+      );
+      this.#image.addEventListener("touchend", (e) => {
+        console.log("drag-zoom-wrapper: touchend", e);
+      });
+      // Mouse events
+      this.#image.addEventListener("mousedown", (e) => {
+        console.log("drag-zoom-wrapper: mousedown", e);
+      });
+      this.#image.addEventListener("mousemove", (e) => {
+        console.log("drag-zoom-wrapper: mousemove", e);
+      });
+      this.#image.addEventListener("mouseup", (e) => {
+        console.log("drag-zoom-wrapper: mouseup", e);
+      });
+      this.#image.addEventListener("mouseleave", (e) => {
+        console.log("drag-zoom-wrapper: mouseleave", e);
+      });
+    } else {
+      console.log("drag-zoom-wrapper: image NOT found");
+    }
+    // Luk dialogen hvis man trykker på billedet og zoom er på minimum
+    if (this.#image) {
+      const closeOnTap = (event) => {
+        if (this.#scale === MIN_ZOOM) {
+          const zoomDialog = this.closest("zoom-dialog");
+          if (zoomDialog && typeof zoomDialog.close === "function") {
+            zoomDialog.close();
+          }
+        }
+      };
+      this.#image.addEventListener("click", closeOnTap);
+      this.#image.addEventListener("touchend", closeOnTap);
+    }
     if (!this.#image) return;
 
     this.#initResizeListener();
     this.#setupDialogCloseListener();
 
-    if (!isMobileBreakpoint()) return;
-
+    // Aktiver drag/zoom på alle devices
     this.#initEventListeners();
     this.#updateTransform();
   }
@@ -64,8 +109,8 @@ export class DragZoomWrapper extends HTMLElement {
    */
   #setupDialogCloseListener() {
     // Find the parent zoom dialog component
-    const zoomDialog = /** @type {ZoomDialog} */ (this.closest('zoom-dialog'));
-    if (!zoomDialog || typeof zoomDialog.close !== 'function') return;
+    const zoomDialog = /** @type {ZoomDialog} */ (this.closest("zoom-dialog"));
+    if (!zoomDialog || typeof zoomDialog.close !== "function") return;
 
     // Store reference to original close method
     const originalClose = zoomDialog.close.bind(zoomDialog);
@@ -81,14 +126,15 @@ export class DragZoomWrapper extends HTMLElement {
   }
 
   #initEventListeners() {
+    if (isMobileBreakpoint()) return; // Deaktiver på mobil
     if (this.#initialized) return;
     this.#initialized = true;
     const { signal } = this.#controller;
     const options = { passive: false, signal };
 
-    this.addEventListener('touchstart', this.#handleTouchStart, options);
-    this.addEventListener('touchmove', this.#handleTouchMove, options);
-    this.addEventListener('touchend', this.#handleTouchEnd, options);
+    this.addEventListener("touchstart", this.#handleTouchStart, options);
+    this.addEventListener("touchmove", this.#handleTouchMove, options);
+    this.addEventListener("touchend", this.#handleTouchEnd, options);
 
     // Initialize transform immediately
     this.#updateTransform();
@@ -422,9 +468,9 @@ export class DragZoomWrapper extends HTMLElement {
     this.#translate.y = clamp(this.#translate.y, -maxTranslateY, maxTranslateY);
 
     // Apply final transforms to CSS
-    this.style.setProperty('--drag-zoom-scale', this.#scale.toString());
-    this.style.setProperty('--drag-zoom-translate-x', `${this.#translate.x}px`);
-    this.style.setProperty('--drag-zoom-translate-y', `${this.#translate.y}px`);
+    this.style.setProperty("--drag-zoom-scale", this.#scale.toString());
+    this.style.setProperty("--drag-zoom-translate-x", `${this.#translate.x}px`);
+    this.style.setProperty("--drag-zoom-translate-y", `${this.#translate.y}px`);
   }
 
   /**
@@ -450,9 +496,9 @@ export class DragZoomWrapper extends HTMLElement {
     this.#animationFrame = null;
 
     this.#constrainTranslation();
-    this.style.setProperty('--drag-zoom-scale', this.#scale.toString());
-    this.style.setProperty('--drag-zoom-translate-x', `${this.#translate.x}px`);
-    this.style.setProperty('--drag-zoom-translate-y', `${this.#translate.y}px`);
+    this.style.setProperty("--drag-zoom-scale", this.#scale.toString());
+    this.style.setProperty("--drag-zoom-translate-x", `${this.#translate.x}px`);
+    this.style.setProperty("--drag-zoom-translate-y", `${this.#translate.y}px`);
   };
 
   /**
@@ -475,9 +521,9 @@ export class DragZoomWrapper extends HTMLElement {
     this.#hasDraggedBeyondThreshold = false;
 
     // Update CSS properties to reflect reset state
-    this.style.setProperty('--drag-zoom-scale', DEFAULT_ZOOM.toString());
-    this.style.setProperty('--drag-zoom-translate-x', '0px');
-    this.style.setProperty('--drag-zoom-translate-y', '0px');
+    this.style.setProperty("--drag-zoom-scale", DEFAULT_ZOOM.toString());
+    this.style.setProperty("--drag-zoom-translate-x", "0px");
+    this.style.setProperty("--drag-zoom-translate-y", "0px");
   }
 
   destroy() {
@@ -504,8 +550,8 @@ function getDistance(point1, point2) {
   return Math.sqrt(dx * dx + dy * dy);
 }
 
-if (!customElements.get('drag-zoom-wrapper')) {
-  customElements.define('drag-zoom-wrapper', DragZoomWrapper);
+if (!customElements.get("drag-zoom-wrapper")) {
+  customElements.define("drag-zoom-wrapper", DragZoomWrapper);
 }
 
 /**

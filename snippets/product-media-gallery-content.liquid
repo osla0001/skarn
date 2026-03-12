@@ -463,7 +463,7 @@
         >
           <button
             type="button"
-            class="button button-unstyled close-button dialog-zoomed-gallery__close-button"
+            class="button button-unstyled close-button dialog-zoomed-gallery__close-button zoom-close-mobile"
             aria-label="{{ 'actions.close' | t }}"
             on:click="/close"
           >
@@ -596,6 +596,28 @@
 {% endif %}
 
 {% stylesheet %}
+  @media screen and (max-width: 749px) {
+    .zoom-close-mobile {
+      position: fixed !important;
+      top: 16px !important;
+      right: 16px !important;
+      width: 56px !important;
+      height: 56px !important;
+      z-index: 9999 !important;
+      background: rgba(0,0,0,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      border: none;
+    }
+    .zoom-close-mobile svg {
+      width: 32px !important;
+      height: 32px !important;
+    }
+  }
   .dialog-zoomed-gallery {
     cursor: zoom-out;
   }
