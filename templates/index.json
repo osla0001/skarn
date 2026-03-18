@@ -125,7 +125,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/skarn_hero.png",
+        "image_1": "shopify://shop_images/skarn_hero3.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -239,7 +239,7 @@
       ],
       "name": "Kampagne",
       "settings": {
-        "background_image": "shopify://shop_images/Kampagne.png",
+        "background_image": "shopify://shop_images/kampagne1.png",
         "section_height": "200px",
         "object_position": "left",
         "object_offset": 23
@@ -438,7 +438,7 @@
       ],
       "name": "Kampagne",
       "settings": {
-        "background_image": "shopify://shop_images/Kampagne2.png",
+        "background_image": "shopify://shop_images/kampagne3.png",
         "section_height": "200px",
         "object_position": "right",
         "object_offset": 23
