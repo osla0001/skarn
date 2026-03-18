@@ -126,7 +126,6 @@
     display: flex;
     align-items: stretch;
     background-color: transparent;
-    width: 80%;
     margin: 0 auto;
   }
 
@@ -230,14 +229,25 @@
     border: none;
   }
 
+  .email-signup__input-group{
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+  }
+
   #newsletter-submit, #EmailInput-newsletter{
     width: 100%;
-    padding: 0;
+    padding: 0 0;
   }
 
   #newsletter-submit{
-    width: 40%;
+    width: fit-content;
+    padding: 0 1rem;
   }
+
+    #newsletter-submit #newsletter-btn-text:hover{
+      -webkit-text-stroke-width: 0.7px
+    }
 
   .email-signup__button-icon {
     color: currentcolor;
