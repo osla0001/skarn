@@ -23,7 +23,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 6,
+            "gap": 0,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -242,8 +242,7 @@
             "image_width": 50,
             "show_button": false,
             "button_label": "vinter 2026",
-            "button_link": "",
-            "heading_size": 20
+            "button_link": ""
           }
         }
       },
@@ -436,8 +435,7 @@
             "image_width": 40,
             "show_button": true,
             "button_label": "nye items",
-            "button_link": "shopify://collections/newest-products",
-            "heading_size": 20
+            "button_link": "shopify://collections/newest-products"
           }
         },
         "left_J8gJnr": {
