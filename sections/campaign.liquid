@@ -20,7 +20,7 @@
               <img src="{{ block.settings.image | image_url: width: 800 }}" alt="" class="campaign-right-image" style="width: {{ block.settings.image_width | default: '100' }}%; max-width: 100%; margin-bottom: {{ block.settings.image_margin_bottom | default: 0 }}px;" />
             {% endif %}
              {% if block.settings.show_heading and block.settings.heading_text != blank %}
-              <h4 class="campaign-right-heading" style="font-size: {{ block.settings.heading_size | default: 32 }}px;">{{ block.settings.heading_text }}</h4>
+              <h4 class="campaign-right-heading">{{ block.settings.heading_text }}</h4>
             {% endif %}
              {% if block.settings.show_button %}
                 <button class="button-secondary">
@@ -155,15 +155,6 @@
           "type": "url",
           "id": "button_link",
           "label": "Knap link"
-        },
-        {
-          "type": "range",
-          "id": "heading_size",
-          "label": "Overskrift tekststørrelse (px)",
-          "min": 12,
-          "max": 80,
-          "step": 1,
-          "default": 32
         }
       ]
     }
@@ -216,6 +207,17 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+h4{
+  font-size: 2cqw !important;
+}
+
+@media (max-width: 749px) {
+h4{
+  font-size: 3cqw !important;
+  
+}
 }
 
 .secondary-button:hover a, .secondary-button:focus a {
