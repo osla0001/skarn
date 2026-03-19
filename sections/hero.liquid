@@ -514,44 +514,40 @@
     </div>
     <script>
       (function() {
-        function getSrc(setting) {
-          return {{ setting | json }} && {{ setting | json }}.length > 0 ? {{ setting | json }} : null;
-        }
         var config = {
           waves: [
-            // Desktop
             {
               columns: '1fr 1fr',
               images: [
-                { src: getSrc(section.settings.desktop_image_1) },
-                { src: getSrc(section.settings.desktop_image_2) }
+                { src: {{ section.settings.desktop_image_1 | image_url: width: 1600 | json }} },
+                { src: {{ section.settings.desktop_image_2 | image_url: width: 1600 | json }} }
               ]
             },
             {
               columns: '1fr 1fr 1fr',
               images: [
-                { src: getSrc(section.settings.desktop_image_3) },
-                { src: getSrc(section.settings.desktop_image_4) },
-                { src: getSrc(section.settings.desktop_image_5) }
+                { src: {{ section.settings.desktop_image_3 | image_url: width: 1600 | json }} },
+                { src: {{ section.settings.desktop_image_4 | image_url: width: 1600 | json }} },
+                { src: {{ section.settings.desktop_image_5 | image_url: width: 1600 | json }} }
               ]
             },
             {
               columns: '1fr 1fr',
               images: [
-                { src: getSrc(section.settings.desktop_image_6) },
-                { src: getSrc(section.settings.desktop_image_7) }
+                { src: {{ section.settings.desktop_image_6 | image_url: width: 1600 | json }} },
+                { src: {{ section.settings.desktop_image_7 | image_url: width: 1600 | json }} }
               ]
             }
           ],
           tablet: [
-            { columns: '1fr', images: [ { src: getSrc(section.settings.tablet_image_1) } ] },
-            { columns: '1fr', images: [ { src: getSrc(section.settings.tablet_image_2) } ] },
-            { columns: '1fr', images: [ { src: getSrc(section.settings.tablet_image_3) } ] }
+            { columns: '1fr', images: [ { src: {{ section.settings.tablet_image_1 | image_url: width: 1200 | json }} } ] },
+            { columns: '1fr', images: [ { src: {{ section.settings.tablet_image_2 | image_url: width: 1200 | json }} } ] },
+            { columns: '1fr', images: [ { src: {{ section.settings.tablet_image_3 | image_url: width: 1200 | json }} } ] }
           ],
           mobile: [
-            { columns: '1fr', images: [ { src: getSrc(section.settings.mobile_image_1) } ] },
-            { columns: '1fr', images: [ { src: getSrc(section.settings.mobile_image_2) } ] },
-            { columns: '1fr', images: [ { src: getSrc(section.settings.mobile_image_3) } ] }
+            { columns: '1fr', images: [ { src: {{ section.settings.mobile_image_1 | image_url: width: 800 | json }} } ] },
+            { columns: '1fr', images: [ { src: {{ section.settings.mobile_image_2 | image_url: width: 800 | json }} } ] },
+            { columns: '1fr', images: [ { src: {{ section.settings.mobile_image_3 | image_url: width: 800 | json }} } ] }
           ]
         };
         function getDevice() {
