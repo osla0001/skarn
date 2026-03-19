@@ -171,7 +171,7 @@
       "type": "introduktion",
       "name": "Introduktion",
       "settings": {
-        "intro_heading": "Skarns univers",
+        "intro_heading": "Skarns udvalgte second-hand",
         "intro_text": "<p>Hos <strong>Skarn</strong> finder du håndplukket vintage og secondhand fra udvalgte årtier. Nøje kurateret med fokus på kvalitet, pasform og karakter. Vi sammensætter kollektioner, der giver tidligere tiders design nyt liv i en moderne garderobe.</p>",
         "secondary_button_label": "Besøg butik →",
         "secondary_button_link": "shopify://collections/all",
@@ -237,12 +237,13 @@
             "gap": 0,
             "image_margin_bottom": 15,
             "show_heading": true,
-            "heading_text": "Dit kuraterede klædeskab",
+            "heading_text": "Kurateret second-hand",
             "image": "shopify://shop_images/skarn_logo_8e53d89b-ba0d-4c72-b801-286125c6a253.svg",
             "image_width": 50,
             "show_button": false,
             "button_label": "vinter 2026",
-            "button_link": ""
+            "button_link": "",
+            "heading_size": 20
           }
         }
       },
@@ -429,13 +430,14 @@
           "settings": {
             "gap": 5,
             "image_margin_bottom": 15,
-            "show_heading": true,
-            "heading_text": "Gør dig klar til foråret",
+            "show_heading": false,
+            "heading_text": "NYE ITEMS",
             "image": "shopify://shop_images/skarn_logo_8e53d89b-ba0d-4c72-b801-286125c6a253.svg",
             "image_width": 40,
             "show_button": true,
-            "button_label": "forår 2026",
-            "button_link": "shopify://collections"
+            "button_label": "nye items",
+            "button_link": "shopify://collections/newest-products",
+            "heading_size": 20
           }
         },
         "left_J8gJnr": {
