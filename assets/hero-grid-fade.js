@@ -1,5 +1,5 @@
 // assets/hero-grid-fade.js
-// Skifter grid-layout og billeder med fade hver 7. sekund
+// Skifter grid-layout og billeder med fade hver 5. sekund
 
 class HeroGridFade {
   constructor(sectionId, config) {
@@ -9,7 +9,29 @@ class HeroGridFade {
     this.config = config;
     this.timer = null;
     this.fadeDuration = 800;
+    this.preloadHeroImages();
     this.init();
+  }
+
+  preloadHeroImages() {
+    // Preload alle billeder fra første grid-wave (eller alle waves hvis ønsket)
+    const allImages = [];
+    if (this.config && this.config.waves) {
+      this.config.waves.forEach((wave) => {
+        wave.images.forEach((img) => {
+          if (img.src) allImages.push(img.src);
+        });
+      });
+    }
+    allImages.forEach((src) => {
+      if (!document.querySelector(`link[rel='preload'][href='${src}']`)) {
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.href = src;
+        document.head.appendChild(link);
+      }
+    });
   }
 
   init() {
