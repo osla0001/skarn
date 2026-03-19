@@ -507,16 +507,72 @@
     {%- endif -%}
     <div
       class="hero__media-wrapper"
-      style="--hero-media-count: {{ media_count }};--hero-media-count-mobile: {{ media_count_mobile }};{%- if section.settings.image_1 != blank -%} --hero-media-aspect-ratio: {{ section.settings.image_1.aspect_ratio }};{% endif %}"
       data-testid="hero-media-wrapper"
+      style="display: grid; width: 100%; height: 100%; grid-template-columns: 1fr 1fr;"
     >
-      {% liquid
-        if section.settings.toggle_overlay
-          render 'overlay', settings: section.settings
-        endif
-      %}
-      {{ media }}
+      <!-- Billeder indsættes dynamisk af JS -->
     </div>
+    <script>
+      (function() {
+        function getSrc(setting) {
+          return {{ setting | json }} && {{ setting | json }}.length > 0 ? {{ setting | json }} : null;
+        }
+        var config = {
+          waves: [
+            // Desktop
+            {
+              columns: '1fr 1fr',
+              images: [
+                { src: getSrc(section.settings.desktop_image_1) },
+                { src: getSrc(section.settings.desktop_image_2) }
+              ]
+            },
+            {
+              columns: '1fr 1fr 1fr',
+              images: [
+                { src: getSrc(section.settings.desktop_image_3) },
+                { src: getSrc(section.settings.desktop_image_4) },
+                { src: getSrc(section.settings.desktop_image_5) }
+              ]
+            },
+            {
+              columns: '1fr 1fr',
+              images: [
+                { src: getSrc(section.settings.desktop_image_6) },
+                { src: getSrc(section.settings.desktop_image_7) }
+              ]
+            }
+          ],
+          tablet: [
+            { columns: '1fr', images: [ { src: getSrc(section.settings.tablet_image_1) } ] },
+            { columns: '1fr', images: [ { src: getSrc(section.settings.tablet_image_2) } ] },
+            { columns: '1fr', images: [ { src: getSrc(section.settings.tablet_image_3) } ] }
+          ],
+          mobile: [
+            { columns: '1fr', images: [ { src: getSrc(section.settings.mobile_image_1) } ] },
+            { columns: '1fr', images: [ { src: getSrc(section.settings.mobile_image_2) } ] },
+            { columns: '1fr', images: [ { src: getSrc(section.settings.mobile_image_3) } ] }
+          ]
+        };
+        function getDevice() {
+          if(window.matchMedia('(max-width: 749px)').matches) return 'mobile';
+          if(window.matchMedia('(max-width: 1023px)').matches) return 'tablet';
+          return 'waves';
+        }
+        function startHeroGridFade() {
+          var device = getDevice();
+          var waves = config[device] || config.waves;
+          new window.HeroGridFade('Hero-{{ section.id }}', { waves: waves });
+        }
+        if(window.HeroGridFade) startHeroGridFade();
+        else {
+          var s = document.createElement('script');
+          s.src = '{{ "hero-grid-fade.js" | asset_url }}';
+          s.onload = startHeroGridFade;
+          document.body.appendChild(s);
+        }
+      })();
+    </script>
     <div
       class="
         hero__content-wrapper
@@ -790,6 +846,31 @@ box-shadow: 0 1px 0 0 black;
     "groups": ["header"]
   },
   "settings": [
+        {
+          "type": "header",
+          "content": "Desktop billeder (7 bølger)"
+        },
+        { "type": "image_picker", "id": "desktop_image_1", "label": "Desktop billede 1" },
+        { "type": "image_picker", "id": "desktop_image_2", "label": "Desktop billede 2" },
+        { "type": "image_picker", "id": "desktop_image_3", "label": "Desktop billede 3" },
+        { "type": "image_picker", "id": "desktop_image_4", "label": "Desktop billede 4" },
+        { "type": "image_picker", "id": "desktop_image_5", "label": "Desktop billede 5" },
+        { "type": "image_picker", "id": "desktop_image_6", "label": "Desktop billede 6" },
+        { "type": "image_picker", "id": "desktop_image_7", "label": "Desktop billede 7" },
+        {
+          "type": "header",
+          "content": "Tablet billeder (3 bølger)"
+        },
+        { "type": "image_picker", "id": "tablet_image_1", "label": "Tablet billede 1" },
+        { "type": "image_picker", "id": "tablet_image_2", "label": "Tablet billede 2" },
+        { "type": "image_picker", "id": "tablet_image_3", "label": "Tablet billede 3" },
+        {
+          "type": "header",
+          "content": "Mobil billeder (3 bølger)"
+        },
+        { "type": "image_picker", "id": "mobile_image_1", "label": "Mobil billede 1" },
+        { "type": "image_picker", "id": "mobile_image_2", "label": "Mobil billede 2" },
+        { "type": "image_picker", "id": "mobile_image_3", "label": "Mobil billede 3" },
     {
       "type": "header",
       "content": "t:content.media_1"
