@@ -11,7 +11,7 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'left' %}
-          <div class="campaign-left">
+          <div class="campaign-left" style="font-size: {{ block.settings.text_size | default: 32 }}px;">
             {{ block.settings.content }}
           </div>
         {% when 'right' %}
@@ -79,6 +79,15 @@
           "type": "richtext",
           "id": "content",
           "label": "Indhold"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "label": "Tekststørrelse (px)",
+          "min": 12,
+          "max": 80,
+          "step": 1,
+          "default": 32
         }
       ]
     },
