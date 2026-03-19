@@ -8,35 +8,84 @@ class HeroGridFade {
     this.waveIndex = 0;
     this.config = config;
     this.timer = null;
+    this.fadeDuration = 800;
     this.init();
   }
 
   init() {
     if (!this.mediaWrapper) return;
-    this.showWave(0);
-    this.startTimer();
+    // Opret to overlays til crossfade
+    this.wrapperA = document.createElement("div");
+    this.wrapperB = document.createElement("div");
+    Object.assign(this.wrapperA.style, this._baseStyle());
+    Object.assign(this.wrapperB.style, this._baseStyle());
+    this.mediaWrapper.appendChild(this.wrapperA);
+    this.mediaWrapper.appendChild(this.wrapperB);
+    this.active = this.wrapperA;
+    this.inactive = this.wrapperB;
+    // Vis første grid-bølge straks uden fade
+    const firstWave = this.config.waves[0];
+    this.active.style.gridTemplateColumns = firstWave.columns;
+    this.active.innerHTML = firstWave.images
+      .filter((img) => img.src)
+      .map((img) => `<img src="${img.src}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;" />`)
+      .join("");
+    this.active.style.opacity = 1;
+    this.inactive.style.opacity = 0;
+    // Start fade til næste bølge efter interval
+    setTimeout(() => {
+      this.startTimer();
+      this.showWave(1, false);
+      this.waveIndex = 1;
+    }, 5000);
+  }
+
+  _baseStyle() {
+    return {
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      display: "grid",
+      transition: `opacity ${this.fadeDuration}ms`,
+      opacity: 0,
+      pointerEvents: "none",
+    };
   }
 
   startTimer() {
     this.timer = setInterval(() => {
       this.waveIndex = (this.waveIndex + 1) % this.config.waves.length;
       this.showWave(this.waveIndex);
-    }, 7000);
+    }, 5000);
   }
 
-  showWave(index) {
+  showWave(index, instant) {
     const wave = this.config.waves[index];
-    // Fade out
-    this.mediaWrapper.style.transition = "opacity 0.8s";
-    this.mediaWrapper.style.opacity = 0;
-    setTimeout(() => {
-      // Skift grid-template-columns
-      this.mediaWrapper.style.gridTemplateColumns = wave.columns;
-      // Skift billeder
-      this.mediaWrapper.innerHTML = wave.images.map((img) => `<img src="${img.src}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:opacity 0.8s;opacity:1;" />`).join("");
-      // Fade in
-      this.mediaWrapper.style.opacity = 1;
-    }, 800);
+    // Opdater grid og billeder på inaktiv wrapper
+    this.inactive.style.gridTemplateColumns = wave.columns;
+    this.inactive.innerHTML = wave.images
+      .filter((img) => img.src)
+      .map((img) => `<img src="${img.src}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center;" />`)
+      .join("");
+    // Bring inaktiv wrapper frem med fade
+    this.inactive.style.opacity = 1;
+    this.active.style.opacity = 0;
+    // Swap references efter fade
+    setTimeout(
+      () => {
+        // Byt roller
+        const temp = this.active;
+        this.active = this.inactive;
+        this.inactive = temp;
+      },
+      instant ? 0 : this.fadeDuration,
+    );
+    // Hvis første load, vis straks
+    if (instant) {
+      this.active.style.opacity = 1;
+      this.inactive.style.opacity = 0;
+    }
   }
 }
 
