@@ -1302,7 +1302,8 @@
         "left_r3NWbE": {
           "type": "left",
           "settings": {
-            "content": ""
+            "content": "",
+            "text_size": 32
           }
         },
         "right_7tR34B": {
@@ -1326,7 +1327,7 @@
       ],
       "name": "Kampagne",
       "settings": {
-        "background_image": "shopify://shop_images/Kampagne.png",
+        "background_image": "shopify://shop_images/campaign_3.png",
         "section_height": "150",
         "object_position": "center",
         "object_offset": 10
