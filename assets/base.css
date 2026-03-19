@@ -2599,12 +2599,12 @@ Otherwise, it should be a block to rely on its own size */
   padding: inherit;
 }
 
-slideshow-slide .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
+slideshow-slide .shopify-model-viewer-ui__controls-area {
   bottom: var(--padding-sm);
   right: var(--padding-sm);
 }
 
-.dialog-zoomed-gallery .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
+.dialog-zoomed-gallery .shopify-model-viewer-ui__controls-area {
   /* Move the controls above the thumbnails. Need to calculate the height of the thumbnails list */
   bottom: calc(var(--thumbnail-width) / var(--media-preview-ratio) + var(--padding-lg) * 2);
   right: var(--padding-lg);
@@ -2623,7 +2623,7 @@ slideshow-slide .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui_
     bottom: calc(var(--minimum-touch-target) + var(--padding-sm));
   }
 
-  .dialog-zoomed-gallery .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
+  .dialog-zoomed-gallery .shopify-model-viewer-ui__controls-area {
     /* Move the controls up to match the padding on the thumbnails */
     bottom: var(--padding-lg);
 
