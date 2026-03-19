@@ -66,11 +66,12 @@
         "show_border_bottom": false,
         "show_secondary_button": false,
         "heading": "Hvem er",
-        "text": "<p><strong>Skarn</strong> er en webshop med håndplukket vintage og secondhand, hvor kvalitet, personlig stil og <strong>bevidste valg</strong> går hånd i hånd. Navnet er ikke tilfældigt. Det, nogen kalder skarn – gammelt, glemt eller “affald” – ser vi som <strong>skjulte skatte</strong>. Vi finder det, udvælger det og giver det nyt liv. For bare fordi noget er kasseret, betyder det ikke, at det har mistet sin værdi.<br/><br/>Vi tror på at bruge de ressourcer, der <strong>allerede findes</strong>. Hvis et stykke tøj intet fejler, hvorfor så producere nyt? Hos os handler det om <strong>genbrug</strong>, <strong>respekt for materialer</strong> og en mere <strong>ansvarlig tilgang</strong> til garderoben. Tøj kan sagtens få flere kapitler – det kræver bare de rigtige hænder.<br/><br/>Hvert item er nøje udvalgt med fokus på <strong>holdbarhed</strong>, <strong>karakter</strong> og <strong>originalitet</strong>. Ingen masseproduktion. Ingen tilfældigheder. Kun styles med personlighed og historie. Vi går ind for <strong>individualitet</strong>, <strong>langsigtet kvalitet</strong> og en kultur, hvor man tør skille sig ud i stedet for at ligne alle andre.<br/><br/>Når du shopper hos Skarn, vælger du mere end bare tøj. Du vælger en <strong>bevidst livsstil</strong>, hvor stil og omtanke ikke udelukker hinanden. Det, andre kalder skarn, kalder vi <strong>potentiale</strong>.</p>",
+        "text": "<p><strong>Skarn</strong> er en webshop med håndplukket vintage og secondhand, hvor kvalitet, personlig stil og <strong>bevidste valg</strong> går hånd i hånd. Navnet er ikke tilfældigt. Det, nogen kalder skarn – gammelt, glemt eller “affald” – ser vi som <strong>skjulte skatte</strong>. Vi finder det, udvælger det og giver det nyt liv. For bare fordi noget er kasseret, betyder det ikke, at det har mistet sin værdi.<br/><br/>Vi tror på at bruge de ressourcer, der <strong>allerede findes</strong>. Hvis et stykke tøj intet fejler, hvorfor så producere nyt? Hos os handler det om <strong>genbrug</strong>, <strong>respekt for materialer</strong> og en mere <strong>ansvarlig tilgang</strong> til garderoben. Tøj kan sagtens få flere kapitler – det kræver bare de rigtige hænder.</p>",
         "button_link": "",
         "secondary_button_label": "Læs mere →",
         "secondary_button_link": "",
-        "color_scheme": ""
+        "color_scheme": "",
+        "text_desktop": "<p>Hvert item er nøje udvalgt med fokus på <strong>holdbarhed</strong>, <strong>karakter</strong> og <strong>originalitet</strong>. Ingen masseproduktion. Ingen tilfældigheder. Kun styles med personlighed og historie. Vi går ind for <strong>individualitet</strong>, <strong>langsigtet kvalitet</strong> og en kultur, hvor man tør skille sig ud i stedet for at ligne alle andre.<br/><br/>Når du shopper hos Skarn, vælger du mere end bare tøj. Du vælger en <strong>bevidst livsstil</strong>, hvor stil og omtanke ikke udelukker hinanden. Det, andre kalder skarn, kalder vi <strong>potentiale</strong>.</p>"
       }
     },
     "divider_y8cXQi": {
@@ -184,7 +185,8 @@
         "left_haktnd": {
           "type": "left",
           "settings": {
-            "content": ""
+            "content": "",
+            "text_size": 32
           }
         }
       },
@@ -195,7 +197,9 @@
       "name": "Kampagne",
       "settings": {
         "background_image": "shopify://shop_images/Kampagne2.png",
-        "section_height": "250px"
+        "section_height": "250px",
+        "object_position": "center",
+        "object_offset": 10
       }
     },
     "divider_jtPc8c": {
