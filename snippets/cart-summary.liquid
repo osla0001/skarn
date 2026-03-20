@@ -335,7 +335,7 @@
 
   .cart-discount__pill-code {
     overflow: hidden;
-    max-width: 100px;
+    max-width: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
     margin: 0;
@@ -346,7 +346,7 @@
   }
 
   .cart-discount .svg-wrapper {
-    width: var(--icon-size-xs);
+    width: fit-content;
     height: var(--icon-size-xs);
   }
 
@@ -378,6 +378,7 @@ height: fit-content;
     gap: var(--padding-xs);
     align-items: center;
     padding: var(--padding-xs) var(--padding-sm);
+    padding-left: 0px;
     border-radius: var(--style-border-radius-pills);
     background-color: var(--color-input-background);
     text-transform: uppercase;
@@ -399,6 +400,7 @@ height: fit-content;
     pointer-events: all;
     cursor: pointer;
     height: 100%;
+    display: flex;
   }
 
   .cart-discount__error {

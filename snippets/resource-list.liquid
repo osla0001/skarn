@@ -178,3 +178,17 @@
     %}
   </div>
 {% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var lists = document.querySelectorAll('.resource-list');
+    lists.forEach(function(list) {
+      list.addEventListener('wheel', function(e) {
+        if (e.deltaY !== 0 && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          list.scrollLeft += e.deltaY;
+          e.preventDefault();
+        }
+      }, { passive: false });
+    });
+  });
+</script>

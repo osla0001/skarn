@@ -4846,3 +4846,7 @@ text-component {
 .facets-drawer__close {
   margin-right: 1rem !important;
 }
+
+input:focus-visible {
+  outline: none;
+}
