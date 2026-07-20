@@ -586,7 +586,7 @@
             "button_nwTike": {
               "type": "button",
               "settings": {
-                "label": "Køb nu",
+                "label": "Shop nu",
                 "link": "shopify://collections/newest-products",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
@@ -683,7 +683,7 @@
             "button_kE7QNL": {
               "type": "button",
               "settings": {
-                "label": "Køb nu",
+                "label": "Shop nu",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
@@ -780,7 +780,7 @@
             "button_bNYYTt": {
               "type": "button",
               "settings": {
-                "label": "Køb nu",
+                "label": "Shop nu",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "button-secondary",
