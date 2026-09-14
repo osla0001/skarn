@@ -6,7 +6,7 @@ Dynamisk generering af kategori-links baseret på produkt-metafield 'kategori'.
   {%- assign kategorier = "" -%}
   {%- for product in collections.all.products -%}
     {%- assign kategori = product.metafields.custom.kategori -%}
-    {%- if kategori != blank and kategorier contains kategori == false -%}
+    {%- if kategori != blank and kategorier contains kategori -%}
       <li>
         <a href="/collections/all?filter.p.custom.kategori={{ kategori | url_encode }}">{{ kategori }}</a>
       </li>
@@ -14,3 +14,13 @@ Dynamisk generering af kategori-links baseret på produkt-metafield 'kategori'.
     {%- endif -%}
   {%- endfor -%}
 </ul>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- if kategori != blank and kategorier contains kategori == false -%}"
+  to: "{%- if kategori != blank and kategorier contains kategori -%}"
+  position: 295..356
+{% endcomment %}
